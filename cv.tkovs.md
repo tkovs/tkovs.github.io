@@ -1,9 +1,9 @@
 # João Vitor Rodrigues da Silva
 
-Email: victor.rdg@hotmail.com
-Endereço: Bairro Primavera, Arapiraca - AL
-Telefone: (82) 981779168
-GitHub: https://github.com/tkovs/
+- Email: victor.rdg@hotmail.com
+- Endereço: Bairro Primavera, Arapiraca - AL
+- Telefone: (82) 981779168
+- GitHub: https://github.com/tkovs/
 
 ## Perfil
 Programador auto-didata, iniciei meu aprendizado nessa área no segundo semestre de 2013. Tenho muito prazer em aprender coisas novas e coloca-las em prática. Amo ouvir e tocar música, não tendo gênero decisivo. Entusiasta da filosofia open source e do trabalho em equipe estruturado.
