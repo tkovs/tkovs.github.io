@@ -65,6 +65,10 @@ Programador auto-didata, iniciei meu aprendizado nessa área no segundo semestre
 - TheHuxLey
 - ProjectEuler
 
+### Tradução
+
+- Contribuidor na Mozilla (mdn)
+
 ## Experiência profissional
 
 Nenhuma
