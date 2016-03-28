@@ -2,7 +2,7 @@
 
 - Email: victor.rdg@hotmail.com
 - Endereço: Bairro Primavera, Arapiraca - AL
-- Telefone: (82) 981779168
+- Telefone: (82) 981778168
 - GitHub: https://github.com/tkovs/
 
 ## Perfil
@@ -14,6 +14,10 @@ Programador auto-didata, iniciei meu aprendizado nessa área no segundo semestre
  - Curso técnico integrado de informática
  - Início: 2013; Fim previsto: 2016
 
+- Línguas
+ - Português (nativo)
+ - Inglês (Intermediário)
+ 
 - Ministrei um curso de desenvolvimento de jogos durante o Ciência e Arte de 2014 no IFAL.
 
 - Participei do desenvolvimento de um letreiro de leds usando Arduino e o CI MAX7219/7220 durante o Ciência e Arte de 2015 no IFAL.
@@ -25,7 +29,6 @@ Programador auto-didata, iniciei meu aprendizado nessa área no segundo semestre
 ### Linguagens de programação
 
 - Linguagem C (2013 ~ Presente)
-- Brainfuck (2014)
 - Haskell (2014 ~ Presente)
 - C# (2014 ~ 2015)
 - Java (2015)
