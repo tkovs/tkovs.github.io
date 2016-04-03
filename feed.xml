@@ -2,15 +2,15 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <description>Vitor Rodrigues</description>
-    <link>https://tkovs.github.io/</link>
-    <atom:link href="https://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 31 Mar 2016 22:31:53 -0300</pubDate>
-    <lastBuildDate>Thu, 31 Mar 2016 22:31:53 -0300</lastBuildDate>
+    <description>Um blog sobre mim e sobre o que eu achar interessante.</description>
+    <link>http://tkovs.github.io/</link>
+    <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 02 Apr 2016 23:18:11 -0300</pubDate>
+    <lastBuildDate>Sat, 02 Apr 2016 23:18:11 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
-        <title>Resumo sobre linguagem C</title>
+        <title>Introdução básica à linguagem C</title>
         <description>&lt;h4 id=&quot;tipos-de-dados&quot;&gt;Tipos de dados&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Int&lt;/strong&gt;: Número inteiro. Sem casas decimais.
@@ -304,12 +304,12 @@
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 </description>
-        <pubDate>Thu, 31 Mar 2016 20:48:32 -0300</pubDate>
-        <link>https://tkovs.github.io/programacao/2016/03/31/resumo-sobre-linguagem-c/</link>
-        <guid isPermaLink="true">https://tkovs.github.io/programacao/2016/03/31/resumo-sobre-linguagem-c/</guid>
+        <pubDate>Thu, 31 Mar 2016 19:48:45 -0300</pubDate>
+        <link>http://tkovs.github.io/blog/introducao-linguagem-c</link>
+        <guid isPermaLink="true">http://tkovs.github.io/blog/introducao-linguagem-c</guid>
         
         
-        <category>programacao</category>
+        <category>linguagem c</category>
         
       </item>
     
