@@ -21,11 +21,24 @@ permalink: /blog/introducao-linguagem-c
 
 **Void**: Tipo vazio. Por enquanto você não precisa saber muito sobre esse tipo.
 
+####Comentários
+
+Comentários podem ser escritos de duas formas: linha única ou várias linhas.
+
+{% highlight c linenos %}
+int idade; // Variável para guardar uma idade
+
+/* Um comentário simplesmente pra dizer que o
+   comentário de uma linha acima é inútil pois
+   o nome da variavel já diz tudo...
+*/
+{% endhighlight %}
+
 ####Função main
 
 Se seu programa será um executável ele precisará da função main que sempre é a primeira a ser chamada. O esqueleto básico que, provavelmente, todos seus programas iniciais terão, é o seguinte:
 
-{% highlight c %}
+{% highlight c linenos %}
 // Biblioteca com funções printf e scanf (e muitas outras, é claro).
 #include <stdio.h>
 
@@ -44,7 +57,7 @@ int main(void) { // O 'abre chaves' indica o começo da função
 
 Você pode criar um arquivo e nele escrever funções para um determinado propósito. Esse arquivo não tem o main() pois não é um executável, não é um programa, é uma biblioteca. Por exemplo, se você não quisesse escrever a mesma função em vários programas - *calcular área de um triangulo, por exemplo* - você a escreveria em apenas um arquivo, e no seu começo dos seus próximos algoritmos você incluiria tal arquivo no seu programa. A função **printf** e a **scanf** estão na biblioteca *stdio*, por isso você costuma adicionar essa biblioteca nos programas. Exemplo:
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 
 int main(void) {
@@ -59,7 +72,7 @@ int main(void) {
 
 Um escopo é o que delimita o código que pertence a uma função, é o que diz a o quê tal código pertence. Um código não pode acessar variáveis que pertencem a um escopo que não seja o próprio ou um anterior.
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 
 int main(void) { // Início do escopo do main.
@@ -89,7 +102,7 @@ Um vetor é apenas uma variável capaz de conter vários valores do mesmo tipo. 
 **String**: Na verdade não há o tipo string, o que existe é um vetor de char onde o último elemento sempre deve ser o '\0' que indica o fim da string. Sendo assim, se quiser uma variável pra armazenar a string "panda" seriam necessários 6 espaços no vetor: 5 para o nome "panda", e 1 para o '\0'.
 > Ex:
 
-{% highlight c %}
+{% highlight c linenos %}
 // Fazer isso:
 char s[6] = "panda";
 
@@ -104,7 +117,7 @@ s[5] = '\0';
 
 Declaração de variáveis
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 
 int main(void) {
@@ -124,7 +137,7 @@ int main(void) {
 
 Para escrever algo na tela (uma mensagem ao usuário ou o resultado de uma conta) é necessário usar a função **printf**. Para ler um valor do usuário, a função **scanf**.
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 
 int main(void) {
@@ -157,7 +170,7 @@ int main(void) {
 
 ####Operadores && Aritmética
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 /*
 + soma
@@ -196,7 +209,7 @@ int main(void) {
 
 O **if** é uma palavra-chave em C para se tomar decisões, fazer comparações.
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 
 int main(void) {
@@ -237,7 +250,7 @@ int main(void) {
 
 Para usar esse recurso existem algumas palavras-chave como while, for e do/while. Na while só é necessária uma condição e, toda vez que ela for verdadeira, o código no escopo do while é executado.
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 
 int main(void) {
@@ -254,7 +267,7 @@ int main(void) {
 
 Para se usar o for 3 definições são necessárias possíveis. Atribuição, condição, ação.
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 
 int main(void) {
@@ -274,7 +287,7 @@ int main(void) {
 
 O do/while é como o while, porém sem comparação inicial. Diferente do while que só roda a primeira vez que a condição for verdadeira, no do/while sempre vai executar o código de seu escopo pelo menos 1 vez.
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 
 int main(void) {
@@ -295,7 +308,7 @@ Funções são muito úteis, inicialmente, para modularizar seu código. Um meio
 
 Funções são escritas de acordo com a seguinte sintaxe: <tipo de retorno> <nome função>(<tipo parametro> <nome parametro, ...) { <codigo> }
 
-{% highlight c %}
+{% highlight c linenos %}
 #include <stdio.h>
 
 // <tipo_retorno> <nome> (<parametros>)
