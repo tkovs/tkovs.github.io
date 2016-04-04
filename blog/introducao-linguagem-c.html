@@ -76,60 +76,71 @@
 
 <p><strong>Void</strong>: Tipo vazio. Por enquanto você não precisa saber muito sobre esse tipo.</p>
 
+<h4 id="comentrios">Comentários</h4>
+
+<p>Comentários podem ser escritos de duas formas: linha única ou várias linhas.</p>
+
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno">1</span> <span class="kt">int</span> <span class="n">idade</span><span class="p">;</span> <span class="c1">// Variável para guardar uma idade</span>
+<span class="lineno">2</span> 
+<span class="lineno">3</span> <span class="cm">/* Um comentário simplesmente pra dizer que o</span>
+<span class="lineno">4</span> <span class="cm">   comentário de uma linha acima é inútil pois</span>
+<span class="lineno">5</span> <span class="cm">   o nome da variavel já diz tudo...</span>
+<span class="lineno">6</span> <span class="cm">*/</span></code></pre></figure>
+
 <h4 id="funo-main">Função main</h4>
 
 <p>Se seu programa será um executável ele precisará da função main que sempre é a primeira a ser chamada. O esqueleto básico que, provavelmente, todos seus programas iniciais terão, é o seguinte:</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// Biblioteca com funções printf e scanf (e muitas outras, é claro).</span>
-<span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="c1">// Função main. Retorna um valor inteiro. Recebe nenhum valor.</span>
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// O &#39;abre chaves&#39; indica o começo da função</span>
-
-    <span class="c1">// Código aqui</span>
-    <span class="c1">// Código aqui</span>
-
-    <span class="c1">// Retorna 0 se chegar até essa linha do código.</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span> <span class="c1">// O &#39;fecha chaves&#39; indica o fim da função.</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="c1">// Biblioteca com funções printf e scanf (e muitas outras, é claro).</span>
+<span class="lineno"> 2</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span> <span class="c1">// Função main. Retorna um valor inteiro. Recebe nenhum valor.</span>
+<span class="lineno"> 5</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// O &#39;abre chaves&#39; indica o começo da função</span>
+<span class="lineno"> 6</span> 
+<span class="lineno"> 7</span>     <span class="c1">// Código aqui</span>
+<span class="lineno"> 8</span>     <span class="c1">// Código aqui</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>     <span class="c1">// Retorna 0 se chegar até essa linha do código.</span>
+<span class="lineno">11</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">12</span> <span class="p">}</span> <span class="c1">// O &#39;fecha chaves&#39; indica o fim da função.</span></code></pre></figure>
 
 <h4 id="bibliotecas">Bibliotecas</h4>
 
 <p>Você pode criar um arquivo e nele escrever funções para um determinado propósito. Esse arquivo não tem o main() pois não é um executável, não é um programa, é uma biblioteca. Por exemplo, se você não quisesse escrever a mesma função em vários programas - <em>calcular área de um triangulo, por exemplo</em> - você a escreveria em apenas um arquivo, e no seu começo dos seus próximos algoritmos você incluiria tal arquivo no seu programa. A função <strong>printf</strong> e a <strong>scanf</strong> estão na biblioteca <em>stdio</em>, por isso você costuma adicionar essa biblioteca nos programas. Exemplo:</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Se não tivesse adicionado a stdio nesse código, daria um erro na próxima linha.</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno">1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno">2</span> 
+<span class="lineno">3</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">4</span>     <span class="c1">// Se não tivesse adicionado a stdio nesse código, daria um erro na próxima linha.</span>
+<span class="lineno">5</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Hello, world!&quot;</span><span class="p">);</span>
+<span class="lineno">6</span> 
+<span class="lineno">7</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">8</span> <span class="p">}</span></code></pre></figure>
 
 <h4 id="escopo">Escopo</h4>
 
 <p>Um escopo é o que delimita o código que pertence a uma função, é o que diz a o quê tal código pertence. Um código não pode acessar variáveis que pertencem a um escopo que não seja o próprio ou um anterior.</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do main.</span>
-
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
-  
-    <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do if.</span>
-        <span class="kt">int</span> <span class="n">j</span><span class="p">;</span>
-        <span class="c1">// A seguinte linha não dá erro.</span>
-        <span class="n">j</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-        <span class="c1">// É possível exibir a variável j aqui usando printf.</span>
-        <span class="c1">// Não ocorre um erro na próxima linha pois o escopo do if está dentro do escopo do main, ou seja, o escopo do main é um escopo anterior ao do if.</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
-    <span class="p">}</span> <span class="c1">// Fim do escopo do if.</span>
-  
-    <span class="c1">// Erro na linha abaixo, pois a variavel j não existe fora do escopo do if.</span>
-    <span class="n">j</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span> <span class="c1">// Fim do escopo do main.</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do main.</span>
+<span class="lineno"> 4</span> 
+<span class="lineno"> 5</span>     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span>
+<span class="lineno"> 6</span>   
+<span class="lineno"> 7</span>     <span class="k">if</span> <span class="p">(</span><span class="n">i</span> <span class="o">==</span> <span class="mi">1</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do if.</span>
+<span class="lineno"> 8</span>         <span class="kt">int</span> <span class="n">j</span><span class="p">;</span>
+<span class="lineno"> 9</span>         <span class="c1">// A seguinte linha não dá erro.</span>
+<span class="lineno">10</span>         <span class="n">j</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="lineno">11</span>         <span class="c1">// É possível exibir a variável j aqui usando printf.</span>
+<span class="lineno">12</span>         <span class="c1">// Não ocorre um erro na próxima linha pois o escopo do if está dentro do escopo do main, ou seja, o escopo do main é um escopo anterior ao do if.</span>
+<span class="lineno">13</span>         <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> 
+<span class="lineno">14</span>     <span class="p">}</span> <span class="c1">// Fim do escopo do if.</span>
+<span class="lineno">15</span>   
+<span class="lineno">16</span>     <span class="c1">// Erro na linha abaixo, pois a variavel j não existe fora do escopo do if.</span>
+<span class="lineno">17</span>     <span class="n">j</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="lineno">18</span> 
+<span class="lineno">19</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">20</span> <span class="p">}</span> <span class="c1">// Fim do escopo do main.</span></code></pre></figure>
 
 <h4 id="declarando-variveis--vetor--string">Declarando variáveis &amp; Vetor &amp; String</h4>
 
@@ -138,189 +149,189 @@
 <p><strong>String</strong>: Na verdade não há o tipo string, o que existe é um vetor de char onde o último elemento sempre deve ser o ‘\0’ que indica o fim da string. Sendo assim, se quiser uma variável pra armazenar a string “panda” seriam necessários 6 espaços no vetor: 5 para o nome “panda”, e 1 para o ‘\0’.
 &gt; Ex:</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="c1">// Fazer isso:</span>
-<span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;panda&quot;</span><span class="p">;</span>
-
-<span class="c1">// É a mesma coisa que fazer isso:</span>
-<span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;p&#39;</span><span class="p">;</span>
-<span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span><span class="p">;</span>
-<span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;n&#39;</span><span class="p">;</span>
-<span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;d&#39;</span><span class="p">;</span>
-<span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span><span class="p">;</span>
-<span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="c1">// Fazer isso:</span>
+<span class="lineno"> 2</span> <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;panda&quot;</span><span class="p">;</span>
+<span class="lineno"> 3</span> 
+<span class="lineno"> 4</span> <span class="c1">// É a mesma coisa que fazer isso:</span>
+<span class="lineno"> 5</span> <span class="n">s</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;p&#39;</span><span class="p">;</span>
+<span class="lineno"> 6</span> <span class="n">s</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span><span class="p">;</span>
+<span class="lineno"> 7</span> <span class="n">s</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;n&#39;</span><span class="p">;</span>
+<span class="lineno"> 8</span> <span class="n">s</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;d&#39;</span><span class="p">;</span>
+<span class="lineno"> 9</span> <span class="n">s</span><span class="p">[</span><span class="mi">4</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;a&#39;</span><span class="p">;</span>
+<span class="lineno">10</span> <span class="n">s</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span> <span class="o">=</span> <span class="sc">&#39;\0&#39;</span><span class="p">;</span></code></pre></figure>
 
 <p>Declaração de variáveis</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Variável do tipo inteiro chamada i.</span>
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
-    <span class="c1">// Variável do tipo float chamada f.</span>
-    <span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">1.83</span><span class="p">;</span> <span class="c1">// Usa-se ponto para separar as casas decimais. Cuidado pra não usar vírgula, dará erro.</span>
-    <span class="c1">// Parece se declarar um vetor, usa-se colchetes depois do nome da variavel com o tamanho de elementos.</span>
-    <span class="c1">// Uma string por exemplo, é um vetor de char. Logo, pra guardar o nome panda, como visto anteriormente, bastaria o seguinte:</span>
-    <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;panda&quot;</span><span class="p">;</span>
-    
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 4</span>     <span class="c1">// Variável do tipo inteiro chamada i.</span>
+<span class="lineno"> 5</span>     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">10</span><span class="p">;</span>
+<span class="lineno"> 6</span>     <span class="c1">// Variável do tipo float chamada f.</span>
+<span class="lineno"> 7</span>     <span class="kt">float</span> <span class="n">f</span> <span class="o">=</span> <span class="mf">1.83</span><span class="p">;</span> <span class="c1">// Usa-se ponto para separar as casas decimais. Cuidado pra não usar vírgula, dará erro.</span>
+<span class="lineno"> 8</span>     <span class="c1">// Parece se declarar um vetor, usa-se colchetes depois do nome da variavel com o tamanho de elementos.</span>
+<span class="lineno"> 9</span>     <span class="c1">// Uma string por exemplo, é um vetor de char. Logo, pra guardar o nome panda, como visto anteriormente, bastaria o seguinte:</span>
+<span class="lineno">10</span>     <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;panda&quot;</span><span class="p">;</span>
+<span class="lineno">11</span>     
+<span class="lineno">12</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">13</span> <span class="p">}</span></code></pre></figure>
 
 <h4 id="funes-de-leitura-e-escrita-printf--scanf">Funções de leitura e escrita (printf / scanf)</h4>
 
 <p>Para escrever algo na tela (uma mensagem ao usuário ou o resultado de uma conta) é necessário usar a função <strong>printf</strong>. Para ler um valor do usuário, a função <strong>scanf</strong>.</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
-    <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
-    
-    <span class="c1">// Scanf</span>
-    <span class="c1">// Parece receber uma informação do usuário usa-se a função scanf. Ela recebe uma string e as variáveis que receberão o valor.</span>
-    <span class="c1">// Na string, informamos os tipos dos dados que serão lidos e, separadas por vírgula, as variáveis.</span>
-    <span class="c1">// %d - inteiro / %f - float / %c - char / %s - string</span>
-    
-    <span class="c1">// O &amp; antes da variável é necessário pois a função precisa saber o endereço da variável i para salvar o valor lá.</span>
-    <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">);</span> <span class="c1">// %d entre aspas pois é uma string, e a variável após a vírgula.</span>
-    
-    <span class="c1">// Leitura de uma letra.</span>
-    <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
-    
-    <span class="c1">// Leitura de uma string. O &amp; não é necessário pois essa variável não é como as outras, é um vetor, e ao usar seu nome já se está dizendo seu endereço.</span>
-    <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
-    
-    <span class="c1">// A função printf recebe uma string e, se necessário, valor de variáveis na string.</span>
-    <span class="c1">// Parece exibir o conteúdo de variáveis não é necessário o &amp;.</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Numero informado pelo usuario: %d&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Tchau!&quot;</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 4</span>     <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="lineno"> 5</span>     <span class="kt">char</span> <span class="n">c</span><span class="p">;</span>
+<span class="lineno"> 6</span>     <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">20</span><span class="p">];</span>
+<span class="lineno"> 7</span>     
+<span class="lineno"> 8</span>     <span class="c1">// Scanf</span>
+<span class="lineno"> 9</span>     <span class="c1">// Parece receber uma informação do usuário usa-se a função scanf. Ela recebe uma string e as variáveis que receberão o valor.</span>
+<span class="lineno">10</span>     <span class="c1">// Na string, informamos os tipos dos dados que serão lidos e, separadas por vírgula, as variáveis.</span>
+<span class="lineno">11</span>     <span class="c1">// %d - inteiro / %f - float / %c - char / %s - string</span>
+<span class="lineno">12</span>     
+<span class="lineno">13</span>     <span class="c1">// O &amp; antes da variável é necessário pois a função precisa saber o endereço da variável i para salvar o valor lá.</span>
+<span class="lineno">14</span>     <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">i</span><span class="p">);</span> <span class="c1">// %d entre aspas pois é uma string, e a variável após a vírgula.</span>
+<span class="lineno">15</span>     
+<span class="lineno">16</span>     <span class="c1">// Leitura de uma letra.</span>
+<span class="lineno">17</span>     <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%c&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">c</span><span class="p">);</span>
+<span class="lineno">18</span>     
+<span class="lineno">19</span>     <span class="c1">// Leitura de uma string. O &amp; não é necessário pois essa variável não é como as outras, é um vetor, e ao usar seu nome já se está dizendo seu endereço.</span>
+<span class="lineno">20</span>     <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%s&quot;</span><span class="p">,</span> <span class="n">s</span><span class="p">);</span>
+<span class="lineno">21</span>     
+<span class="lineno">22</span>     <span class="c1">// A função printf recebe uma string e, se necessário, valor de variáveis na string.</span>
+<span class="lineno">23</span>     <span class="c1">// Parece exibir o conteúdo de variáveis não é necessário o &amp;.</span>
+<span class="lineno">24</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Numero informado pelo usuario: %d&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="lineno">25</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Tchau!&quot;</span><span class="p">);</span>
+<span class="lineno">26</span> 
+<span class="lineno">27</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">28</span> <span class="p">}</span></code></pre></figure>
 
 <h4 id="operadores--aritmtica">Operadores &amp;&amp; Aritmética</h4>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-<span class="cm">/*</span>
-<span class="cm">+ soma</span>
-<span class="cm">- subtração</span>
-<span class="cm">/ divisão</span>
-<span class="cm">* multiplicação</span>
-<span class="cm">% resto</span>
-
-<span class="cm">== igual</span>
-<span class="cm">!= diferente</span>
-<span class="cm">&lt; menor</span>
-<span class="cm">&gt; maior</span>
-<span class="cm">&lt;= menor ou igual</span>
-<span class="cm">&gt;= maior ou igual</span>
-<span class="cm">! negação</span>
-<span class="cm">*/</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Exemplo:</span>
-    <span class="kt">float</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
-
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Insira dois valores: &quot;</span><span class="p">);</span>
-    <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%f %f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
-    
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Soma: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Subtracao: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">);</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Multiplicacao: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">);</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Divisao: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">);</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Resto da divisao: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 2</span> <span class="cm">/*</span>
+<span class="lineno"> 3</span> <span class="cm">+ soma</span>
+<span class="lineno"> 4</span> <span class="cm">- subtração</span>
+<span class="lineno"> 5</span> <span class="cm">/ divisão</span>
+<span class="lineno"> 6</span> <span class="cm">* multiplicação</span>
+<span class="lineno"> 7</span> <span class="cm">% resto</span>
+<span class="lineno"> 8</span> 
+<span class="lineno"> 9</span> <span class="cm">== igual</span>
+<span class="lineno">10</span> <span class="cm">!= diferente</span>
+<span class="lineno">11</span> <span class="cm">&lt; menor</span>
+<span class="lineno">12</span> <span class="cm">&gt; maior</span>
+<span class="lineno">13</span> <span class="cm">&lt;= menor ou igual</span>
+<span class="lineno">14</span> <span class="cm">&gt;= maior ou igual</span>
+<span class="lineno">15</span> <span class="cm">! negação</span>
+<span class="lineno">16</span> <span class="cm">*/</span>
+<span class="lineno">17</span> 
+<span class="lineno">18</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">19</span>     <span class="c1">// Exemplo:</span>
+<span class="lineno">20</span>     <span class="kt">float</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+<span class="lineno">21</span> 
+<span class="lineno">22</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Insira dois valores: &quot;</span><span class="p">);</span>
+<span class="lineno">23</span>     <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%f %f&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+<span class="lineno">24</span>     
+<span class="lineno">25</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Soma: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">);</span>
+<span class="lineno">26</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Subtracao: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">-</span> <span class="n">b</span><span class="p">);</span>
+<span class="lineno">27</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Multiplicacao: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">*</span> <span class="n">b</span><span class="p">);</span>
+<span class="lineno">28</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Divisao: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">/</span> <span class="n">b</span><span class="p">);</span>
+<span class="lineno">29</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Resto da divisao: %f</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">a</span> <span class="o">%</span> <span class="n">b</span><span class="p">);</span>
+<span class="lineno">30</span> 
+<span class="lineno">31</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">32</span> <span class="p">}</span></code></pre></figure>
 
 <h4 id="condio-if">Condição (if)</h4>
 
 <p>O <strong>if</strong> é uma palavra-chave em C para se tomar decisões, fazer comparações.</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
-    
-    <span class="c1">// O usuário insere o valor de a e o valor de b.</span>
-    <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%d %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
-    
-    <span class="c1">// if (condição) { código }</span>
-    <span class="c1">// Aqui é comparado a e b.</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do if</span>
-        <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Valores iguais.&quot;</span><span class="p">);</span>
-    <span class="p">}</span> <span class="c1">// Fim do escopo do if</span>
-    
-    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do if</span>
-        <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Valores diferentes.&quot;</span><span class="p">);</span>
-    <span class="p">}</span> <span class="c1">// Fim do escopo do if.</span>
-    
-    <span class="c1">// Não é necessário fazer duas condições pois existe o else. Else é o senão, é onde está o código que será executado caso a condição não seja satisfeita.</span>
-
-    <span class="c1">// Comparação. O código do escopo do if será executado apenas se a condição do if for verdadeira.</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do if</span>
-        <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Valores iguais.&quot;</span><span class="p">);</span>
-    <span class="p">}</span> <span class="c1">// Fim do escopo do if</span>
-    <span class="c1">// Se a condição do if for falsa, o código do else será executado.</span>
-    <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do else</span>
-        <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;a maior que b.&quot;</span><span class="p">);</span>
-    <span class="p">}</span> <span class="c1">// Fim do escopo do else.</span>
-    <span class="k">else</span> <span class="p">{</span> <span class="c1">// Início do escopo do else</span>
-        <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;a menor que b&quot;</span><span class="p">);</span> <span class="c1">// Se a não é igual a b, não é maior, então é menor.</span>
-<span class="p">}</span> <span class="c1">// Fim do escopo do else.</span>
-    
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 4</span>     <span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">;</span>
+<span class="lineno"> 5</span>     
+<span class="lineno"> 6</span>     <span class="c1">// O usuário insere o valor de a e o valor de b.</span>
+<span class="lineno"> 7</span>     <span class="n">scanf</span> <span class="p">(</span><span class="s">&quot;%d %d&quot;</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">a</span><span class="p">,</span> <span class="o">&amp;</span><span class="n">b</span><span class="p">);</span>
+<span class="lineno"> 8</span>     
+<span class="lineno"> 9</span>     <span class="c1">// if (condição) { código }</span>
+<span class="lineno">10</span>     <span class="c1">// Aqui é comparado a e b.</span>
+<span class="lineno">11</span>     <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do if</span>
+<span class="lineno">12</span>         <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Valores iguais.&quot;</span><span class="p">);</span>
+<span class="lineno">13</span>     <span class="p">}</span> <span class="c1">// Fim do escopo do if</span>
+<span class="lineno">14</span>     
+<span class="lineno">15</span>     <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">!=</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do if</span>
+<span class="lineno">16</span>         <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Valores diferentes.&quot;</span><span class="p">);</span>
+<span class="lineno">17</span>     <span class="p">}</span> <span class="c1">// Fim do escopo do if.</span>
+<span class="lineno">18</span>     
+<span class="lineno">19</span>     <span class="c1">// Não é necessário fazer duas condições pois existe o else. Else é o senão, é onde está o código que será executado caso a condição não seja satisfeita.</span>
+<span class="lineno">20</span> 
+<span class="lineno">21</span>     <span class="c1">// Comparação. O código do escopo do if será executado apenas se a condição do if for verdadeira.</span>
+<span class="lineno">22</span>     <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">==</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do if</span>
+<span class="lineno">23</span>         <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Valores iguais.&quot;</span><span class="p">);</span>
+<span class="lineno">24</span>     <span class="p">}</span> <span class="c1">// Fim do escopo do if</span>
+<span class="lineno">25</span>     <span class="c1">// Se a condição do if for falsa, o código do else será executado.</span>
+<span class="lineno">26</span>     <span class="k">else</span> <span class="k">if</span> <span class="p">(</span><span class="n">a</span> <span class="o">&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span> <span class="c1">// Início do escopo do else</span>
+<span class="lineno">27</span>         <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;a maior que b.&quot;</span><span class="p">);</span>
+<span class="lineno">28</span>     <span class="p">}</span> <span class="c1">// Fim do escopo do else.</span>
+<span class="lineno">29</span>     <span class="k">else</span> <span class="p">{</span> <span class="c1">// Início do escopo do else</span>
+<span class="lineno">30</span>         <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;a menor que b&quot;</span><span class="p">);</span> <span class="c1">// Se a não é igual a b, não é maior, então é menor.</span>
+<span class="lineno">31</span> <span class="p">}</span> <span class="c1">// Fim do escopo do else.</span>
+<span class="lineno">32</span>     
+<span class="lineno">33</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">34</span> <span class="p">}</span></code></pre></figure>
 
 <h4 id="loops-repetio">Loops (repetição)</h4>
 
 <p>Para usar esse recurso existem algumas palavras-chave como while, for e do/while. Na while só é necessária uma condição e, toda vez que ela for verdadeira, o código no escopo do while é executado.</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
-    
-    <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;i maior que 0&quot;</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;i menor ou igual a 0&quot;</span><span class="p">);</span>
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 4</span>     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">100</span><span class="p">;</span>
+<span class="lineno"> 5</span>     
+<span class="lineno"> 6</span>     <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 7</span>         <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;i maior que 0&quot;</span><span class="p">);</span>
+<span class="lineno"> 8</span>     <span class="p">}</span>
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;i menor ou igual a 0&quot;</span><span class="p">);</span>
+<span class="lineno">11</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">12</span> <span class="p">}</span></code></pre></figure>
 
 <p>Para se usar o for 3 definições são necessárias possíveis. Atribuição, condição, ação.</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
-    
-    <span class="c1">// Esqueleto: for (atribuição; condição; ação) { código }</span>
-    <span class="c1">// A atribuição ocorre apenas 1 vez</span>
-    <span class="c1">// A condição é checada toda vez que o for é executado ou seu escopo acaba. Se a condição for verdadeira ele será executado novamente (a ação também)</span>
-    <span class="c1">// A ação ocorre toda vez após a condição ser checada. A ação só acontece a partir da segunda vez que o for é executado.</span>
-    <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-    <span class="p">}</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 4</span>     <span class="kt">int</span> <span class="n">i</span><span class="p">;</span>
+<span class="lineno"> 5</span>     
+<span class="lineno"> 6</span>     <span class="c1">// Esqueleto: for (atribuição; condição; ação) { código }</span>
+<span class="lineno"> 7</span>     <span class="c1">// A atribuição ocorre apenas 1 vez</span>
+<span class="lineno"> 8</span>     <span class="c1">// A condição é checada toda vez que o for é executado ou seu escopo acaba. Se a condição for verdadeira ele será executado novamente (a ação também)</span>
+<span class="lineno"> 9</span>     <span class="c1">// A ação ocorre toda vez após a condição ser checada. A ação só acontece a partir da segunda vez que o for é executado.</span>
+<span class="lineno">10</span>     <span class="k">for</span> <span class="p">(</span><span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">11</span>         <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;%d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="lineno">12</span>     <span class="p">}</span>
+<span class="lineno">13</span> 
+<span class="lineno">14</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">15</span> <span class="p">}</span></code></pre></figure>
 
 <p>O do/while é como o while, porém sem comparação inicial. Diferente do while que só roda a primeira vez que a condição for verdadeira, no do/while sempre vai executar o código de seu escopo pelo menos 1 vez.</p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
-    
-    <span class="k">do</span> <span class="p">{</span>
-        <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Valor de i: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
-        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// Ou i++</span>
-    <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">);</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno"> 4</span>     <span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno"> 5</span>     
+<span class="lineno"> 6</span>     <span class="k">do</span> <span class="p">{</span>
+<span class="lineno"> 7</span>         <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Valor de i: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+<span class="lineno"> 8</span>         <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">;</span> <span class="c1">// Ou i++</span>
+<span class="lineno"> 9</span>     <span class="p">}</span> <span class="k">while</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="mi">10</span><span class="p">);</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">12</span> <span class="p">}</span></code></pre></figure>
 
 <h4 id="funes">Funções</h4>
 
@@ -328,32 +339,32 @@
 
 <p>Funções são escritas de acordo com a seguinte sintaxe: <tipo de="" retorno=""> <nome função="">(<tipo parametro=""> &lt;nome parametro, ...) { <codigo> }</codigo></tipo></nome></tipo></p>
 
-<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="cp">#include &lt;stdio.h&gt;</span>
-
-<span class="c1">// &lt;tipo_retorno&gt; &lt;nome&gt; (&lt;parametros&gt;)</span>
-<span class="c1">// {</span>
-<span class="c1">//    &lt;codigo&gt;</span>
-<span class="c1">//    &lt;codigo&gt;</span>
-<span class="c1">//</span>
-<span class="c1">//    return &lt;valor&gt;; // return apenas se o tipo de retorno não for void</span>
-<span class="c1">// }</span>
-
-<span class="c1">// Exemplo:</span>
-
-<span class="kt">void</span> <span class="nf">saudacao</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Oi pessoa!&quot;</span><span class="p">);</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">soma</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
-<span class="p">}</span>
-
-<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
-    <span class="n">saudacao</span><span class="p">();</span>
-    <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;5 + 3 = %d&quot;</span><span class="p">,</span> <span class="n">soma</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
-
-    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
-<span class="p">}</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
+<span class="lineno"> 2</span> 
+<span class="lineno"> 3</span> <span class="c1">// &lt;tipo_retorno&gt; &lt;nome&gt; (&lt;parametros&gt;)</span>
+<span class="lineno"> 4</span> <span class="c1">// {</span>
+<span class="lineno"> 5</span> <span class="c1">//    &lt;codigo&gt;</span>
+<span class="lineno"> 6</span> <span class="c1">//    &lt;codigo&gt;</span>
+<span class="lineno"> 7</span> <span class="c1">//</span>
+<span class="lineno"> 8</span> <span class="c1">//    return &lt;valor&gt;; // return apenas se o tipo de retorno não for void</span>
+<span class="lineno"> 9</span> <span class="c1">// }</span>
+<span class="lineno">10</span> 
+<span class="lineno">11</span> <span class="c1">// Exemplo:</span>
+<span class="lineno">12</span> 
+<span class="lineno">13</span> <span class="kt">void</span> <span class="nf">saudacao</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">14</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;Oi pessoa!&quot;</span><span class="p">);</span>
+<span class="lineno">15</span> <span class="p">}</span>
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="kt">int</span> <span class="nf">soma</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">18</span>     <span class="k">return</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+<span class="lineno">19</span> <span class="p">}</span>
+<span class="lineno">20</span> 
+<span class="lineno">21</span> <span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span> <span class="p">{</span>
+<span class="lineno">22</span>     <span class="n">saudacao</span><span class="p">();</span>
+<span class="lineno">23</span>     <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;5 + 3 = %d&quot;</span><span class="p">,</span> <span class="n">soma</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">3</span><span class="p">));</span>
+<span class="lineno">24</span> 
+<span class="lineno">25</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="lineno">26</span> <span class="p">}</span></code></pre></figure>
 
 
 		</div>
