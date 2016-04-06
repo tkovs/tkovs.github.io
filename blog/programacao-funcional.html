@@ -36,14 +36,9 @@
 	<li>
 		<a href="http://tkovs.github.io/blog">Blog</a><span>/</span>
 	</li>
-	
 	<li>
-		<a title="tkovs on Github" 
-			href="https://github.com/tkovs" target="_blank">
-			Github
-		</a><span>/</span>
+		<a href="http://tkovs.github.io/resume">Currículo</a><span>/</span>
 	</li>
-	
 </ul>
                 
             </div>
@@ -92,7 +87,7 @@ Haskell por conta própria, recomendo os seguintes materiais:</p>
 
 <p><strong>Funções puras</strong>: São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
-resto do programa. Isso vai de encontro à computação paralela, que é a divisão de uma tarefa entre
+resto do programa. Isso vai ao encontro da computação paralela, que é a divisão de uma tarefa entre
 vários processadores, ou até mesmo máquinas. Um exemplo é você ter uma lista de dados e precisar aplicar
 uma função sobre todos os dados: pode-se dividir essa lista em listas menores e, tendo vários
 processadores a disposição, atribuir uma lista a cada um e fazê-los trabalharem paralelamente,
@@ -112,6 +107,10 @@ conteúdo de <code>vetor[indice]</code> for alterado antes da soma terminar, o r
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">indice</span> <span class="o">&lt;</span> <span class="n">tamanho</span><span class="p">;</span> <span class="n">indice</span><span class="o">++</span><span class="p">)</span>
     <span class="n">soma</span> <span class="o">+=</span> <span class="n">vetor</span><span class="p">[</span><span class="n">indice</span><span class="p">]</span>
 <span class="p">}</span>
+
+<span class="n">Outro</span> <span class="n">exemplo</span> <span class="k">do</span> <span class="n">uso</span> <span class="n">de</span> <span class="n">programa</span><span class="err">çã</span><span class="n">o</span> <span class="n">paralela</span> <span class="err">é</span> <span class="n">na</span> <span class="n">renderiza</span><span class="err">çã</span><span class="n">o</span> <span class="n">de</span> <span class="n">imagens</span><span class="p">.</span> <span class="n">H</span><span class="err">á</span> <span class="n">milh</span><span class="err">õ</span><span class="n">es</span> <span class="n">de</span> <span class="n">pixels</span> <span class="n">que</span>
+<span class="n">devem</span> <span class="n">ser</span> <span class="n">renderizados</span><span class="p">.</span> <span class="n">Todos</span> <span class="n">eles</span> <span class="n">podem</span> <span class="n">ser</span> <span class="n">renderizados</span> <span class="n">individualmente</span><span class="p">,</span> <span class="n">sem</span> <span class="n">depender</span> <span class="n">um</span> <span class="k">do</span> <span class="n">outro</span><span class="p">.</span>
+<span class="n">A</span> <span class="n">ideia</span> <span class="err">é</span> <span class="n">mais</span> <span class="n">ou</span> <span class="n">menos</span> <span class="n">essa</span><span class="p">.</span> <span class="n">Logo</span><span class="p">,</span> <span class="n">dividir</span> <span class="n">a</span> <span class="n">tarefa</span> <span class="n">agiliza</span> <span class="n">demais</span> <span class="n">o</span> <span class="n">processo</span><span class="p">.</span>
 
 <span class="n">printf</span> <span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span> <span class="n">soma</span><span class="p">);</span></code></pre></figure>
 
@@ -138,7 +137,7 @@ Mas antes de entrar nesse assunto será demonstrado aqui o uso da recursão para
 <span class="c1">-- fat 5 </span>
 <span class="c1">-- 120</span></code></pre></figure>
 
-<p>Recursão de cauda, ou <strong>tail call</strong> em inglês, é como uma subcategoria de recursão, e é usada pois
+<p>Recursão de cauda, ou <strong>tail call</strong> em inglês, é como uma subcategoria da recursão, e é usada pois
 na recursão comum o número de chamadas à função aumenta, dessa forma a pilha acaba estourando.
 Explicando isso de uma maneira simples, uma função com recursão de cauda é uma função onde a chamada
 a si mesma ocorre apenas no final da função, pois a cauda de uma função é sua última ação, seu
@@ -200,6 +199,14 @@ auxiliar.</p>
 <span class="cm">-&gt; 8</span>
 <span class="cm">-}</span></code></pre></figure>
 
+<p><strong>Transparência referencial</strong>: Não importa quantas vezes uma função seja chamada, se o parâmetro for
+o mesmo o retorno também será, e a essa propriedade se dá o nome de transparência referencial.
+Dessa forma, facilmente se prova que uma função está funcionando como
+deveria, e consequentemente, constroe-se funções mais complexas e seguras. Isso parece óbvio, mas em
+outros paradigmas, é comum a mesma expressão poder resultar em diferentes valores em diferentes
+momentos dependendo do estado de execução do programa. Como a <a href="https://wiki.haskell.org">wiki do
+Haskell</a> mostra, se <code>y = f x</code> e <code>g = h y y</code>, poderia substituir y por f x
+de modo que g fosse descrito por <code>g = h (f x) (f x)</code> e se obter o mesmo resultado.</p>
 
 		</div>
 	</div>
