@@ -2,16 +2,18 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title></title>
-    <description>Um blog sobre mim e sobre o que eu achar interessante.</description>
+    <description>Um blog sobre mim e o que mais eu achar interessante</description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 04 Apr 2016 22:30:48 -0300</pubDate>
-    <lastBuildDate>Mon, 04 Apr 2016 22:30:48 -0300</lastBuildDate>
+    <pubDate>Tue, 05 Apr 2016 23:29:00 -0300</pubDate>
+    <lastBuildDate>Tue, 05 Apr 2016 23:29:00 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
         <title>Programação Funcional</title>
-        <description>&lt;p&gt;Primeiramente, devo lembra-lo que um paradigma de programaçao é o modo que construímos um programa,
+        <description>&lt;p&gt;&lt;em&gt;Esse artigo é recomendado para quem já tem experiência com programação&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;Primeiramente, devo lembra-lo que um paradigma de programaçao é o modo que construímos um programa,
 se tratando da sua estrutura, da forma como se escreve e como seu fluxo de funcionamento é descrito.
 É um conceito teórico que embasa, posteriormente, o funcionamento de uma linguagem de programação.
 O paradigma tratado nesse texto é baseado no cálculo de funções, diferente do paradigma imperativo na troca de 
@@ -19,6 +21,18 @@ estados durante a execução de um programa, e do paradigma Orientado a Objetos 
 troca de mensagens entre objetos - dei esses dois exemplos pois são os paradigmas mais comuns.
 O paradigma funcional é, naturalmente, um paradigma declarativo, pois os programas se focam mais no
 que deve ser feito do que nos passos para o fazer.&lt;/p&gt;
+
+&lt;h3 id=&quot;haskell&quot;&gt;Haskell&lt;/h3&gt;
+
+&lt;p&gt;A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional e
+muito reconhecida academicamente. Em breve escrevo uma postagem sobre ela apenas com as informações
+necessárias para o entendimento dessa introdução à programação funcional. Caso queira estudar
+Haskell por conta própria, recomendo os seguintes materiais:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://www.cs.nott.ac.uk/~pszgmh/book.html&quot;&gt;&lt;strong&gt;Programming in Haskell&lt;/strong&gt; &lt;em&gt;by Graham Hutton&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.haskell.org/&quot;&gt;&lt;strong&gt;Wiki Haskell&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;h3 id=&quot;conceitos&quot;&gt;Conceitos&lt;/h3&gt;
 
@@ -30,7 +44,110 @@ resto do programa. Isso vai de encontro à computação paralela, que é a divis
 vários processadores, ou até mesmo máquinas. Um exemplo é você ter uma lista de dados e precisar aplicar
 uma função sobre todos os dados: pode-se dividir essa lista em listas menores e, tendo vários
 processadores a disposição, atribuir uma lista a cada um e fazê-los trabalharem paralelamente,
-otimizando a tarefa.&lt;/p&gt;
+otimizando a tarefa. Outro conceito que contribui para paralelização é a imutabilidade.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Imutabilidade&lt;/strong&gt;: Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
+de se alterar o valor existe, cria-se uma cópia para se trabalhar, um dado novo, baseado no velho.
+Ao manipular dados, você não precisa se preocupar em alterar dados, pois novos sempre são criados
+quando você precisa fazer isso.&lt;/p&gt;
+
+&lt;p&gt;No exemplo abaixo, imagine que nesse programa escrito em C a variável &lt;code&gt;tamanho&lt;/code&gt; já tenha sido
+declarada e contenha o tamanho do &lt;code&gt;vetor&lt;/code&gt;, e &lt;code&gt;soma&lt;/code&gt; já tenha sido declarada anteriormente também. Se o
+conteúdo de &lt;code&gt;vetor[indice]&lt;/code&gt; for alterado antes da soma terminar, o resultado será incorreto.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;int&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;indice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;indice&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tamanho&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;indice&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vetor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+&lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Recursão&lt;/strong&gt;: O único meio de iteração ao se programar de um jeito puramente funcional é usando recursão.
+Recursão, na computação, é como definimos o comportamento de uma função que invoca a si mesma.
+Devido ao paralelismo, o resultado é otimizado, porém como recursão está em constante uso, as vezes
+acaba pesando, mesmo com os recursos de otimização, por isso há outros meios que contribuem para 
+isso, como por exemplo usar recursão de cauda.
+Mas antes de entrar nesse assunto será demonstrado aqui o uso da recursão para funções comuns.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;c1&quot;&gt;-- Soma de uma lista&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Num&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Num&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;-- sum [1,2,3,4,5]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 15&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;-- Fatorial de um número&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;fat&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;fat&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;fat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fat&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;-- fat 5 &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 120&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Recursão de cauda, ou &lt;strong&gt;tail call&lt;/strong&gt; em inglês, é como uma subcategoria de recursão, e é usada pois
+na recursão comum o número de chamadas à função aumenta, dessa forma a pilha acaba estourando.
+Explicando isso de uma maneira simples, uma função com recursão de cauda é uma função onde a chamada
+a si mesma ocorre apenas no final da função, pois a cauda de uma função é sua última ação, seu
+último cálculo, dessa forma não é preciso manter na pilha de chamada os valores de retorno. É
+verdade que funções recursivas podem ser mais custosas do que iterações, mas normalmente os
+compiladores de linguagens funcionais transformam chamadas a funções com recursão em cauda em laços,
+o que dá a eficiência de um loop, o código provavelmente ficará mais legível, e as chamadas à função
+podem ser divididas entre processadores/máquinas.&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;O código abaixo mostra a escrita e o funcionamento da função fibonacci sem usar tail call.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;-- Fibonacci sem tail call&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 3&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 4&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 5&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 6&lt;/span&gt; 
+&lt;span class=&quot;lineno&quot;&gt; 7&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;{-&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 8&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; Execução do código acima para x = 6&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt; 9&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib 6&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;10&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; (fib 5) + (fib 4)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; ((fib 4) + (fib 3)) + ((fib 3) + (fib 2))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; (((fib 3) + (fib 2)) + ((fib 2) + (fib 1))) + (((fib 2) + (fib 1)) + ((fib 1) + (fib 0)))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; ((((fib 2) + (fib 1)) + ((fib 1) + (fib 0))) + (((fib 1) + (fib 0)) + 1)) + ((((fib 1) + (fib 0)) + 1) + (1 + 0))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;14&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; (((((fib 1) + (fib 0)) + 1) + (1 + 0)) + ((1 + 0) + 1)) + (((1 + 0) + 1) + (1 + 0))&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;15&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; ((((1 + 0) + 1) + 1) + (1 + 1)) + ((1 + 1) + 1)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;16&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; (((1 + 1) + 1) + 2) + (2 + 1)&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;17&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; ((2 + 1) + 2) + 3&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;18&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; (3 + 2) + 3&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; 5 + 3&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; 8&lt;/span&gt;
+&lt;span class=&quot;lineno&quot;&gt;21&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;O código abaixo mostra a escrita e o funcionamento da função fibonacci usando tail call e uma função
+auxiliar.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;c1&quot;&gt;-- Fibonacci com tail call&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;fib&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib_aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;nf&quot;&gt;fib_aux&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;fib_aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kr&quot;&gt;_&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;    &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;fib_aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib_aux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+
+&lt;span class=&quot;cm&quot;&gt;{-&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; Execução do código acima para x = 6&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib 6&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib_aux(6, 0, 1)&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib_aux(5, 1, 1)&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib_aux(4, 1, 2)&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib_aux(3, 2, 3)&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib_aux(2, 3, 5)&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib_aux(1, 5, 8)&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib_aux(0, 8, 13)&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; 8&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </description>
         <pubDate>Thu, 31 Mar 2016 19:48:45 -0300</pubDate>
         <link>http://tkovs.github.io/blog/programacao-funcional</link>
