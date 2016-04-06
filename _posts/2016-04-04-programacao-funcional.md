@@ -35,7 +35,7 @@ Para compreender esse paradigma, alguns conceitos são fundamentais.
 
 **Funções puras**: São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
-resto do programa. Isso vai de encontro à computação paralela, que é a divisão de uma tarefa entre
+resto do programa. Isso vai ao encontro da computação paralela, que é a divisão de uma tarefa entre
 vários processadores, ou até mesmo máquinas. Um exemplo é você ter uma lista de dados e precisar aplicar
 uma função sobre todos os dados: pode-se dividir essa lista em listas menores e, tendo vários
 processadores a disposição, atribuir uma lista a cada um e fazê-los trabalharem paralelamente,
@@ -56,6 +56,10 @@ soma = 0;
 for (int indice = 0; indice < tamanho; indice++)
     soma += vetor[indice]
 }
+
+Outro exemplo do uso de programação paralela é na renderização de imagens. Há milhões de pixels que
+devem ser renderizados. Todos eles podem ser renderizados individualmente, sem depender um do outro.
+A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza demais o processo.
 
 printf ("%d", soma);
 {% endhighlight %}
@@ -85,7 +89,7 @@ fat x = x * fat (x-1)
 -- 120
 {% endhighlight %}
 
-Recursão de cauda, ou **tail call** em inglês, é como uma subcategoria de recursão, e é usada pois
+Recursão de cauda, ou **tail call** em inglês, é como uma subcategoria da recursão, e é usada pois
 na recursão comum o número de chamadas à função aumenta, dessa forma a pilha acaba estourando.
 Explicando isso de uma maneira simples, uma função com recursão de cauda é uma função onde a chamada
 a si mesma ocorre apenas no final da função, pois a cauda de uma função é sua última ação, seu
@@ -146,3 +150,12 @@ fib_aux (x, current, next) = fib_aux(x-1, next, current + next)
 -> 8
 -}
 {% endhighlight %}
+
+**Transparência referencial**: Não importa quantas vezes uma função seja chamada, se o parâmetro for
+o mesmo o retorno também será, e a essa propriedade se dá o nome de transparência referencial.
+Dessa forma, facilmente se prova que uma função está funcionando como
+deveria, e consequentemente, constroe-se funções mais complexas e seguras. Isso parece óbvio, mas em
+outros paradigmas, é comum a mesma expressão poder resultar em diferentes valores em diferentes
+momentos dependendo do estado de execução do programa. Como a [wiki do
+Haskell](https://wiki.haskell.org) mostra, se `y = f x` e `g = h y y`, poderia substituir y por f x
+de modo que g fosse descrito por `g = h (f x) (f x)` e se obter o mesmo resultado.
