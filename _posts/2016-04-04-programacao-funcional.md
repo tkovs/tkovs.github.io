@@ -70,7 +70,7 @@ Mas antes de entrar nesse assunto será demonstrado aqui o uso da recursão para
 {% highlight haskell %}
 -- Soma de uma lista
 sum :: [Num] -> Num
-sum [] = []
+sum [] = 0
 sum (x:xs) = x + sum xs
 
 -- sum [1,2,3,4,5]
