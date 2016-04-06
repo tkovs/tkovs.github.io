@@ -124,7 +124,7 @@ Mas antes de entrar nesse assunto será demonstrado aqui o uso da recursão para
 
 <figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="c1">-- Soma de uma lista</span>
 <span class="nf">sum</span> <span class="ow">::</span> <span class="p">[</span><span class="kt">Num</span><span class="p">]</span> <span class="ow">-&gt;</span> <span class="kt">Num</span>
-<span class="nf">sum</span> <span class="kt">[]</span> <span class="ow">=</span> <span class="kt">[]</span>
+<span class="nf">sum</span> <span class="kt">[]</span> <span class="ow">=</span> <span class="mi">0</span>
 <span class="nf">sum</span> <span class="p">(</span><span class="n">x</span><span class="kt">:</span><span class="n">xs</span><span class="p">)</span> <span class="ow">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">sum</span> <span class="n">xs</span>
 
 <span class="c1">-- sum [1,2,3,4,5]</span>
