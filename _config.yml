@@ -12,7 +12,7 @@ url: http://tkovs.github.io
 harmony:
   name: tkovs
   # Little description about your site
-  description: Um blog sobre mim e sobre o que eu achar interessante.
+  description: Um blog sobre mim e o que mais eu achar interessante
   # It will appear in your document head meta (for Google search results) and 
   # in your feed.xml site description.
   meta_description: > # 
