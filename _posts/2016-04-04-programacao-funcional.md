@@ -185,8 +185,9 @@ de modo que g fosse descrito por `g = h (f x) (f x)` e se obter o mesmo resultad
 
 Uma das características desse paradigma é que funções são cidadãos de primeira classe.
 Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
-agora são um tipo de dado. Podem ser passadas para funções como parâmetros e serem retornadas por
-funções. Daí, temos 2 conceitos novos: **high order functions** e **currying**. Esses dois termos
+agora suportam muitas operações comuns a outros objetos, como serem passadas para funções como
+parâmetros, serem retornadas por funções, e serem atribuídas a uma variável.
+Daí, temos 2 conceitos novos: **high order functions** e **currying**. Esses dois termos
 podem ser confundidos mas a verdade é que estão intrisecamente ligados: uma high order function é
 uma função que recebe uma função como parâmetro, enquanto curried functions são funções que retornam
 funções como parâmetros.
