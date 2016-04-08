@@ -5,8 +5,8 @@
     <description>Um blog sobre mim e o que mais eu achar interessante</description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 08 Apr 2016 17:45:21 -0300</pubDate>
-    <lastBuildDate>Fri, 08 Apr 2016 17:45:21 -0300</lastBuildDate>
+    <pubDate>Fri, 08 Apr 2016 19:08:02 -0300</pubDate>
+    <lastBuildDate>Fri, 08 Apr 2016 19:08:02 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -186,8 +186,9 @@ de modo que g fosse descrito por &lt;code&gt;g = h (f x) (f x)&lt;/code&gt; e se
 
 &lt;p&gt;Uma das características desse paradigma é que funções são cidadãos de primeira classe.
 Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
-agora são um tipo de dado. Podem ser passadas para funções como parâmetros e serem retornadas por
-funções. Daí, temos 2 conceitos novos: &lt;strong&gt;high order functions&lt;/strong&gt; e &lt;strong&gt;currying&lt;/strong&gt;. Esses dois termos
+agora suportam muitas operações comuns a outros objetos, como serem passadas para funções como
+parâmetros, serem retornadas por funções, e serem atribuídas a uma variável.
+Daí, temos 2 conceitos novos: &lt;strong&gt;high order functions&lt;/strong&gt; e &lt;strong&gt;currying&lt;/strong&gt;. Esses dois termos
 podem ser confundidos mas a verdade é que estão intrisecamente ligados: uma high order function é
 uma função que recebe uma função como parâmetro, enquanto curried functions são funções que retornam
 funções como parâmetros.
@@ -216,6 +217,9 @@ aplica a função sobre cada elemento da lista retornando uma nova lista com as 
 &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;h4 id=&quot;funes-annimas&quot;&gt;Funções anônimas&lt;/h4&gt;
+
+&lt;p&gt;…&lt;/p&gt;
 </description>
         <pubDate>Thu, 31 Mar 2016 19:48:45 -0300</pubDate>
         <link>http://tkovs.github.io/blog/programacao-funcional</link>
