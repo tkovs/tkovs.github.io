@@ -5,40 +5,42 @@
     <description>Um blog sobre mim e o que mais eu achar interessante</description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 06 Apr 2016 19:55:07 -0300</pubDate>
-    <lastBuildDate>Wed, 06 Apr 2016 19:55:07 -0300</lastBuildDate>
+    <pubDate>Fri, 08 Apr 2016 17:45:21 -0300</pubDate>
+    <lastBuildDate>Fri, 08 Apr 2016 17:45:21 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
         <title>Programação Funcional</title>
         <description>&lt;p&gt;&lt;em&gt;Esse artigo é recomendado para quem já tem experiência com programação&lt;/em&gt;&lt;/p&gt;
 
-&lt;p&gt;Primeiramente, devo lembra-lo que um paradigma de programaçao é o modo que construímos um programa,
-se tratando da sua estrutura, da forma como se escreve e como seu fluxo de funcionamento é descrito.
-É um conceito teórico que embasa, posteriormente, o funcionamento de uma linguagem de programação.
-O paradigma tratado nesse texto é baseado no cálculo de funções, diferente do paradigma imperativo na troca de 
-estados durante a execução de um programa, e do paradigma Orientado a Objetos que se baseia na 
-troca de mensagens entre objetos - dei esses dois exemplos pois são os paradigmas mais comuns.
+&lt;p&gt;Um paradigma de programação é um modo de se classificar linguagens de programação, definindo os
+recursos que elas disponibilizam e o seu funcionamento. Linguagens de programação podem estar
+embasadas em apenas um paradigma, e podem ser multiparadigmas. Os mais comuns são o &lt;strong&gt;orientado a
+objetos&lt;/strong&gt;, o &lt;strong&gt;imperativo&lt;/strong&gt;, e o &lt;strong&gt;funcional&lt;/strong&gt;.
 O paradigma funcional é, naturalmente, um paradigma declarativo, pois os programas se focam mais no
-que deve ser feito do que nos passos para o fazer.&lt;/p&gt;
+que deve ser feito do que nos passos para o fazer. Há conceitos que devem ser compreendidos para se
+programar funcionalmente, e eles serão abordados no decorrer do texto.&lt;/p&gt;
 
-&lt;h3 id=&quot;haskell&quot;&gt;Haskell&lt;/h3&gt;
+&lt;h2 id=&quot;haskell&quot;&gt;Haskell&lt;/h2&gt;
 
 &lt;p&gt;A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional e
-muito reconhecida academicamente. Em breve escrevo uma postagem sobre ela apenas com as informações
-necessárias para o entendimento dessa introdução à programação funcional. Caso queira estudar
-Haskell por conta própria, recomendo os seguintes materiais:&lt;/p&gt;
+muito reconhecida academicamente. Em breve irei fazer o
+port para a linguagem Ruby ou Javascript dos códigos usados aqui, assim facilita o entendimento para o maior
+público. Deixarei os exemplos em Haskell no código mas ficarão em segundo plano. 
+Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais:&lt;/p&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://www.cs.nott.ac.uk/~pszgmh/book.html&quot;&gt;&lt;strong&gt;Programming in Haskell&lt;/strong&gt; &lt;em&gt;by Graham Hutton&lt;/em&gt;&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://wiki.haskell.org/&quot;&gt;&lt;strong&gt;Wiki Haskell&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;conceitos&quot;&gt;Conceitos&lt;/h3&gt;
+&lt;h2 id=&quot;conceitos&quot;&gt;Conceitos&lt;/h2&gt;
 
 &lt;p&gt;Para compreender esse paradigma, alguns conceitos são fundamentais.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Funções puras&lt;/strong&gt;: São funções sem side-effects - ou efeitos colaterais, em português. Elas não
+&lt;h4 id=&quot;funes-puras&quot;&gt;Funções puras&lt;/h4&gt;
+
+&lt;p&gt;São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
 resto do programa. Isso vai ao encontro da computação paralela, que é a divisão de uma tarefa entre
 vários processadores, ou até mesmo máquinas. Um exemplo é você ter uma lista de dados e precisar aplicar
@@ -46,7 +48,9 @@ uma função sobre todos os dados: pode-se dividir essa lista em listas menores 
 processadores a disposição, atribuir uma lista a cada um e fazê-los trabalharem paralelamente,
 otimizando a tarefa. Outro conceito que contribui para paralelização é a imutabilidade.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Imutabilidade&lt;/strong&gt;: Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
+&lt;h4 id=&quot;imutabilidade&quot;&gt;Imutabilidade&lt;/h4&gt;
+
+&lt;p&gt;Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
 de se alterar o valor existe, cria-se uma cópia para se trabalhar, um dado novo, baseado no velho.
 Ao manipular dados, você não precisa se preocupar em alterar dados, pois novos sempre são criados
 quando você precisa fazer isso.&lt;/p&gt;
@@ -61,13 +65,15 @@ conteúdo de &lt;code&gt;vetor[indice]&lt;/code&gt; for alterado antes da soma t
     &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;vetor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;indice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 
-&lt;span class=&quot;n&quot;&gt;Outro&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;exemplo&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;uso&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;programa&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;çã&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;paralela&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;é&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;na&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;renderiza&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;çã&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;imagens&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;H&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;á&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;milh&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;õ&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;es&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;de&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;pixels&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;que&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;devem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ser&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;renderizados&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Todos&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;eles&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;podem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ser&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;renderizados&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;individualmente&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sem&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;depender&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;um&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;outro&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;A&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ideia&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;é&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;mais&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ou&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;menos&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;essa&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Logo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dividir&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tarefa&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;agiliza&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;demais&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;o&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;processo&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
-
 &lt;span class=&quot;n&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;%d&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;soma&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;Recursão&lt;/strong&gt;: O único meio de iteração ao se programar de um jeito puramente funcional é usando recursão.
+&lt;p&gt;Outro exemplo do uso de programação paralela é na renderização de imagens. Há milhões de pixels que
+devem ser renderizados. Todos eles podem ser renderizados individualmente, sem depender um do outro.
+A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.&lt;/p&gt;
+
+&lt;h4 id=&quot;recurso&quot;&gt;Recursão&lt;/h4&gt;
+
+&lt;p&gt;O único meio de iteração ao se programar de um jeito puramente funcional é usando recursão.
 Recursão, na computação, é como definimos o comportamento de uma função que invoca a si mesma.
 Devido ao paralelismo, o resultado é otimizado, porém como recursão está em constante uso, as vezes
 acaba pesando, mesmo com os recursos de otimização, por isso há outros meios que contribuem para 
@@ -79,7 +85,14 @@ Mas antes de entrar nesse assunto será demonstrado aqui o uso da recursão para
 &lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;[]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
 &lt;span class=&quot;nf&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;sum&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;
 
+&lt;span class=&quot;c1&quot;&gt;-- Funcionamento&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;-- sum [1,2,3,4,5]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 1 + sum [2,3,4,5]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 1 + 2 + sum [3,4,5]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 1 + 2 + 3 + sum [4,5]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 1 + 2 + 3 + 4 + sum [5]&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 1 + 2 + 3 + 4 + 5 + sum []&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 1 + 2 + 3 + 4 + 5 + 0&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;-- 15&lt;/span&gt;
 
 &lt;span class=&quot;c1&quot;&gt;-- Fatorial de um número&lt;/span&gt;
@@ -87,7 +100,13 @@ Mas antes de entrar nesse assunto será demonstrado aqui o uso da recursão para
 &lt;span class=&quot;nf&quot;&gt;fat&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 &lt;span class=&quot;nf&quot;&gt;fat&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fat&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
-&lt;span class=&quot;c1&quot;&gt;-- fat 5 &lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- Funcionamento&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- fat 5&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 5 * fat 4&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 5 * 4 * fat 3&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 5 * 4 * 3 * fat 2&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 5 * 4 * 3 * 2 * fat 1&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;-- 5 * 4 * 3 * 2 * 1&lt;/span&gt;
 &lt;span class=&quot;c1&quot;&gt;-- 120&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;Recursão de cauda, ou &lt;strong&gt;tail call&lt;/strong&gt; em inglês, é como uma subcategoria da recursão, e é usada pois
@@ -140,7 +159,7 @@ auxiliar.&lt;/p&gt;
 &lt;span class=&quot;nf&quot;&gt;fib_aux&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fib_aux&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
 &lt;span class=&quot;cm&quot;&gt;{-&lt;/span&gt;
-&lt;span class=&quot;cm&quot;&gt;-&amp;gt; Execução do código acima para x = 6&lt;/span&gt;
+&lt;span class=&quot;cm&quot;&gt;-&amp;gt; Funcionamento&lt;/span&gt;
 &lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib 6&lt;/span&gt;
 &lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib_aux(6, 0, 1)&lt;/span&gt;
 &lt;span class=&quot;cm&quot;&gt;-&amp;gt; fib_aux(5, 1, 1)&lt;/span&gt;
@@ -152,7 +171,9 @@ auxiliar.&lt;/p&gt;
 &lt;span class=&quot;cm&quot;&gt;-&amp;gt; 8&lt;/span&gt;
 &lt;span class=&quot;cm&quot;&gt;-}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;&lt;strong&gt;Transparência referencial&lt;/strong&gt;: Não importa quantas vezes uma função seja chamada, se o parâmetro for
+&lt;h4 id=&quot;transparncia-referencial&quot;&gt;Transparência referencial&lt;/h4&gt;
+
+&lt;p&gt;Não importa quantas vezes uma função seja chamada, se o parâmetro for
 o mesmo o retorno também será, e a essa propriedade se dá o nome de transparência referencial.
 Dessa forma, facilmente se prova que uma função está funcionando como
 deveria, e consequentemente, constroe-se funções mais complexas e seguras. Isso parece óbvio, mas em
@@ -160,6 +181,41 @@ outros paradigmas, é comum a mesma expressão poder resultar em diferentes valo
 momentos dependendo do estado de execução do programa. Como a &lt;a href=&quot;https://wiki.haskell.org&quot;&gt;wiki do
 Haskell&lt;/a&gt; mostra, se &lt;code&gt;y = f x&lt;/code&gt; e &lt;code&gt;g = h y y&lt;/code&gt;, poderia substituir y por f x
 de modo que g fosse descrito por &lt;code&gt;g = h (f x) (f x)&lt;/code&gt; e se obter o mesmo resultado.&lt;/p&gt;
+
+&lt;h4 id=&quot;funes&quot;&gt;Funções&lt;/h4&gt;
+
+&lt;p&gt;Uma das características desse paradigma é que funções são cidadãos de primeira classe.
+Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
+agora são um tipo de dado. Podem ser passadas para funções como parâmetros e serem retornadas por
+funções. Daí, temos 2 conceitos novos: &lt;strong&gt;high order functions&lt;/strong&gt; e &lt;strong&gt;currying&lt;/strong&gt;. Esses dois termos
+podem ser confundidos mas a verdade é que estão intrisecamente ligados: uma high order function é
+uma função que recebe uma função como parâmetro, enquanto curried functions são funções que retornam
+funções como parâmetros.
+Através desse recurso, qualquer função com múltiplos parâmetros pode ser escrita com apenas um. Para
+exemplo será usado o código abaixo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;Int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;add&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Observando a declaração da função, ela recebe 1 inteiro e retorna uma função que recebe um inteiro e
+retorna outro inteiro. No corpo da função diz-se que recebe 2 parâmetros e retorna a soma deles.
+Isso ocorre porque a função acima recebe um inteiro e retorna uma função, que recebe um inteiro y e
+retorna o resultado de x + y.&lt;/p&gt;
+
+&lt;p&gt;Com esses recursos é possível escrever funções definitivamente úteis que são muito comuns em linguagens
+funcionais e que costumam receber um port para a biblioteca padrão de linguagens não funcionais. Entre elas, há a
+função map é uma função para manipulação de listas. Ela recebe uma função e uma lista genérica,
+aplica a função sobre cada elemento da lista retornando uma nova lista com as modificações.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;c1&quot;&gt;-- Usando recursão&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;[]&lt;/span&gt;     &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;[]&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;kt&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;-- Usando list comprehension&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
 </description>
         <pubDate>Thu, 31 Mar 2016 19:48:45 -0300</pubDate>
         <link>http://tkovs.github.io/blog/programacao-funcional</link>
