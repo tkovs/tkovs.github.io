@@ -219,3 +219,7 @@ map f (x:xs) = f x : map f xs
 map :: (a -> b) -> [a] -> [b]
 map f x = [f x | x <- xs]
 {% endhighlight %}
+
+####Funções anônimas
+
+...
