@@ -77,7 +77,7 @@ acaba pesando, mesmo com os recursos de otimização, por isso há outros meios 
 isso, como por exemplo usar recursão de cauda.
 Mas antes de entrar nesse assunto será demonstrado aqui o uso da recursão para funções comuns.
 
-{% highlight haskell %}
+{% highlight haskell linenos %}
 -- Soma de uma lista
 sum :: [Num] -> Num
 sum [] = 0
@@ -147,7 +147,7 @@ fib x = fib (x-1) + fib (x-2)
 > O código abaixo mostra a escrita e o funcionamento da função fibonacci usando tail call e uma função
 auxiliar.
 
-{% highlight haskell %}
+{% highlight haskell linenos %}
 -- Fibonacci com tail call
 fib :: Int -> Int
 fib x = fib_aux (x, 0, 1)
@@ -194,7 +194,7 @@ funções como parâmetros.
 Através desse recurso, qualquer função com múltiplos parâmetros pode ser escrita com apenas um. Para
 exemplo será usado o código abaixo:
 
-{% highlight haskell %}
+{% highlight haskell linenos %}
 add :: Int - (Int -> Int)
 add x y = x + y
 {% endhighlight %}
@@ -209,7 +209,7 @@ funcionais e que costumam receber um port para a biblioteca padrão de linguagen
 função map é uma função para manipulação de listas. Ela recebe uma função e uma lista genérica,
 aplica a função sobre cada elemento da lista retornando uma nova lista com as modificações.
 
-{% highlight haskell %}
+{% highlight haskell linenos %}
 -- Usando recursão
 map :: (a -> b) -> [a] -> [b]
 map f []     = []
