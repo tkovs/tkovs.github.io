@@ -3,7 +3,7 @@ url: http://tkovs.github.io
 
 harmony:
   name: tkovs
-  description: Um blog sobre mim e o que mais eu achar interessante
+  description: #Um blog sobre mim e o que mais eu achar interessante
   meta_description: > # 
       Apenas um blog sobre mim, música, programação, as pessoas e o que mais
       me der na telha, flw.
