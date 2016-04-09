@@ -12,7 +12,37 @@ Nesse post será demonstrando o desenvolvimento de um sliding puzzle, usando a l
 programação Ruby, que será executado em CLI - Command Line Interface. Para uso didático, é um bom
 meio de se começar os estudos.
 
-O resultado final será esse
+O resultado final será algo [assim](https://github.com/tkovs/sliding-puzzle/tree/master/ruby)
+
+Um trecho do código que escrevi e está no github:
+
+{% highlight ruby %}
+def moviment(move)
+    if valid?(move)
+       /r_ = row _, c_ = column _
+        _n = _ next, _c = _ current/
+        rc, cc = white_row, white_column
+        rn, cn = rc, cc
+
+        if    move == UP_ARROW    then rn += 1
+        elsif move == DOWN_ARROW  then rn -= 1
+        elsif move == LEFT_ARROW  then cn += 1
+        elsif move == RIGHT_ARROW then cn -= 1
+        end
+        
+        @grid[rc][cc], @grid[rn][cn] = @grid [rn][cn], @grid[rc][cc]
+        @moves += 1
+    end
+end
+
+def white_row #row that contains the white space (0 here)
+    @grid.find_index{|row| row.include?(0)}
+end
+
+def white_column #column that contains the white space (0 here)
+    @grid.map{|row| row.find_index(0)}.compact.first
+end
+{% endhighlight %}
 
 ##Ruby
 
@@ -34,3 +64,7 @@ Sliding Puzzle é um jogo muito simples. Uma versão comum é um tabuleiro quatr
 céculas) onde cada célula tem um número de 1 a 15. Uma das células não contém nada para que seja
 possível a locomoção das outras sobre essa através da troca na vertical ou na horizontal com
 células.
+
+##Funcionamento
+
+...
