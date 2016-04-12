@@ -114,7 +114,7 @@ Explicando isso de uma maneira simples, uma função com recursão de cauda é u
 a si mesma ocorre apenas no final da função, pois a cauda de uma função é sua última ação, seu
 último cálculo, dessa forma não é preciso manter na pilha de chamada os valores de retorno. É
 verdade que funções recursivas podem ser mais custosas do que iterações, mas normalmente os
-compiladores de linguagens funcionais transformam chamadas a funções com recursão em cauda em laços,
+compiladores de linguagens funcionais transformam chamadas a funções com recursão de cauda em laços,
 o que dá a eficiência de um loop, o código provavelmente ficará mais legível, e as chamadas à função
 podem ser divididas entre processadores/máquinas.
 

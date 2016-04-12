@@ -8,41 +8,11 @@ categories:
 permalink: /blog/ruby-sliding-puzzle
 ---
 
-Nesse post será demonstrando o desenvolvimento de um sliding puzzle, usando a linguagem de
+Nesse post será demonstrado o desenvolvimento de um sliding puzzle, usando a linguagem de
 programação Ruby, que será executado em CLI - Command Line Interface. Para uso didático, é um bom
 meio de se começar os estudos.
 
-O resultado final será algo [assim](https://github.com/tkovs/sliding-puzzle/tree/master/ruby)
-
-Um trecho do código que escrevi e está no github:
-
-{% highlight ruby %}
-def moviment(move)
-    if valid?(move)
-       /r_ = row _, c_ = column _
-        _n = _ next, _c = _ current/
-        rc, cc = white_row, white_column
-        rn, cn = rc, cc
-
-        if    move == UP_ARROW    then rn += 1
-        elsif move == DOWN_ARROW  then rn -= 1
-        elsif move == LEFT_ARROW  then cn += 1
-        elsif move == RIGHT_ARROW then cn -= 1
-        end
-        
-        @grid[rc][cc], @grid[rn][cn] = @grid [rn][cn], @grid[rc][cc]
-        @moves += 1
-    end
-end
-
-def white_row #row that contains the white space (0 here)
-    @grid.find_index{|row| row.include?(0)}
-end
-
-def white_column #column that contains the white space (0 here)
-    @grid.map{|row| row.find_index(0)}.compact.first
-end
-{% endhighlight %}
+O resultado final será algo [assim](https://github.com/tkovs/sliding-puzzle/tree/master/ruby).
 
 ##Ruby
 
@@ -61,10 +31,31 @@ GIL - *Global Interpreter Lock*.
 <center><img src="http://www.appsgalery.com/pictures/000/122/-uzzle-15--liding--uzzle-122141.png"></center>
 
 Sliding Puzzle é um jogo muito simples. Uma versão comum é um tabuleiro quatro por quatro (16
-céculas) onde cada célula tem um número de 1 a 15. Uma das células não contém nada para que seja
+células) onde cada célula tem um número de 1 a 15. Uma das células não contém nada para que seja
 possível a locomoção das outras sobre essa através da troca na vertical ou na horizontal com
-células.
+células. O tabuleiro começa com as células desordenadas e o objetivo é ordena-las de modo que a
+última célula seja o espaço vazio.
 
 ##Funcionamento
 
-...
+O funcionamento será o seguinte:
+
+1. Cria-se uma classe que irá gerenciar o tabuleiro NxN onde N é definido pelo usuário
+2. O tabuleiro é preenchido de 1 a 15 e logo depois desordenado
+3. Mostra-se o tabuleiro ao usuário
+4. O usuário insere um comando - *mover pra direita, esquerda, etc* - através das setas
+5. Altera-se o tabuleiro de acordo com o comando passado
+6. Verifica-se o status do tabuleiro
+    1. Se estiver desordenado volta-se ao passo 3
+    2. Se estiver ordenado se segue
+7. Exibe quanto tempo e quantos movimentos foram necessários para vencer
+
+##Início
+
+Agora vamos dar início ao desenvolvimento do jogo
+
+####Preparação
+
+
+
+####Construtor
