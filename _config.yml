@@ -17,9 +17,9 @@ harmony:
 
   social: 
     github: tkovs
-    twitter: _tvovs
+    twitter: _tkovs
     facebook: joaovitorIFAL
-  show_disclaimer: true
+  show_disclaimer: false
 
 markdown:    kramdown
 highlighter: pygments 
