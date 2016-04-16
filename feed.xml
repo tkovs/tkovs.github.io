@@ -3,10 +3,10 @@
   <channel>
     <title></title>
     <description></description>
-    <link>http://localhost:4000/</link>
-    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sat, 16 Apr 2016 19:46:29 -0300</pubDate>
-    <lastBuildDate>Sat, 16 Apr 2016 19:46:29 -0300</lastBuildDate>
+    <link>http://tkovs.github.io/</link>
+    <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Sat, 16 Apr 2016 19:52:30 -0300</pubDate>
+    <lastBuildDate>Sat, 16 Apr 2016 19:52:30 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -67,8 +67,8 @@ células. O tabuleiro começa com as células desordenadas e o objetivo é orden
 &lt;h4 id=&quot;construtor&quot;&gt;Construtor&lt;/h4&gt;
 </description>
         <pubDate>Thu, 07 Apr 2016 21:29:30 -0300</pubDate>
-        <link>http://localhost:4000/blog/ruby-sliding-puzzle</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/ruby-sliding-puzzle</guid>
+        <link>http://tkovs.github.io/blog/ruby-sliding-puzzle</link>
+        <guid isPermaLink="true">http://tkovs.github.io/blog/ruby-sliding-puzzle</guid>
         
         
         <category>ruby</category>
@@ -288,8 +288,8 @@ aplica a função sobre cada elemento da lista retornando uma nova lista com as 
 &lt;p&gt;…&lt;/p&gt;
 </description>
         <pubDate>Thu, 31 Mar 2016 19:48:45 -0300</pubDate>
-        <link>http://localhost:4000/blog/programacao-funcional</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/programacao-funcional</guid>
+        <link>http://tkovs.github.io/blog/programacao-funcional</link>
+        <guid isPermaLink="true">http://tkovs.github.io/blog/programacao-funcional</guid>
         
         
         <category>programação funcional</category>
@@ -603,8 +603,8 @@ aplica a função sobre cada elemento da lista retornando uma nova lista com as 
 
 </description>
         <pubDate>Thu, 31 Mar 2016 19:48:45 -0300</pubDate>
-        <link>http://localhost:4000/blog/introducao-linguagem-c</link>
-        <guid isPermaLink="true">http://localhost:4000/blog/introducao-linguagem-c</guid>
+        <link>http://tkovs.github.io/blog/introducao-linguagem-c</link>
+        <guid isPermaLink="true">http://tkovs.github.io/blog/introducao-linguagem-c</guid>
         
         
         <category>linguagem c</category>
