@@ -58,39 +58,11 @@
 	    </span>
 		</p>		
 		<div class="post">
-			<p>Nesse post será demonstrando o desenvolvimento de um sliding puzzle, usando a linguagem de
+			<p>Nesse post será demonstrado o desenvolvimento de um sliding puzzle, usando a linguagem de
 programação Ruby, que será executado em CLI - Command Line Interface. Para uso didático, é um bom
 meio de se começar os estudos.</p>
 
-<p>O resultado final será algo <a href="https://github.com/tkovs/sliding-puzzle/tree/master/ruby">assim</a></p>
-
-<p>Um trecho do código que escrevi e está no github:</p>
-
-<figure class="highlight"><pre><code class="language-ruby" data-lang="ruby"><span class="k">def</span> <span class="nf">moviment</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
-    <span class="k">if</span> <span class="n">valid?</span><span class="p">(</span><span class="n">move</span><span class="p">)</span>
-       <span class="sr">/r_ = row _, c_ = column _</span>
-<span class="sr">        _n = _ next, _c = _ current/</span>
-        <span class="n">rc</span><span class="p">,</span> <span class="n">cc</span> <span class="o">=</span> <span class="n">white_row</span><span class="p">,</span> <span class="n">white_column</span>
-        <span class="n">rn</span><span class="p">,</span> <span class="n">cn</span> <span class="o">=</span> <span class="n">rc</span><span class="p">,</span> <span class="n">cc</span>
-
-        <span class="k">if</span>    <span class="n">move</span> <span class="o">==</span> <span class="no">UP_ARROW</span>    <span class="k">then</span> <span class="n">rn</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">elsif</span> <span class="n">move</span> <span class="o">==</span> <span class="no">DOWN_ARROW</span>  <span class="k">then</span> <span class="n">rn</span> <span class="o">-=</span> <span class="mi">1</span>
-        <span class="k">elsif</span> <span class="n">move</span> <span class="o">==</span> <span class="no">LEFT_ARROW</span>  <span class="k">then</span> <span class="n">cn</span> <span class="o">+=</span> <span class="mi">1</span>
-        <span class="k">elsif</span> <span class="n">move</span> <span class="o">==</span> <span class="no">RIGHT_ARROW</span> <span class="k">then</span> <span class="n">cn</span> <span class="o">-=</span> <span class="mi">1</span>
-        <span class="k">end</span>
-        
-        <span class="vi">@grid</span><span class="o">[</span><span class="n">rc</span><span class="o">][</span><span class="n">cc</span><span class="o">]</span><span class="p">,</span> <span class="vi">@grid</span><span class="o">[</span><span class="n">rn</span><span class="o">][</span><span class="n">cn</span><span class="o">]</span> <span class="o">=</span> <span class="vi">@grid</span> <span class="o">[</span><span class="n">rn</span><span class="o">][</span><span class="n">cn</span><span class="o">]</span><span class="p">,</span> <span class="vi">@grid</span><span class="o">[</span><span class="n">rc</span><span class="o">][</span><span class="n">cc</span><span class="o">]</span>
-        <span class="vi">@moves</span> <span class="o">+=</span> <span class="mi">1</span>
-    <span class="k">end</span>
-<span class="k">end</span>
-
-<span class="k">def</span> <span class="nf">white_row</span> <span class="c1">#row that contains the white space (0 here)</span>
-    <span class="vi">@grid</span><span class="o">.</span><span class="n">find_index</span><span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">row</span><span class="o">.</span><span class="n">include?</span><span class="p">(</span><span class="mi">0</span><span class="p">)}</span>
-<span class="k">end</span>
-
-<span class="k">def</span> <span class="nf">white_column</span> <span class="c1">#column that contains the white space (0 here)</span>
-    <span class="vi">@grid</span><span class="o">.</span><span class="n">map</span><span class="p">{</span><span class="o">|</span><span class="n">row</span><span class="o">|</span> <span class="n">row</span><span class="o">.</span><span class="n">find_index</span><span class="p">(</span><span class="mi">0</span><span class="p">)}</span><span class="o">.</span><span class="n">compact</span><span class="o">.</span><span class="n">first</span>
-<span class="k">end</span></code></pre></figure>
+<p>O resultado final será algo <a href="https://github.com/tkovs/sliding-puzzle/tree/master/ruby">assim</a>.</p>
 
 <h2 id="ruby">Ruby</h2>
 
@@ -109,13 +81,37 @@ GIL - <em>Global Interpreter Lock</em>.</p>
 <center><img src="http://www.appsgalery.com/pictures/000/122/-uzzle-15--liding--uzzle-122141.png" /></center>
 
 <p>Sliding Puzzle é um jogo muito simples. Uma versão comum é um tabuleiro quatro por quatro (16
-céculas) onde cada célula tem um número de 1 a 15. Uma das células não contém nada para que seja
+células) onde cada célula tem um número de 1 a 15. Uma das células não contém nada para que seja
 possível a locomoção das outras sobre essa através da troca na vertical ou na horizontal com
-células.</p>
+células. O tabuleiro começa com as células desordenadas e o objetivo é ordena-las de modo que a
+última célula seja o espaço vazio.</p>
 
 <h2 id="funcionamento">Funcionamento</h2>
 
-<p>…</p>
+<p>O funcionamento será o seguinte:</p>
+
+<ol>
+  <li>Cria-se uma classe que irá gerenciar o tabuleiro NxN onde N é definido pelo usuário</li>
+  <li>O tabuleiro é preenchido de 1 a 15 e logo depois desordenado</li>
+  <li>Mostra-se o tabuleiro ao usuário</li>
+  <li>O usuário insere um comando - <em>mover pra direita, esquerda, etc</em> - através das setas</li>
+  <li>Altera-se o tabuleiro de acordo com o comando passado</li>
+  <li>Verifica-se o status do tabuleiro
+    <ol>
+      <li>Se estiver desordenado volta-se ao passo 3</li>
+      <li>Se estiver ordenado se segue</li>
+    </ol>
+  </li>
+  <li>Exibe quanto tempo e quantos movimentos foram necessários para vencer</li>
+</ol>
+
+<h2 id="incio">Início</h2>
+
+<p>Agora vamos dar início ao desenvolvimento do jogo</p>
+
+<h4 id="preparao">Preparação</h4>
+
+<h4 id="construtor">Construtor</h4>
 
 		</div>
 	</div>
