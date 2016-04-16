@@ -14,6 +14,7 @@ harmony:
     url: http://tkovs.github.io
 
   google_analytics_key: UA-76526417-1
+  disqus_shortname: tkovsblog
 
   social: 
     github: tkovs
