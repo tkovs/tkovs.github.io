@@ -222,4 +222,27 @@ map f x = [f x | x <- xs]
 
 ####Funções anônimas
 
-...
+Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
+escritos de forma literal, sem obrigação de ser dar um nome, por exemplo ```10``` ```"Vitor"```
+```[1,2,3]```, e agora funções também, que no caso de haskell ficaria assim: ```\x -> 2 * x``` - uma
+função que recebe um valor e retorna seu dobro. Funções anônimas apenas são funções sem nome, também
+conhecidas como **lambda functions**.
+
+São usadas para conter uma funcionalidade que não precisa de um nome ou que tem um uso muito
+curto e rápido, sendo um objeto temporário. Esse recurso evita a escrita de funções de uma linha só
+que seriam usadas apenas uma vez, por exemplo:
+
+{% highlight haskell linenos %}
+something :: Num x => x -> x
+something x = (x *3 + 2) * x
+
+map something [1,2,3]
+-- Retorno: [5,16,33]
+{% endhighlight %}
+
+ficaria assim:
+
+{% highlight haskell linenos %}
+map (\x -> (x * 3 + 2) * x) [1,2,3]
+-- Retorno: [5,16,33]
+{% endhighlight %}
