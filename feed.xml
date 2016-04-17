@@ -5,8 +5,8 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 17 Apr 2016 12:04:02 -0300</pubDate>
-    <lastBuildDate>Sun, 17 Apr 2016 12:04:02 -0300</lastBuildDate>
+    <pubDate>Sun, 17 Apr 2016 18:56:13 -0300</pubDate>
+    <lastBuildDate>Sun, 17 Apr 2016 18:56:13 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -239,6 +239,47 @@ que seriam usadas apenas uma vez, por exemplo:&lt;/p&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;-- Retorno: [5,16,33]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h4 id=&quot;avaliao-preguiosa&quot;&gt;Avaliação preguiçosa&lt;/h4&gt;
+
+&lt;p&gt;Lazy Evaluation. Em breve.&lt;/p&gt;
+
+&lt;h4 id=&quot;programao-funcional&quot;&gt;Programação funcional&lt;/h4&gt;
+
+&lt;p&gt;A programação funcional é um paradigma de programação que 
+se baseia em funções e é muito semelhante à matemática. Até mesmo um
+programa é uma função. Não há um identificador para o ponto de partida, como na linguagem C
+onde se começa pela função main(). O retorno de uma função se baseia inteiramente no que lhe é
+passado e o momento em que a mesma função é chamada não é importante. O software desenvolvido
+segundo esse paradigma funciona através da interação entre essas funções que, devido ao paradigma,
+focam no que se deve fazer e não como fazer para se chegar ao resultado.&lt;/p&gt;
+
+&lt;p&gt;Você pode escrever código funcional em qualquer linguagem que dê suporte à funções de primeira
+classe, como Ruby e Javascript, mas há linguagens focadas nisso, como Haskell e Elixir.&lt;/p&gt;
+
+&lt;p&gt;Há um nível de abstração muito alto, principalmente quando funções são utilizadas, e devido
+à modularização, o código cresce rápido e de forma segura, de forma que a escrita de grandes funções
+se dá através da composição de funções menores, o que evita a reescrita.
+Os programas podem ser avaliados em diferentes ordens pois não há dependência nas operações de
+atribuição, o que também garante aos programas serem mais simples de se provar e analisar 
+matematicamente do que programas procedurais.&lt;/p&gt;
+
+&lt;p&gt;Como as funções são mais fáceis de serem avaliadas isoladamente, é mais fácil encontrar erros e
+bugs e, aliás, contribuir com projetos open-source, mesmo sem um grande envolvimento.&lt;/p&gt;
+
+&lt;p&gt;Códigos funcionais são, geralmente, mais curtos e mais fáceis de entender do que sua 
+implementação no
+paradigma imperativo. É muito mais fácil de se trabalhar com paralelização de tarefas devido à
+imutabilidade e às funções puras. O resultado final é um código bastante modularizado e conciso,
+e sua manutenção é muito mais fácil do que em um código que permite side-effects e trabalha com
+dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.&lt;/p&gt;
+
+&lt;h2 id=&quot;referncias&quot;&gt;Referências&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;http://din.uem.br/ia/ferramentas/lisp/lisp3.htm&quot;&gt;Departamento de Informática (DIN) da Universidade Estadual de Maringá (UEM)&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://wiki.haskell.org/Functional_programming&quot;&gt;Wiki Haskell&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
 </description>
         <pubDate>Thu, 31 Mar 2016 19:48:45 -0300</pubDate>
