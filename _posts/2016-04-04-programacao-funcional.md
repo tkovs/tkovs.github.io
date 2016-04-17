@@ -246,3 +246,43 @@ ficaria assim:
 map (\x -> (x * 3 + 2) * x) [1,2,3]
 -- Retorno: [5,16,33]
 {% endhighlight %}
+
+####Avaliação preguiçosa
+
+Lazy Evaluation. Em breve.
+
+####Programação funcional
+
+A programação funcional é um paradigma de programação que 
+se baseia em funções e é muito semelhante à matemática. Até mesmo um
+programa é uma função. Não há um identificador para o ponto de partida, como na linguagem C
+onde se começa pela função main(). O retorno de uma função se baseia inteiramente no que lhe é
+passado e o momento em que a mesma função é chamada não é importante. O software desenvolvido
+segundo esse paradigma funciona através da interação entre essas funções que, devido ao paradigma,
+focam no que se deve fazer e não como fazer para se chegar ao resultado.
+
+Você pode escrever código funcional em qualquer linguagem que dê suporte à funções de primeira
+classe, como Ruby e Javascript, mas há linguagens focadas nisso, como Haskell e Elixir.
+
+Há um nível de abstração muito alto, principalmente quando funções são utilizadas, e devido
+à modularização, o código cresce rápido e de forma segura, de forma que a escrita de grandes funções
+se dá através da composição de funções menores, o que evita a reescrita.
+Os programas podem ser avaliados em diferentes ordens pois não há dependência nas operações de
+atribuição, o que também garante aos programas serem mais simples de se provar e analisar 
+matematicamente do que programas procedurais.
+
+Como as funções são mais fáceis de serem avaliadas isoladamente, é mais fácil encontrar erros e
+bugs e, aliás, contribuir com projetos open-source, mesmo sem um grande envolvimento.
+
+Códigos funcionais são, geralmente, mais curtos e mais fáceis de entender do que sua 
+implementação no
+paradigma imperativo. É muito mais fácil de se trabalhar com paralelização de tarefas devido à
+imutabilidade e às funções puras. O resultado final é um código bastante modularizado e conciso,
+e sua manutenção é muito mais fácil do que em um código que permite side-effects e trabalha com
+dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.
+
+##Referências
+
+- [Departamento de Informática (DIN) da Universidade Estadual de Maringá (UEM)](http://din.uem.br/ia/ferramentas/lisp/lisp3.htm)
+- [Wiki Haskell](https://wiki.haskell.org/Functional_programming)
+
