@@ -269,7 +269,27 @@ aplica a função sobre cada elemento da lista retornando uma nova lista com as 
 
 <h4 id="funes-annimas">Funções anônimas</h4>
 
-<p>…</p>
+<p>Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
+escritos de forma literal, sem obrigação de ser dar um nome, por exemplo <code>10</code> <code>"Vitor"</code>
+<code>[1,2,3]</code>, e agora funções também, que no caso de haskell ficaria assim: <code>\x -&gt; 2 * x</code> - uma
+função que recebe um valor e retorna seu dobro. Funções anônimas apenas são funções sem nome, também
+conhecidas como <strong>lambda functions</strong>.</p>
+
+<p>São usadas para conter uma funcionalidade que não precisa de um nome ou que tem um uso muito
+curto e rápido, sendo um objeto temporário. Esse recurso evita a escrita de funções de uma linha só
+que seriam usadas apenas uma vez, por exemplo:</p>
+
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="lineno">1</span> <span class="nf">something</span> <span class="ow">::</span> <span class="kt">Num</span> <span class="n">x</span> <span class="ow">=&gt;</span> <span class="n">x</span> <span class="ow">-&gt;</span> <span class="n">x</span>
+<span class="lineno">2</span> <span class="nf">something</span> <span class="n">x</span> <span class="ow">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span>
+<span class="lineno">3</span> 
+<span class="lineno">4</span> <span class="nf">map</span> <span class="n">something</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="lineno">5</span> <span class="c1">-- Retorno: [5,16,33]</span></code></pre></figure>
+
+<p>ficaria assim:</p>
+
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><span class="lineno">1</span> <span class="nf">map</span> <span class="p">(</span><span class="nf">\</span><span class="n">x</span> <span class="ow">-&gt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="lineno">2</span> <span class="c1">-- Retorno: [5,16,33]</span></code></pre></figure>
+
 
 		</div>
 	</div>
