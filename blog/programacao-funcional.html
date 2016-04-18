@@ -294,7 +294,7 @@ que seriam usadas apenas uma vez, por exemplo:</p>
 
 <p>Lazy Evaluation. Em breve.</p>
 
-<h4 id="programao-funcional">Programação funcional</h4>
+<h4 id="ento-o-que--programao-funcional">Então, o que é programação funcional?</h4>
 
 <p>A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -303,7 +303,8 @@ onde se começa pela função main(). O retorno de uma função se baseia inteir
 passado e o momento em que a mesma função é chamada não é importante. O software desenvolvido
 segundo esse paradigma funciona através da interação entre essas funções que, devido ao paradigma,
 focam no que se deve fazer e não como fazer para se chegar ao resultado. Ou seja, o objetivo é
-definir uma função que, trabalhando em cima de outras funções, gere um valor de retorno.</p>
+definir uma função que, trabalhando em cima de outras funções, vistas como expressões, gere um 
+valor de retorno.</p>
 
 <p>Você pode escrever código funcional em qualquer linguagem que dê suporte à funções de primeira
 classe, como Ruby e Javascript, mas há linguagens focadas nisso, como Haskell e Elixir.</p>
@@ -324,6 +325,42 @@ paradigma imperativo. É muito mais fácil de se trabalhar com paralelização d
 imutabilidade e às funções puras. O resultado final é um código bastante modularizado e conciso,
 e sua manutenção é muito mais fácil do que em um código que permite side-effects e trabalha com
 dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.</p>
+
+<h4 id="uso">Uso</h4>
+
+<p>O sistema operacional <strong><a href="http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html">Linspire</a></strong>, baseado no Debian, tem uma equipe que trabalha usando programação
+funcional em algumas tarefas como a <strong>detecção de hardware</strong>, <strong>criação de CDs de instalação</strong> e
+<strong>aplicações web internas</strong>. Inicialmente usaram O’Caml, depois decidiram por usar Haskell também.</p>
+
+<p>O <strong><a href="http://xmonad.org/">xmonad</a></strong>, um gerenciador de janelas “tile-based” dinâmico para o X foi completamente desenvolvido
+usando Haskell.</p>
+
+<p>O <strong><a href="http://darcs.net/">Darcs</a></strong>, um software para controle de versão distribuida, assim como o git e o svn, 
+com muitos recursos, que inicialmente foi escrito em C++, mas logo depois foi portado pra Haskell.</p>
+
+<p><strong><a href="http://pandoc.org">Pandoc</a></strong>, uma ferramenta para conversão de um arquivo num formato de marcação para outro. Suporta
+HTML, LaTeX, OPML, Org-mode, DocBook, Wiki markup, inDesign ICML, ebooks, e vários formatos TeX.
+Desenvolvido em Haskell.</p>
+
+<p>O Facebook tem a implementação de um
+<strong><a href="http://www.wired.com/2015/09/facebooks-new-anti-spam-system-hints-future-coding/">anti-spam</a></strong> feita em Haskel.</p>
+
+<p><strong><a href="http://www.yesodweb.com/">Yesod</a></strong>, uma framework para aplicações web de alta performance e alto
+nível, com performance próxima à do C com acesso direto à memória. Desenvolvida em Haskell.</p>
+
+<p>A linguagem de programação <strong><a href="http://hacklang.org/">Hack</a></strong>, desenvolvida pelo Facebook, é um
+dialeto do PHP. Sua implementação é open-source, e seu compilador foi escrito em O’Caml.</p>
+
+<p>Há o <a href="0install.net"><strong>Zero Install (0Install)</strong></a> é um gerenciador de pacotes multiplataforma,
+desenvolvido em O’Caml. Se você tem um web-site, você pode distribuir seu software criando um pacote
+que funciona em qualquer lugar, com manipulamento de dependências e atualizações automáticas.</p>
+
+<p><strong><a href="http://frama-c.com/">FramaC</a></strong> é uma framework para analise modular de programas escritos em C.
+Um analisador estático que ispenciona programas em executalos. Implementada em O’Caml.</p>
+
+<p><strong><a href="http://haxe.org/">Haxe</a></strong> é uma linguagem de programação de alto nível e multiplataforma com um
+compilador que produz aplicações e código fonte para diferentes plataformas através de um código
+base. Seu commpilador é escrito em O’Caml.</p>
 
 <h2 id="referncias">Referências</h2>
 

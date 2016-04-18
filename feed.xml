@@ -5,8 +5,8 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 17 Apr 2016 19:23:32 -0300</pubDate>
-    <lastBuildDate>Sun, 17 Apr 2016 19:23:32 -0300</lastBuildDate>
+    <pubDate>Mon, 18 Apr 2016 16:52:12 -0300</pubDate>
+    <lastBuildDate>Mon, 18 Apr 2016 16:52:12 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -244,7 +244,7 @@ que seriam usadas apenas uma vez, por exemplo:&lt;/p&gt;
 
 &lt;p&gt;Lazy Evaluation. Em breve.&lt;/p&gt;
 
-&lt;h4 id=&quot;programao-funcional&quot;&gt;Programação funcional&lt;/h4&gt;
+&lt;h4 id=&quot;ento-o-que--programao-funcional&quot;&gt;Então, o que é programação funcional?&lt;/h4&gt;
 
 &lt;p&gt;A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -253,7 +253,8 @@ onde se começa pela função main(). O retorno de uma função se baseia inteir
 passado e o momento em que a mesma função é chamada não é importante. O software desenvolvido
 segundo esse paradigma funciona através da interação entre essas funções que, devido ao paradigma,
 focam no que se deve fazer e não como fazer para se chegar ao resultado. Ou seja, o objetivo é
-definir uma função que, trabalhando em cima de outras funções, gere um valor de retorno.&lt;/p&gt;
+definir uma função que, trabalhando em cima de outras funções, vistas como expressões, gere um 
+valor de retorno.&lt;/p&gt;
 
 &lt;p&gt;Você pode escrever código funcional em qualquer linguagem que dê suporte à funções de primeira
 classe, como Ruby e Javascript, mas há linguagens focadas nisso, como Haskell e Elixir.&lt;/p&gt;
@@ -274,6 +275,42 @@ paradigma imperativo. É muito mais fácil de se trabalhar com paralelização d
 imutabilidade e às funções puras. O resultado final é um código bastante modularizado e conciso,
 e sua manutenção é muito mais fácil do que em um código que permite side-effects e trabalha com
 dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.&lt;/p&gt;
+
+&lt;h4 id=&quot;uso&quot;&gt;Uso&lt;/h4&gt;
+
+&lt;p&gt;O sistema operacional &lt;strong&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html&quot;&gt;Linspire&lt;/a&gt;&lt;/strong&gt;, baseado no Debian, tem uma equipe que trabalha usando programação
+funcional em algumas tarefas como a &lt;strong&gt;detecção de hardware&lt;/strong&gt;, &lt;strong&gt;criação de CDs de instalação&lt;/strong&gt; e
+&lt;strong&gt;aplicações web internas&lt;/strong&gt;. Inicialmente usaram O’Caml, depois decidiram por usar Haskell também.&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;&lt;a href=&quot;http://xmonad.org/&quot;&gt;xmonad&lt;/a&gt;&lt;/strong&gt;, um gerenciador de janelas “tile-based” dinâmico para o X foi completamente desenvolvido
+usando Haskell.&lt;/p&gt;
+
+&lt;p&gt;O &lt;strong&gt;&lt;a href=&quot;http://darcs.net/&quot;&gt;Darcs&lt;/a&gt;&lt;/strong&gt;, um software para controle de versão distribuida, assim como o git e o svn, 
+com muitos recursos, que inicialmente foi escrito em C++, mas logo depois foi portado pra Haskell.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://pandoc.org&quot;&gt;Pandoc&lt;/a&gt;&lt;/strong&gt;, uma ferramenta para conversão de um arquivo num formato de marcação para outro. Suporta
+HTML, LaTeX, OPML, Org-mode, DocBook, Wiki markup, inDesign ICML, ebooks, e vários formatos TeX.
+Desenvolvido em Haskell.&lt;/p&gt;
+
+&lt;p&gt;O Facebook tem a implementação de um
+&lt;strong&gt;&lt;a href=&quot;http://www.wired.com/2015/09/facebooks-new-anti-spam-system-hints-future-coding/&quot;&gt;anti-spam&lt;/a&gt;&lt;/strong&gt; feita em Haskel.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://www.yesodweb.com/&quot;&gt;Yesod&lt;/a&gt;&lt;/strong&gt;, uma framework para aplicações web de alta performance e alto
+nível, com performance próxima à do C com acesso direto à memória. Desenvolvida em Haskell.&lt;/p&gt;
+
+&lt;p&gt;A linguagem de programação &lt;strong&gt;&lt;a href=&quot;http://hacklang.org/&quot;&gt;Hack&lt;/a&gt;&lt;/strong&gt;, desenvolvida pelo Facebook, é um
+dialeto do PHP. Sua implementação é open-source, e seu compilador foi escrito em O’Caml.&lt;/p&gt;
+
+&lt;p&gt;Há o &lt;a href=&quot;0install.net&quot;&gt;&lt;strong&gt;Zero Install (0Install)&lt;/strong&gt;&lt;/a&gt; é um gerenciador de pacotes multiplataforma,
+desenvolvido em O’Caml. Se você tem um web-site, você pode distribuir seu software criando um pacote
+que funciona em qualquer lugar, com manipulamento de dependências e atualizações automáticas.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://frama-c.com/&quot;&gt;FramaC&lt;/a&gt;&lt;/strong&gt; é uma framework para analise modular de programas escritos em C.
+Um analisador estático que ispenciona programas em executalos. Implementada em O’Caml.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://haxe.org/&quot;&gt;Haxe&lt;/a&gt;&lt;/strong&gt; é uma linguagem de programação de alto nível e multiplataforma com um
+compilador que produz aplicações e código fonte para diferentes plataformas através de um código
+base. Seu commpilador é escrito em O’Caml.&lt;/p&gt;
 
 &lt;h2 id=&quot;referncias&quot;&gt;Referências&lt;/h2&gt;
 
