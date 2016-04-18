@@ -251,7 +251,7 @@ map (\x -> (x * 3 + 2) * x) [1,2,3]
 
 Lazy Evaluation. Em breve.
 
-####Programação funcional
+####Então, o que é programação funcional?
 
 A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -260,7 +260,8 @@ onde se começa pela função main(). O retorno de uma função se baseia inteir
 passado e o momento em que a mesma função é chamada não é importante. O software desenvolvido
 segundo esse paradigma funciona através da interação entre essas funções que, devido ao paradigma,
 focam no que se deve fazer e não como fazer para se chegar ao resultado. Ou seja, o objetivo é
-definir uma função que, trabalhando em cima de outras funções, gere um valor de retorno.
+definir uma função que, trabalhando em cima de outras funções, vistas como expressões, gere um 
+valor de retorno.
 
 Você pode escrever código funcional em qualquer linguagem que dê suporte à funções de primeira
 classe, como Ruby e Javascript, mas há linguagens focadas nisso, como Haskell e Elixir.
@@ -281,6 +282,42 @@ paradigma imperativo. É muito mais fácil de se trabalhar com paralelização d
 imutabilidade e às funções puras. O resultado final é um código bastante modularizado e conciso,
 e sua manutenção é muito mais fácil do que em um código que permite side-effects e trabalha com
 dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.
+
+####Uso
+
+O sistema operacional **[Linspire](http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html)**, baseado no Debian, tem uma equipe que trabalha usando programação
+funcional em algumas tarefas como a **detecção de hardware**, **criação de CDs de instalação** e
+**aplicações web internas**. Inicialmente usaram O'Caml, depois decidiram por usar Haskell também.
+
+O **[xmonad](http://xmonad.org/)**, um gerenciador de janelas "tile-based" dinâmico para o X foi completamente desenvolvido
+usando Haskell.
+
+O **[Darcs](http://darcs.net/)**, um software para controle de versão distribuida, assim como o git e o svn, 
+com muitos recursos, que inicialmente foi escrito em C++, mas logo depois foi portado pra Haskell.
+
+**[Pandoc](http://pandoc.org)**, uma ferramenta para conversão de um arquivo num formato de marcação para outro. Suporta
+HTML, LaTeX, OPML, Org-mode, DocBook, Wiki markup, inDesign ICML, ebooks, e vários formatos TeX.
+Desenvolvido em Haskell.
+
+O Facebook tem a implementação de um
+**[anti-spam](http://www.wired.com/2015/09/facebooks-new-anti-spam-system-hints-future-coding/)** feita em Haskel.
+
+**[Yesod](http://www.yesodweb.com/)**, uma framework para aplicações web de alta performance e alto
+nível, com performance próxima à do C com acesso direto à memória. Desenvolvida em Haskell.
+
+A linguagem de programação **[Hack](http://hacklang.org/)**, desenvolvida pelo Facebook, é um
+dialeto do PHP. Sua implementação é open-source, e seu compilador foi escrito em O'Caml.
+
+Há o [**Zero Install (0Install)**](0install.net) é um gerenciador de pacotes multiplataforma,
+desenvolvido em O'Caml. Se você tem um web-site, você pode distribuir seu software criando um pacote
+que funciona em qualquer lugar, com manipulamento de dependências e atualizações automáticas.
+
+**[FramaC](http://frama-c.com/)** é uma framework para analise modular de programas escritos em C.
+Um analisador estático que ispenciona programas em executalos. Implementada em O'Caml.
+
+**[Haxe](http://haxe.org/)** é uma linguagem de programação de alto nível e multiplataforma com um
+compilador que produz aplicações e código fonte para diferentes plataformas através de um código
+base. Seu commpilador é escrito em O'Caml.
 
 ##Referências
 
