@@ -322,5 +322,10 @@ base. Seu commpilador é escrito em O'Caml.
 ##Referências
 
 - [Departamento de Informática (DIN) da Universidade Estadual de Maringá (UEM)](http://din.uem.br/ia/ferramentas/lisp/lisp3.htm)
+- [**Programming in Haskell** *by Graham Hutton*](http://www.cs.nott.ac.uk/~pszgmh/book.html)
 - [Wiki Haskell](https://wiki.haskell.org/Functional_programming)
-
+- [Wikipedia](https://en.wikipedia.org/wiki/Functional_programming)
+- [Smashing Magazine](https://www.smashingmagazine.com/2014/07/dont-be-scared-of-functional-programming/)
+- [StackOverflow](http://pt.stackoverflow.com/questions/13372/programa%C3%A7%C3%A3o-funcional-e-programa%C3%A7%C3%A3o-orientada-a-objetos-o-que-s%C3%A3o-e-quais-suas)
+- [Caelum](http://blog.caelum.com.br/comecando-com-o-calculo-lambda-e-a-programacao-funcional-de-verdade/)
+- [Instituto de Computação UFF](http://www2.ic.uff.br/~bazilio/cursos/lp/material/ProgFuncional.pdf)
