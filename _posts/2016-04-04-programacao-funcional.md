@@ -14,9 +14,9 @@ Um paradigma de programação é um modo de se classificar linguagens de program
 recursos que elas disponibilizam e o seu funcionamento. Linguagens de programação podem estar
 embasadas em apenas um paradigma, e podem ser multiparadigmas. Os mais comuns são o **orientado a
 objetos**, o **imperativo**, e o **funcional**.
-O paradigma funcional é, naturalmente, um paradigma declarativo, pois os programas se focam mais no
-que deve ser feito do que nos passos para o fazer. Há conceitos que devem ser compreendidos para se
-programar funcionalmente, e eles serão abordados no decorrer do texto.
+
+Há conceitos que devem ser compreendidos para se programar funcionalmente, e eles serão
+abordados no decorrer do texto.
 
 ## Haskell
 
@@ -38,30 +38,42 @@ Para compreender esse paradigma, alguns conceitos são fundamentais.
 São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
 resto do programa. Isso vai ao encontro da computação paralela, que é a divisão de uma tarefa entre
-vários processadores, ou até mesmo máquinas. Um exemplo é você ter uma lista de dados e precisar aplicar
+vários processadores, ou até mesmo máquinas. Um exemplo do porque programação funcional é bastante
+relacionado à computação paralela é você ter uma lista de dados e precisar aplicar
 uma função sobre todos os dados: pode-se dividir essa lista em listas menores e, tendo vários
 processadores a disposição, atribuir uma lista a cada um e fazê-los trabalharem paralelamente,
-otimizando a tarefa. Outro conceito que contribui para paralelização é a imutabilidade.
+otimizando a tarefa. Isso é completamente viável porque uma execução não vai influenciar em outra
+paralela.
+
+Outro conceito que contribui para paralelização é a imutabilidade.
 
 ####Imutabilidade
 
 Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
 de se alterar o valor existe, cria-se uma cópia para se trabalhar, um dado novo, baseado no velho.
 Ao manipular dados, você não precisa se preocupar em alterar dados, pois novos sempre são criados
-quando você precisa fazer isso.
+quando você precisa fazer isso. Isso seria inviável na programação imperativa que se baseia em ações
+e estruturas que modificam as variáveis que definem um programa.
+
+**Exemplo de uso**:
 
 No exemplo abaixo, imagine que nesse programa escrito em C a variável `tamanho` já tenha sido
 declarada e contenha o tamanho do `vetor`, e `soma` já tenha sido declarada anteriormente também. Se o
-conteúdo de `vetor[indice]` for alterado antes da soma terminar, o resultado será incorreto.
+conteúdo do `vetor` for alterado por alguma ação paralela no resto do programa antes da soma terminar,
+o resultado será incorreto.
 
 {% highlight c %}
-soma = 0;
+...
+...
 
 for (int indice = 0; indice < tamanho; indice++)
     soma += vetor[indice]
 }
 
 printf ("%d", soma);
+
+...
+...
 {% endhighlight %}
 
 Outro exemplo do uso de programação paralela é na renderização de imagens. Há milhões de pixels que
@@ -70,12 +82,14 @@ A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.
 
 ####Recursão
 
-O único meio de iteração ao se programar de um jeito puramente funcional é usando recursão.
-Recursão, na computação, é como definimos o comportamento de uma função que invoca a si mesma.
+O único meio de iteração ao se programar funcionalmente é usando recursão.
+
+Recursão em funções, na computação, é como definimos o comportamento de uma função que invoca a si mesma.
 Devido ao paralelismo, o resultado é otimizado, porém como recursão está em constante uso, as vezes
 acaba pesando, mesmo com os recursos de otimização, por isso há outros meios que contribuem para 
 isso, como por exemplo usar recursão de cauda.
-Mas antes de entrar nesse assunto será demonstrado aqui o uso da recursão para funções comuns.
+
+Mas antes de entrar nesse assunto, será demonstrado aqui o uso da recursão para funções comuns.
 
 {% highlight haskell linenos %}
 -- Soma de uma lista
@@ -109,14 +123,11 @@ fat x = x * fat (x-1)
 {% endhighlight %}
 
 Recursão de cauda, ou **tail call** em inglês, é como uma subcategoria da recursão, e é usada pois
-na recursão comum o número de chamadas à função aumenta, dessa forma a pilha acaba estourando.
-Explicando isso de uma maneira simples, uma função com recursão de cauda é uma função onde a chamada
-a si mesma ocorre apenas no final da função, pois a cauda de uma função é sua última ação, seu
-último cálculo, dessa forma não é preciso manter na pilha de chamada os valores de retorno. É
-verdade que funções recursivas podem ser mais custosas do que iterações, mas normalmente os
-compiladores de linguagens funcionais transformam chamadas a funções com recursão de cauda em laços,
-o que dá a eficiência de um loop, o código provavelmente ficará mais legível, e as chamadas à função
-podem ser divididas entre processadores/máquinas.
+na recursão comum o número de chamadas à função aumenta, consequentemente estourando a pilha.
+Explicando isso de uma maneira simples: uma função com recursão de cauda é uma função onde a chamada
+a si mesma ocorre apenas no final da função, não precisando manter na pilha de chamada os valores de
+retorno. É verdade que funções recursivas podem ser mais custosas do que iterações, mas normalmente os
+compiladores de linguagens funcionais transformam chamadas a funções com recursão de cauda em loops.
 
 > O código abaixo mostra a escrita e o funcionamento da função fibonacci sem usar tail call.
 
@@ -175,9 +186,9 @@ fib_aux (x, current, next) = fib_aux(x-1, next, current + next)
 Não importa quantas vezes uma função seja chamada, se o parâmetro for
 o mesmo o retorno também será, e a essa propriedade se dá o nome de transparência referencial.
 Dessa forma, facilmente se prova que uma função está funcionando como
-deveria, e consequentemente, constroe-se funções mais complexas e seguras. Isso parece óbvio, mas em
+deveria, e consequentemente, constrói-se funções mais complexas e seguras. Isso parece óbvio, mas em
 outros paradigmas, é comum a mesma expressão poder resultar em diferentes valores em diferentes
-momentos dependendo do estado de execução do programa. Como a [wiki do
+momentos dependendo do estado de execução do programa. Como o exemplo da [wiki do
 Haskell](https://wiki.haskell.org) mostra, se `y = f x` e `g = h y y`, poderia substituir y por f x
 de modo que g fosse descrito por `g = h (f x) (f x)` e se obter o mesmo resultado.
 
