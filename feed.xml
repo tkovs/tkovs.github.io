@@ -5,13 +5,39 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Apr 2016 17:32:31 -0300</pubDate>
-    <lastBuildDate>Tue, 19 Apr 2016 17:32:31 -0300</lastBuildDate>
+    <pubDate>Tue, 19 Apr 2016 19:32:57 -0300</pubDate>
+    <lastBuildDate>Tue, 19 Apr 2016 19:32:57 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
         <title>Programação Funcional</title>
-        <description>&lt;p&gt;&lt;em&gt;Esse artigo é recomendado para quem já tem experiência com programação&lt;/em&gt;&lt;/p&gt;
+        <description>&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-introducao&quot;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-haskell&quot;&gt;Haskell&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-conceitos&quot;&gt;Conceitos&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-funcoes-puras&quot;&gt;Funções puras&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-imutabilidade&quot;&gt;Imutabilidade&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-recursao&quot;&gt;Recursão&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-transparencia-referencinal&quot;&gt;Transparência referencial&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-funcoes&quot;&gt;Funções&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-funcoes-anonimas&quot;&gt;Funções anônimas&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-avaliacao-preguicosa&quot;&gt;Avaliação preguiçosa&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-o-que-e&quot;&gt;Então, o que é programação funcional?&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-uso&quot;&gt;Uso&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;div id=&quot;id-introducao&quot; /&gt;
+
+&lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
+
+&lt;p&gt;&lt;em&gt;Esse artigo é recomendado para quem já tem experiência com programação&lt;/em&gt;&lt;/p&gt;
 
 &lt;p&gt;Um paradigma de programação é um modo de se classificar linguagens de programação, definindo os
 recursos que elas disponibilizam e o seu funcionamento. Linguagens de programação podem estar
@@ -20,6 +46,8 @@ objetos&lt;/strong&gt;, o &lt;strong&gt;imperativo&lt;/strong&gt;, e o &lt;stron
 
 &lt;p&gt;Há conceitos que devem ser compreendidos para se programar funcionalmente, e eles serão
 abordados no decorrer do texto.&lt;/p&gt;
+
+&lt;div id=&quot;id-haskell&quot; /&gt;
 
 &lt;h2 id=&quot;haskell&quot;&gt;Haskell&lt;/h2&gt;
 
@@ -34,9 +62,13 @@ Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais
   &lt;li&gt;&lt;a href=&quot;https://wiki.haskell.org/&quot;&gt;&lt;strong&gt;Wiki Haskell&lt;/strong&gt;&lt;/a&gt;&lt;/li&gt;
 &lt;/ul&gt;
 
+&lt;div id=&quot;id-conceitos&quot; /&gt;
+
 &lt;h2 id=&quot;conceitos&quot;&gt;Conceitos&lt;/h2&gt;
 
 &lt;p&gt;Para compreender esse paradigma, alguns conceitos são fundamentais.&lt;/p&gt;
+
+&lt;div id=&quot;id-funcoes-puras&quot; /&gt;
 
 &lt;h4 id=&quot;funes-puras&quot;&gt;Funções puras&lt;/h4&gt;
 
@@ -51,6 +83,8 @@ otimizando a tarefa. Isso é completamente viável porque uma execução não va
 paralela.&lt;/p&gt;
 
 &lt;p&gt;Outro conceito que contribui para paralelização é a imutabilidade.&lt;/p&gt;
+
+&lt;div id=&quot;id-imutabilidade&quot; /&gt;
 
 &lt;h4 id=&quot;imutabilidade&quot;&gt;Imutabilidade&lt;/h4&gt;
 
@@ -82,6 +116,8 @@ o resultado será incorreto.&lt;/p&gt;
 &lt;p&gt;Outro exemplo do uso de programação paralela é na renderização de imagens. Há milhões de pixels que
 devem ser renderizados. Todos eles podem ser renderizados individualmente, sem depender um do outro.
 A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.&lt;/p&gt;
+
+&lt;div id=&quot;id-recursao&quot; /&gt;
 
 &lt;h4 id=&quot;recurso&quot;&gt;Recursão&lt;/h4&gt;
 
@@ -182,6 +218,8 @@ auxiliar.&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-&amp;gt; 8&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;div id=&quot;id-transparencia-referencial&quot; /&gt;
+
 &lt;h4 id=&quot;transparncia-referencial&quot;&gt;Transparência referencial&lt;/h4&gt;
 
 &lt;p&gt;Não importa quantas vezes uma função seja chamada, se o parâmetro for
@@ -193,9 +231,11 @@ momentos dependendo do estado de execução do programa. Como o exemplo da &lt;a
 Haskell&lt;/a&gt; mostra, se &lt;code&gt;y = f x&lt;/code&gt; e &lt;code&gt;g = h y y&lt;/code&gt;, poderia substituir y por f x
 de modo que g fosse descrito por &lt;code&gt;g = h (f x) (f x)&lt;/code&gt; e se obter o mesmo resultado.&lt;/p&gt;
 
+&lt;div id=&quot;id-funcoes&quot; /&gt;
+
 &lt;h4 id=&quot;funes&quot;&gt;Funções&lt;/h4&gt;
 
-&lt;p&gt;Uma das características desse paradigma é que funções são cidadãos de primeira classe.
+&lt;p&gt;Uma das características desse paradigma é que funções são cidadãs de primeira classe.
 Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
 agora suportam muitas operações comuns a outros objetos, como serem passadas para funções como
 parâmetros, serem retornadas por funções, e serem atribuídas a uma variável.
@@ -228,6 +268,8 @@ aplica a função sobre cada elemento da lista retornando uma nova lista com as 
 &lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;::&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;b&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;div id=&quot;id-funcoes-anonimas&quot; /&gt;
+
 &lt;h4 id=&quot;funes-annimas&quot;&gt;Funções anônimas&lt;/h4&gt;
 
 &lt;p&gt;Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
@@ -251,11 +293,15 @@ que seriam usadas apenas uma vez, por exemplo:&lt;/p&gt;
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-haskell&quot; data-lang=&quot;haskell&quot;&gt;&lt;span class=&quot;lineno&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;-&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;-- Retorno: [5,16,33]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
+&lt;div id=&quot;id-avaliacao-preguicosa&quot; /&gt;
+
 &lt;h4 id=&quot;avaliao-preguiosa&quot;&gt;Avaliação preguiçosa&lt;/h4&gt;
 
 &lt;p&gt;Lazy Evaluation. Em breve.&lt;/p&gt;
 
-&lt;h4 id=&quot;ento-o-que--programao-funcional&quot;&gt;Então, o que é programação funcional?&lt;/h4&gt;
+&lt;div id=&quot;id-o-que-e&quot; /&gt;
+
+&lt;h2 id=&quot;ento-o-que--programao-funcional&quot;&gt;Então, o que é programação funcional?&lt;/h2&gt;
 
 &lt;p&gt;A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -287,7 +333,9 @@ imutabilidade e às funções puras. O resultado final é um código bastante mo
 e sua manutenção é muito mais fácil do que em um código que permite side-effects e trabalha com
 dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.&lt;/p&gt;
 
-&lt;h4 id=&quot;uso&quot;&gt;Uso&lt;/h4&gt;
+&lt;div id=&quot;id-uso&quot; /&gt;
+
+&lt;h2 id=&quot;uso&quot;&gt;Uso&lt;/h2&gt;
 
 &lt;p&gt;O sistema operacional &lt;strong&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html&quot;&gt;Linspire&lt;/a&gt;&lt;/strong&gt;, baseado no Debian, tem uma equipe que trabalha usando programação
 funcional em algumas tarefas como a &lt;strong&gt;detecção de hardware&lt;/strong&gt;, &lt;strong&gt;criação de CDs de instalação&lt;/strong&gt; e
