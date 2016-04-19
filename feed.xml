@@ -5,8 +5,8 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Tue, 19 Apr 2016 20:46:17 -0300</pubDate>
-    <lastBuildDate>Tue, 19 Apr 2016 20:46:17 -0300</lastBuildDate>
+    <pubDate>Tue, 19 Apr 2016 20:56:01 -0300</pubDate>
+    <lastBuildDate>Tue, 19 Apr 2016 20:56:01 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -34,7 +34,8 @@
 &lt;hr /&gt;
 
 &lt;div id=&quot;id-introducao&quot;&gt;&lt;/div&gt;
-&lt;p&gt;## Introdução&lt;/p&gt;
+
+&lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;Esse artigo é recomendado para quem já tem experiência com programação&lt;/em&gt;&lt;/p&gt;
 
@@ -47,7 +48,8 @@ objetos&lt;/strong&gt;, o &lt;strong&gt;imperativo&lt;/strong&gt;, e o &lt;stron
 abordados no decorrer do texto.&lt;/p&gt;
 
 &lt;div id=&quot;id-haskell&quot;&gt;&lt;/div&gt;
-&lt;p&gt;## Haskell&lt;/p&gt;
+
+&lt;h2 id=&quot;haskell&quot;&gt;Haskell&lt;/h2&gt;
 
 &lt;p&gt;A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional e
 muito reconhecida academicamente. Em breve irei fazer o
@@ -61,12 +63,14 @@ Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais
 &lt;/ul&gt;
 
 &lt;div id=&quot;id-conceitos&quot;&gt;&lt;/div&gt;
-&lt;p&gt;## Conceitos&lt;/p&gt;
+
+&lt;h2 id=&quot;conceitos&quot;&gt;Conceitos&lt;/h2&gt;
 
 &lt;p&gt;Para compreender esse paradigma, alguns conceitos são fundamentais.&lt;/p&gt;
 
 &lt;div id=&quot;id-funcoes-puras&quot;&gt;&lt;/div&gt;
-&lt;p&gt;####Funções puras&lt;/p&gt;
+
+&lt;h4 id=&quot;funes-puras&quot;&gt;Funções puras&lt;/h4&gt;
 
 &lt;p&gt;São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
@@ -81,7 +85,8 @@ paralela.&lt;/p&gt;
 &lt;p&gt;Outro conceito que contribui para paralelização é a imutabilidade.&lt;/p&gt;
 
 &lt;div id=&quot;id-imutabilidade&quot;&gt;&lt;/div&gt;
-&lt;p&gt;####Imutabilidade&lt;/p&gt;
+
+&lt;h4 id=&quot;imutabilidade&quot;&gt;Imutabilidade&lt;/h4&gt;
 
 &lt;p&gt;Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
 de se alterar o valor existe, cria-se uma cópia para se trabalhar, um dado novo, baseado no velho.
@@ -113,7 +118,8 @@ devem ser renderizados. Todos eles podem ser renderizados individualmente, sem d
 A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.&lt;/p&gt;
 
 &lt;div id=&quot;id-recursao&quot;&gt;&lt;/div&gt;
-&lt;p&gt;####Recursão&lt;/p&gt;
+
+&lt;h4 id=&quot;recurso&quot;&gt;Recursão&lt;/h4&gt;
 
 &lt;p&gt;O único meio de iteração ao se programar funcionalmente é usando recursão.&lt;/p&gt;
 
@@ -213,7 +219,8 @@ auxiliar.&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;-}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-transparencia-referencial&quot;&gt;&lt;/div&gt;
-&lt;p&gt;####Transparência referencial&lt;/p&gt;
+
+&lt;h4 id=&quot;transparncia-referencial&quot;&gt;Transparência referencial&lt;/h4&gt;
 
 &lt;p&gt;Não importa quantas vezes uma função seja chamada, se o parâmetro for
 o mesmo o retorno também será, e a essa propriedade se dá o nome de transparência referencial.
@@ -225,7 +232,8 @@ Haskell&lt;/a&gt; mostra, se &lt;code&gt;y = f x&lt;/code&gt; e &lt;code&gt;g = 
 de modo que g fosse descrito por &lt;code&gt;g = h (f x) (f x)&lt;/code&gt; e se obter o mesmo resultado.&lt;/p&gt;
 
 &lt;div id=&quot;id-funcoes&quot;&gt;&lt;/div&gt;
-&lt;p&gt;####Funções&lt;/p&gt;
+
+&lt;h4 id=&quot;funes&quot;&gt;Funções&lt;/h4&gt;
 
 &lt;p&gt;Uma das características desse paradigma é que funções são cidadãs de primeira classe.
 Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
@@ -261,7 +269,8 @@ aplica a função sobre cada elemento da lista retornando uma nova lista com as 
 &lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;map&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;xs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-funcoes-anonimas&quot;&gt;&lt;/div&gt;
-&lt;p&gt;####Funções anônimas&lt;/p&gt;
+
+&lt;h4 id=&quot;funes-annimas&quot;&gt;Funções anônimas&lt;/h4&gt;
 
 &lt;p&gt;Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
 escritos de forma literal, sem obrigação de ser dar um nome, por exemplo &lt;code&gt;10&lt;/code&gt; &lt;code&gt;&quot;Vitor&quot;&lt;/code&gt;
@@ -285,12 +294,14 @@ que seriam usadas apenas uma vez, por exemplo:&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;-- Retorno: [5,16,33]&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-avaliacao-preguicosa&quot;&gt;&lt;/div&gt;
-&lt;p&gt;####Avaliação preguiçosa&lt;/p&gt;
+
+&lt;h4 id=&quot;avaliao-preguiosa&quot;&gt;Avaliação preguiçosa&lt;/h4&gt;
 
 &lt;p&gt;Lazy Evaluation. Em breve.&lt;/p&gt;
 
 &lt;div id=&quot;id-o-que-e&quot;&gt;&lt;/div&gt;
-&lt;p&gt;##Então, o que é programação funcional?&lt;/p&gt;
+
+&lt;h2 id=&quot;ento-o-que--programao-funcional&quot;&gt;Então, o que é programação funcional?&lt;/h2&gt;
 
 &lt;p&gt;A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -323,7 +334,8 @@ e sua manutenção é muito mais fácil do que em um código que permite side-ef
 dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.&lt;/p&gt;
 
 &lt;div id=&quot;id-uso&quot;&gt;&lt;/div&gt;
-&lt;p&gt;##Uso&lt;/p&gt;
+
+&lt;h2 id=&quot;uso&quot;&gt;Uso&lt;/h2&gt;
 
 &lt;p&gt;O sistema operacional &lt;strong&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html&quot;&gt;Linspire&lt;/a&gt;&lt;/strong&gt;, baseado no Debian, tem uma equipe que trabalha usando programação
 funcional em algumas tarefas como a &lt;strong&gt;detecção de hardware&lt;/strong&gt;, &lt;strong&gt;criação de CDs de instalação&lt;/strong&gt; e

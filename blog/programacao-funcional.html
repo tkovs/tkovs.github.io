@@ -84,7 +84,8 @@
 <hr />
 
 <div id="id-introducao"></div>
-<p>## Introdução</p>
+
+<h2 id="introduo">Introdução</h2>
 
 <p><em>Esse artigo é recomendado para quem já tem experiência com programação</em></p>
 
@@ -97,7 +98,8 @@ objetos</strong>, o <strong>imperativo</strong>, e o <strong>funcional</strong>.
 abordados no decorrer do texto.</p>
 
 <div id="id-haskell"></div>
-<p>## Haskell</p>
+
+<h2 id="haskell">Haskell</h2>
 
 <p>A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional e
 muito reconhecida academicamente. Em breve irei fazer o
@@ -111,12 +113,14 @@ Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais
 </ul>
 
 <div id="id-conceitos"></div>
-<p>## Conceitos</p>
+
+<h2 id="conceitos">Conceitos</h2>
 
 <p>Para compreender esse paradigma, alguns conceitos são fundamentais.</p>
 
 <div id="id-funcoes-puras"></div>
-<p>####Funções puras</p>
+
+<h4 id="funes-puras">Funções puras</h4>
 
 <p>São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
@@ -131,7 +135,8 @@ paralela.</p>
 <p>Outro conceito que contribui para paralelização é a imutabilidade.</p>
 
 <div id="id-imutabilidade"></div>
-<p>####Imutabilidade</p>
+
+<h4 id="imutabilidade">Imutabilidade</h4>
 
 <p>Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
 de se alterar o valor existe, cria-se uma cópia para se trabalhar, um dado novo, baseado no velho.
@@ -163,7 +168,8 @@ devem ser renderizados. Todos eles podem ser renderizados individualmente, sem d
 A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.</p>
 
 <div id="id-recursao"></div>
-<p>####Recursão</p>
+
+<h4 id="recurso">Recursão</h4>
 
 <p>O único meio de iteração ao se programar funcionalmente é usando recursão.</p>
 
@@ -263,7 +269,8 @@ auxiliar.</p>
 <span class="lineno">20</span> <span class="cm">-}</span></code></pre></figure>
 
 <div id="id-transparencia-referencial"></div>
-<p>####Transparência referencial</p>
+
+<h4 id="transparncia-referencial">Transparência referencial</h4>
 
 <p>Não importa quantas vezes uma função seja chamada, se o parâmetro for
 o mesmo o retorno também será, e a essa propriedade se dá o nome de transparência referencial.
@@ -275,7 +282,8 @@ Haskell</a> mostra, se <code>y = f x</code> e <code>g = h y y</code>, poderia su
 de modo que g fosse descrito por <code>g = h (f x) (f x)</code> e se obter o mesmo resultado.</p>
 
 <div id="id-funcoes"></div>
-<p>####Funções</p>
+
+<h4 id="funes">Funções</h4>
 
 <p>Uma das características desse paradigma é que funções são cidadãs de primeira classe.
 Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
@@ -311,7 +319,8 @@ aplica a função sobre cada elemento da lista retornando uma nova lista com as 
 <span class="lineno">8</span> <span class="nf">map</span> <span class="n">f</span> <span class="n">x</span> <span class="ow">=</span> <span class="p">[</span><span class="n">f</span> <span class="n">x</span> <span class="o">|</span> <span class="n">x</span> <span class="ow">&lt;-</span> <span class="n">xs</span><span class="p">]</span></code></pre></figure>
 
 <div id="id-funcoes-anonimas"></div>
-<p>####Funções anônimas</p>
+
+<h4 id="funes-annimas">Funções anônimas</h4>
 
 <p>Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
 escritos de forma literal, sem obrigação de ser dar um nome, por exemplo <code>10</code> <code>"Vitor"</code>
@@ -335,12 +344,14 @@ que seriam usadas apenas uma vez, por exemplo:</p>
 <span class="lineno">2</span> <span class="c1">-- Retorno: [5,16,33]</span></code></pre></figure>
 
 <div id="id-avaliacao-preguicosa"></div>
-<p>####Avaliação preguiçosa</p>
+
+<h4 id="avaliao-preguiosa">Avaliação preguiçosa</h4>
 
 <p>Lazy Evaluation. Em breve.</p>
 
 <div id="id-o-que-e"></div>
-<p>##Então, o que é programação funcional?</p>
+
+<h2 id="ento-o-que--programao-funcional">Então, o que é programação funcional?</h2>
 
 <p>A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -373,7 +384,8 @@ e sua manutenção é muito mais fácil do que em um código que permite side-ef
 dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.</p>
 
 <div id="id-uso"></div>
-<p>##Uso</p>
+
+<h2 id="uso">Uso</h2>
 
 <p>O sistema operacional <strong><a href="http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html">Linspire</a></strong>, baseado no Debian, tem uma equipe que trabalha usando programação
 funcional em algumas tarefas como a <strong>detecção de hardware</strong>, <strong>criação de CDs de instalação</strong> e
