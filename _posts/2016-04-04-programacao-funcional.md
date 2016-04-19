@@ -24,7 +24,7 @@ permalink: /blog/programacao-funcional
 4. [Uso](#id-uso)
 
 <hr />
-<div id='id-introducao' />
+<div id='id-introducao'></div>
 ## Introdução
 
 *Esse artigo é recomendado para quem já tem experiência com programação*
@@ -37,7 +37,7 @@ objetos**, o **imperativo**, e o **funcional**.
 Há conceitos que devem ser compreendidos para se programar funcionalmente, e eles serão
 abordados no decorrer do texto.
 
-<div id='id-haskell' />
+<div id='id-haskell'></div>
 ## Haskell
 
 A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional e
@@ -49,12 +49,12 @@ Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais
 - [**Programming in Haskell** *by Graham Hutton*](http://www.cs.nott.ac.uk/~pszgmh/book.html)
 - [**Wiki Haskell**](https://wiki.haskell.org/)
 
-<div id='id-conceitos' />
+<div id='id-conceitos'></div>
 ## Conceitos
 
 Para compreender esse paradigma, alguns conceitos são fundamentais.
 
-<div id='id-funcoes-puras' />
+<div id='id-funcoes-puras'></div>
 ####Funções puras
 
 São funções sem side-effects - ou efeitos colaterais, em português. Elas não
@@ -69,7 +69,7 @@ paralela.
 
 Outro conceito que contribui para paralelização é a imutabilidade.
 
-<div id='id-imutabilidade' />
+<div id='id-imutabilidade'></div>
 ####Imutabilidade
 
 Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
@@ -103,7 +103,7 @@ Outro exemplo do uso de programação paralela é na renderização de imagens. 
 devem ser renderizados. Todos eles podem ser renderizados individualmente, sem depender um do outro.
 A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.
 
-<div id='id-recursao' />
+<div id='id-recursao'></div>
 ####Recursão
 
 O único meio de iteração ao se programar funcionalmente é usando recursão.
@@ -205,7 +205,7 @@ fib_aux (x, current, next) = fib_aux(x-1, next, current + next)
 -}
 {% endhighlight %}
 
-<div id='id-transparencia-referencial' />
+<div id='id-transparencia-referencial'></div>
 ####Transparência referencial
 
 Não importa quantas vezes uma função seja chamada, se o parâmetro for
@@ -217,7 +217,7 @@ momentos dependendo do estado de execução do programa. Como o exemplo da [wiki
 Haskell](https://wiki.haskell.org) mostra, se `y = f x` e `g = h y y`, poderia substituir y por f x
 de modo que g fosse descrito por `g = h (f x) (f x)` e se obter o mesmo resultado.
 
-<div id='id-funcoes' />
+<div id='id-funcoes'></div>
 ####Funções
 
 Uma das características desse paradigma é que funções são cidadãs de primeira classe.
@@ -257,7 +257,7 @@ map :: (a -> b) -> [a] -> [b]
 map f x = [f x | x <- xs]
 {% endhighlight %}
 
-<div id='id-funcoes-anonimas' />
+<div id='id-funcoes-anonimas'></div>
 ####Funções anônimas
 
 Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
@@ -285,12 +285,12 @@ map (\x -> (x * 3 + 2) * x) [1,2,3]
 -- Retorno: [5,16,33]
 {% endhighlight %}
 
-<div id='id-avaliacao-preguicosa' />
+<div id='id-avaliacao-preguicosa'></div>
 ####Avaliação preguiçosa
 
 Lazy Evaluation. Em breve.
 
-<div id='id-o-que-e' />
+<div id='id-o-que-e'></div>
 ##Então, o que é programação funcional?
 
 A programação funcional é um paradigma de programação que 
@@ -323,7 +323,7 @@ imutabilidade e às funções puras. O resultado final é um código bastante mo
 e sua manutenção é muito mais fácil do que em um código que permite side-effects e trabalha com
 dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.
 
-<div id='id-uso' />
+<div id='id-uso'></div>
 ##Uso
 
 O sistema operacional **[Linspire](http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html)**, baseado no Debian, tem uma equipe que trabalha usando programação
