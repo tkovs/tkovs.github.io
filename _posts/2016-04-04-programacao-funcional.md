@@ -8,6 +8,25 @@ categories:
 permalink: /blog/programacao-funcional
 ---
 
+## Table of Contents
+
+0. [Introdução](#id-introducao)
+1. [Haskell](#id-haskell)
+2. [Conceitos](#id-conceitos)
+    1. [Funções puras](#id-funcoes-puras)
+    2. [Imutabilidade](#id-imutabilidade)
+    3. [Recursão](#id-recursao)
+    4. [Transparência referencial](#id-transparencia-referencinal)
+    5. [Funções](#id-funcoes)
+    6. [Funções anônimas](#id-funcoes-anonimas)
+    7. [Avaliação preguiçosa](#id-avaliacao-preguicosa)
+3. [Então, o que é programação funcional?](#id-o-que-e)
+4. [Uso](#id-uso)
+
+<hr />
+<div id='id-introducao' />
+## Introdução
+
 *Esse artigo é recomendado para quem já tem experiência com programação*
 
 Um paradigma de programação é um modo de se classificar linguagens de programação, definindo os
@@ -18,6 +37,7 @@ objetos**, o **imperativo**, e o **funcional**.
 Há conceitos que devem ser compreendidos para se programar funcionalmente, e eles serão
 abordados no decorrer do texto.
 
+<div id='id-haskell' />
 ## Haskell
 
 A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional e
@@ -29,10 +49,12 @@ Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais
 - [**Programming in Haskell** *by Graham Hutton*](http://www.cs.nott.ac.uk/~pszgmh/book.html)
 - [**Wiki Haskell**](https://wiki.haskell.org/)
 
+<div id='id-conceitos' />
 ## Conceitos
 
 Para compreender esse paradigma, alguns conceitos são fundamentais.
 
+<div id='id-funcoes-puras' />
 ####Funções puras
 
 São funções sem side-effects - ou efeitos colaterais, em português. Elas não
@@ -47,6 +69,7 @@ paralela.
 
 Outro conceito que contribui para paralelização é a imutabilidade.
 
+<div id='id-imutabilidade' />
 ####Imutabilidade
 
 Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
@@ -80,6 +103,7 @@ Outro exemplo do uso de programação paralela é na renderização de imagens. 
 devem ser renderizados. Todos eles podem ser renderizados individualmente, sem depender um do outro.
 A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.
 
+<div id='id-recursao' />
 ####Recursão
 
 O único meio de iteração ao se programar funcionalmente é usando recursão.
@@ -181,6 +205,7 @@ fib_aux (x, current, next) = fib_aux(x-1, next, current + next)
 -}
 {% endhighlight %}
 
+<div id='id-transparencia-referencial' />
 ####Transparência referencial
 
 Não importa quantas vezes uma função seja chamada, se o parâmetro for
@@ -192,9 +217,10 @@ momentos dependendo do estado de execução do programa. Como o exemplo da [wiki
 Haskell](https://wiki.haskell.org) mostra, se `y = f x` e `g = h y y`, poderia substituir y por f x
 de modo que g fosse descrito por `g = h (f x) (f x)` e se obter o mesmo resultado.
 
+<div id='id-funcoes' />
 ####Funções
 
-Uma das características desse paradigma é que funções são cidadãos de primeira classe.
+Uma das características desse paradigma é que funções são cidadãs de primeira classe.
 Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
 agora suportam muitas operações comuns a outros objetos, como serem passadas para funções como
 parâmetros, serem retornadas por funções, e serem atribuídas a uma variável.
@@ -231,6 +257,7 @@ map :: (a -> b) -> [a] -> [b]
 map f x = [f x | x <- xs]
 {% endhighlight %}
 
+<div id='id-funcoes-anonimas' />
 ####Funções anônimas
 
 Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
@@ -258,11 +285,13 @@ map (\x -> (x * 3 + 2) * x) [1,2,3]
 -- Retorno: [5,16,33]
 {% endhighlight %}
 
+<div id='id-avaliacao-preguicosa' />
 ####Avaliação preguiçosa
 
 Lazy Evaluation. Em breve.
 
-####Então, o que é programação funcional?
+<div id='id-o-que-e' />
+##Então, o que é programação funcional?
 
 A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -294,7 +323,8 @@ imutabilidade e às funções puras. O resultado final é um código bastante mo
 e sua manutenção é muito mais fácil do que em um código que permite side-effects e trabalha com
 dados mutáveis, assim como a otimização do código e trabalho e equipe se tornam mais simples.
 
-####Uso
+<div id='id-uso' />
+##Uso
 
 O sistema operacional **[Linspire](http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html)**, baseado no Debian, tem uma equipe que trabalha usando programação
 funcional em algumas tarefas como a **detecção de hardware**, **criação de CDs de instalação** e

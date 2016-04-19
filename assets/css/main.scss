@@ -374,7 +374,6 @@ div.page-content {
 
 div.page-content {
   ul {       
-    padding: 0 0 1em 0;
     li {
       @include font-size(14px);
       color: $color-2; 
@@ -396,18 +395,17 @@ div.page-content {
   ol { 
     @include font-size(12px);
     // padding-top: 1em;
-    padding-bottom: 1em;
     list-style: decimal;
     margin-left: 0;
     li {
       color: $color-2; 
       line-height: 1.6;
-      padding: 0 0 5px 0px;
+      padding: 0 0 3px 0px;
       margin-left: 2em;
       position:relative;
     }
     @include MQ(M){
-      @include font-size(16px);
+      @include font-size(19px);
       li { 
         line-height: 1.5;
         background-position: 0 7px; 
