@@ -2,7 +2,7 @@
 layout: post
 title:  "Programação Funcional"
 date:   2016-03-31 22:48:45
-description: Iniciação ao paradigma funcional.
+description: Uma abordagem completa - mas não profunda - sobre a programação funcional, listando e explicando os conceitos fundamentais ligados a esse paradigma e mostrando seu uso na indústria e na comunidade.
 categories:
 - programação funcional
 permalink: /blog/programacao-funcional
