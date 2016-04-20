@@ -42,10 +42,11 @@ abordados no decorrer do texto.
 
 ## Haskell
 
-A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional e
-muito reconhecida academicamente. Em breve irei fazer o
-port para a linguagem Ruby ou Javascript dos códigos usados aqui, assim facilita o entendimento para o maior
-público. Deixarei os exemplos em Haskell no código mas ficarão em segundo plano. 
+A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional,
+sem side-effects nem dados mutáveis, baseada no *Lambda Calculus*. Em breve irei 
+fazer o port para a linguagem Ruby ou Javascript dos códigos usados aqui, assim facilita o entendimento
+para o maior público. Deixarei os exemplos em Haskell no post mas ficarão em segundo plano após o
+port. 
 Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais:
 
 - [**Programming in Haskell** *by Graham Hutton*](http://www.cs.nott.ac.uk/~pszgmh/book.html)
@@ -70,8 +71,6 @@ uma função sobre todos os dados: pode-se dividir essa lista em listas menores 
 processadores a disposição, atribuir uma lista a cada um e fazê-los trabalharem paralelamente,
 otimizando a tarefa. Isso é completamente viável porque uma execução não vai influenciar em outra
 paralela.
-
-Outro conceito que contribui para paralelização é a imutabilidade.
 
 <div id='id-imutabilidade'></div>
 
