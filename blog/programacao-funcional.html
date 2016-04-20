@@ -71,7 +71,7 @@
       <li><a href="#id-funcoes-puras">Funções puras</a></li>
       <li><a href="#id-imutabilidade">Imutabilidade</a></li>
       <li><a href="#id-recursao">Recursão</a></li>
-      <li><a href="#id-transparencia-referencinal">Transparência referencial</a></li>
+      <li><a href="#id-transparencia-referencial">Transparência referencial</a></li>
       <li><a href="#id-funcoes">Funções</a></li>
       <li><a href="#id-funcoes-anonimas">Funções anônimas</a></li>
       <li><a href="#id-avaliacao-preguicosa">Avaliação preguiçosa</a></li>
@@ -101,10 +101,11 @@ abordados no decorrer do texto.</p>
 
 <h2 id="haskell">Haskell</h2>
 
-<p>A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional e
-muito reconhecida academicamente. Em breve irei fazer o
-port para a linguagem Ruby ou Javascript dos códigos usados aqui, assim facilita o entendimento para o maior
-público. Deixarei os exemplos em Haskell no código mas ficarão em segundo plano. 
+<p>A linguagem escolhida para demonstração de exemplos foi Haskell, uma linguagem puramente funcional,
+sem side-effects nem dados mutáveis, baseada no <em>Lambda Calculus</em>. Em breve irei 
+fazer o port para a linguagem Ruby ou Javascript dos códigos usados aqui, assim facilita o entendimento
+para o maior público. Deixarei os exemplos em Haskell no post mas ficarão em segundo plano após o
+port. 
 Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais:</p>
 
 <ul>
@@ -131,8 +132,6 @@ uma função sobre todos os dados: pode-se dividir essa lista em listas menores 
 processadores a disposição, atribuir uma lista a cada um e fazê-los trabalharem paralelamente,
 otimizando a tarefa. Isso é completamente viável porque uma execução não vai influenciar em outra
 paralela.</p>
-
-<p>Outro conceito que contribui para paralelização é a imutabilidade.</p>
 
 <div id="id-imutabilidade"></div>
 
@@ -420,6 +419,13 @@ Um analisador estático que ispenciona programas em executalos. Implementada em 
 <p><strong><a href="http://haxe.org/">Haxe</a></strong> é uma linguagem de programação de alto nível e multiplataforma com um
 compilador que produz aplicações e código fonte para diferentes plataformas através de um código
 base. Seu commpilador é escrito em O’Caml.</p>
+
+<p>Para mais exemplos, há o link abaixo que reune programas escritos no paradigma funcional aplicados
+em tarefas do mundo real. Entre as linguagens citadas na lista, há Clean, Haskell, Miranda, Scheme,
+SML e Erlang.</p>
+
+<p><a href="http://homepages.inf.ed.ac.uk/wadler/realworld/index.html">Functional Programming in the Real
+World</a></p>
 
 <h2 id="referncias">Referências</h2>
 
