@@ -16,7 +16,7 @@ permalink: /blog/programacao-funcional
     1. [Funções puras](#id-funcoes-puras)
     2. [Imutabilidade](#id-imutabilidade)
     3. [Recursão](#id-recursao)
-    4. [Transparência referencial](#id-transparencia-referencinal)
+    4. [Transparência referencial](#id-transparencia-referencial)
     5. [Funções](#id-funcoes)
     6. [Funções anônimas](#id-funcoes-anonimas)
     7. [Avaliação preguiçosa](#id-avaliacao-preguicosa)
@@ -371,6 +371,13 @@ Um analisador estático que ispenciona programas em executalos. Implementada em 
 **[Haxe](http://haxe.org/)** é uma linguagem de programação de alto nível e multiplataforma com um
 compilador que produz aplicações e código fonte para diferentes plataformas através de um código
 base. Seu commpilador é escrito em O'Caml.
+
+Para mais exemplos, há o link abaixo que reune programas escritos no paradigma funcional aplicados
+em tarefas do mundo real. Entre as linguagens citadas na lista, há Clean, Haskell, Miranda, Scheme,
+SML e Erlang.
+
+[Functional Programming in the Real
+World](http://homepages.inf.ed.ac.uk/wadler/realworld/index.html)
 
 ##Referências
 
