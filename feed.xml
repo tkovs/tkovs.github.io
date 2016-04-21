@@ -5,8 +5,8 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 20 Apr 2016 13:20:28 -0300</pubDate>
-    <lastBuildDate>Wed, 20 Apr 2016 13:20:28 -0300</lastBuildDate>
+    <pubDate>Thu, 21 Apr 2016 07:50:57 -0300</pubDate>
+    <lastBuildDate>Thu, 21 Apr 2016 07:50:57 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -338,7 +338,7 @@ dados mutáveis, assim como a otimização do código e trabalho e equipe se tor
 
 &lt;p&gt;O sistema operacional &lt;strong&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html&quot;&gt;Linspire&lt;/a&gt;&lt;/strong&gt;, baseado no Debian, tem uma equipe que trabalha usando programação
 funcional em algumas tarefas como a &lt;strong&gt;detecção de hardware&lt;/strong&gt;, &lt;strong&gt;criação de CDs de instalação&lt;/strong&gt; e
-&lt;strong&gt;aplicações web internas&lt;/strong&gt;. Inicialmente usaram O’Caml, depois decidiram por usar Haskell também.&lt;/p&gt;
+&lt;strong&gt;aplicações web internas&lt;/strong&gt;. Inicialmente usaram OCaml, depois decidiram por usar Haskell também.&lt;/p&gt;
 
 &lt;p&gt;O &lt;strong&gt;&lt;a href=&quot;http://xmonad.org/&quot;&gt;xmonad&lt;/a&gt;&lt;/strong&gt;, um gerenciador de janelas “tile-based” dinâmico para o X foi completamente desenvolvido
 usando Haskell.&lt;/p&gt;
@@ -357,18 +357,18 @@ Desenvolvido em Haskell.&lt;/p&gt;
 nível, com performance próxima à do C com acesso direto à memória. Desenvolvida em Haskell.&lt;/p&gt;
 
 &lt;p&gt;A linguagem de programação &lt;strong&gt;&lt;a href=&quot;http://hacklang.org/&quot;&gt;Hack&lt;/a&gt;&lt;/strong&gt;, desenvolvida pelo Facebook, é um
-dialeto do PHP. Sua implementação é open-source, e seu compilador foi escrito em O’Caml.&lt;/p&gt;
+dialeto do PHP. Sua implementação é open-source, e seu compilador foi escrito em OCaml.&lt;/p&gt;
 
 &lt;p&gt;Há o &lt;a href=&quot;0install.net&quot;&gt;&lt;strong&gt;Zero Install (0Install)&lt;/strong&gt;&lt;/a&gt; é um gerenciador de pacotes multiplataforma,
-desenvolvido em O’Caml. Se você tem um web-site, você pode distribuir seu software criando um pacote
+desenvolvido em OCaml. Se você tem um web-site, você pode distribuir seu software criando um pacote
 que funciona em qualquer lugar, com manipulamento de dependências e atualizações automáticas.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://frama-c.com/&quot;&gt;FramaC&lt;/a&gt;&lt;/strong&gt; é uma framework para analise modular de programas escritos em C.
-Um analisador estático que ispenciona programas em executalos. Implementada em O’Caml.&lt;/p&gt;
+Um analisador estático que ispenciona programas em executalos. Implementada em OCaml.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://haxe.org/&quot;&gt;Haxe&lt;/a&gt;&lt;/strong&gt; é uma linguagem de programação de alto nível e multiplataforma com um
 compilador que produz aplicações e código fonte para diferentes plataformas através de um código
-base. Seu commpilador é escrito em O’Caml.&lt;/p&gt;
+base. Seu commpilador é escrito em OCaml.&lt;/p&gt;
 
 &lt;p&gt;Para mais exemplos, há o link abaixo que reune programas escritos no paradigma funcional aplicados
 em tarefas do mundo real. Entre as linguagens citadas na lista, há Clean, Haskell, Miranda, Scheme,
