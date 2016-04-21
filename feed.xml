@@ -5,8 +5,8 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 Apr 2016 07:50:57 -0300</pubDate>
-    <lastBuildDate>Thu, 21 Apr 2016 07:50:57 -0300</lastBuildDate>
+    <pubDate>Thu, 21 Apr 2016 08:04:46 -0300</pubDate>
+    <lastBuildDate>Thu, 21 Apr 2016 08:04:46 -0300</lastBuildDate>
     <generator>Jekyll v3.0.3</generator>
     
       <item>
@@ -364,7 +364,7 @@ desenvolvido em OCaml. Se você tem um web-site, você pode distribuir seu softw
 que funciona em qualquer lugar, com manipulamento de dependências e atualizações automáticas.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://frama-c.com/&quot;&gt;FramaC&lt;/a&gt;&lt;/strong&gt; é uma framework para analise modular de programas escritos em C.
-Um analisador estático que ispenciona programas em executalos. Implementada em OCaml.&lt;/p&gt;
+Um analisador estático que ispenciona programas sem executalos. Implementada em OCaml.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;&lt;a href=&quot;http://haxe.org/&quot;&gt;Haxe&lt;/a&gt;&lt;/strong&gt; é uma linguagem de programação de alto nível e multiplataforma com um
 compilador que produz aplicações e código fonte para diferentes plataformas através de um código
