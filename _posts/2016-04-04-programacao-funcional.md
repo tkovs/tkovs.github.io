@@ -339,7 +339,7 @@ dados mutáveis, assim como a otimização do código e trabalho e equipe se tor
 
 O sistema operacional **[Linspire](http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html)**, baseado no Debian, tem uma equipe que trabalha usando programação
 funcional em algumas tarefas como a **detecção de hardware**, **criação de CDs de instalação** e
-**aplicações web internas**. Inicialmente usaram O'Caml, depois decidiram por usar Haskell também.
+**aplicações web internas**. Inicialmente usaram OCaml, depois decidiram por usar Haskell também.
 
 O **[xmonad](http://xmonad.org/)**, um gerenciador de janelas "tile-based" dinâmico para o X foi completamente desenvolvido
 usando Haskell.
@@ -358,18 +358,18 @@ O Facebook tem a implementação de um
 nível, com performance próxima à do C com acesso direto à memória. Desenvolvida em Haskell.
 
 A linguagem de programação **[Hack](http://hacklang.org/)**, desenvolvida pelo Facebook, é um
-dialeto do PHP. Sua implementação é open-source, e seu compilador foi escrito em O'Caml.
+dialeto do PHP. Sua implementação é open-source, e seu compilador foi escrito em OCaml.
 
 Há o [**Zero Install (0Install)**](0install.net) é um gerenciador de pacotes multiplataforma,
-desenvolvido em O'Caml. Se você tem um web-site, você pode distribuir seu software criando um pacote
+desenvolvido em OCaml. Se você tem um web-site, você pode distribuir seu software criando um pacote
 que funciona em qualquer lugar, com manipulamento de dependências e atualizações automáticas.
 
 **[FramaC](http://frama-c.com/)** é uma framework para analise modular de programas escritos em C.
-Um analisador estático que ispenciona programas em executalos. Implementada em O'Caml.
+Um analisador estático que ispenciona programas em executalos. Implementada em OCaml.
 
 **[Haxe](http://haxe.org/)** é uma linguagem de programação de alto nível e multiplataforma com um
 compilador que produz aplicações e código fonte para diferentes plataformas através de um código
-base. Seu commpilador é escrito em O'Caml.
+base. Seu commpilador é escrito em OCaml.
 
 Para mais exemplos, há o link abaixo que reune programas escritos no paradigma funcional aplicados
 em tarefas do mundo real. Entre as linguagens citadas na lista, há Clean, Haskell, Miranda, Scheme,
