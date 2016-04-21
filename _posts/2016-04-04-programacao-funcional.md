@@ -365,7 +365,7 @@ desenvolvido em OCaml. Se você tem um web-site, você pode distribuir seu softw
 que funciona em qualquer lugar, com manipulamento de dependências e atualizações automáticas.
 
 **[FramaC](http://frama-c.com/)** é uma framework para analise modular de programas escritos em C.
-Um analisador estático que ispenciona programas em executalos. Implementada em OCaml.
+Um analisador estático que ispenciona programas sem executalos. Implementada em OCaml.
 
 **[Haxe](http://haxe.org/)** é uma linguagem de programação de alto nível e multiplataforma com um
 compilador que produz aplicações e código fonte para diferentes plataformas através de um código
