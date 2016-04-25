@@ -30,7 +30,15 @@ title: Arquivos
 	<ul>
             {% for post in site.posts %}
                 {% if post.tags contains tag %}
-		    <li><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a> <i><small>({{ post.date | date_to_string }})</small></i></li>
+                    <li>
+                        <span style="float: left;">
+                            <a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+                        </span>
+                        <span style="float: right;">
+                            {{ post.date | date_to_string }}
+                        </span>
+                        <div style="clear: both;"></div>
+                    </li>
 		{% endif %}
 	    {% endfor %}
 	</ul>
