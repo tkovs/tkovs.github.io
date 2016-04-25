@@ -5,9 +5,9 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 21 Apr 2016 08:41:37 -0300</pubDate>
-    <lastBuildDate>Thu, 21 Apr 2016 08:41:37 -0300</lastBuildDate>
-    <generator>Jekyll v3.0.3</generator>
+    <pubDate>Mon, 25 Apr 2016 15:18:35 -0300</pubDate>
+    <lastBuildDate>Mon, 25 Apr 2016 15:18:35 -0300</lastBuildDate>
+    <generator>Jekyll v3.0.4</generator>
     
       <item>
         <title>Programação Funcional</title>
@@ -394,8 +394,8 @@ World&lt;/a&gt;&lt;/p&gt;
         <link>http://tkovs.github.io/blog/programacao-funcional</link>
         <guid isPermaLink="true">http://tkovs.github.io/blog/programacao-funcional</guid>
         
-        
         <category>programação funcional</category>
+        
         
       </item>
     
@@ -709,8 +709,8 @@ World&lt;/a&gt;&lt;/p&gt;
         <link>http://tkovs.github.io/blog/introducao-linguagem-c</link>
         <guid isPermaLink="true">http://tkovs.github.io/blog/introducao-linguagem-c</guid>
         
-        
         <category>linguagem c</category>
+        
         
       </item>
     
