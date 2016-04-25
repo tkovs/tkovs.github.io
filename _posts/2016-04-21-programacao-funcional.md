@@ -3,7 +3,7 @@ layout: post
 title:  "Programação Funcional"
 date:   2016-04-21 
 description: Uma abordagem completa - mas não profunda - sobre a programação funcional, listando e explicando os conceitos fundamentais ligados a esse paradigma e mostrando seu uso na indústria e na comunidade.
-categories:
+tags:
 - programação funcional
 permalink: /blog/programacao-funcional
 ---

@@ -1,5 +1,6 @@
 ---
 layout: default
+title: tkovs
 ---
 <div id="home" class="page-content wc-container">
 	<div class="posts">
@@ -12,9 +13,9 @@ layout: default
     			</h3>
 
           <p class="post-meta">
-            {% if (post.categories.size > 0 %}
+            {% if (post.tags.size > 0 %}
             <span class="categories">
-            {{ post.categories | array_to_sentence_string }}
+            {{ post.tags | array_to_sentence_string }}
             </span> |
             {% endif %}
             <span class="post-date">

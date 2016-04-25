@@ -1,6 +1,6 @@
 ---
 layout: page
-title: João Vitor Rodrigues da Silva
+title: Currículo
 ---
 
 - Brasileiro, solteiro, 18 anos
