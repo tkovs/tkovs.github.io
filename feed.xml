@@ -5,9 +5,126 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Mon, 25 Apr 2016 15:37:13 -0300</pubDate>
-    <lastBuildDate>Mon, 25 Apr 2016 15:37:13 -0300</lastBuildDate>
-    <generator>Jekyll v3.0.4</generator>
+    <pubDate>Wed, 27 Apr 2016 22:21:15 -0300</pubDate>
+    <lastBuildDate>Wed, 27 Apr 2016 22:21:15 -0300</lastBuildDate>
+    <generator>Jekyll v3.0.5</generator>
+    
+      <item>
+        <title>O que é controle de versão?</title>
+        <description>&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-introducao&quot;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-versionamento&quot;&gt;Versionamento&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-git&quot;&gt;Git&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-escolher-arquivos&quot;&gt;Escolher quais arquivos estão sob versionamento&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-nova-versao&quot;&gt;Definir uma nova versão&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comparacao-versoes&quot;&gt;Comparação de versões&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-navegacao-entre-versoes&quot;&gt;Navegação entre versões&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-guia-git-iniciantes&quot;&gt;Guia de Git para iniciantes&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;div id=&quot;id-introducao&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
+
+&lt;p&gt;No decorrer do texto será abordado alguns temas importantes sobre versionamento, seguido de um
+tutorial usando o Git e o Github.&lt;/p&gt;
+
+&lt;div id=&quot;id-versionamento&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;versionamento&quot;&gt;Versionamento&lt;/h2&gt;
+
+&lt;p&gt;Versionamento é como chamamos o ato de gerenciar diferentes versões de um mesmo arquivo, cada uma 
+com um id de identificação - geralmente um número.&lt;/p&gt;
+
+&lt;p&gt;Por experiência própria já vi muitos colegas - até mesmo professores - usarem um método de
+versionamento muito manual: a cada versão do projeto toda a pasta era salva para um backup em que o
+nome era a data ou o número da versão, fazendo com que todos arquivos que não foram alterados fossem
+replicados e pesando muito, além de não ter recursos fundamentais que um sistema de controle de
+versão tem.&lt;/p&gt;
+
+&lt;p&gt;Nesse artigo mostrarei o Git que é um sistema de controle de versão muito usado e exigido por
+empresas, além de ser fácil de usar e estar em constante atualização e crescimento.&lt;/p&gt;
+
+&lt;div id=&quot;id-versionamento&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;git&quot;&gt;Git&lt;/h2&gt;
+
+&lt;p&gt;Git é uma ferramenta escrita em C de código aberto que foi desenvolvida pra ser o sistema de
+controle de versão do Linux. Hoje o Git é amplamente utilizado e é de fundamental importância
+conhecê-lo. Pessoalmente, eu o utilizo para desenvolvimento de jogos, modelagem e texturização
+e animação 3D, projetos de programação, trabalhos de escola, textos aleatórios, arquivos de 
+configuração do linux. Gerencio tudo isso da forma fácil e prática que o Git oferece e propõe, pois
+tudo acontece localmente sem necessidade de internet e seu funcionamento é simples para o usuário.&lt;/p&gt;
+
+&lt;p&gt;Seu funcionamento se dá, pra início de conversa, com um comando inicial numa pasta. A partir daí,
+todo arquivo que for copiado ou criado nessa pasta está sob controle do Git, com algumas exceções.&lt;/p&gt;
+
+&lt;p&gt;A seguir, será demonstrado alguns dos recursos oferecidos pelo Git, e mais a frente um tutorial.&lt;/p&gt;
+
+&lt;div id=&quot;id-escolher-arquivos&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;escolher-quais-arquivos-esto-sob-versionamento&quot;&gt;Escolher quais arquivos estão sob versionamento&lt;/h4&gt;
+
+&lt;p&gt;Embora o controle de versão do Git gerencie uma pasta específica, você decide quais arquivos dentro
+dessa pasta estão sob o controle desse sistema. Logo, não é porque um arquivo está dentro dessa
+pasta que ele vai sofrer o &lt;strong&gt;tracking&lt;/strong&gt; do Git - tracking é só a supervisão, o policiamento do Git
+sobre algo.&lt;/p&gt;
+
+&lt;div id=&quot;id-nova-versao&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;definir-uma-nova-verso&quot;&gt;Definir uma nova versão&lt;/h4&gt;
+
+&lt;p&gt;A cada vez que você altera arquivos uma nova versão deles está sendo criada, mas pra que os arquivos
+que estão sobre o controle do Git sejam salvos numa nova versão é necessário fazer um &lt;strong&gt;commit&lt;/strong&gt; dos
+arquivos. Ao se executar um commit, você precisa fornecer uma mensagem descrevendo a nova versão.
+Na mensagem, você pode dizer, de modo geral, o que foi alterado e porque as alterações foram feitas.
+Isso é importante pois após vários commits pode-se listar todos com as descrição sendo exibida, então
+você tem algo como uma linha do tempo no projeto.&lt;/p&gt;
+
+&lt;div id=&quot;id-comparacao-versoes&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;comparao-de-verses&quot;&gt;Comparação de versões&lt;/h4&gt;
+
+&lt;p&gt;Após ter mais de 1 versão do projeto gerenciado pelo Git, você pode comparar versões através do
+&lt;strong&gt;diff&lt;/strong&gt;. O resultado é a mostra de todas as linhas que foram alteradas.&lt;/p&gt;
+
+&lt;p&gt;A seguir há duas versões de um mesmo arquivos, e posteriormente a forma como o git mostra a
+diferença entre duas versões.&lt;/p&gt;
+
+&lt;p&gt;Primeira versão:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Olé! Como vi você?
+
+Tchau.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Segunda versão:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Olá! Como vai você?
+
+Tchau.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Resultado da execução do &lt;strong&gt;diff&lt;/strong&gt; entre as duas versões:
+&lt;img src=&quot;../assets/img/diff-ola.png&quot; alt=&quot;Diferença entre duas versões&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-navegacao-entre-versoes&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;navegao-entre-verses&quot;&gt;Navegação entre versões&lt;/h4&gt;
+</description>
+        <pubDate>Mon, 25 Apr 2016 00:00:00 -0300</pubDate>
+        <link>http://tkovs.github.io/blog/versionamento-parte-1</link>
+        <guid isPermaLink="true">http://tkovs.github.io/blog/versionamento-parte-1</guid>
+        
+        <category>Versionamento</category>
+        
+        
+      </item>
     
       <item>
         <title>Programação Funcional</title>
@@ -394,7 +511,7 @@ World&lt;/a&gt;&lt;/p&gt;
         <link>http://tkovs.github.io/blog/programacao-funcional</link>
         <guid isPermaLink="true">http://tkovs.github.io/blog/programacao-funcional</guid>
         
-        <category>programação funcional</category>
+        <category>Programação Funcional</category>
         
         
       </item>
@@ -709,7 +826,7 @@ World&lt;/a&gt;&lt;/p&gt;
         <link>http://tkovs.github.io/blog/introducao-linguagem-c</link>
         <guid isPermaLink="true">http://tkovs.github.io/blog/introducao-linguagem-c</guid>
         
-        <category>linguagem c</category>
+        <category>Linguagem c</category>
         
         
       </item>
