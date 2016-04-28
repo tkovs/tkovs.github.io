@@ -4,7 +4,7 @@ title:  "Introdução básica à linguagem C"
 date:   2016-03-31
 description: Material produzido para revisão básica da linguagem C. O público alvo é de pessoas que precisam aprender C mas sem se aprofundar - Institutos Federais com curso técnico de informática, por exemplo.
 tags:
-- linguagem c
+- Linguagem c
 permalink: /blog/introducao-linguagem-c
 ---
 
