@@ -1,0 +1,129 @@
+<h2 id="table-of-contents">Table of Contents</h2>
+
+<ol>
+  <li><a href="#id-introducao">Introdução</a></li>
+  <li><a href="#id-versionamento">Versionamento</a></li>
+  <li><a href="#id-plataforma">Plataforma</a></li>
+  <li><a href="#id-git">Git</a>
+    <ol>
+      <li><a href="#id-escolher-arquivos">Escolher quais arquivos estão sob versionamento</a></li>
+      <li><a href="#id-nova-versao">Definir uma nova versão</a></li>
+      <li><a href="#id-comparacao-versoes">Comparação de versões</a></li>
+      <li><a href="#id-navegacao-entre-versoes">Navegação entre versões</a></li>
+      <li><a href="#id-gerenciamento-varios-usuarios">Gerenciamento entre vários usuários</a></li>
+    </ol>
+  </li>
+  <li><a href="#id-guia-git-iniciantes">Guia de Git para iniciantes</a></li>
+</ol>
+
+<hr />
+
+<div id="id-introducao"></div>
+
+<h2 id="introduo">Introdução</h2>
+
+<p>No decorrer do texto será abordado alguns temas importantes sobre versionamento, seguido de um
+tutorial usando o Git.</p>
+
+<div id="id-versionamento"></div>
+
+<h2 id="versionamento">Versionamento</h2>
+
+<p>Versionamento é como chamamos o ato de gerenciar diferentes versões de um mesmo arquivo, cada uma 
+com um id de identificação - geralmente um número.</p>
+
+<p>Por experiência própria já vi muitos colegas - até mesmo professores - usarem um método de
+versionamento muito manual: a cada versão do projeto toda a pasta era salva para um backup em que o
+nome era a data ou o número da versão, fazendo com que todos arquivos que não foram alterados fossem
+replicados e pesando muito, além de não ter recursos fundamentais que um sistema de controle de
+versão tem.</p>
+
+<p>Nesse artigo mostrarei o Git que é um sistema de controle de versão muito usado e exigido por
+empresas, além de ser fácil de usar e estar em constante atualização e crescimento.
+id-plataforma</p>
+
+<div id="id-plataforma"></div>
+
+<h2 id="plataforma">Plataforma</h2>
+
+<p>Independente da plataforma que você atue, há sistemas de controle de versão para Linux, Mac,
+Windows, BSD e o que mais houver. Sempre haverá implementações de softwares com esse objetivo em
+diferentes linguagens, tanto privados quanto de código aberto.</p>
+
+<div id="id-git"></div>
+
+<h2 id="git">Git</h2>
+
+<p>Git é uma ferramenta escrita em C de código aberto que foi desenvolvida pra ser o sistema de
+controle de versão do Linux. Hoje o Git é amplamente utilizado e é de fundamental importância
+conhecê-lo. Pessoalmente, eu o utilizo para desenvolvimento de jogos, modelagem e texturização
+e animação 3D, projetos de programação, trabalhos de escola, textos aleatórios, arquivos de 
+configuração do linux. Gerencio tudo isso da forma fácil e prática que o Git oferece e propõe, pois
+tudo acontece localmente sem necessidade de internet e seu funcionamento é simples para o usuário.</p>
+
+<p>Seu funcionamento se dá, pra início de conversa, com um comando inicial numa pasta. A partir daí,
+todo arquivo que for copiado ou criado nessa pasta está sob controle do Git, com algumas exceções.</p>
+
+<p>A seguir, será demonstrado alguns dos recursos oferecidos pelo Git, e mais a frente um tutorial.</p>
+
+<div id="id-escolher-arquivos"></div>
+
+<h4 id="escolher-quais-arquivos-esto-sob-versionamento">Escolher quais arquivos estão sob versionamento</h4>
+
+<p>Embora o controle de versão do Git gerencie uma pasta específica, você decide quais arquivos dentro
+dessa pasta estão sob o controle desse sistema. Logo, não é porque um arquivo está dentro dessa
+pasta que ele vai sofrer o <strong>tracking</strong> do Git - tracking é só a supervisão, o policiamento do Git
+sobre algo.</p>
+
+<div id="id-nova-versao"></div>
+
+<h4 id="definir-uma-nova-verso">Definir uma nova versão</h4>
+
+<p>A cada vez que você altera arquivos, uma nova versão deles está sendo criada teoricamente falando,
+mas para que os arquivos que estão sobre o controle do Git sejam salvos numa nova versão é 
+necessário fazer um <strong>commit</strong> dos arquivos. Ao se executar um commit, você precisa fornecer uma
+mensagem descrevendo a nova versão. Na mensagem, você pode dizer, de modo geral, o que foi alterado
+e porque as alterações foram feitas. Isso é importante pois após vários commits pode-se listar todos
+com as descrição sendo exibida, então você tem algo como uma linha do tempo no projeto.</p>
+
+<div id="id-comparacao-versoes"></div>
+
+<h4 id="comparao-de-verses">Comparação de versões</h4>
+
+<p>Após ter mais de 1 versão do projeto gerenciado pelo Git, você pode comparar versões através do
+<strong>diff</strong>. O resultado é a mostra de todas as linhas que foram alteradas.</p>
+
+<p>A seguir há duas versões de um mesmo arquivo, e posteriormente a forma como o git mostra a
+diferença entre essas duas versões.</p>
+
+<p>Primeira versão:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Olé! Como vi você?
+
+Tchau.</code></pre></figure>
+
+<p>Segunda versão:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">Olá! Como vai você?
+
+Tchau.</code></pre></figure>
+
+<p>Resultado da execução do <strong>diff</strong> entre as duas versões:
+<img src="../assets/img/diff-ola.png" alt="Diferença entre duas versões" /></p>
+
+<div id="id-navegacao-entre-versoes"></div>
+
+<h4 id="navegao-entre-verses">Navegação entre versões</h4>
+
+<p>Embora você passe a esmagadora maioria do tempo navegando no seu projeto em seu estado atual, você
+pode visita-lo a qualquer momento em que um commit foi feito. No exemplo abaixo, o comando cat exibe
+o conteúdo de um arquivo. Usando o comando cat duas vezes no mesmo arquivo ele mostra conteúdo
+diferente, mas por quê? Porque entre as duas execuções o projeto foi alterado pra versão anterior,
+então todos os arquivos foram alterados pro estado que estavam no commit anterior.</p>
+
+<p><img src="../assets/img/navegando-versoes-antigas.png" alt="Versões diferentes" /></p>
+
+<div id="id-gerenciamento-varios-usuarios"></div>
+
+<h4 id="gerenciamento-entre-vrios-usurios">Gerenciamento entre vários usuários</h4>
+

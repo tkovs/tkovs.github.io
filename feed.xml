@@ -5,23 +5,25 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 27 Apr 2016 22:21:15 -0300</pubDate>
-    <lastBuildDate>Wed, 27 Apr 2016 22:21:15 -0300</lastBuildDate>
+    <pubDate>Thu, 28 Apr 2016 04:55:29 -0300</pubDate>
+    <lastBuildDate>Thu, 28 Apr 2016 04:55:29 -0300</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
-        <title>O que é controle de versão?</title>
-        <description>&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+        <title>Versionamento e iniciando no Git!</title>
+        <description>&lt;h2 id=&quot;tabela-de-contedo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;#id-introducao&quot;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#id-versionamento&quot;&gt;Versionamento&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-plataforma&quot;&gt;Plataforma&lt;/a&gt;&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#id-git&quot;&gt;Git&lt;/a&gt;
     &lt;ol&gt;
       &lt;li&gt;&lt;a href=&quot;#id-escolher-arquivos&quot;&gt;Escolher quais arquivos estão sob versionamento&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-nova-versao&quot;&gt;Definir uma nova versão&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-comparacao-versoes&quot;&gt;Comparação de versões&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-navegacao-entre-versoes&quot;&gt;Navegação entre versões&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-gerenciamento-varios-usuarios&quot;&gt;Gerenciamento entre vários usuários&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#id-guia-git-iniciantes&quot;&gt;Guia de Git para iniciantes&lt;/a&gt;&lt;/li&gt;
@@ -34,7 +36,7 @@
 &lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
 
 &lt;p&gt;No decorrer do texto será abordado alguns temas importantes sobre versionamento, seguido de um
-tutorial usando o Git e o Github.&lt;/p&gt;
+tutorial usando o Git.&lt;/p&gt;
 
 &lt;div id=&quot;id-versionamento&quot;&gt;&lt;/div&gt;
 
@@ -50,9 +52,21 @@ replicados e pesando muito, além de não ter recursos fundamentais que um siste
 versão tem.&lt;/p&gt;
 
 &lt;p&gt;Nesse artigo mostrarei o Git que é um sistema de controle de versão muito usado e exigido por
-empresas, além de ser fácil de usar e estar em constante atualização e crescimento.&lt;/p&gt;
+empresas, além de ser fácil de usar e estar em constante atualização e crescimento.
+id-plataforma&lt;/p&gt;
 
-&lt;div id=&quot;id-versionamento&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;id-plataforma&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;plataforma&quot;&gt;Plataforma&lt;/h2&gt;
+
+&lt;p&gt;Independente da plataforma que você atue, há sistemas de controle de versão para Linux, Mac,
+Windows, BSD e o que mais houver. Sempre haverá implementações de softwares com esse objetivo em
+diferentes linguagens, tanto privados quanto de código aberto.&lt;/p&gt;
+
+&lt;p&gt;Pessoalmente eu uso o Git no Arch Linux. Minha área de trabalho:
+&lt;img src=&quot;../assets/img/arch-linux.png&quot; alt=&quot;Arch Linux&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-git&quot;&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;git&quot;&gt;Git&lt;/h2&gt;
 
@@ -81,12 +95,12 @@ sobre algo.&lt;/p&gt;
 
 &lt;h4 id=&quot;definir-uma-nova-verso&quot;&gt;Definir uma nova versão&lt;/h4&gt;
 
-&lt;p&gt;A cada vez que você altera arquivos uma nova versão deles está sendo criada, mas pra que os arquivos
-que estão sobre o controle do Git sejam salvos numa nova versão é necessário fazer um &lt;strong&gt;commit&lt;/strong&gt; dos
-arquivos. Ao se executar um commit, você precisa fornecer uma mensagem descrevendo a nova versão.
-Na mensagem, você pode dizer, de modo geral, o que foi alterado e porque as alterações foram feitas.
-Isso é importante pois após vários commits pode-se listar todos com as descrição sendo exibida, então
-você tem algo como uma linha do tempo no projeto.&lt;/p&gt;
+&lt;p&gt;A cada vez que você altera arquivos, uma nova versão deles está sendo criada teoricamente falando,
+mas para que os arquivos que estão sobre o controle do Git sejam salvos numa nova versão é 
+necessário fazer um &lt;strong&gt;commit&lt;/strong&gt; dos arquivos. Ao se executar um commit, você precisa fornecer uma
+mensagem descrevendo a nova versão. Na mensagem, você pode dizer, de modo geral, o que foi alterado
+e porque as alterações foram feitas. Isso é importante pois após vários commits pode-se listar todos
+com as descrição sendo exibida, então você tem algo como uma linha do tempo no projeto.&lt;/p&gt;
 
 &lt;div id=&quot;id-comparacao-versoes&quot;&gt;&lt;/div&gt;
 
@@ -95,8 +109,8 @@ você tem algo como uma linha do tempo no projeto.&lt;/p&gt;
 &lt;p&gt;Após ter mais de 1 versão do projeto gerenciado pelo Git, você pode comparar versões através do
 &lt;strong&gt;diff&lt;/strong&gt;. O resultado é a mostra de todas as linhas que foram alteradas.&lt;/p&gt;
 
-&lt;p&gt;A seguir há duas versões de um mesmo arquivos, e posteriormente a forma como o git mostra a
-diferença entre duas versões.&lt;/p&gt;
+&lt;p&gt;A seguir há duas versões de um mesmo arquivo, e posteriormente a forma como o git mostra a
+diferença entre essas duas versões.&lt;/p&gt;
 
 &lt;p&gt;Primeira versão:&lt;/p&gt;
 
@@ -116,10 +130,23 @@ Tchau.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 &lt;div id=&quot;id-navegacao-entre-versoes&quot;&gt;&lt;/div&gt;
 
 &lt;h4 id=&quot;navegao-entre-verses&quot;&gt;Navegação entre versões&lt;/h4&gt;
+
+&lt;p&gt;Embora você passe a esmagadora maioria do tempo navegando no seu projeto em seu estado atual, você
+pode visita-lo a qualquer momento em que um commit foi feito. No exemplo abaixo, o comando cat exibe
+o conteúdo de um arquivo. Usando o comando cat duas vezes no mesmo arquivo ele mostra conteúdo
+diferente, mas por quê? Porque entre as duas execuções o projeto foi alterado pra versão anterior,
+então todos os arquivos foram alterados pro estado que estavam no commit anterior.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/navegando-versoes-antigas.png&quot; alt=&quot;Versões diferentes&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-gerenciamento-varios-usuarios&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;gerenciamento-entre-vrios-usurios&quot;&gt;Gerenciamento entre vários usuários&lt;/h4&gt;
+
 </description>
         <pubDate>Mon, 25 Apr 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/versionamento-parte-1</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/versionamento-parte-1</guid>
+        <link>http://tkovs.github.io/blog/versionamento-git</link>
+        <guid isPermaLink="true">http://tkovs.github.io/blog/versionamento-git</guid>
         
         <category>Versionamento</category>
         
@@ -128,7 +155,7 @@ Tchau.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
     
       <item>
         <title>Programação Funcional</title>
-        <description>&lt;h2 id=&quot;table-of-contents&quot;&gt;Table of Contents&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;tabela-de-contedo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;#id-introducao&quot;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
