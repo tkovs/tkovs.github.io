@@ -8,7 +8,7 @@ tags:
 permalink: /blog/programacao-funcional
 ---
 
-## Table of Contents
+## Tabela de conteúdo
 
 0. [Introdução](#id-introducao)
 1. [Haskell](#id-haskell)

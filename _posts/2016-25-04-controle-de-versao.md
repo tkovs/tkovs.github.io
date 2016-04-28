@@ -1,23 +1,25 @@
 ---
 layout: post
-title:  "O que é controle de versão?"
+title:  "Versionamento e iniciando no Git!"
 date:   2016-04-25
 description: Início da série sobre versionamento; filosofia open source; Git e Github; licenças (MIT, Apache, GPL); relação mercado de trabalho e github; grandes projetos de código aberto; tutorial sobre como usar o Git independente e sobre como integrar com o Github.
 tags:
 - Versionamento
-permalink: /blog/versionamento-parte-1
+permalink: /blog/versionamento-git
 ---
 
-## Table of Contents
+## Tabela de conteúdo
 
 0. [Introdução](#id-introducao)
 1. [Versionamento](#id-versionamento)
-2. [Git](#id-git)
+2. [Plataforma](#id-plataforma)
+3. [Git](#id-git)
     1. [Escolher quais arquivos estão sob versionamento](#id-escolher-arquivos)
     2. [Definir uma nova versão](#id-nova-versao)
     3. [Comparação de versões](#id-comparacao-versoes)
     4. [Navegação entre versões](#id-navegacao-entre-versoes)
-3. [Guia de Git para iniciantes](#id-guia-git-iniciantes)
+    5. [Gerenciamento entre vários usuários](#id-gerenciamento-varios-usuarios)
+4. [Guia de Git para iniciantes](#id-guia-git-iniciantes)
 
 <hr />
 <div id='id-introducao'></div>
@@ -25,7 +27,7 @@ permalink: /blog/versionamento-parte-1
 ##Introdução
 
 No decorrer do texto será abordado alguns temas importantes sobre versionamento, seguido de um
-tutorial usando o Git e o Github.
+tutorial usando o Git.
 
 <div id='id-versionamento'></div>
 
@@ -42,8 +44,20 @@ versão tem.
 
 Nesse artigo mostrarei o Git que é um sistema de controle de versão muito usado e exigido por
 empresas, além de ser fácil de usar e estar em constante atualização e crescimento.
+id-plataforma
 
-<div id='id-versionamento'></div>
+<div id='id-plataforma'></div>
+
+##Plataforma
+
+Independente da plataforma que você atue, há sistemas de controle de versão para Linux, Mac,
+Windows, BSD e o que mais houver. Sempre haverá implementações de softwares com esse objetivo em
+diferentes linguagens, tanto privados quanto de código aberto.
+
+Pessoalmente eu uso o Git no Arch Linux. Minha área de trabalho:
+![Arch Linux](../assets/img/arch-linux.png)
+
+<div id='id-git'></div>
 
 ##Git
 
@@ -72,12 +86,12 @@ sobre algo.
 
 ####Definir uma nova versão
 
-A cada vez que você altera arquivos uma nova versão deles está sendo criada, mas pra que os arquivos
-que estão sobre o controle do Git sejam salvos numa nova versão é necessário fazer um **commit** dos
-arquivos. Ao se executar um commit, você precisa fornecer uma mensagem descrevendo a nova versão.
-Na mensagem, você pode dizer, de modo geral, o que foi alterado e porque as alterações foram feitas.
-Isso é importante pois após vários commits pode-se listar todos com as descrição sendo exibida, então
-você tem algo como uma linha do tempo no projeto.
+A cada vez que você altera arquivos, uma nova versão deles está sendo criada teoricamente falando,
+mas para que os arquivos que estão sobre o controle do Git sejam salvos numa nova versão é 
+necessário fazer um **commit** dos arquivos. Ao se executar um commit, você precisa fornecer uma
+mensagem descrevendo a nova versão. Na mensagem, você pode dizer, de modo geral, o que foi alterado
+e porque as alterações foram feitas. Isso é importante pois após vários commits pode-se listar todos
+com as descrição sendo exibida, então você tem algo como uma linha do tempo no projeto.
 
 <div id='id-comparacao-versoes'></div>
 
@@ -86,8 +100,8 @@ você tem algo como uma linha do tempo no projeto.
 Após ter mais de 1 versão do projeto gerenciado pelo Git, você pode comparar versões através do
 **diff**. O resultado é a mostra de todas as linhas que foram alteradas.
 
-A seguir há duas versões de um mesmo arquivos, e posteriormente a forma como o git mostra a
-diferença entre duas versões.
+A seguir há duas versões de um mesmo arquivo, e posteriormente a forma como o git mostra a
+diferença entre essas duas versões.
 
 Primeira versão:
 
@@ -111,3 +125,17 @@ Resultado da execução do **diff** entre as duas versões:
 <div id='id-navegacao-entre-versoes'></div>
 
 ####Navegação entre versões
+
+Embora você passe a esmagadora maioria do tempo navegando no seu projeto em seu estado atual, você
+pode visita-lo a qualquer momento em que um commit foi feito. No exemplo abaixo, o comando cat exibe
+o conteúdo de um arquivo. Usando o comando cat duas vezes no mesmo arquivo ele mostra conteúdo
+diferente, mas por quê? Porque entre as duas execuções o projeto foi alterado pra versão anterior,
+então todos os arquivos foram alterados pro estado que estavam no commit anterior.
+
+![Versões diferentes](../assets/img/navegando-versoes-antigas.png)
+
+<div id='id-gerenciamento-varios-usuarios'></div>
+
+####Gerenciamento entre vários usuários
+
+
