@@ -69,10 +69,17 @@
       <li><a href="#id-nova-versao">Definir uma nova versão</a></li>
       <li><a href="#id-comparacao-versoes">Comparação de versões</a></li>
       <li><a href="#id-navegacao-entre-versoes">Navegação entre versões</a></li>
-      <li><a href="#id-gerenciamento-varios-usuarios">Gerenciamento entre vários usuários</a></li>
+      <li><a href="#id-ramificacoes">Ramificações</a></li>
+      <li><a href="#id-gestao-usuarios">Gerenciando vários contribuidores num mesmo projeto</a></li>
     </ol>
   </li>
-  <li><a href="#id-guia-git-iniciantes">Guia de Git para iniciantes</a></li>
+  <li><a href="#id-guia-git-iniciantes">Guia de Git para iniciantes</a>
+    <ol>
+      <li><a href="#id-instalacao-git">Instalação do Git</a></li>
+      <li><a href="#id-configurando-usuario">Configurando seu usuário no git</a></li>
+      <li><a href="#id-git-init">Iniciando gerência do git sob uma pasta</a></li>
+    </ol>
+  </li>
 </ol>
 
 <hr />
@@ -82,7 +89,7 @@
 <h2 id="introduo">Introdução</h2>
 
 <p>No decorrer do texto será abordado alguns temas importantes sobre versionamento, seguido de um
-tutorial usando o Git.</p>
+tutorial usando o Git no terminal.</p>
 
 <div id="id-versionamento"></div>
 
@@ -105,8 +112,8 @@ id-plataforma</p>
 
 <h2 id="plataforma">Plataforma</h2>
 
-<p>Independente da plataforma que você atue, há sistemas de controle de versão para Linux, Mac,
-Windows, BSD e o que mais houver. Sempre haverá implementações de softwares com esse objetivo em
+<p>Independente da plataforma que você atue, há sistemas de controle de versão para Linux, Mac OS X,
+Windows, Solaris e o que mais houver. Sempre haverá implementações de softwares com esse objetivo em
 diferentes linguagens, tanto privados quanto de código aberto.</p>
 
 <p>Pessoalmente eu uso o Git no Arch Linux. Minha área de trabalho:
@@ -116,7 +123,7 @@ diferentes linguagens, tanto privados quanto de código aberto.</p>
 
 <h2 id="git">Git</h2>
 
-<p>Git é uma ferramenta escrita em C de código aberto que foi desenvolvida pra ser o sistema de
+<p>Git é uma ferramenta escrita em C, de código aberto, que foi desenvolvida pra ser o sistema de
 controle de versão do Linux. Hoje o Git é amplamente utilizado e é de fundamental importância
 conhecê-lo. Pessoalmente, eu o utilizo para desenvolvimento de jogos, modelagem e texturização
 e animação 3D, projetos de programação, trabalhos de escola, textos aleatórios, arquivos de 
@@ -185,10 +192,91 @@ então todos os arquivos foram alterados pro estado que estavam no commit anteri
 
 <p><img src="../assets/img/navegando-versoes-antigas.png" alt="Versões diferentes" /></p>
 
-<div id="id-gerenciamento-varios-usuarios"></div>
+<div id="id-ramificacoes"></div>
 
-<h4 id="gerenciamento-entre-vrios-usurios">Gerenciamento entre vários usuários</h4>
+<h4 id="ramificaes">Ramificações</h4>
 
+<p>Quando você precisar fazer alterações no projeto, mas quiser manter uma cópia segura, não
+precisa copiá-lo para algum lugar como um backup. Quando quiser adicionar um novo recurso ou alterar
+um arquivo sem riscos de corromper o projeto atual e ter dificuldades de reverter para o estado em
+que funcionava, você não precisa salvar uma cópia do seu projeto
+como backup. Ao invés de um backup, o Git cria uma ramificação do projeto em paralelo à ramificação
+principal para que se trabalhe em linhas diferentes. Elas são independentes e podem simplesmentes não
+se unirem no futuro. Ao se finalizar as alterações necessárias, o Git
+faz o <strong>merge</strong> de duas ramificações, que adiciona as alterações de uma ramificação em outra, dando a
+você controle total sobre o projeto e as alterações feitas. E é claro, a qualquer momento você pode
+navegar por diferentes ramificações, que no git são chamadas de <strong>branchs</strong>.</p>
+
+<p><img src="../assets/img/feature-x.png" alt="Feature-x" /></p>
+
+<div id="id-gestao-usuarios"></div>
+
+<h4 id="gerenciando-vrios-contribuidores-num-mesmo-projeto">Gerenciando vários contribuidores num mesmo projeto</h4>
+
+<p>Usando o merge, diferentes pessoas podem trabalhar num mesmo projeto de modo organizado, cada um
+com sua ramificação própria atrás de um fim específico, desse modo ao não trabalharem num mesmo
+arquivo a junção das alterações é feita rapidamente sem problemas. Caso você tente juntar diferentes
+versões de um arquivo, com problemas de compatibilidade, o Git avisa quais são os dados que estão
+entrando em conflito e aí fica por sua conta quais dados terão prioridade sobre outros no resultado
+final.</p>
+
+<div id="id-guia-git-iniciantes"></div>
+
+<h2 id="guia-de-git-para-iniciantes">Guia de Git para iniciantes</h2>
+
+<p>A seguir, um tutorial enxuto sobre como usar o Git na prática, com apoio de imagens e gifs.</p>
+
+<p><img src="../assets/img/git-logo.png" alt="Git logo" /></p>
+
+<div id="id-instalacao-git"></div>
+
+<h4 id="instalao-do-git">Instalação do Git</h4>
+
+<p>Faça o download do Git para o seu sistema operacional seguindo os passos no próprio
+<a href="https://git-scm.com/download/">site</a> da ferramenta. A instalação é muito simples e leva pouco
+tempo, além de ter muitos tutoriais na internet ensinando a fazê-lo.</p>
+
+<div id="id-configurando-usuario"></div>
+
+<h4 id="configurando-seu-usurio-no-git">Configurando seu usuário no git</h4>
+
+<p>Após instalar, abra o terminal. Se você executar <code>git --version</code>, e não obtiver a versão do git, algo
+deu errado na instalação, mesmo que seja a adição do git no $PATH do seu sistema operacional.</p>
+
+<p>Quando fizer commits, seu email fica atrelado a ele, então você precisa informar ao Git seu nome e
+seu email. Isso também se faz necessário para se conectar ao Github, mas deixarei isso para outro
+artigo.</p>
+
+<p><strong>Seu usuário</strong></p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> git config --global user.name <span class="s2">&quot;tkovs&quot;</span>
+<span class="gp">$</span> git config --global user.email <span class="s2">&quot;victor.rdg@hotmail.com&quot;</span></code></pre></figure>
+
+<p><strong>Seu editor</strong></p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> git config --global core.editor vim</code></pre></figure>
+
+<p>E para verificar se está tudo certo, execute o comando abaixo. No meu notebook o resultado foi esse:</p>
+
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> git config -l
+<span class="go">user.email=victor.rdg@hotmail.com</span>
+<span class="go">user.name=tkovs</span>
+<span class="go">core.repositoryformatversion=0</span>
+<span class="go">core.filemode=true</span>
+<span class="go">core.bare=false</span>
+<span class="go">core.logallrefupdates=true</span>
+<span class="go">remote.origin.url=git@github.com:tkovs/tkovs.github.io.git</span>
+<span class="go">remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*</span>
+<span class="go">branch.master.remote=origin</span>
+<span class="go">branch.master.merge=refs/heads/master</span>
+<span class="go">branch.source.remote=origin</span>
+<span class="go">branch.source.merge=refs/heads/source</span></code></pre></figure>
+
+<div id="id-git-init"></div>
+
+<h4 id="iniciando-gerncia-do-git-sob-uma-pasta">Iniciando gerência do git sob uma pasta</h4>
+
+<p>Em breve…</p>
 
 		</div>
 	</div>

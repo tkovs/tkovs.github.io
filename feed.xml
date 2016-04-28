@@ -5,8 +5,8 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 28 Apr 2016 04:55:29 -0300</pubDate>
-    <lastBuildDate>Thu, 28 Apr 2016 04:55:29 -0300</lastBuildDate>
+    <pubDate>Thu, 28 Apr 2016 19:11:41 -0300</pubDate>
+    <lastBuildDate>Thu, 28 Apr 2016 19:11:41 -0300</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
@@ -23,10 +23,17 @@
       &lt;li&gt;&lt;a href=&quot;#id-nova-versao&quot;&gt;Definir uma nova versão&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-comparacao-versoes&quot;&gt;Comparação de versões&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-navegacao-entre-versoes&quot;&gt;Navegação entre versões&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#id-gerenciamento-varios-usuarios&quot;&gt;Gerenciamento entre vários usuários&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-ramificacoes&quot;&gt;Ramificações&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-gestao-usuarios&quot;&gt;Gerenciando vários contribuidores num mesmo projeto&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#id-guia-git-iniciantes&quot;&gt;Guia de Git para iniciantes&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-guia-git-iniciantes&quot;&gt;Guia de Git para iniciantes&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-instalacao-git&quot;&gt;Instalação do Git&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-configurando-usuario&quot;&gt;Configurando seu usuário no git&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-git-init&quot;&gt;Iniciando gerência do git sob uma pasta&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;hr /&gt;
@@ -36,7 +43,7 @@
 &lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
 
 &lt;p&gt;No decorrer do texto será abordado alguns temas importantes sobre versionamento, seguido de um
-tutorial usando o Git.&lt;/p&gt;
+tutorial usando o Git no terminal.&lt;/p&gt;
 
 &lt;div id=&quot;id-versionamento&quot;&gt;&lt;/div&gt;
 
@@ -59,8 +66,8 @@ id-plataforma&lt;/p&gt;
 
 &lt;h2 id=&quot;plataforma&quot;&gt;Plataforma&lt;/h2&gt;
 
-&lt;p&gt;Independente da plataforma que você atue, há sistemas de controle de versão para Linux, Mac,
-Windows, BSD e o que mais houver. Sempre haverá implementações de softwares com esse objetivo em
+&lt;p&gt;Independente da plataforma que você atue, há sistemas de controle de versão para Linux, Mac OS X,
+Windows, Solaris e o que mais houver. Sempre haverá implementações de softwares com esse objetivo em
 diferentes linguagens, tanto privados quanto de código aberto.&lt;/p&gt;
 
 &lt;p&gt;Pessoalmente eu uso o Git no Arch Linux. Minha área de trabalho:
@@ -70,7 +77,7 @@ diferentes linguagens, tanto privados quanto de código aberto.&lt;/p&gt;
 
 &lt;h2 id=&quot;git&quot;&gt;Git&lt;/h2&gt;
 
-&lt;p&gt;Git é uma ferramenta escrita em C de código aberto que foi desenvolvida pra ser o sistema de
+&lt;p&gt;Git é uma ferramenta escrita em C, de código aberto, que foi desenvolvida pra ser o sistema de
 controle de versão do Linux. Hoje o Git é amplamente utilizado e é de fundamental importância
 conhecê-lo. Pessoalmente, eu o utilizo para desenvolvimento de jogos, modelagem e texturização
 e animação 3D, projetos de programação, trabalhos de escola, textos aleatórios, arquivos de 
@@ -139,10 +146,91 @@ então todos os arquivos foram alterados pro estado que estavam no commit anteri
 
 &lt;p&gt;&lt;img src=&quot;../assets/img/navegando-versoes-antigas.png&quot; alt=&quot;Versões diferentes&quot; /&gt;&lt;/p&gt;
 
-&lt;div id=&quot;id-gerenciamento-varios-usuarios&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;id-ramificacoes&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;gerenciamento-entre-vrios-usurios&quot;&gt;Gerenciamento entre vários usuários&lt;/h4&gt;
+&lt;h4 id=&quot;ramificaes&quot;&gt;Ramificações&lt;/h4&gt;
 
+&lt;p&gt;Quando você precisar fazer alterações no projeto, mas quiser manter uma cópia segura, não
+precisa copiá-lo para algum lugar como um backup. Quando quiser adicionar um novo recurso ou alterar
+um arquivo sem riscos de corromper o projeto atual e ter dificuldades de reverter para o estado em
+que funcionava, você não precisa salvar uma cópia do seu projeto
+como backup. Ao invés de um backup, o Git cria uma ramificação do projeto em paralelo à ramificação
+principal para que se trabalhe em linhas diferentes. Elas são independentes e podem simplesmentes não
+se unirem no futuro. Ao se finalizar as alterações necessárias, o Git
+faz o &lt;strong&gt;merge&lt;/strong&gt; de duas ramificações, que adiciona as alterações de uma ramificação em outra, dando a
+você controle total sobre o projeto e as alterações feitas. E é claro, a qualquer momento você pode
+navegar por diferentes ramificações, que no git são chamadas de &lt;strong&gt;branchs&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/feature-x.png&quot; alt=&quot;Feature-x&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-gestao-usuarios&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;gerenciando-vrios-contribuidores-num-mesmo-projeto&quot;&gt;Gerenciando vários contribuidores num mesmo projeto&lt;/h4&gt;
+
+&lt;p&gt;Usando o merge, diferentes pessoas podem trabalhar num mesmo projeto de modo organizado, cada um
+com sua ramificação própria atrás de um fim específico, desse modo ao não trabalharem num mesmo
+arquivo a junção das alterações é feita rapidamente sem problemas. Caso você tente juntar diferentes
+versões de um arquivo, com problemas de compatibilidade, o Git avisa quais são os dados que estão
+entrando em conflito e aí fica por sua conta quais dados terão prioridade sobre outros no resultado
+final.&lt;/p&gt;
+
+&lt;div id=&quot;id-guia-git-iniciantes&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;guia-de-git-para-iniciantes&quot;&gt;Guia de Git para iniciantes&lt;/h2&gt;
+
+&lt;p&gt;A seguir, um tutorial enxuto sobre como usar o Git na prática, com apoio de imagens e gifs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/git-logo.png&quot; alt=&quot;Git logo&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-instalacao-git&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;instalao-do-git&quot;&gt;Instalação do Git&lt;/h4&gt;
+
+&lt;p&gt;Faça o download do Git para o seu sistema operacional seguindo os passos no próprio
+&lt;a href=&quot;https://git-scm.com/download/&quot;&gt;site&lt;/a&gt; da ferramenta. A instalação é muito simples e leva pouco
+tempo, além de ter muitos tutoriais na internet ensinando a fazê-lo.&lt;/p&gt;
+
+&lt;div id=&quot;id-configurando-usuario&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;configurando-seu-usurio-no-git&quot;&gt;Configurando seu usuário no git&lt;/h4&gt;
+
+&lt;p&gt;Após instalar, abra o terminal. Se você executar &lt;code&gt;git --version&lt;/code&gt;, e não obtiver a versão do git, algo
+deu errado na instalação, mesmo que seja a adição do git no $PATH do seu sistema operacional.&lt;/p&gt;
+
+&lt;p&gt;Quando fizer commits, seu email fica atrelado a ele, então você precisa informar ao Git seu nome e
+seu email. Isso também se faz necessário para se conectar ao Github, mas deixarei isso para outro
+artigo.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Seu usuário&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;tkovs&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config --global user.email &lt;span class=&quot;s2&quot;&gt;&amp;quot;victor.rdg@hotmail.com&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;strong&gt;Seu editor&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config --global core.editor vim&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;E para verificar se está tudo certo, execute o comando abaixo. No meu notebook o resultado foi esse:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config -l
+&lt;span class=&quot;go&quot;&gt;user.email=victor.rdg@hotmail.com&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;user.name=tkovs&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;core.repositoryformatversion=0&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;core.filemode=true&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;core.bare=false&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;core.logallrefupdates=true&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;remote.origin.url=git@github.com:tkovs/tkovs.github.io.git&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;remote.origin.fetch=+refs/heads/*:refs/remotes/origin/*&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;branch.master.remote=origin&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;branch.master.merge=refs/heads/master&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;branch.source.remote=origin&lt;/span&gt;
+&lt;span class=&quot;go&quot;&gt;branch.source.merge=refs/heads/source&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-git-init&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;iniciando-gerncia-do-git-sob-uma-pasta&quot;&gt;Iniciando gerência do git sob uma pasta&lt;/h4&gt;
+
+&lt;p&gt;Em breve…&lt;/p&gt;
 </description>
         <pubDate>Mon, 25 Apr 2016 00:00:00 -0300</pubDate>
         <link>http://tkovs.github.io/blog/versionamento-git</link>
