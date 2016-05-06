@@ -5,8 +5,8 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 28 Apr 2016 19:11:41 -0300</pubDate>
-    <lastBuildDate>Thu, 28 Apr 2016 19:11:41 -0300</lastBuildDate>
+    <pubDate>Fri, 06 May 2016 19:12:52 -0300</pubDate>
+    <lastBuildDate>Fri, 06 May 2016 19:12:52 -0300</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
@@ -31,7 +31,7 @@
     &lt;ol&gt;
       &lt;li&gt;&lt;a href=&quot;#id-instalacao-git&quot;&gt;Instalação do Git&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-configurando-usuario&quot;&gt;Configurando seu usuário no git&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#id-git-init&quot;&gt;Iniciando gerência do git sob uma pasta&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos&quot;&gt;Comandos básicos&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
@@ -226,11 +226,57 @@ artigo.&lt;/p&gt;
 &lt;span class=&quot;go&quot;&gt;branch.source.remote=origin&lt;/span&gt;
 &lt;span class=&quot;go&quot;&gt;branch.source.merge=refs/heads/source&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;div id=&quot;id-git-init&quot;&gt;&lt;/div&gt;
+&lt;div id=&quot;id-comandos-basicos&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;iniciando-gerncia-do-git-sob-uma-pasta&quot;&gt;Iniciando gerência do git sob uma pasta&lt;/h4&gt;
+&lt;h4 id=&quot;comandos-bsicos&quot;&gt;Comandos básicos&lt;/h4&gt;
 
-&lt;p&gt;Em breve…&lt;/p&gt;
+&lt;p&gt;Primeiramente, como usaremos o Git através do terminal, precisamos conhecer alguns comandos básicos
+para o uso básico. Eles não têm relação com o Git então &lt;a href=&quot;#id-pular-comandos-basicos&quot;&gt;clique aqui&lt;/a&gt; se
+você já tem domínio básico sobre o terminal que usa.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ls&lt;/strong&gt; e &lt;strong&gt;dir&lt;/strong&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Use ls se estiver em uma distro Linux.
+
+Use dir se estiver em alguma versão do Windows.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Lista o conteúdo do diretório atual. Para visualizar os possíveis argumentos, tente &lt;code&gt;man ls&lt;/code&gt; se
+estiver no Linux.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/ls-exemplo.png&quot; alt=&quot;ls-exemplo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;cd&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Navega para o diretório que lhe foi passado como argumento.&lt;/p&gt;
+
+&lt;p&gt;obs.: &lt;code&gt;cd ..&lt;/code&gt; leva para a pasta anterior na hierarquia de diretórios.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/cd-exemplo.png&quot; alt=&quot;ls-exemplo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;mkdir&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Cria um novo diretório. Se a pasta a ser criada estiver dentro de uma que ainda não existe, deve-se
+usar a opção p para criar diretórios de parentesco se necessário.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/mkdir-exemplo.png&quot; alt=&quot;mkdir-exemplo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;touch&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Se estiver usando Linux, você pode criar um arquivo usando o comando touch, passando o nome do
+arquivo como argumento.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/touch-exemplo.png&quot; alt=&quot;touch-exemplo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Para edição de arquivos eu uso o Vim, meu editor de texto preferido. Eu te aconselho a usar o
+Sublime Text 3 pela facilidade de se usar.&lt;/p&gt;
+
+&lt;p&gt;Imagem do meu vim:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/vim-exemplo.png&quot; alt=&quot;vim-exemplo&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-pular-comandos-basicos&quot;&gt;&lt;/div&gt;
 </description>
         <pubDate>Mon, 25 Apr 2016 00:00:00 -0300</pubDate>
         <link>http://tkovs.github.io/blog/versionamento-git</link>
