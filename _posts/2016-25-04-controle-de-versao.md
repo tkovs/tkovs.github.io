@@ -23,7 +23,7 @@ permalink: /blog/versionamento-git
 4. [Guia de Git para iniciantes](#id-guia-git-iniciantes)
     1. [Instalação do Git](#id-instalacao-git)
     2. [Configurando seu usuário no git](#id-configurando-usuario)
-    3. [Iniciando gerência do git sob uma pasta](#id-git-init)
+    3. [Comandos básicos](#id-comandos-basicos)
 
 <hr />
 <div id='id-introducao'></div>
@@ -224,8 +224,56 @@ branch.source.remote=origin
 branch.source.merge=refs/heads/source
 {% endhighlight %}
 
-<div id='id-git-init'></div>
+<div id='id-comandos-basicos'></div>
 
-####Iniciando gerência do git sob uma pasta
+####Comandos básicos
 
-Em breve...
+Primeiramente, como usaremos o Git através do terminal, precisamos conhecer alguns comandos básicos
+para o uso básico. Eles não têm relação com o Git então [clique aqui](#id-pular-comandos-basicos) se
+você já tem domínio básico sobre o terminal que usa.
+
+**ls** e **dir**
+
+{% highlight text %}
+Use ls se estiver em uma distro Linux.
+
+Use dir se estiver em alguma versão do Windows.
+{% endhighlight %}
+
+Lista o conteúdo do diretório atual. Para visualizar os possíveis argumentos, tente ```man ls``` se
+estiver no Linux.
+
+![ls-exemplo](../assets/img/ls-exemplo.png)
+
+**cd**
+
+Navega para o diretório que lhe foi passado como argumento.
+
+obs.: ```cd ..``` leva para a pasta anterior na hierarquia de diretórios.
+
+![ls-exemplo](../assets/img/cd-exemplo.png)
+
+**mkdir**
+
+Cria um novo diretório. Se a pasta a ser criada estiver dentro de uma que ainda não existe, deve-se
+usar a opção p para criar diretórios de parentesco se necessário.
+
+![mkdir-exemplo](../assets/img/mkdir-exemplo.png)
+
+**touch**
+
+Se estiver usando Linux, você pode criar um arquivo usando o comando touch, passando o nome do
+arquivo como argumento.
+
+![touch-exemplo](../assets/img/touch-exemplo.png)
+
+**vim**
+
+Para edição de arquivos eu uso o Vim, meu editor de texto preferido. Eu te aconselho a usar o
+Sublime Text 3 pela facilidade de se usar.
+
+Imagem do meu vim:
+
+![vim-exemplo](../assets/img/vim-exemplo.png)
+
+<div id="id-pular-comandos-basicos"></div>
