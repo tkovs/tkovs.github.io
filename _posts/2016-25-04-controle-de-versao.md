@@ -256,7 +256,9 @@ obs.: ```cd ..``` leva para a pasta anterior na hierarquia de diretórios.
 **mkdir**
 
 Cria um novo diretório. Se a pasta a ser criada estiver dentro de uma que ainda não existe, deve-se
-usar a opção p para criar diretórios de parentesco se necessário.
+usar a opção p para criar diretórios de parentesco se necessário, exemplo: ```mkdir
+novapasta/novoarquivo``` vai resultar em um erro pois a novapasta não existe para abrigar um novo
+arquivo, nesse caso deve-se usar a opção p, ficando assim: ```mkdir -p novapasta/novoarquivo```
 
 ![mkdir-exemplo](../assets/img/mkdir-exemplo.png)
 
