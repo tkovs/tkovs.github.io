@@ -5,12 +5,132 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Fri, 06 May 2016 19:12:52 -0300</pubDate>
-    <lastBuildDate>Fri, 06 May 2016 19:12:52 -0300</lastBuildDate>
+    <pubDate>Thu, 12 May 2016 22:21:38 -0300</pubDate>
+    <lastBuildDate>Thu, 12 May 2016 22:21:38 -0300</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
-        <title>Versionamento e iniciando no Git!</title>
+        <title>Comandos básicos do Terminal (Linux) (em progesso)</title>
+        <description>&lt;h2 id=&quot;tabela-de-contedo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-introducao&quot;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-terminal&quot;&gt;Terminal&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-comando&quot;&gt;Comando&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-dicas&quot;&gt;Dicas&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-dicas-autocomplemento&quot;&gt;Autocomplemento&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-dicas-manual&quot;&gt;Manual&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-dicas-ajuda&quot;&gt;Ajuda&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-dicas-sudo&quot;&gt;Permissão&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-navegacao&quot;&gt;Navegação&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-navegacao-listar-diretorios&quot;&gt;Listar&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-navegacao-navegar-entre-pastas&quot;&gt;Navegar entre pastas&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-navegacao-criar-diretorio&quot;&gt;Criar&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-navegacao-apagar-diretorios&quot;&gt;Apagar&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-navegacao-renomear-diretorios&quot;&gt;Renomear&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-manipulacao-arquivos&quot;&gt;Manipulação de arquivos&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-manipulacao-arquivos-listar-arquivos&quot;&gt;Listar&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-manipulacao-arquivos-criar-arquivos&quot;&gt;Criar&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-manipulacao-arquivos-deletar-arquivos&quot;&gt;Deletar&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-manipulacao-arquivos-copiar-arquivos&quot;&gt;Copiar&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-manipulacao-arquivos-mover-arquivos&quot;&gt;Mover&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-manipulacao-arquivos-renomear-arquivos&quot;&gt;Renomear&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-manipulacao-arquivos-exibir-conteudo&quot;&gt;Exibir conteúdo&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais&quot;&gt;Comandos gerais&lt;/a&gt;
+    &lt;ol&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-pausa&quot;&gt;Pausa (sleep)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-informacoes-so&quot;&gt;Informações sistema operacional&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-data-e-hora&quot;&gt;Data e Hora&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-limpar-tela&quot;&gt;Limpar tela do terminal&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-historico-comandos&quot;&gt;Histórico de comandos&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;hr /&gt;
+
+&lt;div id=&quot;id-introducao&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
+
+&lt;p&gt;A ideia desse post surgiu quando eu vi a dificuldade que minha turma no 4º ano de informática no
+IFAL tem com o terminal. Há ainda uma visão ruim sobre ele, que é difícil e que interface
+gráfica é mais “fácil”, mas é apenas costume, eu trabalho mais rápido no terminal que usando o mouse.&lt;/p&gt;
+
+&lt;div id=&quot;id-terminal&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;terminal&quot;&gt;Terminal&lt;/h2&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/terminal-padrao.png&quot; alt=&quot;Terminal Linux&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Em primeiro lugar, observe o terminal. Na configuração do meu, o texto que aparece antes de qualquer
+comando que eu insira é &lt;code&gt;[tkovs@toby Downloads]$&lt;/code&gt;. O que isso significa? Antes do @,
+aparece o nome do usuário atual: &lt;strong&gt;tkovs&lt;/strong&gt;. Imediatamente após o @, o nome da máquina: &lt;strong&gt;toby&lt;/strong&gt;. Por
+último, após o nome da máquina, informa-se a pasta atual que o terminal está acessando, que nesse
+exemplo é a pasta &lt;strong&gt;Downloads&lt;/strong&gt;. Eu poderia trocar essa informação, mudar a forma que ela
+aparece, exibir a hora, mostrar o caminho completo da pasta, data atual, etc.&lt;/p&gt;
+
+&lt;div id=&quot;id-comando&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;comando&quot;&gt;Comando&lt;/h2&gt;
+
+&lt;p&gt;Dentro do Terminal, você tem a oportunidade de executar os comandos que achar necessário. Basta
+digitar o nome do comando e seus argumentos. Por exemplo, para listar os arquivos do diretório
+atual, basta um &lt;code&gt;$ls&lt;/code&gt; para que uma lista seja retornada. Se você quiser listar os arquivos, e
+antes de cada um exibir seu tamanho, basta usar a opção &lt;strong&gt;s&lt;/strong&gt;. O comando fica assim: &lt;code&gt;$ls -s&lt;/code&gt;,
+ou na forma mais longa: &lt;code&gt;ls --size&lt;/code&gt;. Normalmente, opções têm a forma curta e a longa. Para usar
+a curta usa-se 1 traço, e na longa, 2.&lt;/p&gt;
+
+&lt;p&gt;No exemplo abaixo mostro o comando ls de duas formas: na primeira usando sua forma sem argumentos, e
+na segunda listando os arquivos em ordem de modificação onde os mais recentes aparecem primeiro.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/ls-argumento.png&quot; alt=&quot;Arch Linux&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-dicas&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;dicas&quot;&gt;Dicas&lt;/h2&gt;
+
+&lt;p&gt;Algumas dicas para lhe ajudar no uso do Terminal.&lt;/p&gt;
+
+&lt;div id=&quot;id-dicas-autocomplemento&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;autocomplemento&quot;&gt;Autocomplemento&lt;/h4&gt;
+
+&lt;p&gt;Recurso importante, completa automaticamente o nome de um comando ou arquivo conhecido pelo
+Terminal apertando a tecla &lt;strong&gt;tab&lt;/strong&gt;, caso haja apenas uma possibilidade. Do contrário, ele lista
+todas as possibilidades de comando ou arquivo conforme o texto que você inseriu antes de apertar
+o tab.&lt;/p&gt;
+
+&lt;div id=&quot;id-dicas-manual&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;manual&quot;&gt;Manual&lt;/h4&gt;
+
+&lt;p&gt;O Linux tem um manual com a maioria dos comandos e dos programas que você instala. Para usa-lo,
+basta executar &lt;code&gt;man nome_comando&lt;/code&gt;. Se quer conhecer mais sobre o comando ls, que lista
+diretórios, execute &lt;code&gt;man ls&lt;/code&gt; e verá uma explicação completa. Para sair do manual, pressione q.&lt;/p&gt;
+
+&lt;p&gt;Continua…&lt;/p&gt;
+</description>
+        <pubDate>Thu, 12 May 2016 00:00:00 -0300</pubDate>
+        <link>http://tkovs.github.io/blog/comandos-terminal</link>
+        <guid isPermaLink="true">http://tkovs.github.io/blog/comandos-terminal</guid>
+        
+        <category>Linux</category>
+        
+        
+      </item>
+    
+      <item>
+        <title>Versionamento e iniciando no Git! (em progesso)</title>
         <description>&lt;h2 id=&quot;tabela-de-contedo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
 
 &lt;ol&gt;
@@ -230,53 +350,23 @@ artigo.&lt;/p&gt;
 
 &lt;h4 id=&quot;comandos-bsicos&quot;&gt;Comandos básicos&lt;/h4&gt;
 
-&lt;p&gt;Primeiramente, como usaremos o Git através do terminal, precisamos conhecer alguns comandos básicos
-para o uso básico. Eles não têm relação com o Git então &lt;a href=&quot;#id-pular-comandos-basicos&quot;&gt;clique aqui&lt;/a&gt; se
-você já tem domínio básico sobre o terminal que usa.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;ls&lt;/strong&gt; e &lt;strong&gt;dir&lt;/strong&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;Use ls se estiver em uma distro Linux.
-
-Use dir se estiver em alguma versão do Windows.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;Lista o conteúdo do diretório atual. Para visualizar os possíveis argumentos, tente &lt;code&gt;man ls&lt;/code&gt; se
-estiver no Linux.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/img/ls-exemplo.png&quot; alt=&quot;ls-exemplo&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;cd&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Navega para o diretório que lhe foi passado como argumento.&lt;/p&gt;
-
-&lt;p&gt;obs.: &lt;code&gt;cd ..&lt;/code&gt; leva para a pasta anterior na hierarquia de diretórios.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/img/cd-exemplo.png&quot; alt=&quot;ls-exemplo&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;mkdir&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Cria um novo diretório. Se a pasta a ser criada estiver dentro de uma que ainda não existe, deve-se
-usar a opção p para criar diretórios de parentesco se necessário.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/img/mkdir-exemplo.png&quot; alt=&quot;mkdir-exemplo&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;touch&lt;/strong&gt;&lt;/p&gt;
-
-&lt;p&gt;Se estiver usando Linux, você pode criar um arquivo usando o comando touch, passando o nome do
-arquivo como argumento.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/img/touch-exemplo.png&quot; alt=&quot;touch-exemplo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia &lt;a href=&quot;http://tkovs.github.io/blog/comandos-terminal&quot;&gt;minha postagem&lt;/a&gt; sobre ele.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;Para edição de arquivos eu uso o Vim, meu editor de texto preferido. Eu te aconselho a usar o
-Sublime Text 3 pela facilidade de se usar.&lt;/p&gt;
+&lt;p&gt;Para edição de arquivos eu uso o Vim, meu editor de texto preferido. Se você executar o comando &lt;code&gt;vim&lt;/code&gt; em seu terminal e
+nada aparecer é porque ele não está instalado. Eu te aconselho a usar o Sublime Text 3 pela facilidade de se usar.&lt;/p&gt;
 
 &lt;p&gt;Imagem do meu vim:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;../assets/img/vim-exemplo.png&quot; alt=&quot;vim-exemplo&quot; /&gt;&lt;/p&gt;
 
+&lt;hr /&gt;
+
 &lt;div id=&quot;id-pular-comandos-basicos&quot;&gt;&lt;/div&gt;
+
+&lt;p&gt;E agora, os comandos básicos do Git.&lt;/p&gt;
+
 </description>
         <pubDate>Mon, 25 Apr 2016 00:00:00 -0300</pubDate>
         <link>http://tkovs.github.io/blog/versionamento-git</link>
