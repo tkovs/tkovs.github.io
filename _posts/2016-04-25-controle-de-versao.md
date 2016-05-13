@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Versionamento e iniciando no Git!"
+title:  "Versionamento e iniciando no Git! (em progesso)"
 date:   2016-04-25
 description: Início da série sobre versionamento; filosofia open source; Git e Github; licenças (MIT, Apache, GPL); relação mercado de trabalho e github; grandes projetos de código aberto; tutorial sobre como usar o Git independente e sobre como integrar com o Github.
 tags:
@@ -228,54 +228,20 @@ branch.source.merge=refs/heads/source
 
 ####Comandos básicos
 
-Primeiramente, como usaremos o Git através do terminal, precisamos conhecer alguns comandos básicos
-para o uso básico. Eles não têm relação com o Git então [clique aqui](#id-pular-comandos-basicos) se
-você já tem domínio básico sobre o terminal que usa.
-
-**ls** e **dir**
-
-{% highlight text %}
-Use ls se estiver em uma distro Linux.
-
-Use dir se estiver em alguma versão do Windows.
-{% endhighlight %}
-
-Lista o conteúdo do diretório atual. Para visualizar os possíveis argumentos, tente ```man ls``` se
-estiver no Linux.
-
-![ls-exemplo](../assets/img/ls-exemplo.png)
-
-**cd**
-
-Navega para o diretório que lhe foi passado como argumento.
-
-obs.: ```cd ..``` leva para a pasta anterior na hierarquia de diretórios.
-
-![ls-exemplo](../assets/img/cd-exemplo.png)
-
-**mkdir**
-
-Cria um novo diretório. Se a pasta a ser criada estiver dentro de uma que ainda não existe, deve-se
-usar a opção p para criar diretórios de parentesco se necessário, exemplo: ```mkdir
-novapasta/novoarquivo``` vai resultar em um erro pois a novapasta não existe para abrigar um novo
-arquivo, nesse caso deve-se usar a opção p, ficando assim: ```mkdir -p novapasta/novoarquivo```
-
-![mkdir-exemplo](../assets/img/mkdir-exemplo.png)
-
-**touch**
-
-Se estiver usando Linux, você pode criar um arquivo usando o comando touch, passando o nome do
-arquivo como argumento.
-
-![touch-exemplo](../assets/img/touch-exemplo.png)
+Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia [minha postagem]({{ site.url }}/blog/comandos-terminal) sobre ele.
 
 **vim**
 
-Para edição de arquivos eu uso o Vim, meu editor de texto preferido. Eu te aconselho a usar o
-Sublime Text 3 pela facilidade de se usar.
+Para edição de arquivos eu uso o Vim, meu editor de texto preferido. Se você executar o comando ```vim``` em seu terminal e
+nada aparecer é porque ele não está instalado. Eu te aconselho a usar o Sublime Text 3 pela facilidade de se usar.
 
 Imagem do meu vim:
 
 ![vim-exemplo](../assets/img/vim-exemplo.png)
 
+<hr />
 <div id="id-pular-comandos-basicos"></div>
+
+E agora, os comandos básicos do Git.
+
+
