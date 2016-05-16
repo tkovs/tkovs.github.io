@@ -5,12 +5,12 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Thu, 12 May 2016 22:21:38 -0300</pubDate>
-    <lastBuildDate>Thu, 12 May 2016 22:21:38 -0300</lastBuildDate>
+    <pubDate>Sun, 15 May 2016 21:25:12 -0300</pubDate>
+    <lastBuildDate>Sun, 15 May 2016 21:25:12 -0300</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
-        <title>Comandos básicos do Terminal (Linux) (em progesso)</title>
+        <title>Comandos básicos do Terminal</title>
         <description>&lt;h2 id=&quot;tabela-de-contedo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
 
 &lt;ol&gt;
@@ -23,6 +23,7 @@
       &lt;li&gt;&lt;a href=&quot;#id-dicas-manual&quot;&gt;Manual&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-dicas-ajuda&quot;&gt;Ajuda&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-dicas-sudo&quot;&gt;Permissão&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-dicas-info&quot;&gt;Info&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#id-navegacao&quot;&gt;Navegação&lt;/a&gt;
@@ -48,12 +49,12 @@
   &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais&quot;&gt;Comandos gerais&lt;/a&gt;
     &lt;ol&gt;
       &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-pausa&quot;&gt;Pausa (sleep)&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-informacoes-so&quot;&gt;Informações sistema operacional&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-data-e-hora&quot;&gt;Data e Hora&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-limpar-tela&quot;&gt;Limpar tela do terminal&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#id-comandos-gerais-historico-comandos&quot;&gt;Histórico de comandos&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-conclusao&quot;&gt;Conclusão&lt;/a&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;hr /&gt;
@@ -78,6 +79,8 @@ aparece o nome do usuário atual: &lt;strong&gt;tkovs&lt;/strong&gt;. Imediatame
 último, após o nome da máquina, informa-se a pasta atual que o terminal está acessando, que nesse
 exemplo é a pasta &lt;strong&gt;Downloads&lt;/strong&gt;. Eu poderia trocar essa informação, mudar a forma que ela
 aparece, exibir a hora, mostrar o caminho completo da pasta, data atual, etc.&lt;/p&gt;
+
+&lt;p&gt;É através do terminal que você geralmente irá trabalhar, executando comandos.&lt;/p&gt;
 
 &lt;div id=&quot;id-comando&quot;&gt;&lt;/div&gt;
 
@@ -114,15 +117,435 @@ o tab.&lt;/p&gt;
 
 &lt;h4 id=&quot;manual&quot;&gt;Manual&lt;/h4&gt;
 
-&lt;p&gt;O Linux tem um manual com a maioria dos comandos e dos programas que você instala. Para usa-lo,
+&lt;p&gt;O Linux tem um manual da maioria dos comandos e dos programas que você instala. Para usa-lo,
 basta executar &lt;code&gt;man nome_comando&lt;/code&gt;. Se quer conhecer mais sobre o comando ls, que lista
-diretórios, execute &lt;code&gt;man ls&lt;/code&gt; e verá uma explicação completa. Para sair do manual, pressione q.&lt;/p&gt;
+diretórios, execute &lt;code&gt;man ls&lt;/code&gt; e verá uma explicação completa. Para sair do manual, pressione q.
+O manual fica localizado em /etc/share/man, e é dividido em seções para organizar os tipos de
+comandos, que vão desde chamadas do sistema (kernel) a comandos relacionados a jogos.&lt;/p&gt;
 
-&lt;p&gt;Continua…&lt;/p&gt;
+&lt;div id=&quot;id-dicas-ajuda&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;ajuda&quot;&gt;Ajuda&lt;/h4&gt;
+
+&lt;p&gt;Muitos comandos têm por padrão a opção &lt;strong&gt;–help&lt;/strong&gt; para que uma breve explicação sobre ele seja
+retornada. Também há o comando &lt;code&gt;help&lt;/code&gt; que exibe informações de alguns comandos que lhe são
+passados como argumento.&lt;/p&gt;
+
+&lt;p&gt;Exemplo da opção &lt;strong&gt;–help&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby ~]$ mkdir --help
+Uso: mkdir [OPÇÃO]... DIRETÓRIO...
+Create the DIRECTORY(ies), if they do not already exist.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -m, --mode=MODE   set file mode (as in chmod), not a=rwx - umask
+  -p, --parents     no error if existing, make parent directories as needed
+  -v, --verbose     print a message for each created directory
+  -Z                   set SELinux security context of each created directory
+                         to the default type
+      --context[=CTX]  like -Z, or if CTX is specified then set the SELinux
+                         or SMACK security context to CTX
+      --help     mostra esta ajuda e finaliza
+      --version  informa a versão e finaliza
+
+GNU coreutils online help: &amp;lt;http://www.gnu.org/software/coreutils/&amp;gt;
+Report mkdir translation bugs to &amp;lt;http://translationproject.org/team/&amp;gt;
+Full documentation at: &amp;lt;http://www.gnu.org/software/coreutils/mkdir&amp;gt;
+or available locally via: info &amp;#39;(coreutils) mkdir invocation&amp;#39;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-dicas-sudo&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;permisso&quot;&gt;Permissão&lt;/h4&gt;
+
+&lt;p&gt;As vezes, você não conseguirá executar alguns comandos, pois para isso precisará de privilégios que
+não tem. Privilégios esses que outro usuário tem, geralmente o administrador. Para usa-los, existe o
+comando &lt;code&gt;sudo&lt;/code&gt;. Digite sudo antes do comando que precisa de permissão e o termina irá lhe pedir
+a senha de seu usuário, insira ela e aperte enter, o comando ira ser executado.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby ~]$ fdisk -l
+fdisk: não foi possível abrir /dev/sda: Permissão negada
+[tkovs@toby ~]$ sudo fdisk -l
+[sudo] senha para tkovs: 
+Disco /dev/sda: 465,8 GiB, 500107862016 bytes, 976773168 setores
+Unidades: setor de 1 * 512 = 512 bytes
+Tamanho de setor (lógico/físico): 512 bytes / 4096 bytes
+Tamanho E/S (mínimo/ótimo): 4096 bytes / 4096 bytes
+Tipo de rótulo do disco: gpt
+Identificador do disco: BE149545-D8A3-4D79-9A8E-7F3D8A4CC935
+
+Dispositivo    Início       Fim   Setores Tamanho Tipo
+/dev/sda1        2048    616447    614400    300M Windows ambiente de recuperaçã
+/dev/sda2      616448    821247    204800    100M Sistema EFI
+/dev/sda3      821248   1083391    262144    128M Microsoft reservado
+/dev/sda4     1083392 306280447 305197056  145,5G Microsoft dados básico
+/dev/sda5   306280448 307202047    921600    450M Windows ambiente de recuperaçã
+/dev/sda6   307202048 516917247 209715200    100G Linux raiz (x86-64)
+/dev/sda7   516917248 967804927 450887680    215G Linux home&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-dicas-info&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;info&quot;&gt;Info&lt;/h4&gt;
+
+&lt;p&gt;Outro meio de se obter informações sobre comandos é através do &lt;code&gt;info&lt;/code&gt;. Basta passar o nome do
+comando que você quer obter detalhes para o info e ele abrirá um programa semelhante ao man.&lt;/p&gt;
+
+&lt;p&gt;Exemplo de um &lt;code&gt;info cd&lt;/code&gt;:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;CD(1P)                     POSIX Programmer&amp;#39;s Manual                    CD(1P)
+
+PROLOG
+       This  manual  page is part of the POSIX Programmer&amp;#39;s Manual.  The Linux
+       implementation of this interface may differ (consult the  corresponding
+       Linux  manual page for details of Linux behavior), or the interface may
+       not be implemented on Linux.
+
+NAME
+       cd — change the working directory
+
+SYNOPSIS
+       cd [−L|−P] [directory]
+
+       cd −
+
+DESCRIPTION
+       The cd utility shall change the working directory of the current  shell
+       execution  environment  (see Section 2.12, Shell Execution Environment)
+       by executing the following steps in sequence. (In the following  steps,
+       ...
+       ...&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-navegacao&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;navegao&quot;&gt;Navegação&lt;/h2&gt;
+
+&lt;p&gt;Para os exemplos, usarei a estrutura de diretórios abaixo.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;.
+├── include
+│   └── cbrainfuck.h
+├── LICENCE
+├── main.c
+├── Makefile
+├── README.md
+├── samples
+│   ├── 666.bf
+│   ├── beer.bf
+│   ├── gameoflife.bf
+│   ├── helloworld.bf
+│   ├── print.bf
+│   ├── squares.bf
+│   └── triangle.bf
+└── source
+    └── cbrainfuck.c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-navegacao-listar-diretorios&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;listar&quot;&gt;Listar&lt;/h4&gt;
+
+&lt;p&gt;Para listar as pastas contidas no diretório atual, basta executar &lt;code&gt;ls -d */&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ ls -d */
+include/  samples/  source/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-navegacao-navegar-entre-pastas&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;navegar-entre-pastas&quot;&gt;Navegar entre pastas&lt;/h4&gt;
+
+&lt;p&gt;A navegação entre pastas acontece de forma simples. O comando &lt;code&gt;cd&lt;/code&gt; leva o terminal para o
+diretório passado como argumento. Para voltar para um diretório acima, se passa &lt;strong&gt;..&lt;/strong&gt; para o
+cd, e para voltar para o diretório anterior, se passa &lt;strong&gt;-&lt;/strong&gt;, já o &lt;strong&gt;~&lt;/strong&gt; leva-o para o diretório
+principal de seu usuário.&lt;/p&gt;
+
+&lt;p&gt;No exemplo abaixo, o terminal stá na pasta cbrainfuck. O &lt;code&gt;cd source&lt;/code&gt; leva-o até a pasta source,
+e o comando seguinte retorna-o para cbrainfuck.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ cd source
+[tkovs@toby source]$ cd ..
+[tkovs@toby cbrainfuck]$ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-navegacao-criar-diretorio&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;criar&quot;&gt;Criar&lt;/h4&gt;
+
+&lt;p&gt;O comando &lt;code&gt;mkdir&lt;/code&gt; cria uma nova pasta, se ela não existe. Caso diretórios pais precisem ser criados,
+deve-se usar a opção &lt;strong&gt;-p&lt;/strong&gt; no uso do mkdir.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;vs@toby cbrainfuck]$ ls -d */
+include/  samples/  source/
+[tkovs@toby cbrainfuck]$ mkdir test
+[tkovs@toby cbrainfuck]$ ls -d */
+include/  samples/  source/  test/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-navegacao-apagar-diretorio&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;apagar&quot;&gt;Apagar&lt;/h4&gt;
+
+&lt;p&gt;Semelhante ao mkdir, há o &lt;code&gt;rmdir&lt;/code&gt;. Enquanto mkdir resume &lt;em&gt;Make Directories&lt;/em&gt;, rmdir resume &lt;em&gt;Remove
+Directories&lt;/em&gt;. Basta passar o nome de um diretório como argumento. Caso haja arquivos dentro do
+diretório, faz-se necessário o uso da opção &lt;code&gt;--ignore-fail-on-non-empty&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ ls -d */
+include/  samples/  source/  test/
+[tkovs@toby cbrainfuck]$ rmdir test/
+[tkovs@toby cbrainfuck]$ ls -d */
+include/  samples/  source/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-navegacao-renomear-diretorio&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;renomear&quot;&gt;Renomear&lt;/h4&gt;
+
+&lt;p&gt;O comando &lt;code&gt;rename&lt;/code&gt; renomeia um arquivo ou uma pasta e funciona de um jeito simples. Ele
+substitui a primeira ocorrência de &lt;strong&gt;expressao&lt;/strong&gt; pela sua &lt;strong&gt;substituição&lt;/strong&gt; no &lt;strong&gt;arquivo&lt;/strong&gt; escolhido,
+de modo que o comando é escrito assim: &lt;code&gt;rename expressao substituição arquivo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ ls -d */
+include/  samples/  source/
+[tkovs@toby cbrainfuck]$ mkdir tst01
+[tkovs@toby cbrainfuck]$ ls -d */
+include/  samples/  source/  tst01/
+[tkovs@toby cbrainfuck]$ rename tst01/ test01/ tst01/
+[tkovs@toby cbrainfuck]$ ls -d */
+include/  samples/  source/  test01/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-manipulacao-arquivos&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;manipulao-de-arquivos&quot;&gt;Manipulação de arquivos&lt;/h2&gt;
+
+&lt;p&gt;Para os exemplos, usarei a estrutura de diretórios abaixo.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;.
+├── include
+│   └── cbrainfuck.h
+├── LICENCE
+├── main.c
+├── Makefile
+├── README.md
+├── samples
+│   ├── 666.bf
+│   ├── beer.bf
+│   ├── gameoflife.bf
+│   ├── helloworld.bf
+│   ├── print.bf
+│   ├── squares.bf
+│   └── triangle.bf
+└── source
+    └── cbrainfuck.c&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-manipulacao-arquivos-listar-arquivos&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;listar-1&quot;&gt;Listar&lt;/h4&gt;
+
+&lt;p&gt;Para se listar apenas os arquivos de um diretório, execute &lt;code&gt;ls -p | grep -v */&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ ls -p
+include/  LICENCE  main.c  Makefile  README.md  samples/  source/
+[tkovs@toby cbrainfuck]$ ls -p | grep -v /
+LICENCE
+main.c
+Makefile
+README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-manipulacao-arquivos-criar-arquivos&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;criar-1&quot;&gt;Criar&lt;/h4&gt;
+
+&lt;p&gt;O modo mais simples de se criar um arquivo vazio que eu conheço é através do comando &lt;code&gt;touch&lt;/code&gt;.
+Basta passar o nome do arquivo para o comando touch.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ ls -p | grep -v /
+LICENCE
+main.c
+Makefile
+README.md
+[tkovs@toby cbrainfuck]$ touch fofao.hs
+[tkovs@toby cbrainfuck]$ ls -p | grep -v /
+fofao.hs
+LICENCE
+main.c
+Makefile
+README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-manipulacao-arquivos-deletar-arquivos&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;deletar&quot;&gt;Deletar&lt;/h4&gt;
+
+&lt;p&gt;Deletar um arquivo se dá através do comando &lt;code&gt;rm&lt;/code&gt; passando para ele o caminho do arquivo.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ ls -p | grep -v /
+fofao.hs
+LICENCE
+main.c
+Makefile
+README.md
+[tkovs@toby cbrainfuck]$ rm fofao.hs
+[tkovs@toby cbrainfuck]$ ls -p | grep -v /
+LICENCE
+main.c
+Makefile
+README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-manipulacao-arquivos-copiar-arquivos&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;copiar&quot;&gt;Copiar&lt;/h4&gt;
+
+&lt;p&gt;Para copiar um arquivo, basta passar o caminho do arquivo a ser copiado, e o caminho do arquivo a ser
+criado com o conteúdo do outro arquivo, para o comando &lt;code&gt;cp&lt;/code&gt;. Seu uso fica assim: &lt;code&gt;cp fonte
+destino&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ ls -p | grep -v /
+LICENCE
+main.c
+Makefile
+README.md
+[tkovs@toby cbrainfuck]$ cp main.c main.c.backup
+[tkovs@toby cbrainfuck]$ ls -p | grep -v /
+LICENCE
+main.c
+main.c.backup
+Makefile
+README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-manipulacao-arquivos-mover-arquivos&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;mover&quot;&gt;Mover&lt;/h4&gt;
+
+&lt;p&gt;Para mover um arquivo de um lugar a outro basta usar o &lt;code&gt;mv&lt;/code&gt; do mesmo jeito que se usa o
+&lt;code&gt;cp&lt;/code&gt;, a diferença é que o arquivo fonte será apagado.&lt;/p&gt;
+
+&lt;div id=&quot;id-manipulacao-arquivos-renomear-arquivos&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;renomear-1&quot;&gt;Renomear&lt;/h4&gt;
+
+&lt;p&gt;Como explica o &lt;code&gt;man&lt;/code&gt; quanto ao &lt;code&gt;rename&lt;/code&gt;: passa-se a &lt;strong&gt;expressão&lt;/strong&gt; a ser substituída pela
+&lt;strong&gt;substituição&lt;/strong&gt; no &lt;strong&gt;arquivo&lt;/strong&gt; destino. Usando, fica assim: &lt;code&gt;rename expressão substituição
+arquivo&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ ls -p | grep -v /
+LICENCE
+main.c
+main.c.backup
+Makefile
+README.md
+[tkovs@toby cbrainfuck]$ rename Make Bang Makefile 
+[tkovs@toby cbrainfuck]$ ls -p | grep -v /
+Bangfile
+LICENCE
+main.c
+main.c.backup
+README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-manipulacao-arquivos-exibir-conteudo&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;exibir-contedo&quot;&gt;Exibir conteúdo&lt;/h4&gt;
+
+&lt;p&gt;O comando &lt;code&gt;cat&lt;/code&gt; concatena um arquivo para a saída padrão. No terminal, quando um arquivo é
+passado como argumento para o comando cat, seu conteúdo é exibido no próprio terminal.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby cbrainfuck]$ cat main.c
+#include &amp;lt;stdio.h&amp;gt;
+#include &amp;lt;stdlib.h&amp;gt;
+
+#include &amp;quot;include/cbrainfuck.h&amp;quot;
+
+int main(int argc, char ** argv) {
+    char *s;
+    s = interpreter(argv[1], (argc &amp;gt; 2 ? argv[2]:&amp;quot;/dev/stdin&amp;quot;));
+
+    if (_ERRORS_) {
+        fprintf(stderr, &amp;quot;%s\n&amp;quot;, _MESSAGE_);
+        return 1;
+    } else {
+        printf (&amp;quot;%s&amp;quot;, s);
+        free(s);
+    }
+
+    return 0;
+}
+[tkovs@toby cbrainfuck]$ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Também há o &lt;code&gt;more&lt;/code&gt;, que divide o conteúdo de um arquivo em páginas. Para se navegar, use o
+&lt;strong&gt;espaço&lt;/strong&gt; para continuar a leitura e o &lt;strong&gt;b&lt;/strong&gt; para voltar uma página. Para fechar, pressione &lt;strong&gt;q&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-gerais&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;comandos-gerais&quot;&gt;Comandos gerais&lt;/h2&gt;
+
+&lt;p&gt;Comandos sem um objetivo em específico.&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-gerais-pausa&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;pausa&quot;&gt;Pausa&lt;/h4&gt;
+
+&lt;p&gt;Existe um comando que simplesmente faz uma pausa por um tempo específico. É o comando &lt;code&gt;sleep&lt;/code&gt;.
+Para usado, basta passar a quantidade de segundos como argumento para o sleep. Exemplo: &lt;code&gt;sleep
+5&lt;/code&gt; pausa por 5 segundos. Mas pra que usar? Bom, 2 comandos podem ser executados um após o outro,
+basta usar o &lt;strong&gt;&amp;amp;&amp;amp;&lt;/strong&gt; entre os comandos. Exemplo: &lt;code&gt;sleep 3600 &amp;amp;&amp;amp; reboot&lt;/code&gt; faz com que o terminal
+espere por 3600 segundos, equivalente à 1 hora, e então reinicia a máquina.&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-gerais-data-e-hora&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;data-e-hora&quot;&gt;Data e Hora&lt;/h4&gt;
+
+&lt;p&gt;Para obter a data e a hora atual, usa-se o comando &lt;code&gt;date&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;Exemplo:&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;[tkovs@toby ~]$ date
+Dom Mai 15 20:42:46 BRT 2016
+[tkovs@toby ~]$ &lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;div id=&quot;id-comandos-gerais-limpar-tela&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;limpar-a-tela-do-terminal&quot;&gt;Limpar a tela do terminal&lt;/h4&gt;
+
+&lt;p&gt;Para limpar a tela do terminal, pressione Ctrl + L.&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-gerais-historico-comandos&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;histrico-de-comandos&quot;&gt;Histórico de comandos&lt;/h4&gt;
+
+&lt;p&gt;Você pode acessar suas últimas centenas de comandos digitados no terminal. Apenas execute o
+comando &lt;code&gt;history&lt;/code&gt;.&lt;/p&gt;
+
+&lt;div id=&quot;id-conclusao&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;concluso&quot;&gt;Conclusão&lt;/h2&gt;
+
+&lt;p&gt;Espero que com esse guia você esteja mais familiarizado com o terminal, e tenha perdido um pouco do
+medo que é comum quando se trata de trabalhar apenas com texto, sem ajuda de interface gráfica.&lt;/p&gt;
+
+&lt;p&gt;Quando &lt;strong&gt;eu&lt;/strong&gt; estou no Linux eu sempre uso terminal. É difícil eu não deixa-lo aberto. Uso o
+terminal para programar (vim), para controlar versões (git), para copiar/mover/renomear/procurar
+arquivos, configurar o sistema por completo, etc. Não espero que você chegue na mesma situação, mas
+que ao menos se familiarize com ele. Boa sorte :)&lt;/p&gt;
 </description>
-        <pubDate>Thu, 12 May 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/comandos-terminal</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/comandos-terminal</guid>
+        <pubDate>Sun, 15 May 2016 00:00:00 -0300</pubDate>
+        <link>http://tkovs.github.io/blog/introducao-terminal</link>
+        <guid isPermaLink="true">http://tkovs.github.io/blog/introducao-terminal</guid>
         
         <category>Linux</category>
         
