@@ -20,10 +20,17 @@ permalink: /blog/versionamento-git
     4. [Navegação entre versões](#id-navegacao-entre-versoes)
     5. [Ramificações](#id-ramificacoes)
     6. [Gerenciando vários contribuidores num mesmo projeto](#id-gestao-usuarios)
-4. [Guia de Git para iniciantes](#id-guia-git-iniciantes)
-    1. [Instalação do Git](#id-instalacao-git)
-    2. [Configurando seu usuário no git](#id-configurando-usuario)
-    3. [Comandos básicos](#id-comandos-basicos)
+4. [Instalação do Git](#id-instalacao-git)
+5. [Configurando seu usuário no git](#id-configurando-usuario)
+6. [Comandos básicos](#id-comandos-basicos)
+    1. [Init](#id-comandos-basicos-init)
+    2. [Status](#id-comandos-basicos-status)
+    3. [Add](#id-comandos-basicos-add)
+    4. [Commit](#id-comandos-basicos-commit)
+    5. [Diff](#id-comandos-basicos-diff)
+    6. [Log](#id-comandos-basicos-log)
+    7. [Branch](#id-comandos-basicos-branch)
+    8. [Checkout](#id-comandos-basicos-checkout)
 
 <hr />
 <div id='id-introducao'></div>
@@ -166,17 +173,9 @@ versões de um arquivo, com problemas de compatibilidade, o Git avisa quais são
 entrando em conflito e aí fica por sua conta quais dados terão prioridade sobre outros no resultado
 final.
 
-<div id='id-guia-git-iniciantes'></div>
-
-##Guia de Git para iniciantes
-
-A seguir, um tutorial enxuto sobre como usar o Git na prática, com apoio de imagens e gifs.
-
-![Git logo](../assets/img/git-logo.png)
-
 <div id='id-instalacao-git'></div>
 
-####Instalação do Git
+##Instalação do Git
 
 Faça o download do Git para o seu sistema operacional seguindo os passos no próprio
 [site](https://git-scm.com/download/) da ferramenta. A instalação é muito simples e leva pouco
@@ -184,7 +183,7 @@ tempo, além de ter muitos tutoriais na internet ensinando a fazê-lo.
 
 <div id='id-configurando-usuario'></div>
 
-####Configurando seu usuário no git
+##Configurando seu usuário no git
 
 Após instalar, abra o terminal. Se você executar ```git --version```, e não obtiver a versão do git, algo
 deu errado na instalação, mesmo que seja a adição do git no $PATH do seu sistema operacional.
@@ -196,14 +195,14 @@ artigo.
 **Seu usuário**
 
 {% highlight console %}
-$ git config --global user.name "tkovs"
-$ git config --global user.email "victor.rdg@hotmail.com"
+$ git config --global user.name "seu nome de usuário"
+$ git config --global user.email "seu email"
 {% endhighlight %}
 
 **Seu editor**
 
 {% highlight console %}
-$ git config --global core.editor vim
+$ git config --global core.editor "seu editor de texto"
 {% endhighlight %}
 
 E para verificar se está tudo certo, execute o comando abaixo. No meu notebook o resultado foi esse:
@@ -226,22 +225,76 @@ branch.source.merge=refs/heads/source
 
 <div id='id-comandos-basicos'></div>
 
-####Comandos básicos
+##Comandos básicos
 
-Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia [minha postagem]({{ site.url }}/blog/comandos-terminal) sobre ele.
+Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia [minha postagem]({{ site.url }}/blog/introducao-terminal) sobre ele.
 
-**vim**
+Pra executar um comando do Git no terminal, digite **git** seguido pelo comando. Exemplo do comando
+**init**: ```git init```.
 
-Para edição de arquivos eu uso o Vim, meu editor de texto preferido. Se você executar o comando ```vim``` em seu terminal e
-nada aparecer é porque ele não está instalado. Eu te aconselho a usar o Sublime Text 3 pela facilidade de se usar.
+<div id='id-comandos-basicos-init'></div>
 
-Imagem do meu vim:
+####Init
 
-![vim-exemplo](../assets/img/vim-exemplo.png)
+Esse comando é responsável por criar um repositório Git vazio. Um diretório só pode ser gerenciado
+pelo Git se o ```init``` for executado nele.
 
-<hr />
-<div id="id-pular-comandos-basicos"></div>
+<div id='id-comandos-basicos-status'></div>
 
-E agora, os comandos básicos do Git.
+####Status
 
+Retorna informações sobre o repositório atual: lista de arquivos alterados desde o último commit,
+branch atual, mudanças a serem *commitadas*, etc.
+
+![git status](../assets/img/comandos-basicos-status.png)
+
+<div id='id-comandos-basicos-add'></div>
+
+####Add
+
+Adiciona um arquivo que foi alterado para o gerenciamento do Git. Se um arquivo é alterado mas não
+passa pelo comando ```add``` antes do commit, suas alterações não são salvas.
+
+<div id='id-comandos-basicos-commit'></div>
+
+####Commit
+
+Salva as mudanças realizadas no repositório desde o último commit. Junto com as mudanças, salva
+informações como, por exemplo, quem fez as alterações, data do commit, breve explicação sobre o
+commit, etc. Cada commit tem um código como por exemplo
+*a39ce6f14a6079ebdbe2d82e4fcd0bc643b65c97*. Quando você for navegar entre os commits passados,
+precisará desse código que é exibido usando o ```log```. Quando for usar o código, não precisa usar
+mais que os 5 primeiros digitos de um código pra usa-lo.
+
+Exemplo: ```git commit -m "Nova função para imprimir pizzas reais"```
+
+<div id='id-comandos-basicos-diff'></div>
+
+####Diff
+
+Compara dois commits e mostra a diferença entre eles. **Eu** uso muito pra comparar as alterações
+que fiz desde o último commit antes de fazer o próximo commit, sempre.
+
+<div id='id-comandos-basicos-log'></div>
+
+####Log
+
+Lista todos os commits, junto com a descrição e informações básicas como quem foi o autor do commit
+e a data. Detalhe: o commit mais novo pode ser referenciado por **HEAD**, dessa forma, para comparar
+as mudanças feitas desde o último commit, basta executar ```git diff HEAD```.
+
+![git log](../assets/img/comandos-basicos-log.png)
+
+<div id='id-comandos-basicos-branch'></div>
+
+####Branch
+
+O comando ```branch``` gerencia branches (ramificações) no seu repositório, excluindo-os, criando-os
+ou listando-os.
+
+<div id='id-comandos-basicos-checkout'></div>
+
+####Checkout
+
+Serve para navegar entre branches ou commits.
 

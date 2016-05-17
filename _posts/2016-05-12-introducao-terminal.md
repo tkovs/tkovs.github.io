@@ -2,7 +2,7 @@
 layout: post
 title:  "Comandos básicos do Terminal"
 date:   2016-05-15
-description: Esse post não foca nenhum distro em específico pois há comandos característicos de distro, como o gerenciador de pacotes. Aqui, iremos ver comandos básicos mas importantes para um bom manuseio e aproveitamento do terminal, além de quebrar o preconceito e acabar com o medo de muitos têm dessa ferramenta simples e poderosa.
+description: Esse post não foca nenhum distro em específico. Aqui, iremos ver comandos básicos mas importantes para um bom manuseio e aproveitamento do terminal, além de quebrar o preconceito e acabar com o medo de muitos têm dessa ferramenta simples e poderosa.
 tags:
 - Linux
 permalink: /blog/introducao-terminal
