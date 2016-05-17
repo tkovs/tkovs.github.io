@@ -8,7 +8,7 @@
         <meta name="description" content="Apenas um blog sobre mim, música, programação, as pessoas e o que mais me der na telha, flw.
 ">
         <link rel="canonical" 
-        href="http://tkovs.github.io/blog/versionamento-git">
+        href="http://localhost:4000/blog/versionamento-git">
         
         <!-- Harmony styles -->
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
@@ -34,13 +34,13 @@
                 <h2></h2>
                 <ul>
 	<li>
-		<a href="http://tkovs.github.io/about">Sobre</a><span>/</span>
+		<a href="http://localhost:4000/about">Sobre</a><span>/</span>
 	</li>
 	<li>
-		<a href="http://tkovs.github.io/blog">Blog</a><span>/</span>
+		<a href="http://localhost:4000/blog">Blog</a><span>/</span>
 	</li>
 	<li>
-		<a href="http://tkovs.github.io/resume">Currículo</a><span>/</span>
+		<a href="http://localhost:4000/resume">Currículo</a><span>/</span>
 	</li>
 </ul>
                 
@@ -73,11 +73,18 @@
       <li><a href="#id-gestao-usuarios">Gerenciando vários contribuidores num mesmo projeto</a></li>
     </ol>
   </li>
-  <li><a href="#id-guia-git-iniciantes">Guia de Git para iniciantes</a>
+  <li><a href="#id-instalacao-git">Instalação do Git</a></li>
+  <li><a href="#id-configurando-usuario">Configurando seu usuário no git</a></li>
+  <li><a href="#id-comandos-basicos">Comandos básicos</a>
     <ol>
-      <li><a href="#id-instalacao-git">Instalação do Git</a></li>
-      <li><a href="#id-configurando-usuario">Configurando seu usuário no git</a></li>
-      <li><a href="#id-comandos-basicos">Comandos básicos</a></li>
+      <li><a href="#id-comandos-basicos-init">Init</a></li>
+      <li><a href="#id-comandos-basicos-status">Status</a></li>
+      <li><a href="#id-comandos-basicos-add">Add</a></li>
+      <li><a href="#id-comandos-basicos-commit">Commit</a></li>
+      <li><a href="#id-comandos-basicos-diff">Diff</a></li>
+      <li><a href="#id-comandos-basicos-log">Log</a></li>
+      <li><a href="#id-comandos-basicos-branch">Branch</a></li>
+      <li><a href="#id-comandos-basicos-checkout">Checkout</a></li>
     </ol>
   </li>
 </ol>
@@ -220,17 +227,9 @@ versões de um arquivo, com problemas de compatibilidade, o Git avisa quais são
 entrando em conflito e aí fica por sua conta quais dados terão prioridade sobre outros no resultado
 final.</p>
 
-<div id="id-guia-git-iniciantes"></div>
-
-<h2 id="guia-de-git-para-iniciantes">Guia de Git para iniciantes</h2>
-
-<p>A seguir, um tutorial enxuto sobre como usar o Git na prática, com apoio de imagens e gifs.</p>
-
-<p><img src="../assets/img/git-logo.png" alt="Git logo" /></p>
-
 <div id="id-instalacao-git"></div>
 
-<h4 id="instalao-do-git">Instalação do Git</h4>
+<h2 id="instalao-do-git">Instalação do Git</h2>
 
 <p>Faça o download do Git para o seu sistema operacional seguindo os passos no próprio
 <a href="https://git-scm.com/download/">site</a> da ferramenta. A instalação é muito simples e leva pouco
@@ -238,7 +237,7 @@ tempo, além de ter muitos tutoriais na internet ensinando a fazê-lo.</p>
 
 <div id="id-configurando-usuario"></div>
 
-<h4 id="configurando-seu-usurio-no-git">Configurando seu usuário no git</h4>
+<h2 id="configurando-seu-usurio-no-git">Configurando seu usuário no git</h2>
 
 <p>Após instalar, abra o terminal. Se você executar <code>git --version</code>, e não obtiver a versão do git, algo
 deu errado na instalação, mesmo que seja a adição do git no $PATH do seu sistema operacional.</p>
@@ -249,12 +248,12 @@ artigo.</p>
 
 <p><strong>Seu usuário</strong></p>
 
-<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> git config --global user.name <span class="s2">&quot;tkovs&quot;</span>
-<span class="gp">$</span> git config --global user.email <span class="s2">&quot;victor.rdg@hotmail.com&quot;</span></code></pre></figure>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> git config --global user.name <span class="s2">&quot;seu nome de usuário&quot;</span>
+<span class="gp">$</span> git config --global user.email <span class="s2">&quot;seu email&quot;</span></code></pre></figure>
 
 <p><strong>Seu editor</strong></p>
 
-<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> git config --global core.editor vim</code></pre></figure>
+<figure class="highlight"><pre><code class="language-console" data-lang="console"><span class="gp">$</span> git config --global core.editor <span class="s2">&quot;seu editor de texto&quot;</span></code></pre></figure>
 
 <p>E para verificar se está tudo certo, execute o comando abaixo. No meu notebook o resultado foi esse:</p>
 
@@ -274,24 +273,78 @@ artigo.</p>
 
 <div id="id-comandos-basicos"></div>
 
-<h4 id="comandos-bsicos">Comandos básicos</h4>
+<h2 id="comandos-bsicos">Comandos básicos</h2>
 
-<p>Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia <a href="http://tkovs.github.io/blog/comandos-terminal">minha postagem</a> sobre ele.</p>
+<p>Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia <a href="http://localhost:4000/blog/introducao-terminal">minha postagem</a> sobre ele.</p>
 
-<p><strong>vim</strong></p>
+<p>Pra executar um comando do Git no terminal, digite <strong>git</strong> seguido pelo comando. Exemplo do comando
+<strong>init</strong>: <code>git init</code>.</p>
 
-<p>Para edição de arquivos eu uso o Vim, meu editor de texto preferido. Se você executar o comando <code>vim</code> em seu terminal e
-nada aparecer é porque ele não está instalado. Eu te aconselho a usar o Sublime Text 3 pela facilidade de se usar.</p>
+<div id="id-comandos-basicos-init"></div>
 
-<p>Imagem do meu vim:</p>
+<h4 id="init">Init</h4>
 
-<p><img src="../assets/img/vim-exemplo.png" alt="vim-exemplo" /></p>
+<p>Esse comando é responsável por criar um repositório Git vazio. Um diretório só pode ser gerenciado
+pelo Git se o <code>init</code> for executado nele.</p>
 
-<hr />
+<div id="id-comandos-basicos-status"></div>
 
-<div id="id-pular-comandos-basicos"></div>
+<h4 id="status">Status</h4>
 
-<p>E agora, os comandos básicos do Git.</p>
+<p>Retorna informações sobre o repositório atual: lista de arquivos alterados desde o último commit,
+branch atual, mudanças a serem <em>commitadas</em>, etc.</p>
+
+<p><img src="../assets/img/comandos-basicos-status.png" alt="git status" /></p>
+
+<div id="id-comandos-basicos-add"></div>
+
+<h4 id="add">Add</h4>
+
+<p>Adiciona um arquivo que foi alterado para o gerenciamento do Git. Se um arquivo é alterado mas não
+passa pelo comando <code>add</code> antes do commit, suas alterações não são salvas.</p>
+
+<div id="id-comandos-basicos-commit"></div>
+
+<h4 id="commit">Commit</h4>
+
+<p>Salva as mudanças realizadas no repositório desde o último commit. Junto com as mudanças, salva
+informações como, por exemplo, quem fez as alterações, data do commit, breve explicação sobre o
+commit, etc. Cada commit tem um código como por exemplo
+<em>a39ce6f14a6079ebdbe2d82e4fcd0bc643b65c97</em>. Quando você for navegar entre os commits passados,
+precisará desse código que é exibido usando o <code>log</code>. Quando for usar o código, não precisa usar
+mais que os 5 primeiros digitos de um código pra usa-lo.</p>
+
+<p>Exemplo: <code>git commit -m "Nova função para imprimir pizzas reais"</code></p>
+
+<div id="id-comandos-basicos-diff"></div>
+
+<h4 id="diff">Diff</h4>
+
+<p>Compara dois commits e mostra a diferença entre eles. <strong>Eu</strong> uso muito pra comparar as alterações
+que fiz desde o último commit antes de fazer o próximo commit, sempre.</p>
+
+<div id="id-comandos-basicos-log"></div>
+
+<h4 id="log">Log</h4>
+
+<p>Lista todos os commits, junto com a descrição e informações básicas como quem foi o autor do commit
+e a data. Detalhe: o commit mais novo pode ser referenciado por <strong>HEAD</strong>, dessa forma, para comparar
+as mudanças feitas desde o último commit, basta executar <code>git diff HEAD</code>.</p>
+
+<p><img src="../assets/img/comandos-basicos-log.png" alt="git log" /></p>
+
+<div id="id-comandos-basicos-branch"></div>
+
+<h4 id="branch">Branch</h4>
+
+<p>O comando <code>branch</code> gerencia branches (ramificações) no seu repositório, excluindo-os, criando-os
+ou listando-os.</p>
+
+<div id="id-comandos-basicos-checkout"></div>
+
+<h4 id="checkout">Checkout</h4>
+
+<p>Serve para navegar entre branches ou commits.</p>
 
 
 		</div>
@@ -305,17 +358,17 @@ nada aparecer é porque ele não está instalado. Eu te aconselho a usar o Subli
 		    
 		    <li>
 			  <span>15 May 2016 &raquo;</span>
-			  <a href="http://tkovs.github.io/blog/introducao-terminal">Comandos básicos do Terminal</a>
+			  <a href="http://localhost:4000/blog/introducao-terminal">Comandos básicos do Terminal</a>
 		    </li>
 		    
 		    <li>
 			  <span>21 Apr 2016 &raquo;</span>
-			  <a href="http://tkovs.github.io/blog/programacao-funcional">Programação Funcional</a>
+			  <a href="http://localhost:4000/blog/programacao-funcional">Programação Funcional</a>
 		    </li>
 		    
 		    <li>
 			  <span>31 Mar 2016 &raquo;</span>
-			  <a href="http://tkovs.github.io/blog/introducao-linguagem-c">Introdução básica à linguagem C</a>
+			  <a href="http://localhost:4000/blog/introducao-linguagem-c">Introdução básica à linguagem C</a>
 		    </li>
 		    
 		</ul>
@@ -325,13 +378,13 @@ nada aparecer é porque ele não está instalado. Eu te aconselho a usar o Subli
 	<div class="post-footer">
 		<div class="column-1">
 			
-				<a href="http://tkovs.github.io/blog/programacao-funcional"><< Older</a>
+				<a href="http://localhost:4000/blog/programacao-funcional"><< Older</a>
 			
 		</div>
-		<div class="column-2"><a href="http://tkovs.github.io/ ">Home</a></div>
+		<div class="column-2"><a href="http://localhost:4000/ ">Home</a></div>
 		<div class="column-3">
 			
-				<a href="http://tkovs.github.io/blog/introducao-terminal">Newer >></a>
+				<a href="http://localhost:4000/blog/introducao-terminal">Newer >></a>
 			
 		</div>
 	</div>
@@ -363,8 +416,8 @@ powered by Disqus.</a></noscript>
                 <div class="column one">
                     <h6>Few more links</h6>
 <ul class="menu">
-    <li><a href="http://tkovs.github.io/about">About</a></li>
-    <li><a href="http://tkovs.github.io/blog">Blog</a></li>
+    <li><a href="http://localhost:4000/about">About</a></li>
+    <li><a href="http://localhost:4000/blog">Blog</a></li>
 </ul>		
                     
                 </div>

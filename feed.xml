@@ -3,10 +3,10 @@
   <channel>
     <title></title>
     <description></description>
-    <link>http://tkovs.github.io/</link>
-    <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Sun, 15 May 2016 21:25:12 -0300</pubDate>
-    <lastBuildDate>Sun, 15 May 2016 21:25:12 -0300</lastBuildDate>
+    <link>http://localhost:4000/</link>
+    <atom:link href="http://localhost:4000/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Mon, 16 May 2016 21:12:16 -0300</pubDate>
+    <lastBuildDate>Mon, 16 May 2016 21:12:16 -0300</lastBuildDate>
     <generator>Jekyll v3.0.5</generator>
     
       <item>
@@ -544,8 +544,8 @@ arquivos, configurar o sistema por completo, etc. Não espero que você chegue n
 que ao menos se familiarize com ele. Boa sorte :)&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 May 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/introducao-terminal</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/introducao-terminal</guid>
+        <link>http://localhost:4000/blog/introducao-terminal</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/introducao-terminal</guid>
         
         <category>Linux</category>
         
@@ -570,11 +570,18 @@ que ao menos se familiarize com ele. Boa sorte :)&lt;/p&gt;
       &lt;li&gt;&lt;a href=&quot;#id-gestao-usuarios&quot;&gt;Gerenciando vários contribuidores num mesmo projeto&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#id-guia-git-iniciantes&quot;&gt;Guia de Git para iniciantes&lt;/a&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-instalacao-git&quot;&gt;Instalação do Git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-configurando-usuario&quot;&gt;Configurando seu usuário no git&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos&quot;&gt;Comandos básicos&lt;/a&gt;
     &lt;ol&gt;
-      &lt;li&gt;&lt;a href=&quot;#id-instalacao-git&quot;&gt;Instalação do Git&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#id-configurando-usuario&quot;&gt;Configurando seu usuário no git&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos&quot;&gt;Comandos básicos&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos-init&quot;&gt;Init&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos-status&quot;&gt;Status&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos-add&quot;&gt;Add&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos-commit&quot;&gt;Commit&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos-diff&quot;&gt;Diff&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos-log&quot;&gt;Log&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos-branch&quot;&gt;Branch&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#id-comandos-basicos-checkout&quot;&gt;Checkout&lt;/a&gt;&lt;/li&gt;
     &lt;/ol&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
@@ -717,17 +724,9 @@ versões de um arquivo, com problemas de compatibilidade, o Git avisa quais são
 entrando em conflito e aí fica por sua conta quais dados terão prioridade sobre outros no resultado
 final.&lt;/p&gt;
 
-&lt;div id=&quot;id-guia-git-iniciantes&quot;&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;guia-de-git-para-iniciantes&quot;&gt;Guia de Git para iniciantes&lt;/h2&gt;
-
-&lt;p&gt;A seguir, um tutorial enxuto sobre como usar o Git na prática, com apoio de imagens e gifs.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;../assets/img/git-logo.png&quot; alt=&quot;Git logo&quot; /&gt;&lt;/p&gt;
-
 &lt;div id=&quot;id-instalacao-git&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;instalao-do-git&quot;&gt;Instalação do Git&lt;/h4&gt;
+&lt;h2 id=&quot;instalao-do-git&quot;&gt;Instalação do Git&lt;/h2&gt;
 
 &lt;p&gt;Faça o download do Git para o seu sistema operacional seguindo os passos no próprio
 &lt;a href=&quot;https://git-scm.com/download/&quot;&gt;site&lt;/a&gt; da ferramenta. A instalação é muito simples e leva pouco
@@ -735,7 +734,7 @@ tempo, além de ter muitos tutoriais na internet ensinando a fazê-lo.&lt;/p&gt;
 
 &lt;div id=&quot;id-configurando-usuario&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;configurando-seu-usurio-no-git&quot;&gt;Configurando seu usuário no git&lt;/h4&gt;
+&lt;h2 id=&quot;configurando-seu-usurio-no-git&quot;&gt;Configurando seu usuário no git&lt;/h2&gt;
 
 &lt;p&gt;Após instalar, abra o terminal. Se você executar &lt;code&gt;git --version&lt;/code&gt;, e não obtiver a versão do git, algo
 deu errado na instalação, mesmo que seja a adição do git no $PATH do seu sistema operacional.&lt;/p&gt;
@@ -746,12 +745,12 @@ artigo.&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Seu usuário&lt;/strong&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;tkovs&amp;quot;&lt;/span&gt;
-&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config --global user.email &lt;span class=&quot;s2&quot;&gt;&amp;quot;victor.rdg@hotmail.com&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config --global user.name &lt;span class=&quot;s2&quot;&gt;&amp;quot;seu nome de usuário&amp;quot;&lt;/span&gt;
+&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config --global user.email &lt;span class=&quot;s2&quot;&gt;&amp;quot;seu email&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;&lt;strong&gt;Seu editor&lt;/strong&gt;&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config --global core.editor vim&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-console&quot; data-lang=&quot;console&quot;&gt;&lt;span class=&quot;gp&quot;&gt;$&lt;/span&gt; git config --global core.editor &lt;span class=&quot;s2&quot;&gt;&amp;quot;seu editor de texto&amp;quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;p&gt;E para verificar se está tudo certo, execute o comando abaixo. No meu notebook o resultado foi esse:&lt;/p&gt;
 
@@ -771,29 +770,83 @@ artigo.&lt;/p&gt;
 
 &lt;div id=&quot;id-comandos-basicos&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;comandos-bsicos&quot;&gt;Comandos básicos&lt;/h4&gt;
+&lt;h2 id=&quot;comandos-bsicos&quot;&gt;Comandos básicos&lt;/h2&gt;
 
-&lt;p&gt;Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia &lt;a href=&quot;http://tkovs.github.io/blog/comandos-terminal&quot;&gt;minha postagem&lt;/a&gt; sobre ele.&lt;/p&gt;
+&lt;p&gt;Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia &lt;a href=&quot;http://localhost:4000/blog/introducao-terminal&quot;&gt;minha postagem&lt;/a&gt; sobre ele.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;vim&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;Pra executar um comando do Git no terminal, digite &lt;strong&gt;git&lt;/strong&gt; seguido pelo comando. Exemplo do comando
+&lt;strong&gt;init&lt;/strong&gt;: &lt;code&gt;git init&lt;/code&gt;.&lt;/p&gt;
 
-&lt;p&gt;Para edição de arquivos eu uso o Vim, meu editor de texto preferido. Se você executar o comando &lt;code&gt;vim&lt;/code&gt; em seu terminal e
-nada aparecer é porque ele não está instalado. Eu te aconselho a usar o Sublime Text 3 pela facilidade de se usar.&lt;/p&gt;
+&lt;div id=&quot;id-comandos-basicos-init&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;Imagem do meu vim:&lt;/p&gt;
+&lt;h4 id=&quot;init&quot;&gt;Init&lt;/h4&gt;
 
-&lt;p&gt;&lt;img src=&quot;../assets/img/vim-exemplo.png&quot; alt=&quot;vim-exemplo&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;Esse comando é responsável por criar um repositório Git vazio. Um diretório só pode ser gerenciado
+pelo Git se o &lt;code&gt;init&lt;/code&gt; for executado nele.&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;div id=&quot;id-comandos-basicos-status&quot;&gt;&lt;/div&gt;
 
-&lt;div id=&quot;id-pular-comandos-basicos&quot;&gt;&lt;/div&gt;
+&lt;h4 id=&quot;status&quot;&gt;Status&lt;/h4&gt;
 
-&lt;p&gt;E agora, os comandos básicos do Git.&lt;/p&gt;
+&lt;p&gt;Retorna informações sobre o repositório atual: lista de arquivos alterados desde o último commit,
+branch atual, mudanças a serem &lt;em&gt;commitadas&lt;/em&gt;, etc.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/comandos-basicos-status.png&quot; alt=&quot;git status&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-basicos-add&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;add&quot;&gt;Add&lt;/h4&gt;
+
+&lt;p&gt;Adiciona um arquivo que foi alterado para o gerenciamento do Git. Se um arquivo é alterado mas não
+passa pelo comando &lt;code&gt;add&lt;/code&gt; antes do commit, suas alterações não são salvas.&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-basicos-commit&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;commit&quot;&gt;Commit&lt;/h4&gt;
+
+&lt;p&gt;Salva as mudanças realizadas no repositório desde o último commit. Junto com as mudanças, salva
+informações como, por exemplo, quem fez as alterações, data do commit, breve explicação sobre o
+commit, etc. Cada commit tem um código como por exemplo
+&lt;em&gt;a39ce6f14a6079ebdbe2d82e4fcd0bc643b65c97&lt;/em&gt;. Quando você for navegar entre os commits passados,
+precisará desse código que é exibido usando o &lt;code&gt;log&lt;/code&gt;. Quando for usar o código, não precisa usar
+mais que os 5 primeiros digitos de um código pra usa-lo.&lt;/p&gt;
+
+&lt;p&gt;Exemplo: &lt;code&gt;git commit -m &quot;Nova função para imprimir pizzas reais&quot;&lt;/code&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-basicos-diff&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;diff&quot;&gt;Diff&lt;/h4&gt;
+
+&lt;p&gt;Compara dois commits e mostra a diferença entre eles. &lt;strong&gt;Eu&lt;/strong&gt; uso muito pra comparar as alterações
+que fiz desde o último commit antes de fazer o próximo commit, sempre.&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-basicos-log&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;log&quot;&gt;Log&lt;/h4&gt;
+
+&lt;p&gt;Lista todos os commits, junto com a descrição e informações básicas como quem foi o autor do commit
+e a data. Detalhe: o commit mais novo pode ser referenciado por &lt;strong&gt;HEAD&lt;/strong&gt;, dessa forma, para comparar
+as mudanças feitas desde o último commit, basta executar &lt;code&gt;git diff HEAD&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;../assets/img/comandos-basicos-log.png&quot; alt=&quot;git log&quot; /&gt;&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-basicos-branch&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;branch&quot;&gt;Branch&lt;/h4&gt;
+
+&lt;p&gt;O comando &lt;code&gt;branch&lt;/code&gt; gerencia branches (ramificações) no seu repositório, excluindo-os, criando-os
+ou listando-os.&lt;/p&gt;
+
+&lt;div id=&quot;id-comandos-basicos-checkout&quot;&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;checkout&quot;&gt;Checkout&lt;/h4&gt;
+
+&lt;p&gt;Serve para navegar entre branches ou commits.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 25 Apr 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/versionamento-git</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/versionamento-git</guid>
+        <link>http://localhost:4000/blog/versionamento-git</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/versionamento-git</guid>
         
         <category>Versionamento</category>
         
@@ -1182,8 +1235,8 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 21 Apr 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/programacao-funcional</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/programacao-funcional</guid>
+        <link>http://localhost:4000/blog/programacao-funcional</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/programacao-funcional</guid>
         
         <category>Programação Funcional</category>
         
@@ -1497,8 +1550,8 @@ World&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 31 Mar 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/introducao-linguagem-c</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/introducao-linguagem-c</guid>
+        <link>http://localhost:4000/blog/introducao-linguagem-c</link>
+        <guid isPermaLink="true">http://localhost:4000/blog/introducao-linguagem-c</guid>
         
         <category>Linguagem c</category>
         
