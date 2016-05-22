@@ -3,12 +3,12 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>Versionamento e iniciando no Git! (em progesso)</title>
+        <title>Versionamento e iniciando no Git! (em progresso)</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">        
         <meta name="description" content="Apenas um blog sobre mim, música, programação, as pessoas e o que mais me der na telha, flw.
 ">
         <link rel="canonical" 
-        href="http://localhost:4000/blog/versionamento-git">
+        href="http://tkovs.github.io/blog/versionamento-git">
         
         <!-- Harmony styles -->
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
@@ -34,13 +34,13 @@
                 <h2></h2>
                 <ul>
 	<li>
-		<a href="http://localhost:4000/about">Sobre</a><span>/</span>
+		<a href="http://tkovs.github.io/about">Sobre</a><span>/</span>
 	</li>
 	<li>
-		<a href="http://localhost:4000/blog">Blog</a><span>/</span>
+		<a href="http://tkovs.github.io/blog">Blog</a><span>/</span>
 	</li>
 	<li>
-		<a href="http://localhost:4000/resume">Currículo</a><span>/</span>
+		<a href="http://tkovs.github.io/resume">Currículo</a><span>/</span>
 	</li>
 </ul>
                 
@@ -49,7 +49,7 @@
         <div class="page-content wc-container">
 	
 	<div class="post">
-		<h1>Versionamento e iniciando no Git! (em progesso)</h1>
+		<h1>Versionamento e iniciando no Git! (em progresso)</h1>
 		<p class="post-meta">
 			
 	    <span class="post-date">
@@ -87,6 +87,7 @@
       <li><a href="#id-comandos-basicos-checkout">Checkout</a></li>
     </ol>
   </li>
+  <li><a href="#id-demonstracao-pratica">Demonstração prática</a></li>
 </ol>
 
 <hr />
@@ -204,15 +205,18 @@ então todos os arquivos foram alterados pro estado que estavam no commit anteri
 <h4 id="ramificaes">Ramificações</h4>
 
 <p>Quando você precisar fazer alterações no projeto, mas quiser manter uma cópia segura, não
-precisa copiá-lo para algum lugar como um backup. Quando quiser adicionar um novo recurso ou alterar
+precisa copiá-lo para algum lugar como um backup. Quando quiser adicionar um novo recurso, ou alterar
 um arquivo sem riscos de corromper o projeto atual e ter dificuldades de reverter para o estado em
-que funcionava, você não precisa salvar uma cópia do seu projeto
-como backup. Ao invés de um backup, o Git cria uma ramificação do projeto em paralelo à ramificação
+que funcionava, você não vai precisar salvar uma cópia do seu projeto como backup.
+Ao invés de um backup, o Git cria uma ramificação do projeto em paralelo à ramificação
 principal para que se trabalhe em linhas diferentes. Elas são independentes e podem simplesmentes não
 se unirem no futuro. Ao se finalizar as alterações necessárias, o Git
 faz o <strong>merge</strong> de duas ramificações, que adiciona as alterações de uma ramificação em outra, dando a
 você controle total sobre o projeto e as alterações feitas. E é claro, a qualquer momento você pode
-navegar por diferentes ramificações, que no git são chamadas de <strong>branchs</strong>.</p>
+navegar por diferentes ramificações, que no git são chamadas de <strong>branches</strong>.</p>
+
+<p>O branch principal de um projeto, que é criado logo na inicialização do Git em um diretório, é o
+branch <strong>master</strong>.</p>
 
 <p><img src="../assets/img/feature-x.png" alt="Feature-x" /></p>
 
@@ -275,7 +279,7 @@ artigo.</p>
 
 <h2 id="comandos-bsicos">Comandos básicos</h2>
 
-<p>Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia <a href="http://localhost:4000/blog/introducao-terminal">minha postagem</a> sobre ele.</p>
+<p>Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia <a href="http://tkovs.github.io/blog/introducao-terminal">minha postagem</a> sobre ele.</p>
 
 <p>Pra executar um comando do Git no terminal, digite <strong>git</strong> seguido pelo comando. Exemplo do comando
 <strong>init</strong>: <code>git init</code>.</p>
@@ -346,6 +350,54 @@ ou listando-os.</p>
 
 <p>Serve para navegar entre branches ou commits.</p>
 
+<div id="id-demonstracao-pratica"></div>
+
+<h2 id="demonstrao-prtica">Demonstração prática</h2>
+
+<p>Pra finalizar, vou criar um diretório, criar arquivos, gerencia-los com o Git, mostrando
+passo-a-passo o que eu faria.</p>
+
+<h4 id="primeiro-commit">Primeiro commit</h4>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno"> 1</span> <span class="o">[</span>tkovs@toby ~<span class="o">]</span><span class="nv">$ </span>mkdir exemplo
+<span class="lineno"> 2</span> <span class="o">[</span>tkovs@toby ~<span class="o">]</span><span class="nv">$ </span><span class="nb">cd </span>exemplo/
+<span class="lineno"> 3</span> <span class="o">[</span>tkovs@toby exemplo<span class="o">]</span><span class="nv">$ </span>git init
+<span class="lineno"> 4</span> Initialized empty Git repository in /home/tkovs/exemplo/.git/
+<span class="lineno"> 5</span> <span class="o">[</span>tkovs@toby exemplo<span class="o">]</span><span class="nv">$ </span>touch nomes.txt
+<span class="lineno"> 6</span> <span class="o">[</span>tkovs@toby exemplo<span class="o">]</span><span class="nv">$ </span>git add .
+<span class="lineno"> 7</span> <span class="o">[</span>tkovs@toby exemplo<span class="o">]</span><span class="nv">$ </span>git status
+<span class="lineno"> 8</span> On branch master
+<span class="lineno"> 9</span> 
+<span class="lineno">10</span> Initial commit
+<span class="lineno">11</span> 
+<span class="lineno">12</span> Changes to be committed:
+<span class="lineno">13</span>   <span class="o">(</span>use <span class="s2">&quot;git rm --cached &lt;file&gt;...&quot;</span> to unstage<span class="o">)</span>
+<span class="lineno">14</span> 
+<span class="lineno">15</span> 	new file:   nomes.txt
+<span class="lineno">16</span> 
+<span class="lineno">17</span> <span class="o">[</span>tkovs@toby exemplo<span class="o">]</span><span class="nv">$ </span>git commit -m <span class="s2">&quot;Início do exemplo&quot;</span>
+<span class="lineno">18</span> <span class="o">[</span>master <span class="o">(</span>root-commit<span class="o">)</span> e3c49ac<span class="o">]</span> Início <span class="k">do</span> exemplo
+<span class="lineno">19</span>  <span class="m">1</span> file changed, <span class="m">0</span> insertions<span class="o">(</span>+<span class="o">)</span>, <span class="m">0</span> deletions<span class="o">(</span>-<span class="o">)</span>
+<span class="lineno">20</span>  create mode <span class="m">100644</span> nomes.txt
+<span class="lineno">21</span> <span class="o">[</span>tkovs@toby exemplo<span class="o">]</span><span class="nv">$ </span></code></pre></figure>
+
+<p>Acima, eu crio a pasta desse exemplo; entro nela; inicio o Git; crio um arquivo chamado <em>nomes.txt</em>;
+proponho essas mudanças ao Git usando o <code>git add</code>; verifico o status atual do repositório para,
+posteriormente, fazer o <code>git commit</code>, que me diz que um arquivo foi alterado, com 0 linhas adicionadas e
+0 linhas deletadas, e também é informado que o branch atual é o master, e confirma as alterações
+propostas pelo <code>git add</code>. Como pode-se ver, eu passei uma mensagem explicando as alterações que fiz
+no repositório ao <code>git commit</code>.</p>
+
+<p>A partir deste momento, qualquer arquivo nesse diretório poderá estar sob o <em>controle</em> do Git,
+exceto aqueles adicionados ao arquivo <em>.gitignore</em>.</p>
+
+<p>O estado atual do repositório é o seguinte:</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">exemplo/
+└── nomes.txt
+
+0 directories, 1 file</code></pre></figure>
+
 
 		</div>
 	</div>
@@ -358,17 +410,17 @@ ou listando-os.</p>
 		    
 		    <li>
 			  <span>15 May 2016 &raquo;</span>
-			  <a href="http://localhost:4000/blog/introducao-terminal">Comandos básicos do Terminal</a>
+			  <a href="http://tkovs.github.io/blog/introducao-terminal">Comandos básicos do Terminal</a>
 		    </li>
 		    
 		    <li>
 			  <span>21 Apr 2016 &raquo;</span>
-			  <a href="http://localhost:4000/blog/programacao-funcional">Programação Funcional</a>
+			  <a href="http://tkovs.github.io/blog/programacao-funcional">Programação Funcional</a>
 		    </li>
 		    
 		    <li>
 			  <span>31 Mar 2016 &raquo;</span>
-			  <a href="http://localhost:4000/blog/introducao-linguagem-c">Introdução básica à linguagem C</a>
+			  <a href="http://tkovs.github.io/blog/introducao-linguagem-c">Introdução básica à linguagem C</a>
 		    </li>
 		    
 		</ul>
@@ -378,13 +430,13 @@ ou listando-os.</p>
 	<div class="post-footer">
 		<div class="column-1">
 			
-				<a href="http://localhost:4000/blog/programacao-funcional"><< Older</a>
+				<a href="http://tkovs.github.io/blog/programacao-funcional"><< Older</a>
 			
 		</div>
-		<div class="column-2"><a href="http://localhost:4000/ ">Home</a></div>
+		<div class="column-2"><a href="http://tkovs.github.io/ ">Home</a></div>
 		<div class="column-3">
 			
-				<a href="http://localhost:4000/blog/introducao-terminal">Newer >></a>
+				<a href="http://tkovs.github.io/blog/introducao-terminal">Newer >></a>
 			
 		</div>
 	</div>
@@ -416,8 +468,8 @@ powered by Disqus.</a></noscript>
                 <div class="column one">
                     <h6>Few more links</h6>
 <ul class="menu">
-    <li><a href="http://localhost:4000/about">About</a></li>
-    <li><a href="http://localhost:4000/blog">Blog</a></li>
+    <li><a href="http://tkovs.github.io/about">About</a></li>
+    <li><a href="http://tkovs.github.io/blog">Blog</a></li>
 </ul>		
                     
                 </div>
