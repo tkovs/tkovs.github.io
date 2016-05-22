@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Versionamento e iniciando no Git! (em progesso)"
+title:  "Versionamento e iniciando no Git! (em progresso)"
 date:   2016-04-25
 description: Início da série sobre versionamento; filosofia open source; Git e Github; licenças (MIT, Apache, GPL); relação mercado de trabalho e github; grandes projetos de código aberto; tutorial sobre como usar o Git independente e sobre como integrar com o Github.
 tags:
@@ -31,6 +31,7 @@ permalink: /blog/versionamento-git
     6. [Log](#id-comandos-basicos-log)
     7. [Branch](#id-comandos-basicos-branch)
     8. [Checkout](#id-comandos-basicos-checkout)
+7. [Demonstração prática](#id-demonstracao-pratica)
 
 <hr />
 <div id='id-introducao'></div>
@@ -150,15 +151,18 @@ então todos os arquivos foram alterados pro estado que estavam no commit anteri
 ####Ramificações
 
 Quando você precisar fazer alterações no projeto, mas quiser manter uma cópia segura, não
-precisa copiá-lo para algum lugar como um backup. Quando quiser adicionar um novo recurso ou alterar
+precisa copiá-lo para algum lugar como um backup. Quando quiser adicionar um novo recurso, ou alterar
 um arquivo sem riscos de corromper o projeto atual e ter dificuldades de reverter para o estado em
-que funcionava, você não precisa salvar uma cópia do seu projeto
-como backup. Ao invés de um backup, o Git cria uma ramificação do projeto em paralelo à ramificação
+que funcionava, você não vai precisar salvar uma cópia do seu projeto como backup.
+Ao invés de um backup, o Git cria uma ramificação do projeto em paralelo à ramificação
 principal para que se trabalhe em linhas diferentes. Elas são independentes e podem simplesmentes não
 se unirem no futuro. Ao se finalizar as alterações necessárias, o Git
 faz o **merge** de duas ramificações, que adiciona as alterações de uma ramificação em outra, dando a
 você controle total sobre o projeto e as alterações feitas. E é claro, a qualquer momento você pode
-navegar por diferentes ramificações, que no git são chamadas de **branchs**.
+navegar por diferentes ramificações, que no git são chamadas de **branches**.
+
+O branch principal de um projeto, que é criado logo na inicialização do Git em um diretório, é o
+branch **master**.
 
 ![Feature-x](../assets/img/feature-x.png)
 
@@ -297,4 +301,56 @@ ou listando-os.
 ####Checkout
 
 Serve para navegar entre branches ou commits.
+
+<div id='id-demonstracao-pratica'></div>
+
+##Demonstração prática
+
+Pra finalizar, vou criar um diretório, criar arquivos, gerencia-los com o Git, mostrando
+passo-a-passo o que eu faria.
+
+####Primeiro commit
+
+{% highlight bash linenos %}
+[tkovs@toby ~]$ mkdir exemplo
+[tkovs@toby ~]$ cd exemplo/
+[tkovs@toby exemplo]$ git init
+Initialized empty Git repository in /home/tkovs/exemplo/.git/
+[tkovs@toby exemplo]$ touch nomes.txt
+[tkovs@toby exemplo]$ git add .
+[tkovs@toby exemplo]$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+
+	new file:   nomes.txt
+
+[tkovs@toby exemplo]$ git commit -m "Início do exemplo"
+[master (root-commit) e3c49ac] Início do exemplo
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 nomes.txt
+[tkovs@toby exemplo]$ 
+{% endhighlight %}
+
+Acima, eu crio a pasta desse exemplo; entro nela; inicio o Git; crio um arquivo chamado *nomes.txt*;
+proponho essas mudanças ao Git usando o ```git add```; verifico o status atual do repositório para,
+posteriormente, fazer o ```git commit```, que me diz que um arquivo foi alterado, com 0 linhas adicionadas e
+0 linhas deletadas, e também é informado que o branch atual é o master, e confirma as alterações
+propostas pelo ```git add```. Como pode-se ver, eu passei uma mensagem explicando as alterações que fiz
+no repositório ao ```git commit```.
+
+A partir deste momento, qualquer arquivo nesse diretório poderá estar sob o *controle* do Git,
+exceto aqueles adicionados ao arquivo *.gitignore*.
+
+O estado atual do repositório é o seguinte:
+
+{% highlight text %}
+exemplo/
+└── nomes.txt
+
+0 directories, 1 file
+{% endhighlight %}
 
