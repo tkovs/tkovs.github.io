@@ -107,7 +107,7 @@
 
 <div id="id-introducao"></div>
 
-<h2 id="introduo">Introdução</h2>
+<p>##Introdução</p>
 
 <p>A ideia desse post surgiu quando eu vi a dificuldade que minha turma no 4º ano de informática no
 IFAL tem com o terminal. Há ainda uma visão ruim sobre ele, que é difícil e que interface
@@ -115,7 +115,7 @@ gráfica é mais “fácil”, mas é apenas costume, eu trabalho mais rápido n
 
 <div id="id-terminal"></div>
 
-<h2 id="terminal">Terminal</h2>
+<p>##Terminal</p>
 
 <p><img src="../assets/img/terminal-padrao.png" alt="Terminal Linux" /></p>
 
@@ -130,7 +130,7 @@ aparece, exibir a hora, mostrar o caminho completo da pasta, data atual, etc.</p
 
 <div id="id-comando"></div>
 
-<h2 id="comando">Comando</h2>
+<p>##Comando</p>
 
 <p>Dentro do Terminal, você tem a oportunidade de executar os comandos que achar necessário. Basta
 digitar o nome do comando e seus argumentos. Por exemplo, para listar os arquivos do diretório
@@ -146,13 +146,13 @@ na segunda listando os arquivos em ordem de modificação onde os mais recentes 
 
 <div id="id-dicas"></div>
 
-<h2 id="dicas">Dicas</h2>
+<p>##Dicas</p>
 
 <p>Algumas dicas para lhe ajudar no uso do Terminal.</p>
 
 <div id="id-dicas-autocomplemento"></div>
 
-<h4 id="autocomplemento">Autocomplemento</h4>
+<p>####Autocomplemento</p>
 
 <p>Recurso importante, completa automaticamente o nome de um comando ou arquivo conhecido pelo
 Terminal apertando a tecla <strong>tab</strong>, caso haja apenas uma possibilidade. Do contrário, ele lista
@@ -161,7 +161,7 @@ o tab.</p>
 
 <div id="id-dicas-manual"></div>
 
-<h4 id="manual">Manual</h4>
+<p>####Manual</p>
 
 <p>O Linux tem um manual da maioria dos comandos e dos programas que você instala. Para usa-lo,
 basta executar <code>man nome_comando</code>. Se quer conhecer mais sobre o comando ls, que lista
@@ -171,7 +171,7 @@ comandos, que vão desde chamadas do sistema (kernel) a comandos relacionados a 
 
 <div id="id-dicas-ajuda"></div>
 
-<h4 id="ajuda">Ajuda</h4>
+<p>####Ajuda</p>
 
 <p>Muitos comandos têm por padrão a opção <strong>–help</strong> para que uma breve explicação sobre ele seja
 retornada. Também há o comando <code>help</code> que exibe informações de alguns comandos que lhe são
@@ -201,7 +201,7 @@ or available locally via: info &#39;(coreutils) mkdir invocation&#39;</code></pr
 
 <div id="id-dicas-sudo"></div>
 
-<h4 id="permisso">Permissão</h4>
+<p>####Permissão</p>
 
 <p>As vezes, você não conseguirá executar alguns comandos, pois para isso precisará de privilégios que
 não tem. Privilégios esses que outro usuário tem, geralmente o administrador. Para usa-los, existe o
@@ -232,7 +232,7 @@ Dispositivo    Início       Fim   Setores Tamanho Tipo
 
 <div id="id-dicas-info"></div>
 
-<h4 id="info">Info</h4>
+<p>####Info</p>
 
 <p>Outro meio de se obter informações sobre comandos é através do <code>info</code>. Basta passar o nome do
 comando que você quer obter detalhes para o info e ele abrirá um programa semelhante ao man.</p>
@@ -264,7 +264,7 @@ DESCRIPTION
 
 <div id="id-navegacao"></div>
 
-<h2 id="navegao">Navegação</h2>
+<p>##Navegação</p>
 
 <p>Para os exemplos, usarei a estrutura de diretórios abaixo.</p>
 
@@ -288,7 +288,7 @@ DESCRIPTION
 
 <div id="id-navegacao-listar-diretorios"></div>
 
-<h4 id="listar">Listar</h4>
+<p>####Listar</p>
 
 <p>Para listar as pastas contidas no diretório atual, basta executar <code>ls -d */</code>.</p>
 
@@ -299,7 +299,7 @@ include/  samples/  source/</code></pre></figure>
 
 <div id="id-navegacao-navegar-entre-pastas"></div>
 
-<h4 id="navegar-entre-pastas">Navegar entre pastas</h4>
+<p>####Navegar entre pastas</p>
 
 <p>A navegação entre pastas acontece de forma simples. O comando <code>cd</code> leva o terminal para o
 diretório passado como argumento. Para voltar para um diretório acima, se passa <strong>..</strong> para o
@@ -317,7 +317,7 @@ e o comando seguinte retorna-o para cbrainfuck.</p>
 
 <div id="id-navegacao-criar-diretorio"></div>
 
-<h4 id="criar">Criar</h4>
+<p>####Criar</p>
 
 <p>O comando <code>mkdir</code> cria uma nova pasta, se ela não existe. Caso diretórios pais precisem ser criados,
 deve-se usar a opção <strong>-p</strong> no uso do mkdir.</p>
@@ -332,7 +332,7 @@ include/  samples/  source/  test/</code></pre></figure>
 
 <div id="id-navegacao-apagar-diretorio"></div>
 
-<h4 id="apagar">Apagar</h4>
+<p>####Apagar</p>
 
 <p>Semelhante ao mkdir, há o <code>rmdir</code>. Enquanto mkdir resume <em>Make Directories</em>, rmdir resume <em>Remove
 Directories</em>. Basta passar o nome de um diretório como argumento. Caso haja arquivos dentro do
@@ -348,7 +348,7 @@ include/  samples/  source/</code></pre></figure>
 
 <div id="id-navegacao-renomear-diretorio"></div>
 
-<h4 id="renomear">Renomear</h4>
+<p>####Renomear</p>
 
 <p>O comando <code>rename</code> renomeia um arquivo ou uma pasta e funciona de um jeito simples. Ele
 substitui a primeira ocorrência de <strong>expressao</strong> pela sua <strong>substituição</strong> no <strong>arquivo</strong> escolhido,
@@ -367,7 +367,7 @@ include/  samples/  source/  test01/</code></pre></figure>
 
 <div id="id-manipulacao-arquivos"></div>
 
-<h2 id="manipulao-de-arquivos">Manipulação de arquivos</h2>
+<p>##Manipulação de arquivos</p>
 
 <p>Para os exemplos, usarei a estrutura de diretórios abaixo.</p>
 
@@ -391,7 +391,7 @@ include/  samples/  source/  test01/</code></pre></figure>
 
 <div id="id-manipulacao-arquivos-listar-arquivos"></div>
 
-<h4 id="listar-1">Listar</h4>
+<p>####Listar</p>
 
 <p>Para se listar apenas os arquivos de um diretório, execute <code>ls -p | grep -v */</code></p>
 
@@ -407,7 +407,7 @@ README.md</code></pre></figure>
 
 <div id="id-manipulacao-arquivos-criar-arquivos"></div>
 
-<h4 id="criar-1">Criar</h4>
+<p>####Criar</p>
 
 <p>O modo mais simples de se criar um arquivo vazio que eu conheço é através do comando <code>touch</code>.
 Basta passar o nome do arquivo para o comando touch.</p>
@@ -429,7 +429,7 @@ README.md</code></pre></figure>
 
 <div id="id-manipulacao-arquivos-deletar-arquivos"></div>
 
-<h4 id="deletar">Deletar</h4>
+<p>####Deletar</p>
 
 <p>Deletar um arquivo se dá através do comando <code>rm</code> passando para ele o caminho do arquivo.</p>
 
@@ -450,7 +450,7 @@ README.md</code></pre></figure>
 
 <div id="id-manipulacao-arquivos-copiar-arquivos"></div>
 
-<h4 id="copiar">Copiar</h4>
+<p>####Copiar</p>
 
 <p>Para copiar um arquivo, basta passar o caminho do arquivo a ser copiado, e o caminho do arquivo a ser
 criado com o conteúdo do outro arquivo, para o comando <code>cp</code>. Seu uso fica assim: <code>cp fonte
@@ -473,14 +473,14 @@ README.md</code></pre></figure>
 
 <div id="id-manipulacao-arquivos-mover-arquivos"></div>
 
-<h4 id="mover">Mover</h4>
+<p>####Mover</p>
 
 <p>Para mover um arquivo de um lugar a outro basta usar o <code>mv</code> do mesmo jeito que se usa o
 <code>cp</code>, a diferença é que o arquivo fonte será apagado.</p>
 
 <div id="id-manipulacao-arquivos-renomear-arquivos"></div>
 
-<h4 id="renomear-1">Renomear</h4>
+<p>####Renomear</p>
 
 <p>Como explica o <code>man</code> quanto ao <code>rename</code>: passa-se a <strong>expressão</strong> a ser substituída pela
 <strong>substituição</strong> no <strong>arquivo</strong> destino. Usando, fica assim: <code>rename expressão substituição
@@ -504,7 +504,7 @@ README.md</code></pre></figure>
 
 <div id="id-manipulacao-arquivos-exibir-conteudo"></div>
 
-<h4 id="exibir-contedo">Exibir conteúdo</h4>
+<p>####Exibir conteúdo</p>
 
 <p>O comando <code>cat</code> concatena um arquivo para a saída padrão. No terminal, quando um arquivo é
 passado como argumento para o comando cat, seu conteúdo é exibido no próprio terminal.</p>
@@ -538,13 +538,13 @@ int main(int argc, char ** argv) {
 
 <div id="id-comandos-gerais"></div>
 
-<h2 id="comandos-gerais">Comandos gerais</h2>
+<p>##Comandos gerais</p>
 
 <p>Comandos sem um objetivo em específico.</p>
 
 <div id="id-comandos-gerais-pausa"></div>
 
-<h4 id="pausa">Pausa</h4>
+<p>####Pausa</p>
 
 <p>Existe um comando que simplesmente faz uma pausa por um tempo específico. É o comando <code>sleep</code>.
 Para usado, basta passar a quantidade de segundos como argumento para o sleep. Exemplo: <code>sleep
@@ -554,7 +554,7 @@ espere por 3600 segundos, equivalente à 1 hora, e então reinicia a máquina.</
 
 <div id="id-comandos-gerais-data-e-hora"></div>
 
-<h4 id="data-e-hora">Data e Hora</h4>
+<p>####Data e Hora</p>
 
 <p>Para obter a data e a hora atual, usa-se o comando <code>date</code>.</p>
 
@@ -566,20 +566,20 @@ Dom Mai 15 20:42:46 BRT 2016
 
 <div id="id-comandos-gerais-limpar-tela"></div>
 
-<h4 id="limpar-a-tela-do-terminal">Limpar a tela do terminal</h4>
+<p>####Limpar a tela do terminal</p>
 
 <p>Para limpar a tela do terminal, pressione Ctrl + L.</p>
 
 <div id="id-comandos-gerais-historico-comandos"></div>
 
-<h4 id="histrico-de-comandos">Histórico de comandos</h4>
+<p>####Histórico de comandos</p>
 
 <p>Você pode acessar suas últimas centenas de comandos digitados no terminal. Apenas execute o
 comando <code>history</code>.</p>
 
 <div id="id-conclusao"></div>
 
-<h2 id="concluso">Conclusão</h2>
+<p>##Conclusão</p>
 
 <p>Espero que com esse guia você esteja mais familiarizado com o terminal, e tenha perdido um pouco do
 medo que é comum quando se trata de trabalhar apenas com texto, sem ajuda de interface gráfica.</p>

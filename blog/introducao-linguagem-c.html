@@ -57,7 +57,7 @@
 	    </span>
 		</p>		
 		<div class="post">
-			<h4 id="tipos-de-dados">Tipos de dados</h4>
+			<p>####Tipos de dados</p>
 
 <p><strong>Int</strong>: Número inteiro. Sem casas decimais.
 &gt; Ex: 0 -543 2015</p>
@@ -70,7 +70,7 @@
 
 <p><strong>Void</strong>: Tipo vazio. Por enquanto você não precisa saber muito sobre esse tipo.</p>
 
-<h4 id="comentrios">Comentários</h4>
+<p>####Comentários</p>
 
 <p>Comentários podem ser escritos de duas formas: linha única ou várias linhas.</p>
 
@@ -81,7 +81,7 @@
 <span class="lineno">5</span> <span class="cm">   o nome da variavel já diz tudo...</span>
 <span class="lineno">6</span> <span class="cm">*/</span></code></pre></figure>
 
-<h4 id="funo-main">Função main</h4>
+<p>####Função main</p>
 
 <p>Se seu programa será um executável ele precisará da função main que sempre é a primeira a ser chamada. O esqueleto básico que, provavelmente, todos seus programas iniciais terão, é o seguinte:</p>
 
@@ -98,7 +98,7 @@
 <span class="lineno">11</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">12</span> <span class="p">}</span> <span class="c1">// O &#39;fecha chaves&#39; indica o fim da função.</span></code></pre></figure>
 
-<h4 id="bibliotecas">Bibliotecas</h4>
+<p>####Bibliotecas</p>
 
 <p>Você pode criar um arquivo e nele escrever funções para um determinado propósito. Esse arquivo não tem o main() pois não é um executável, não é um programa, é uma biblioteca. Por exemplo, se você não quisesse escrever a mesma função em vários programas - <em>calcular área de um triangulo, por exemplo</em> - você a escreveria em apenas um arquivo, e no seu começo dos seus próximos algoritmos você incluiria tal arquivo no seu programa. A função <strong>printf</strong> e a <strong>scanf</strong> estão na biblioteca <em>stdio</em>, por isso você costuma adicionar essa biblioteca nos programas. Exemplo:</p>
 
@@ -111,7 +111,7 @@
 <span class="lineno">7</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">8</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="escopo">Escopo</h4>
+<p>####Escopo</p>
 
 <p>Um escopo é o que delimita o código que pertence a uma função, é o que diz a o quê tal código pertence. Um código não pode acessar variáveis que pertencem a um escopo que não seja o próprio ou um anterior.</p>
 
@@ -136,7 +136,7 @@
 <span class="lineno">19</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">20</span> <span class="p">}</span> <span class="c1">// Fim do escopo do main.</span></code></pre></figure>
 
-<h4 id="declarando-variveis--vetor--string">Declarando variáveis &amp; Vetor &amp; String</h4>
+<p>####Declarando variáveis &amp; Vetor &amp; String</p>
 
 <p>Um vetor é apenas uma variável capaz de conter vários valores do mesmo tipo. É como se uma variável comum fosse um pedaço de papel (uma página) e um vetor fosse um livro (conjunto de páginas). A seguir, um “tipo de dado” chamado string.</p>
 
@@ -170,7 +170,7 @@
 <span class="lineno">12</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">13</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="funes-de-leitura-e-escrita-printf--scanf">Funções de leitura e escrita (printf / scanf)</h4>
+<p>####Funções de leitura e escrita (printf / scanf)</p>
 
 <p>Para escrever algo na tela (uma mensagem ao usuário ou o resultado de uma conta) é necessário usar a função <strong>printf</strong>. Para ler um valor do usuário, a função <strong>scanf</strong>.</p>
 
@@ -203,7 +203,7 @@
 <span class="lineno">27</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">28</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="operadores--aritmtica">Operadores &amp;&amp; Aritmética</h4>
+<p>####Operadores &amp;&amp; Aritmética</p>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
 <span class="lineno"> 2</span> <span class="cm">/*</span>
@@ -238,7 +238,7 @@
 <span class="lineno">31</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">32</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="condio-if">Condição (if)</h4>
+<p>####Condição (if)</p>
 
 <p>O <strong>if</strong> é uma palavra-chave em C para se tomar decisões, fazer comparações.</p>
 
@@ -277,7 +277,7 @@
 <span class="lineno">33</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">34</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="loops-repetio">Loops (repetição)</h4>
+<p>####Loops (repetição)</p>
 
 <p>Para usar esse recurso existem algumas palavras-chave como while, for e do/while. Na while só é necessária uma condição e, toda vez que ela for verdadeira, o código no escopo do while é executado.</p>
 
@@ -327,7 +327,7 @@
 <span class="lineno">11</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">12</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="funes">Funções</h4>
+<p>####Funções</p>
 
 <p>Funções são muito úteis, inicialmente, para modularizar seu código. Um meio de separar trechos de códigos que têm um mesmo objetivo em um lugar separado do resto do código. Funções são como empregados, onde cada um tem uma função específica a fazer e, ao ser necessário que x trabalho seja realizado você não o reescreve no código, simplesmente chama a função encarregada de realizar a tarefa x.</p>
 
