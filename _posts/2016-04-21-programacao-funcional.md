@@ -60,7 +60,7 @@ Para compreender esse paradigma, alguns conceitos são fundamentais.
 
 <div id='id-funcoes-puras'></div>
 
-####Funções puras
+#### Funções puras
 
 São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
@@ -74,7 +74,7 @@ paralela.
 
 <div id='id-imutabilidade'></div>
 
-####Imutabilidade
+#### Imutabilidade
 
 Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
 de se alterar o valor existe, cria-se uma cópia para se trabalhar, um dado novo, baseado no velho.
@@ -109,7 +109,7 @@ A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.
 
 <div id='id-recursao'></div>
 
-####Recursão
+#### Recursão
 
 O único meio de iteração ao se programar funcionalmente é usando recursão.
 
@@ -212,7 +212,7 @@ fib_aux (x, current, next) = fib_aux(x-1, next, current + next)
 
 <div id='id-transparencia-referencial'></div>
 
-####Transparência referencial
+#### Transparência referencial
 
 Não importa quantas vezes uma função seja chamada, se o parâmetro for
 o mesmo o retorno também será, e a essa propriedade se dá o nome de transparência referencial.
@@ -225,7 +225,7 @@ de modo que g fosse descrito por `g = h (f x) (f x)` e se obter o mesmo resultad
 
 <div id='id-funcoes'></div>
 
-####Funções
+#### Funções
 
 Uma das características desse paradigma é que funções são cidadãs de primeira classe.
 Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
@@ -266,7 +266,7 @@ map f x = [f x | x <- xs]
 
 <div id='id-funcoes-anonimas'></div>
 
-####Funções anônimas
+#### Funções anônimas
 
 Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
 escritos de forma literal, sem obrigação de ser dar um nome, por exemplo ```10``` ```"Vitor"```
@@ -295,13 +295,13 @@ map (\x -> (x * 3 + 2) * x) [1,2,3]
 
 <div id='id-avaliacao-preguicosa'></div>
 
-####Avaliação preguiçosa
+#### Avaliação preguiçosa
 
 Lazy Evaluation. Em breve.
 
 <div id='id-o-que-e'></div>
 
-##Então, o que é programação funcional?
+## Então, o que é programação funcional?
 
 A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -335,7 +335,7 @@ dados mutáveis, assim como a otimização do código e trabalho e equipe se tor
 
 <div id='id-uso'></div>
 
-##Uso
+## Uso
 
 O sistema operacional **[Linspire](http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html)**, baseado no Debian, tem uma equipe que trabalha usando programação
 funcional em algumas tarefas como a **detecção de hardware**, **criação de CDs de instalação** e
@@ -378,7 +378,7 @@ SML e Erlang.
 [Functional Programming in the Real
 World](http://homepages.inf.ed.ac.uk/wadler/realworld/index.html)
 
-##Referências
+## Referências
 
 - [Departamento de Informática (DIN) da Universidade Estadual de Maringá (UEM)](http://din.uem.br/ia/ferramentas/lisp/lisp3.htm)
 - [**Programming in Haskell** *by Graham Hutton*](http://www.cs.nott.ac.uk/~pszgmh/book.html)

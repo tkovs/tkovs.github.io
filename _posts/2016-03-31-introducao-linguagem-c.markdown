@@ -8,7 +8,7 @@ tags:
 permalink: /blog/introducao-linguagem-c
 ---
 
-####Tipos de dados
+#### Tipos de dados
 
 **Int**: Número inteiro. Sem casas decimais.
 > Ex: 0 -543 2015
@@ -21,7 +21,7 @@ permalink: /blog/introducao-linguagem-c
 
 **Void**: Tipo vazio. Por enquanto você não precisa saber muito sobre esse tipo.
 
-####Comentários
+#### Comentários
 
 Comentários podem ser escritos de duas formas: linha única ou várias linhas.
 
@@ -34,7 +34,7 @@ int idade; // Variável para guardar uma idade
 */
 {% endhighlight %}
 
-####Função main
+#### Função main
 
 Se seu programa será um executável ele precisará da função main que sempre é a primeira a ser chamada. O esqueleto básico que, provavelmente, todos seus programas iniciais terão, é o seguinte:
 
@@ -53,7 +53,7 @@ int main(void) { // O 'abre chaves' indica o começo da função
 } // O 'fecha chaves' indica o fim da função.
 {% endhighlight %}
 
-####Bibliotecas
+#### Bibliotecas
 
 Você pode criar um arquivo e nele escrever funções para um determinado propósito. Esse arquivo não tem o main() pois não é um executável, não é um programa, é uma biblioteca. Por exemplo, se você não quisesse escrever a mesma função em vários programas - *calcular área de um triangulo, por exemplo* - você a escreveria em apenas um arquivo, e no seu começo dos seus próximos algoritmos você incluiria tal arquivo no seu programa. A função **printf** e a **scanf** estão na biblioteca *stdio*, por isso você costuma adicionar essa biblioteca nos programas. Exemplo:
 
@@ -68,7 +68,7 @@ int main(void) {
 }
 {% endhighlight %}
 
-####Escopo
+#### Escopo
 
 Um escopo é o que delimita o código que pertence a uma função, é o que diz a o quê tal código pertence. Um código não pode acessar variáveis que pertencem a um escopo que não seja o próprio ou um anterior.
 
@@ -95,7 +95,7 @@ int main(void) { // Início do escopo do main.
 } // Fim do escopo do main.
 {% endhighlight %}
 
-####Declarando variáveis & Vetor & String
+#### Declarando variáveis & Vetor & String
 
 Um vetor é apenas uma variável capaz de conter vários valores do mesmo tipo. É como se uma variável comum fosse um pedaço de papel (uma página) e um vetor fosse um livro (conjunto de páginas). A seguir, um "tipo de dado" chamado string.
 
@@ -133,7 +133,7 @@ int main(void) {
 }
 {% endhighlight %}
 
-####Funções de leitura e escrita (printf / scanf)
+#### Funções de leitura e escrita (printf / scanf)
 
 Para escrever algo na tela (uma mensagem ao usuário ou o resultado de uma conta) é necessário usar a função **printf**. Para ler um valor do usuário, a função **scanf**.
 
@@ -168,7 +168,7 @@ int main(void) {
 }
 {% endhighlight %}
 
-####Operadores && Aritmética
+#### Operadores && Aritmética
 
 {% highlight c linenos %}
 #include <stdio.h>
@@ -205,7 +205,7 @@ int main(void) {
 }
 {% endhighlight %}
 
-####Condição (if)
+#### Condição (if)
 
 O **if** é uma palavra-chave em C para se tomar decisões, fazer comparações.
 
@@ -246,7 +246,7 @@ int main(void) {
 }
 {% endhighlight %}
 
-####Loops (repetição)
+#### Loops (repetição)
 
 Para usar esse recurso existem algumas palavras-chave como while, for e do/while. Na while só é necessária uma condição e, toda vez que ela for verdadeira, o código no escopo do while é executado.
 
@@ -302,7 +302,7 @@ int main(void) {
 }
 {% endhighlight %}
 
-####Funções
+#### Funções
 
 Funções são muito úteis, inicialmente, para modularizar seu código. Um meio de separar trechos de códigos que têm um mesmo objetivo em um lugar separado do resto do código. Funções são como empregados, onde cada um tem uma função específica a fazer e, ao ser necessário que x trabalho seja realizado você não o reescreve no código, simplesmente chama a função encarregada de realizar a tarefa x.
 

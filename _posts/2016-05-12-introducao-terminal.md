@@ -43,7 +43,7 @@ permalink: /blog/introducao-terminal
 <hr />
 <div id='id-introducao'></div>
 
-##Introdução
+## Introdução
 
 A ideia desse post surgiu quando eu vi a dificuldade que minha turma no 4º ano de informática no
 IFAL tem com o terminal. Há ainda uma visão ruim sobre ele, que é difícil e que interface
@@ -51,7 +51,7 @@ gráfica é mais "fácil", mas é apenas costume, eu trabalho mais rápido no te
 
 <div id='id-terminal'></div>
 
-##Terminal
+## Terminal
 
 ![Terminal Linux](../assets/img/terminal-padrao.png)
 
@@ -66,7 +66,7 @@ aparece, exibir a hora, mostrar o caminho completo da pasta, data atual, etc.
 
 <div id='id-comando'></div>
 
-##Comando
+## Comando
 
 Dentro do Terminal, você tem a oportunidade de executar os comandos que achar necessário. Basta
 digitar o nome do comando e seus argumentos. Por exemplo, para listar os arquivos do diretório
@@ -82,13 +82,13 @@ na segunda listando os arquivos em ordem de modificação onde os mais recentes 
 
 <div id='id-dicas'></div>
 
-##Dicas
+## Dicas
 
 Algumas dicas para lhe ajudar no uso do Terminal.
 
 <div id='id-dicas-autocomplemento'></div>
 
-####Autocomplemento
+#### Autocomplemento
 
 Recurso importante, completa automaticamente o nome de um comando ou arquivo conhecido pelo
 Terminal apertando a tecla **tab**, caso haja apenas uma possibilidade. Do contrário, ele lista
@@ -97,7 +97,7 @@ o tab.
 
 <div id='id-dicas-manual'></div>
 
-####Manual
+#### Manual
 
 O Linux tem um manual da maioria dos comandos e dos programas que você instala. Para usa-lo,
 basta executar ```man nome_comando```. Se quer conhecer mais sobre o comando ls, que lista
@@ -107,7 +107,7 @@ comandos, que vão desde chamadas do sistema (kernel) a comandos relacionados a 
 
 <div id='id-dicas-ajuda'></div>
 
-####Ajuda
+#### Ajuda
 
 Muitos comandos têm por padrão a opção **--help** para que uma breve explicação sobre ele seja
 retornada. Também há o comando ```help``` que exibe informações de alguns comandos que lhe são
@@ -139,7 +139,7 @@ or available locally via: info '(coreutils) mkdir invocation'
 
 <div id='id-dicas-sudo'></div>
 
-####Permissão
+#### Permissão
 
 As vezes, você não conseguirá executar alguns comandos, pois para isso precisará de privilégios que
 não tem. Privilégios esses que outro usuário tem, geralmente o administrador. Para usa-los, existe o
@@ -172,7 +172,7 @@ Dispositivo    Início       Fim   Setores Tamanho Tipo
 
 <div id='id-dicas-info'></div>
 
-####Info
+#### Info
 
 Outro meio de se obter informações sobre comandos é através do ```info```. Basta passar o nome do
 comando que você quer obter detalhes para o info e ele abrirá um programa semelhante ao man.
@@ -206,7 +206,7 @@ DESCRIPTION
 
 <div id='id-navegacao'></div>
 
-##Navegação
+## Navegação
 
 Para os exemplos, usarei a estrutura de diretórios abaixo.
 
@@ -232,7 +232,7 @@ Para os exemplos, usarei a estrutura de diretórios abaixo.
 
 <div id='id-navegacao-listar-diretorios'></div>
 
-####Listar
+#### Listar
 
 Para listar as pastas contidas no diretório atual, basta executar ```ls -d */```.
 
@@ -245,7 +245,7 @@ include/  samples/  source/
 
 <div id='id-navegacao-navegar-entre-pastas'></div>
 
-####Navegar entre pastas
+#### Navegar entre pastas
 
 A navegação entre pastas acontece de forma simples. O comando ```cd``` leva o terminal para o
 diretório passado como argumento. Para voltar para um diretório acima, se passa **..** para o
@@ -265,7 +265,7 @@ Exemplo:
 
 <div id='id-navegacao-criar-diretorio'></div>
 
-####Criar
+#### Criar
 
 O comando ```mkdir``` cria uma nova pasta, se ela não existe. Caso diretórios pais precisem ser criados,
 deve-se usar a opção **-p** no uso do mkdir.
@@ -282,7 +282,7 @@ include/  samples/  source/  test/
 
 <div id='id-navegacao-apagar-diretorio'></div>
 
-####Apagar
+#### Apagar
 
 Semelhante ao mkdir, há o ```rmdir```. Enquanto mkdir resume *Make Directories*, rmdir resume *Remove
 Directories*. Basta passar o nome de um diretório como argumento. Caso haja arquivos dentro do
@@ -300,7 +300,7 @@ include/  samples/  source/
 
 <div id='id-navegacao-renomear-diretorio'></div>
 
-####Renomear
+#### Renomear
 
 O comando ```rename``` renomeia um arquivo ou uma pasta e funciona de um jeito simples. Ele
 substitui a primeira ocorrência de **expressao** pela sua **substituição** no **arquivo** escolhido,
@@ -321,7 +321,7 @@ include/  samples/  source/  test01/
 
 <div id='id-manipulacao-arquivos'></div>
 
-##Manipulação de arquivos
+## Manipulação de arquivos
 
 Para os exemplos, usarei a estrutura de diretórios abaixo.
 
@@ -347,7 +347,7 @@ Para os exemplos, usarei a estrutura de diretórios abaixo.
 
 <div id='id-manipulacao-arquivos-listar-arquivos'></div>
 
-####Listar
+#### Listar
 
 Para se listar apenas os arquivos de um diretório, execute ```ls -p | grep -v */```
 
@@ -365,7 +365,7 @@ README.md
 
 <div id='id-manipulacao-arquivos-criar-arquivos'></div>
 
-####Criar
+#### Criar
 
 O modo mais simples de se criar um arquivo vazio que eu conheço é através do comando ```touch```.
 Basta passar o nome do arquivo para o comando touch.
@@ -389,7 +389,7 @@ README.md
 
 <div id='id-manipulacao-arquivos-deletar-arquivos'></div>
 
-####Deletar
+#### Deletar
 
 Deletar um arquivo se dá através do comando ```rm``` passando para ele o caminho do arquivo.
 
@@ -412,7 +412,7 @@ README.md
 
 <div id='id-manipulacao-arquivos-copiar-arquivos'></div>
 
-####Copiar
+#### Copiar
 
 Para copiar um arquivo, basta passar o caminho do arquivo a ser copiado, e o caminho do arquivo a ser
 criado com o conteúdo do outro arquivo, para o comando ```cp```. Seu uso fica assim: ```cp fonte
@@ -437,14 +437,14 @@ README.md
 
 <div id='id-manipulacao-arquivos-mover-arquivos'></div>
 
-####Mover
+#### Mover
 
 Para mover um arquivo de um lugar a outro basta usar o ```mv``` do mesmo jeito que se usa o
 ```cp```, a diferença é que o arquivo fonte será apagado.
 
 <div id='id-manipulacao-arquivos-renomear-arquivos'></div>
 
-####Renomear
+#### Renomear
 
 Como explica o ```man``` quanto ao ```rename```: passa-se a **expressão** a ser substituída pela
 **substituição** no **arquivo** destino. Usando, fica assim: ```rename expressão substituição
@@ -470,7 +470,7 @@ README.md
 
 <div id='id-manipulacao-arquivos-exibir-conteudo'></div>
 
-####Exibir conteúdo
+#### Exibir conteúdo
 
 O comando ```cat``` concatena um arquivo para a saída padrão. No terminal, quando um arquivo é
 passado como argumento para o comando cat, seu conteúdo é exibido no próprio terminal.
@@ -506,13 +506,13 @@ Também há o ```more```, que divide o conteúdo de um arquivo em páginas. Para
 
 <div id='id-comandos-gerais'></div>
 
-##Comandos gerais
+## Comandos gerais
 
 Comandos sem um objetivo em específico.
 
 <div id='id-comandos-gerais-pausa'></div>
 
-####Pausa
+#### Pausa
 
 Existe um comando que simplesmente faz uma pausa por um tempo específico. É o comando ```sleep```.
 Para usado, basta passar a quantidade de segundos como argumento para o sleep. Exemplo: ```sleep
@@ -522,7 +522,7 @@ espere por 3600 segundos, equivalente à 1 hora, e então reinicia a máquina.
 
 <div id='id-comandos-gerais-data-e-hora'></div>
 
-####Data e Hora
+#### Data e Hora
 
 Para obter a data e a hora atual, usa-se o comando ```date```.
 
@@ -536,20 +536,20 @@ Dom Mai 15 20:42:46 BRT 2016
 
 <div id='id-comandos-gerais-limpar-tela'></div>
 
-####Limpar a tela do terminal
+#### Limpar a tela do terminal
 
 Para limpar a tela do terminal, pressione Ctrl + L.
 
 <div id='id-comandos-gerais-historico-comandos'></div>
 
-####Histórico de comandos
+#### Histórico de comandos
 
 Você pode acessar suas últimas centenas de comandos digitados no terminal. Apenas execute o
 comando ```history```.
 
 <div id='id-conclusao'></div>
 
-##Conclusão
+## Conclusão
 
 Espero que com esse guia você esteja mais familiarizado com o terminal, e tenha perdido um pouco do
 medo que é comum quando se trata de trabalhar apenas com texto, sem ajuda de interface gráfica.
