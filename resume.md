@@ -18,8 +18,8 @@ especificamente no desenvolvimento web.
 
 #### Qualificações
 
-- **Linguagens de programação**: Haskell, C, C#, Ruby, Java.
-- **Desenvolvimento web**: HTML5 e CSS3, Jekyll.
+- **Linguagens de programação**: Haskell, C, C#, Ruby, Java, Python.
+- **Desenvolvimento web**: HTML5 e CSS3, Jekyll, Django, Liquid.
 - **Prototipagem**: Arduino Uno.
 - **Computação gráfica**: Blender, Unity 3D.
 - **Línguas**: Português (nativo), Inglês (intermediário).
@@ -29,5 +29,5 @@ especificamente no desenvolvimento web.
 
 #### Informações adicionais
 
-- Desenvolvi o aplicativo 3D usado para apoio na defesa de um mestrado realizado na UFAL de Maceio.
-- Contribuo na MDN (Mozilla Network Developer) como tradutor.
+- Desenvolveu o aplicativo 3D usado na defesa de um mestrado realizado na UFAL de Maceio.
+- Ministrou um curso de desenvolvimento de jogos durante o Ciência e Arte no IFAL - Campus Arapiraca.
