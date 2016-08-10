@@ -5,8 +5,8 @@
     <description></description>
     <link>http://tkovs.github.io/</link>
     <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 10 Aug 2016 16:59:58 -0300</pubDate>
-    <lastBuildDate>Wed, 10 Aug 2016 16:59:58 -0300</lastBuildDate>
+    <pubDate>Wed, 10 Aug 2016 17:12:25 -0300</pubDate>
+    <lastBuildDate>Wed, 10 Aug 2016 17:12:25 -0300</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -61,7 +61,7 @@
 
 &lt;div id=&quot;id-introducao&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Introdução&lt;/p&gt;
+&lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
 
 &lt;p&gt;A ideia desse post surgiu quando eu vi a dificuldade que minha turma no 4º ano de informática no
 IFAL tem com o terminal. Há ainda uma visão ruim sobre ele, que é difícil e que interface
@@ -69,7 +69,7 @@ gráfica é mais “fácil”, mas é apenas costume, eu trabalho mais rápido n
 
 &lt;div id=&quot;id-terminal&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Terminal&lt;/p&gt;
+&lt;h2 id=&quot;terminal&quot;&gt;Terminal&lt;/h2&gt;
 
 &lt;p&gt;&lt;img src=&quot;../assets/img/terminal-padrao.png&quot; alt=&quot;Terminal Linux&quot; /&gt;&lt;/p&gt;
 
@@ -84,7 +84,7 @@ aparece, exibir a hora, mostrar o caminho completo da pasta, data atual, etc.&lt
 
 &lt;div id=&quot;id-comando&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Comando&lt;/p&gt;
+&lt;h2 id=&quot;comando&quot;&gt;Comando&lt;/h2&gt;
 
 &lt;p&gt;Dentro do Terminal, você tem a oportunidade de executar os comandos que achar necessário. Basta
 digitar o nome do comando e seus argumentos. Por exemplo, para listar os arquivos do diretório
@@ -100,13 +100,13 @@ na segunda listando os arquivos em ordem de modificação onde os mais recentes 
 
 &lt;div id=&quot;id-dicas&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Dicas&lt;/p&gt;
+&lt;h2 id=&quot;dicas&quot;&gt;Dicas&lt;/h2&gt;
 
 &lt;p&gt;Algumas dicas para lhe ajudar no uso do Terminal.&lt;/p&gt;
 
 &lt;div id=&quot;id-dicas-autocomplemento&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Autocomplemento&lt;/p&gt;
+&lt;h4 id=&quot;autocomplemento&quot;&gt;Autocomplemento&lt;/h4&gt;
 
 &lt;p&gt;Recurso importante, completa automaticamente o nome de um comando ou arquivo conhecido pelo
 Terminal apertando a tecla &lt;strong&gt;tab&lt;/strong&gt;, caso haja apenas uma possibilidade. Do contrário, ele lista
@@ -115,7 +115,7 @@ o tab.&lt;/p&gt;
 
 &lt;div id=&quot;id-dicas-manual&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Manual&lt;/p&gt;
+&lt;h4 id=&quot;manual&quot;&gt;Manual&lt;/h4&gt;
 
 &lt;p&gt;O Linux tem um manual da maioria dos comandos e dos programas que você instala. Para usa-lo,
 basta executar &lt;code&gt;man nome_comando&lt;/code&gt;. Se quer conhecer mais sobre o comando ls, que lista
@@ -125,7 +125,7 @@ comandos, que vão desde chamadas do sistema (kernel) a comandos relacionados a 
 
 &lt;div id=&quot;id-dicas-ajuda&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Ajuda&lt;/p&gt;
+&lt;h4 id=&quot;ajuda&quot;&gt;Ajuda&lt;/h4&gt;
 
 &lt;p&gt;Muitos comandos têm por padrão a opção &lt;strong&gt;–help&lt;/strong&gt; para que uma breve explicação sobre ele seja
 retornada. Também há o comando &lt;code&gt;help&lt;/code&gt; que exibe informações de alguns comandos que lhe são
@@ -155,7 +155,7 @@ or available locally via: info &amp;#39;(coreutils) mkdir invocation&amp;#39;&lt
 
 &lt;div id=&quot;id-dicas-sudo&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Permissão&lt;/p&gt;
+&lt;h4 id=&quot;permisso&quot;&gt;Permissão&lt;/h4&gt;
 
 &lt;p&gt;As vezes, você não conseguirá executar alguns comandos, pois para isso precisará de privilégios que
 não tem. Privilégios esses que outro usuário tem, geralmente o administrador. Para usa-los, existe o
@@ -186,7 +186,7 @@ Dispositivo    Início       Fim   Setores Tamanho Tipo
 
 &lt;div id=&quot;id-dicas-info&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Info&lt;/p&gt;
+&lt;h4 id=&quot;info&quot;&gt;Info&lt;/h4&gt;
 
 &lt;p&gt;Outro meio de se obter informações sobre comandos é através do &lt;code&gt;info&lt;/code&gt;. Basta passar o nome do
 comando que você quer obter detalhes para o info e ele abrirá um programa semelhante ao man.&lt;/p&gt;
@@ -218,7 +218,7 @@ DESCRIPTION
 
 &lt;div id=&quot;id-navegacao&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Navegação&lt;/p&gt;
+&lt;h2 id=&quot;navegao&quot;&gt;Navegação&lt;/h2&gt;
 
 &lt;p&gt;Para os exemplos, usarei a estrutura de diretórios abaixo.&lt;/p&gt;
 
@@ -242,7 +242,7 @@ DESCRIPTION
 
 &lt;div id=&quot;id-navegacao-listar-diretorios&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Listar&lt;/p&gt;
+&lt;h4 id=&quot;listar&quot;&gt;Listar&lt;/h4&gt;
 
 &lt;p&gt;Para listar as pastas contidas no diretório atual, basta executar &lt;code&gt;ls -d */&lt;/code&gt;.&lt;/p&gt;
 
@@ -253,7 +253,7 @@ include/  samples/  source/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-navegacao-navegar-entre-pastas&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Navegar entre pastas&lt;/p&gt;
+&lt;h4 id=&quot;navegar-entre-pastas&quot;&gt;Navegar entre pastas&lt;/h4&gt;
 
 &lt;p&gt;A navegação entre pastas acontece de forma simples. O comando &lt;code&gt;cd&lt;/code&gt; leva o terminal para o
 diretório passado como argumento. Para voltar para um diretório acima, se passa &lt;strong&gt;..&lt;/strong&gt; para o
@@ -271,7 +271,7 @@ e o comando seguinte retorna-o para cbrainfuck.&lt;/p&gt;
 
 &lt;div id=&quot;id-navegacao-criar-diretorio&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Criar&lt;/p&gt;
+&lt;h4 id=&quot;criar&quot;&gt;Criar&lt;/h4&gt;
 
 &lt;p&gt;O comando &lt;code&gt;mkdir&lt;/code&gt; cria uma nova pasta, se ela não existe. Caso diretórios pais precisem ser criados,
 deve-se usar a opção &lt;strong&gt;-p&lt;/strong&gt; no uso do mkdir.&lt;/p&gt;
@@ -286,7 +286,7 @@ include/  samples/  source/  test/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-navegacao-apagar-diretorio&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Apagar&lt;/p&gt;
+&lt;h4 id=&quot;apagar&quot;&gt;Apagar&lt;/h4&gt;
 
 &lt;p&gt;Semelhante ao mkdir, há o &lt;code&gt;rmdir&lt;/code&gt;. Enquanto mkdir resume &lt;em&gt;Make Directories&lt;/em&gt;, rmdir resume &lt;em&gt;Remove
 Directories&lt;/em&gt;. Basta passar o nome de um diretório como argumento. Caso haja arquivos dentro do
@@ -302,7 +302,7 @@ include/  samples/  source/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-navegacao-renomear-diretorio&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Renomear&lt;/p&gt;
+&lt;h4 id=&quot;renomear&quot;&gt;Renomear&lt;/h4&gt;
 
 &lt;p&gt;O comando &lt;code&gt;rename&lt;/code&gt; renomeia um arquivo ou uma pasta e funciona de um jeito simples. Ele
 substitui a primeira ocorrência de &lt;strong&gt;expressao&lt;/strong&gt; pela sua &lt;strong&gt;substituição&lt;/strong&gt; no &lt;strong&gt;arquivo&lt;/strong&gt; escolhido,
@@ -321,7 +321,7 @@ include/  samples/  source/  test01/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Manipulação de arquivos&lt;/p&gt;
+&lt;h2 id=&quot;manipulao-de-arquivos&quot;&gt;Manipulação de arquivos&lt;/h2&gt;
 
 &lt;p&gt;Para os exemplos, usarei a estrutura de diretórios abaixo.&lt;/p&gt;
 
@@ -345,7 +345,7 @@ include/  samples/  source/  test01/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos-listar-arquivos&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Listar&lt;/p&gt;
+&lt;h4 id=&quot;listar-1&quot;&gt;Listar&lt;/h4&gt;
 
 &lt;p&gt;Para se listar apenas os arquivos de um diretório, execute &lt;code&gt;ls -p | grep -v */&lt;/code&gt;&lt;/p&gt;
 
@@ -361,7 +361,7 @@ README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos-criar-arquivos&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Criar&lt;/p&gt;
+&lt;h4 id=&quot;criar-1&quot;&gt;Criar&lt;/h4&gt;
 
 &lt;p&gt;O modo mais simples de se criar um arquivo vazio que eu conheço é através do comando &lt;code&gt;touch&lt;/code&gt;.
 Basta passar o nome do arquivo para o comando touch.&lt;/p&gt;
@@ -383,7 +383,7 @@ README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos-deletar-arquivos&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Deletar&lt;/p&gt;
+&lt;h4 id=&quot;deletar&quot;&gt;Deletar&lt;/h4&gt;
 
 &lt;p&gt;Deletar um arquivo se dá através do comando &lt;code&gt;rm&lt;/code&gt; passando para ele o caminho do arquivo.&lt;/p&gt;
 
@@ -404,7 +404,7 @@ README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos-copiar-arquivos&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Copiar&lt;/p&gt;
+&lt;h4 id=&quot;copiar&quot;&gt;Copiar&lt;/h4&gt;
 
 &lt;p&gt;Para copiar um arquivo, basta passar o caminho do arquivo a ser copiado, e o caminho do arquivo a ser
 criado com o conteúdo do outro arquivo, para o comando &lt;code&gt;cp&lt;/code&gt;. Seu uso fica assim: &lt;code&gt;cp fonte
@@ -427,14 +427,14 @@ README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos-mover-arquivos&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Mover&lt;/p&gt;
+&lt;h4 id=&quot;mover&quot;&gt;Mover&lt;/h4&gt;
 
 &lt;p&gt;Para mover um arquivo de um lugar a outro basta usar o &lt;code&gt;mv&lt;/code&gt; do mesmo jeito que se usa o
 &lt;code&gt;cp&lt;/code&gt;, a diferença é que o arquivo fonte será apagado.&lt;/p&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos-renomear-arquivos&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Renomear&lt;/p&gt;
+&lt;h4 id=&quot;renomear-1&quot;&gt;Renomear&lt;/h4&gt;
 
 &lt;p&gt;Como explica o &lt;code&gt;man&lt;/code&gt; quanto ao &lt;code&gt;rename&lt;/code&gt;: passa-se a &lt;strong&gt;expressão&lt;/strong&gt; a ser substituída pela
 &lt;strong&gt;substituição&lt;/strong&gt; no &lt;strong&gt;arquivo&lt;/strong&gt; destino. Usando, fica assim: &lt;code&gt;rename expressão substituição
@@ -458,7 +458,7 @@ README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos-exibir-conteudo&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Exibir conteúdo&lt;/p&gt;
+&lt;h4 id=&quot;exibir-contedo&quot;&gt;Exibir conteúdo&lt;/h4&gt;
 
 &lt;p&gt;O comando &lt;code&gt;cat&lt;/code&gt; concatena um arquivo para a saída padrão. No terminal, quando um arquivo é
 passado como argumento para o comando cat, seu conteúdo é exibido no próprio terminal.&lt;/p&gt;
@@ -492,13 +492,13 @@ int main(int argc, char ** argv) {
 
 &lt;div id=&quot;id-comandos-gerais&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Comandos gerais&lt;/p&gt;
+&lt;h2 id=&quot;comandos-gerais&quot;&gt;Comandos gerais&lt;/h2&gt;
 
 &lt;p&gt;Comandos sem um objetivo em específico.&lt;/p&gt;
 
 &lt;div id=&quot;id-comandos-gerais-pausa&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Pausa&lt;/p&gt;
+&lt;h4 id=&quot;pausa&quot;&gt;Pausa&lt;/h4&gt;
 
 &lt;p&gt;Existe um comando que simplesmente faz uma pausa por um tempo específico. É o comando &lt;code&gt;sleep&lt;/code&gt;.
 Para usado, basta passar a quantidade de segundos como argumento para o sleep. Exemplo: &lt;code&gt;sleep
@@ -508,7 +508,7 @@ espere por 3600 segundos, equivalente à 1 hora, e então reinicia a máquina.&l
 
 &lt;div id=&quot;id-comandos-gerais-data-e-hora&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Data e Hora&lt;/p&gt;
+&lt;h4 id=&quot;data-e-hora&quot;&gt;Data e Hora&lt;/h4&gt;
 
 &lt;p&gt;Para obter a data e a hora atual, usa-se o comando &lt;code&gt;date&lt;/code&gt;.&lt;/p&gt;
 
@@ -520,20 +520,20 @@ Dom Mai 15 20:42:46 BRT 2016
 
 &lt;div id=&quot;id-comandos-gerais-limpar-tela&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Limpar a tela do terminal&lt;/p&gt;
+&lt;h4 id=&quot;limpar-a-tela-do-terminal&quot;&gt;Limpar a tela do terminal&lt;/h4&gt;
 
 &lt;p&gt;Para limpar a tela do terminal, pressione Ctrl + L.&lt;/p&gt;
 
 &lt;div id=&quot;id-comandos-gerais-historico-comandos&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Histórico de comandos&lt;/p&gt;
+&lt;h4 id=&quot;histrico-de-comandos&quot;&gt;Histórico de comandos&lt;/h4&gt;
 
 &lt;p&gt;Você pode acessar suas últimas centenas de comandos digitados no terminal. Apenas execute o
 comando &lt;code&gt;history&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div id=&quot;id-conclusao&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Conclusão&lt;/p&gt;
+&lt;h2 id=&quot;concluso&quot;&gt;Conclusão&lt;/h2&gt;
 
 &lt;p&gt;Espero que com esse guia você esteja mais familiarizado com o terminal, e tenha perdido um pouco do
 medo que é comum quando se trata de trabalhar apenas com texto, sem ajuda de interface gráfica.&lt;/p&gt;
@@ -967,7 +967,7 @@ Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais
 
 &lt;div id=&quot;id-funcoes-puras&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Funções puras&lt;/p&gt;
+&lt;h4 id=&quot;funes-puras&quot;&gt;Funções puras&lt;/h4&gt;
 
 &lt;p&gt;São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
@@ -981,7 +981,7 @@ paralela.&lt;/p&gt;
 
 &lt;div id=&quot;id-imutabilidade&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Imutabilidade&lt;/p&gt;
+&lt;h4 id=&quot;imutabilidade&quot;&gt;Imutabilidade&lt;/h4&gt;
 
 &lt;p&gt;Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
 de se alterar o valor existe, cria-se uma cópia para se trabalhar, um dado novo, baseado no velho.
@@ -1014,7 +1014,7 @@ A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.&lt;/p&
 
 &lt;div id=&quot;id-recursao&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Recursão&lt;/p&gt;
+&lt;h4 id=&quot;recurso&quot;&gt;Recursão&lt;/h4&gt;
 
 &lt;p&gt;O único meio de iteração ao se programar funcionalmente é usando recursão.&lt;/p&gt;
 
@@ -1115,7 +1115,7 @@ auxiliar.&lt;/p&gt;
 
 &lt;div id=&quot;id-transparencia-referencial&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Transparência referencial&lt;/p&gt;
+&lt;h4 id=&quot;transparncia-referencial&quot;&gt;Transparência referencial&lt;/h4&gt;
 
 &lt;p&gt;Não importa quantas vezes uma função seja chamada, se o parâmetro for
 o mesmo o retorno também será, e a essa propriedade se dá o nome de transparência referencial.
@@ -1128,7 +1128,7 @@ de modo que g fosse descrito por &lt;code&gt;g = h (f x) (f x)&lt;/code&gt; e se
 
 &lt;div id=&quot;id-funcoes&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Funções&lt;/p&gt;
+&lt;h4 id=&quot;funes&quot;&gt;Funções&lt;/h4&gt;
 
 &lt;p&gt;Uma das características desse paradigma é que funções são cidadãs de primeira classe.
 Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
@@ -1165,7 +1165,7 @@ aplica a função sobre cada elemento da lista retornando uma nova lista com as 
 
 &lt;div id=&quot;id-funcoes-anonimas&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Funções anônimas&lt;/p&gt;
+&lt;h4 id=&quot;funes-annimas&quot;&gt;Funções anônimas&lt;/h4&gt;
 
 &lt;p&gt;Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
 escritos de forma literal, sem obrigação de ser dar um nome, por exemplo &lt;code&gt;10&lt;/code&gt; &lt;code&gt;&quot;Vitor&quot;&lt;/code&gt;
@@ -1190,13 +1190,13 @@ que seriam usadas apenas uma vez, por exemplo:&lt;/p&gt;
 
 &lt;div id=&quot;id-avaliacao-preguicosa&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;####Avaliação preguiçosa&lt;/p&gt;
+&lt;h4 id=&quot;avaliao-preguiosa&quot;&gt;Avaliação preguiçosa&lt;/h4&gt;
 
 &lt;p&gt;Lazy Evaluation. Em breve.&lt;/p&gt;
 
 &lt;div id=&quot;id-o-que-e&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Então, o que é programação funcional?&lt;/p&gt;
+&lt;h2 id=&quot;ento-o-que--programao-funcional&quot;&gt;Então, o que é programação funcional?&lt;/h2&gt;
 
 &lt;p&gt;A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -1230,7 +1230,7 @@ dados mutáveis, assim como a otimização do código e trabalho e equipe se tor
 
 &lt;div id=&quot;id-uso&quot;&gt;&lt;/div&gt;
 
-&lt;p&gt;##Uso&lt;/p&gt;
+&lt;h2 id=&quot;uso&quot;&gt;Uso&lt;/h2&gt;
 
 &lt;p&gt;O sistema operacional &lt;strong&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/realworld/linspire.html&quot;&gt;Linspire&lt;/a&gt;&lt;/strong&gt;, baseado no Debian, tem uma equipe que trabalha usando programação
 funcional em algumas tarefas como a &lt;strong&gt;detecção de hardware&lt;/strong&gt;, &lt;strong&gt;criação de CDs de instalação&lt;/strong&gt; e
@@ -1273,7 +1273,7 @@ SML e Erlang.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/realworld/index.html&quot;&gt;Functional Programming in the Real
 World&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;##Referências&lt;/p&gt;
+&lt;h2 id=&quot;referncias&quot;&gt;Referências&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://din.uem.br/ia/ferramentas/lisp/lisp3.htm&quot;&gt;Departamento de Informática (DIN) da Universidade Estadual de Maringá (UEM)&lt;/a&gt;&lt;/li&gt;
@@ -1297,7 +1297,7 @@ World&lt;/a&gt;&lt;/p&gt;
     
       <item>
         <title>Introdução básica à linguagem C</title>
-        <description>&lt;p&gt;####Tipos de dados&lt;/p&gt;
+        <description>&lt;h4 id=&quot;tipos-de-dados&quot;&gt;Tipos de dados&lt;/h4&gt;
 
 &lt;p&gt;&lt;strong&gt;Int&lt;/strong&gt;: Número inteiro. Sem casas decimais.
 &amp;gt; Ex: 0 -543 2015&lt;/p&gt;
@@ -1310,7 +1310,7 @@ World&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;strong&gt;Void&lt;/strong&gt;: Tipo vazio. Por enquanto você não precisa saber muito sobre esse tipo.&lt;/p&gt;
 
-&lt;p&gt;####Comentários&lt;/p&gt;
+&lt;h4 id=&quot;comentrios&quot;&gt;Comentários&lt;/h4&gt;
 
 &lt;p&gt;Comentários podem ser escritos de duas formas: linha única ou várias linhas.&lt;/p&gt;
 
@@ -1321,7 +1321,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;   o nome da variavel já diz tudo...&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;*/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;####Função main&lt;/p&gt;
+&lt;h4 id=&quot;funo-main&quot;&gt;Função main&lt;/h4&gt;
 
 &lt;p&gt;Se seu programa será um executável ele precisará da função main que sempre é a primeira a ser chamada. O esqueleto básico que, provavelmente, todos seus programas iniciais terão, é o seguinte:&lt;/p&gt;
 
@@ -1338,7 +1338,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// O &amp;#39;fecha chaves&amp;#39; indica o fim da função.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;####Bibliotecas&lt;/p&gt;
+&lt;h4 id=&quot;bibliotecas&quot;&gt;Bibliotecas&lt;/h4&gt;
 
 &lt;p&gt;Você pode criar um arquivo e nele escrever funções para um determinado propósito. Esse arquivo não tem o main() pois não é um executável, não é um programa, é uma biblioteca. Por exemplo, se você não quisesse escrever a mesma função em vários programas - &lt;em&gt;calcular área de um triangulo, por exemplo&lt;/em&gt; - você a escreveria em apenas um arquivo, e no seu começo dos seus próximos algoritmos você incluiria tal arquivo no seu programa. A função &lt;strong&gt;printf&lt;/strong&gt; e a &lt;strong&gt;scanf&lt;/strong&gt; estão na biblioteca &lt;em&gt;stdio&lt;/em&gt;, por isso você costuma adicionar essa biblioteca nos programas. Exemplo:&lt;/p&gt;
 
@@ -1351,7 +1351,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;7&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;####Escopo&lt;/p&gt;
+&lt;h4 id=&quot;escopo&quot;&gt;Escopo&lt;/h4&gt;
 
 &lt;p&gt;Um escopo é o que delimita o código que pertence a uma função, é o que diz a o quê tal código pertence. Um código não pode acessar variáveis que pertencem a um escopo que não seja o próprio ou um anterior.&lt;/p&gt;
 
@@ -1376,7 +1376,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Fim do escopo do main.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;####Declarando variáveis &amp;amp; Vetor &amp;amp; String&lt;/p&gt;
+&lt;h4 id=&quot;declarando-variveis--vetor--string&quot;&gt;Declarando variáveis &amp;amp; Vetor &amp;amp; String&lt;/h4&gt;
 
 &lt;p&gt;Um vetor é apenas uma variável capaz de conter vários valores do mesmo tipo. É como se uma variável comum fosse um pedaço de papel (uma página) e um vetor fosse um livro (conjunto de páginas). A seguir, um “tipo de dado” chamado string.&lt;/p&gt;
 
@@ -1410,7 +1410,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;####Funções de leitura e escrita (printf / scanf)&lt;/p&gt;
+&lt;h4 id=&quot;funes-de-leitura-e-escrita-printf--scanf&quot;&gt;Funções de leitura e escrita (printf / scanf)&lt;/h4&gt;
 
 &lt;p&gt;Para escrever algo na tela (uma mensagem ao usuário ou o resultado de uma conta) é necessário usar a função &lt;strong&gt;printf&lt;/strong&gt;. Para ler um valor do usuário, a função &lt;strong&gt;scanf&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1443,7 +1443,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;27&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;####Operadores &amp;amp;&amp;amp; Aritmética&lt;/p&gt;
+&lt;h4 id=&quot;operadores--aritmtica&quot;&gt;Operadores &amp;amp;&amp;amp; Aritmética&lt;/h4&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/*&lt;/span&gt;
@@ -1478,7 +1478,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;31&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;32&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;####Condição (if)&lt;/p&gt;
+&lt;h4 id=&quot;condio-if&quot;&gt;Condição (if)&lt;/h4&gt;
 
 &lt;p&gt;O &lt;strong&gt;if&lt;/strong&gt; é uma palavra-chave em C para se tomar decisões, fazer comparações.&lt;/p&gt;
 
@@ -1517,7 +1517,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;33&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;34&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;####Loops (repetição)&lt;/p&gt;
+&lt;h4 id=&quot;loops-repetio&quot;&gt;Loops (repetição)&lt;/h4&gt;
 
 &lt;p&gt;Para usar esse recurso existem algumas palavras-chave como while, for e do/while. Na while só é necessária uma condição e, toda vez que ela for verdadeira, o código no escopo do while é executado.&lt;/p&gt;
 
@@ -1567,7 +1567,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;####Funções&lt;/p&gt;
+&lt;h4 id=&quot;funes&quot;&gt;Funções&lt;/h4&gt;
 
 &lt;p&gt;Funções são muito úteis, inicialmente, para modularizar seu código. Um meio de separar trechos de códigos que têm um mesmo objetivo em um lugar separado do resto do código. Funções são como empregados, onde cada um tem uma função específica a fazer e, ao ser necessário que x trabalho seja realizado você não o reescreve no código, simplesmente chama a função encarregada de realizar a tarefa x.&lt;/p&gt;
 
