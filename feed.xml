@@ -3,15 +3,15 @@
   <channel>
     <title></title>
     <description></description>
-    <link>http://tkovs.github.io/</link>
-    <atom:link href="http://tkovs.github.io/feed.xml" rel="self" type="application/rss+xml" />
-    <pubDate>Wed, 10 Aug 2016 17:12:25 -0300</pubDate>
-    <lastBuildDate>Wed, 10 Aug 2016 17:12:25 -0300</lastBuildDate>
-    <generator>Jekyll v3.1.6</generator>
+    <link>https://tkovs.me/</link>
+    <atom:link href="https://tkovs.me/feed.xml" rel="self" type="application/rss+xml" />
+    <pubDate>Fri, 15 Sep 2017 18:41:29 -0300</pubDate>
+    <lastBuildDate>Fri, 15 Sep 2017 18:41:29 -0300</lastBuildDate>
+    <generator>Jekyll v3.5.2</generator>
     
       <item>
         <title>Comandos básicos do Terminal</title>
-        <description>&lt;h2 id=&quot;tabela-de-contedo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;tabela-de-conteúdo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;#id-introducao&quot;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
@@ -61,7 +61,7 @@
 
 &lt;div id=&quot;id-introducao&quot;&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
+&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt;
 
 &lt;p&gt;A ideia desse post surgiu quando eu vi a dificuldade que minha turma no 4º ano de informática no
 IFAL tem com o terminal. Há ainda uma visão ruim sobre ele, que é difícil e que interface
@@ -155,7 +155,7 @@ or available locally via: info &amp;#39;(coreutils) mkdir invocation&amp;#39;&lt
 
 &lt;div id=&quot;id-dicas-sudo&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;permisso&quot;&gt;Permissão&lt;/h4&gt;
+&lt;h4 id=&quot;permissão&quot;&gt;Permissão&lt;/h4&gt;
 
 &lt;p&gt;As vezes, você não conseguirá executar alguns comandos, pois para isso precisará de privilégios que
 não tem. Privilégios esses que outro usuário tem, geralmente o administrador. Para usa-los, existe o
@@ -218,7 +218,7 @@ DESCRIPTION
 
 &lt;div id=&quot;id-navegacao&quot;&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;navegao&quot;&gt;Navegação&lt;/h2&gt;
+&lt;h2 id=&quot;navegação&quot;&gt;Navegação&lt;/h2&gt;
 
 &lt;p&gt;Para os exemplos, usarei a estrutura de diretórios abaixo.&lt;/p&gt;
 
@@ -321,7 +321,7 @@ include/  samples/  source/  test01/&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos&quot;&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;manipulao-de-arquivos&quot;&gt;Manipulação de arquivos&lt;/h2&gt;
+&lt;h2 id=&quot;manipulação-de-arquivos&quot;&gt;Manipulação de arquivos&lt;/h2&gt;
 
 &lt;p&gt;Para os exemplos, usarei a estrutura de diretórios abaixo.&lt;/p&gt;
 
@@ -458,7 +458,7 @@ README.md&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div id=&quot;id-manipulacao-arquivos-exibir-conteudo&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;exibir-contedo&quot;&gt;Exibir conteúdo&lt;/h4&gt;
+&lt;h4 id=&quot;exibir-conteúdo&quot;&gt;Exibir conteúdo&lt;/h4&gt;
 
 &lt;p&gt;O comando &lt;code&gt;cat&lt;/code&gt; concatena um arquivo para a saída padrão. No terminal, quando um arquivo é
 passado como argumento para o comando cat, seu conteúdo é exibido no próprio terminal.&lt;/p&gt;
@@ -526,14 +526,14 @@ Dom Mai 15 20:42:46 BRT 2016
 
 &lt;div id=&quot;id-comandos-gerais-historico-comandos&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;histrico-de-comandos&quot;&gt;Histórico de comandos&lt;/h4&gt;
+&lt;h4 id=&quot;histórico-de-comandos&quot;&gt;Histórico de comandos&lt;/h4&gt;
 
 &lt;p&gt;Você pode acessar suas últimas centenas de comandos digitados no terminal. Apenas execute o
 comando &lt;code&gt;history&lt;/code&gt;.&lt;/p&gt;
 
 &lt;div id=&quot;id-conclusao&quot;&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;concluso&quot;&gt;Conclusão&lt;/h2&gt;
+&lt;h2 id=&quot;conclusão&quot;&gt;Conclusão&lt;/h2&gt;
 
 &lt;p&gt;Espero que com esse guia você esteja mais familiarizado com o terminal, e tenha perdido um pouco do
 medo que é comum quando se trata de trabalhar apenas com texto, sem ajuda de interface gráfica.&lt;/p&gt;
@@ -544,8 +544,8 @@ arquivos, configurar o sistema por completo, etc. Não espero que você chegue n
 que ao menos se familiarize com ele. Boa sorte :)&lt;/p&gt;
 </description>
         <pubDate>Sun, 15 May 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/introducao-terminal</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/introducao-terminal</guid>
+        <link>https://tkovs.me/blog/introducao-terminal</link>
+        <guid isPermaLink="true">https://tkovs.me/blog/introducao-terminal</guid>
         
         <category>Linux</category>
         
@@ -554,7 +554,7 @@ que ao menos se familiarize com ele. Boa sorte :)&lt;/p&gt;
     
       <item>
         <title>Versionamento e iniciando no Git! (em progresso)</title>
-        <description>&lt;h2 id=&quot;tabela-de-contedo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;tabela-de-conteúdo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;#id-introducao&quot;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
@@ -776,7 +776,7 @@ artigo.&lt;/p&gt;
 
 &lt;p&gt;##Comandos básicos&lt;/p&gt;
 
-&lt;p&gt;Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia &lt;a href=&quot;http://tkovs.github.io/blog/introducao-terminal&quot;&gt;minha postagem&lt;/a&gt; sobre ele.&lt;/p&gt;
+&lt;p&gt;Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia &lt;a href=&quot;https://tkovs.me/blog/introducao-terminal&quot;&gt;minha postagem&lt;/a&gt; sobre ele.&lt;/p&gt;
 
 &lt;p&gt;Pra executar um comando do Git no terminal, digite &lt;strong&gt;git&lt;/strong&gt; seguido pelo comando. Exemplo do comando
 &lt;strong&gt;init&lt;/strong&gt;: &lt;code&gt;git init&lt;/code&gt;.&lt;/p&gt;
@@ -897,8 +897,8 @@ exceto aqueles adicionados ao arquivo &lt;em&gt;.gitignore&lt;/em&gt;.&lt;/p&gt;
 
 </description>
         <pubDate>Mon, 25 Apr 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/versionamento-git</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/versionamento-git</guid>
+        <link>https://tkovs.me/blog/versionamento-git</link>
+        <guid isPermaLink="true">https://tkovs.me/blog/versionamento-git</guid>
         
         <category>Versionamento</category>
         
@@ -907,7 +907,7 @@ exceto aqueles adicionados ao arquivo &lt;em&gt;.gitignore&lt;/em&gt;.&lt;/p&gt;
     
       <item>
         <title>Programação Funcional</title>
-        <description>&lt;h2 id=&quot;tabela-de-contedo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
+        <description>&lt;h2 id=&quot;tabela-de-conteúdo&quot;&gt;Tabela de conteúdo&lt;/h2&gt;
 
 &lt;ol&gt;
   &lt;li&gt;&lt;a href=&quot;#id-introducao&quot;&gt;Introdução&lt;/a&gt;&lt;/li&gt;
@@ -931,7 +931,7 @@ exceto aqueles adicionados ao arquivo &lt;em&gt;.gitignore&lt;/em&gt;.&lt;/p&gt;
 
 &lt;div id=&quot;id-introducao&quot;&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;introduo&quot;&gt;Introdução&lt;/h2&gt;
+&lt;h2 id=&quot;introdução&quot;&gt;Introdução&lt;/h2&gt;
 
 &lt;p&gt;&lt;em&gt;Esse artigo é recomendado para quem já tem experiência com programação&lt;/em&gt;&lt;/p&gt;
 
@@ -967,7 +967,7 @@ Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais
 
 &lt;div id=&quot;id-funcoes-puras&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;funes-puras&quot;&gt;Funções puras&lt;/h4&gt;
+&lt;h4 id=&quot;funções-puras&quot;&gt;Funções puras&lt;/h4&gt;
 
 &lt;p&gt;São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
@@ -1014,7 +1014,7 @@ A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.&lt;/p&
 
 &lt;div id=&quot;id-recursao&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;recurso&quot;&gt;Recursão&lt;/h4&gt;
+&lt;h4 id=&quot;recursão&quot;&gt;Recursão&lt;/h4&gt;
 
 &lt;p&gt;O único meio de iteração ao se programar funcionalmente é usando recursão.&lt;/p&gt;
 
@@ -1115,7 +1115,7 @@ auxiliar.&lt;/p&gt;
 
 &lt;div id=&quot;id-transparencia-referencial&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;transparncia-referencial&quot;&gt;Transparência referencial&lt;/h4&gt;
+&lt;h4 id=&quot;transparência-referencial&quot;&gt;Transparência referencial&lt;/h4&gt;
 
 &lt;p&gt;Não importa quantas vezes uma função seja chamada, se o parâmetro for
 o mesmo o retorno também será, e a essa propriedade se dá o nome de transparência referencial.
@@ -1128,7 +1128,7 @@ de modo que g fosse descrito por &lt;code&gt;g = h (f x) (f x)&lt;/code&gt; e se
 
 &lt;div id=&quot;id-funcoes&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;funes&quot;&gt;Funções&lt;/h4&gt;
+&lt;h4 id=&quot;funções&quot;&gt;Funções&lt;/h4&gt;
 
 &lt;p&gt;Uma das características desse paradigma é que funções são cidadãs de primeira classe.
 Isso implica no fato de que funções não são usadas apenas para serem declaradas e chamadas. Elas
@@ -1165,7 +1165,7 @@ aplica a função sobre cada elemento da lista retornando uma nova lista com as 
 
 &lt;div id=&quot;id-funcoes-anonimas&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;funes-annimas&quot;&gt;Funções anônimas&lt;/h4&gt;
+&lt;h4 id=&quot;funções-anônimas&quot;&gt;Funções anônimas&lt;/h4&gt;
 
 &lt;p&gt;Conforme já vimos, funções são cidadãs de primeira classe. Valores de vários tipos podem ser
 escritos de forma literal, sem obrigação de ser dar um nome, por exemplo &lt;code&gt;10&lt;/code&gt; &lt;code&gt;&quot;Vitor&quot;&lt;/code&gt;
@@ -1190,13 +1190,13 @@ que seriam usadas apenas uma vez, por exemplo:&lt;/p&gt;
 
 &lt;div id=&quot;id-avaliacao-preguicosa&quot;&gt;&lt;/div&gt;
 
-&lt;h4 id=&quot;avaliao-preguiosa&quot;&gt;Avaliação preguiçosa&lt;/h4&gt;
+&lt;h4 id=&quot;avaliação-preguiçosa&quot;&gt;Avaliação preguiçosa&lt;/h4&gt;
 
 &lt;p&gt;Lazy Evaluation. Em breve.&lt;/p&gt;
 
 &lt;div id=&quot;id-o-que-e&quot;&gt;&lt;/div&gt;
 
-&lt;h2 id=&quot;ento-o-que--programao-funcional&quot;&gt;Então, o que é programação funcional?&lt;/h2&gt;
+&lt;h2 id=&quot;então-o-que-é-programação-funcional&quot;&gt;Então, o que é programação funcional?&lt;/h2&gt;
 
 &lt;p&gt;A programação funcional é um paradigma de programação que 
 se baseia em funções e é muito semelhante à matemática. Até mesmo um
@@ -1273,7 +1273,7 @@ SML e Erlang.&lt;/p&gt;
 &lt;p&gt;&lt;a href=&quot;http://homepages.inf.ed.ac.uk/wadler/realworld/index.html&quot;&gt;Functional Programming in the Real
 World&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;referncias&quot;&gt;Referências&lt;/h2&gt;
+&lt;h2 id=&quot;referências&quot;&gt;Referências&lt;/h2&gt;
 
 &lt;ul&gt;
   &lt;li&gt;&lt;a href=&quot;http://din.uem.br/ia/ferramentas/lisp/lisp3.htm&quot;&gt;Departamento de Informática (DIN) da Universidade Estadual de Maringá (UEM)&lt;/a&gt;&lt;/li&gt;
@@ -1287,8 +1287,8 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;/ul&gt;
 </description>
         <pubDate>Thu, 21 Apr 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/programacao-funcional</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/programacao-funcional</guid>
+        <link>https://tkovs.me/blog/programacao-funcional</link>
+        <guid isPermaLink="true">https://tkovs.me/blog/programacao-funcional</guid>
         
         <category>Programação Funcional</category>
         
@@ -1299,18 +1299,24 @@ World&lt;/a&gt;&lt;/p&gt;
         <title>Introdução básica à linguagem C</title>
         <description>&lt;h4 id=&quot;tipos-de-dados&quot;&gt;Tipos de dados&lt;/h4&gt;
 
-&lt;p&gt;&lt;strong&gt;Int&lt;/strong&gt;: Número inteiro. Sem casas decimais.
-&amp;gt; Ex: 0 -543 2015&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Int&lt;/strong&gt;: Número inteiro. Sem casas decimais.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Ex: 0 -543 2015&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Char&lt;/strong&gt;: Letra. Apenas 1, se quiser mais é necessário criar um vetor, o que daria uma string.
-&amp;gt; Ex: ‘a’ ‘%’ ‘Z’ ‘+’&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Char&lt;/strong&gt;: Letra. Apenas 1, se quiser mais é necessário criar um vetor, o que daria uma string.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Ex: ‘a’ ‘%’ ‘Z’ ‘+’&lt;/p&gt;
+&lt;/blockquote&gt;
 
-&lt;p&gt;&lt;strong&gt;Float&lt;/strong&gt;: Número real. Com casas decimais.
-&amp;gt; Ex: 0.5 -5.43 20.15&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Float&lt;/strong&gt;: Número real. Com casas decimais.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Ex: 0.5 -5.43 20.15&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;Void&lt;/strong&gt;: Tipo vazio. Por enquanto você não precisa saber muito sobre esse tipo.&lt;/p&gt;
 
-&lt;h4 id=&quot;comentrios&quot;&gt;Comentários&lt;/h4&gt;
+&lt;h4 id=&quot;comentários&quot;&gt;Comentários&lt;/h4&gt;
 
 &lt;p&gt;Comentários podem ser escritos de duas formas: linha única ou várias linhas.&lt;/p&gt;
 
@@ -1321,7 +1327,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;5&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;   o nome da variavel já diz tudo...&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;6&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;*/&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;funo-main&quot;&gt;Função main&lt;/h4&gt;
+&lt;h4 id=&quot;função-main&quot;&gt;Função main&lt;/h4&gt;
 
 &lt;p&gt;Se seu programa será um executável ele precisará da função main que sempre é a primeira a ser chamada. O esqueleto básico que, provavelmente, todos seus programas iniciais terão, é o seguinte:&lt;/p&gt;
 
@@ -1376,12 +1382,14 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;19&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;20&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Fim do escopo do main.&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;declarando-variveis--vetor--string&quot;&gt;Declarando variáveis &amp;amp; Vetor &amp;amp; String&lt;/h4&gt;
+&lt;h4 id=&quot;declarando-variáveis--vetor--string&quot;&gt;Declarando variáveis &amp;amp; Vetor &amp;amp; String&lt;/h4&gt;
 
 &lt;p&gt;Um vetor é apenas uma variável capaz de conter vários valores do mesmo tipo. É como se uma variável comum fosse um pedaço de papel (uma página) e um vetor fosse um livro (conjunto de páginas). A seguir, um “tipo de dado” chamado string.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;String&lt;/strong&gt;: Na verdade não há o tipo string, o que existe é um vetor de char onde o último elemento sempre deve ser o ‘\0’ que indica o fim da string. Sendo assim, se quiser uma variável pra armazenar a string “panda” seriam necessários 6 espaços no vetor: 5 para o nome “panda”, e 1 para o ‘\0’.
-&amp;gt; Ex:&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;String&lt;/strong&gt;: Na verdade não há o tipo string, o que existe é um vetor de char onde o último elemento sempre deve ser o ‘\0’ que indica o fim da string. Sendo assim, se quiser uma variável pra armazenar a string “panda” seriam necessários 6 espaços no vetor: 5 para o nome “panda”, e 1 para o ‘\0’.&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Ex:&lt;/p&gt;
+&lt;/blockquote&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// Fazer isso:&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;kt&quot;&gt;char&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;s&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&amp;quot;panda&amp;quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
@@ -1410,7 +1418,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;13&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;funes-de-leitura-e-escrita-printf--scanf&quot;&gt;Funções de leitura e escrita (printf / scanf)&lt;/h4&gt;
+&lt;h4 id=&quot;funções-de-leitura-e-escrita-printf--scanf&quot;&gt;Funções de leitura e escrita (printf / scanf)&lt;/h4&gt;
 
 &lt;p&gt;Para escrever algo na tela (uma mensagem ao usuário ou o resultado de uma conta) é necessário usar a função &lt;strong&gt;printf&lt;/strong&gt;. Para ler um valor do usuário, a função &lt;strong&gt;scanf&lt;/strong&gt;.&lt;/p&gt;
 
@@ -1443,7 +1451,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;27&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;28&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;operadores--aritmtica&quot;&gt;Operadores &amp;amp;&amp;amp; Aritmética&lt;/h4&gt;
+&lt;h4 id=&quot;operadores--aritmética&quot;&gt;Operadores &amp;amp;&amp;amp; Aritmética&lt;/h4&gt;
 
 &lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-c&quot; data-lang=&quot;c&quot;&gt;&lt;span class=&quot;lineno&quot;&gt; 1&lt;/span&gt; &lt;span class=&quot;cp&quot;&gt;#include &amp;lt;stdio.h&amp;gt;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt; 2&lt;/span&gt; &lt;span class=&quot;cm&quot;&gt;/*&lt;/span&gt;
@@ -1478,7 +1486,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;31&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;32&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;condio-if&quot;&gt;Condição (if)&lt;/h4&gt;
+&lt;h4 id=&quot;condição-if&quot;&gt;Condição (if)&lt;/h4&gt;
 
 &lt;p&gt;O &lt;strong&gt;if&lt;/strong&gt; é uma palavra-chave em C para se tomar decisões, fazer comparações.&lt;/p&gt;
 
@@ -1517,7 +1525,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;33&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;34&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;loops-repetio&quot;&gt;Loops (repetição)&lt;/h4&gt;
+&lt;h4 id=&quot;loops-repetição&quot;&gt;Loops (repetição)&lt;/h4&gt;
 
 &lt;p&gt;Para usar esse recurso existem algumas palavras-chave como while, for e do/while. Na while só é necessária uma condição e, toda vez que ela for verdadeira, o código no escopo do while é executado.&lt;/p&gt;
 
@@ -1567,7 +1575,7 @@ World&lt;/a&gt;&lt;/p&gt;
 &lt;span class=&quot;lineno&quot;&gt;11&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 &lt;span class=&quot;lineno&quot;&gt;12&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;funes&quot;&gt;Funções&lt;/h4&gt;
+&lt;h4 id=&quot;funções&quot;&gt;Funções&lt;/h4&gt;
 
 &lt;p&gt;Funções são muito úteis, inicialmente, para modularizar seu código. Um meio de separar trechos de códigos que têm um mesmo objetivo em um lugar separado do resto do código. Funções são como empregados, onde cada um tem uma função específica a fazer e, ao ser necessário que x trabalho seja realizado você não o reescreve no código, simplesmente chama a função encarregada de realizar a tarefa x.&lt;/p&gt;
 
@@ -1602,8 +1610,8 @@ World&lt;/a&gt;&lt;/p&gt;
 
 </description>
         <pubDate>Thu, 31 Mar 2016 00:00:00 -0300</pubDate>
-        <link>http://tkovs.github.io/blog/introducao-linguagem-c</link>
-        <guid isPermaLink="true">http://tkovs.github.io/blog/introducao-linguagem-c</guid>
+        <link>https://tkovs.me/blog/introducao-linguagem-c</link>
+        <guid isPermaLink="true">https://tkovs.me/blog/introducao-linguagem-c</guid>
         
         <category>Linguagem c</category>
         

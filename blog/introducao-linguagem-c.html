@@ -8,7 +8,7 @@
         <meta name="description" content="Apenas um blog sobre mim, música, programação, as pessoas e o que mais me der na telha, flw.
 ">
         <link rel="canonical" 
-        href="http://tkovs.github.io/blog/introducao-linguagem-c">
+        href="https://tkovs.me/blog/introducao-linguagem-c">
         
         <!-- Harmony styles -->
         <link rel="stylesheet" type="text/css" href="/assets/css/main.css">
@@ -34,13 +34,13 @@
                 <h2></h2>
                 <ul>
 	<li>
-		<a href="http://tkovs.github.io/about">Sobre</a><span>/</span>
+		<a href="https://tkovs.me/about">Sobre</a><span>/</span>
 	</li>
 	<li>
-		<a href="http://tkovs.github.io/blog">Blog</a><span>/</span>
+		<a href="https://tkovs.me/blog">Blog</a><span>/</span>
 	</li>
 	<li>
-		<a href="http://tkovs.github.io/resume">Currículo</a><span>/</span>
+		<a href="https://tkovs.me/resume">Currículo</a><span>/</span>
 	</li>
 </ul>
                 
@@ -59,18 +59,24 @@
 		<div class="post">
 			<h4 id="tipos-de-dados">Tipos de dados</h4>
 
-<p><strong>Int</strong>: Número inteiro. Sem casas decimais.
-&gt; Ex: 0 -543 2015</p>
+<p><strong>Int</strong>: Número inteiro. Sem casas decimais.</p>
+<blockquote>
+  <p>Ex: 0 -543 2015</p>
+</blockquote>
 
-<p><strong>Char</strong>: Letra. Apenas 1, se quiser mais é necessário criar um vetor, o que daria uma string.
-&gt; Ex: ‘a’ ‘%’ ‘Z’ ‘+’</p>
+<p><strong>Char</strong>: Letra. Apenas 1, se quiser mais é necessário criar um vetor, o que daria uma string.</p>
+<blockquote>
+  <p>Ex: ‘a’ ‘%’ ‘Z’ ‘+’</p>
+</blockquote>
 
-<p><strong>Float</strong>: Número real. Com casas decimais.
-&gt; Ex: 0.5 -5.43 20.15</p>
+<p><strong>Float</strong>: Número real. Com casas decimais.</p>
+<blockquote>
+  <p>Ex: 0.5 -5.43 20.15</p>
+</blockquote>
 
 <p><strong>Void</strong>: Tipo vazio. Por enquanto você não precisa saber muito sobre esse tipo.</p>
 
-<h4 id="comentrios">Comentários</h4>
+<h4 id="comentários">Comentários</h4>
 
 <p>Comentários podem ser escritos de duas formas: linha única ou várias linhas.</p>
 
@@ -81,7 +87,7 @@
 <span class="lineno">5</span> <span class="cm">   o nome da variavel já diz tudo...</span>
 <span class="lineno">6</span> <span class="cm">*/</span></code></pre></figure>
 
-<h4 id="funo-main">Função main</h4>
+<h4 id="função-main">Função main</h4>
 
 <p>Se seu programa será um executável ele precisará da função main que sempre é a primeira a ser chamada. O esqueleto básico que, provavelmente, todos seus programas iniciais terão, é o seguinte:</p>
 
@@ -136,12 +142,14 @@
 <span class="lineno">19</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">20</span> <span class="p">}</span> <span class="c1">// Fim do escopo do main.</span></code></pre></figure>
 
-<h4 id="declarando-variveis--vetor--string">Declarando variáveis &amp; Vetor &amp; String</h4>
+<h4 id="declarando-variáveis--vetor--string">Declarando variáveis &amp; Vetor &amp; String</h4>
 
 <p>Um vetor é apenas uma variável capaz de conter vários valores do mesmo tipo. É como se uma variável comum fosse um pedaço de papel (uma página) e um vetor fosse um livro (conjunto de páginas). A seguir, um “tipo de dado” chamado string.</p>
 
-<p><strong>String</strong>: Na verdade não há o tipo string, o que existe é um vetor de char onde o último elemento sempre deve ser o ‘\0’ que indica o fim da string. Sendo assim, se quiser uma variável pra armazenar a string “panda” seriam necessários 6 espaços no vetor: 5 para o nome “panda”, e 1 para o ‘\0’.
-&gt; Ex:</p>
+<p><strong>String</strong>: Na verdade não há o tipo string, o que existe é um vetor de char onde o último elemento sempre deve ser o ‘\0’ que indica o fim da string. Sendo assim, se quiser uma variável pra armazenar a string “panda” seriam necessários 6 espaços no vetor: 5 para o nome “panda”, e 1 para o ‘\0’.</p>
+<blockquote>
+  <p>Ex:</p>
+</blockquote>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="c1">// Fazer isso:</span>
 <span class="lineno"> 2</span> <span class="kt">char</span> <span class="n">s</span><span class="p">[</span><span class="mi">6</span><span class="p">]</span> <span class="o">=</span> <span class="s">&quot;panda&quot;</span><span class="p">;</span>
@@ -170,7 +178,7 @@
 <span class="lineno">12</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">13</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="funes-de-leitura-e-escrita-printf--scanf">Funções de leitura e escrita (printf / scanf)</h4>
+<h4 id="funções-de-leitura-e-escrita-printf--scanf">Funções de leitura e escrita (printf / scanf)</h4>
 
 <p>Para escrever algo na tela (uma mensagem ao usuário ou o resultado de uma conta) é necessário usar a função <strong>printf</strong>. Para ler um valor do usuário, a função <strong>scanf</strong>.</p>
 
@@ -203,7 +211,7 @@
 <span class="lineno">27</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">28</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="operadores--aritmtica">Operadores &amp;&amp; Aritmética</h4>
+<h4 id="operadores--aritmética">Operadores &amp;&amp; Aritmética</h4>
 
 <figure class="highlight"><pre><code class="language-c" data-lang="c"><span class="lineno"> 1</span> <span class="cp">#include &lt;stdio.h&gt;</span>
 <span class="lineno"> 2</span> <span class="cm">/*</span>
@@ -238,7 +246,7 @@
 <span class="lineno">31</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">32</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="condio-if">Condição (if)</h4>
+<h4 id="condição-if">Condição (if)</h4>
 
 <p>O <strong>if</strong> é uma palavra-chave em C para se tomar decisões, fazer comparações.</p>
 
@@ -277,7 +285,7 @@
 <span class="lineno">33</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">34</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="loops-repetio">Loops (repetição)</h4>
+<h4 id="loops-repetição">Loops (repetição)</h4>
 
 <p>Para usar esse recurso existem algumas palavras-chave como while, for e do/while. Na while só é necessária uma condição e, toda vez que ela for verdadeira, o código no escopo do while é executado.</p>
 
@@ -327,7 +335,7 @@
 <span class="lineno">11</span>     <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
 <span class="lineno">12</span> <span class="p">}</span></code></pre></figure>
 
-<h4 id="funes">Funções</h4>
+<h4 id="funções">Funções</h4>
 
 <p>Funções são muito úteis, inicialmente, para modularizar seu código. Um meio de separar trechos de códigos que têm um mesmo objetivo em um lugar separado do resto do código. Funções são como empregados, onde cada um tem uma função específica a fazer e, ao ser necessário que x trabalho seja realizado você não o reescreve no código, simplesmente chama a função encarregada de realizar a tarefa x.</p>
 
@@ -372,17 +380,17 @@
 		    
 		    <li>
 			  <span>15 May 2016 &raquo;</span>
-			  <a href="http://tkovs.github.io/blog/introducao-terminal">Comandos básicos do Terminal</a>
+			  <a href="https://tkovs.me/blog/introducao-terminal">Comandos básicos do Terminal</a>
 		    </li>
 		    
 		    <li>
 			  <span>25 Apr 2016 &raquo;</span>
-			  <a href="http://tkovs.github.io/blog/versionamento-git">Versionamento e iniciando no Git! (em progresso)</a>
+			  <a href="https://tkovs.me/blog/versionamento-git">Versionamento e iniciando no Git! (em progresso)</a>
 		    </li>
 		    
 		    <li>
 			  <span>21 Apr 2016 &raquo;</span>
-			  <a href="http://tkovs.github.io/blog/programacao-funcional">Programação Funcional</a>
+			  <a href="https://tkovs.me/blog/programacao-funcional">Programação Funcional</a>
 		    </li>
 		    
 		</ul>
@@ -395,10 +403,10 @@
 				<span><< Older</span>
 			
 		</div>
-		<div class="column-2"><a href="http://tkovs.github.io/ ">Home</a></div>
+		<div class="column-2"><a href="https://tkovs.me/ ">Home</a></div>
 		<div class="column-3">
 			
-				<a href="http://tkovs.github.io/blog/programacao-funcional">Newer >></a>
+				<a href="https://tkovs.me/blog/programacao-funcional">Newer >></a>
 			
 		</div>
 	</div>
@@ -430,8 +438,8 @@ powered by Disqus.</a></noscript>
                 <div class="column one">
                     <h6>Few more links</h6>
 <ul class="menu">
-    <li><a href="http://tkovs.github.io/about">About</a></li>
-    <li><a href="http://tkovs.github.io/blog">Blog</a></li>
+    <li><a href="https://tkovs.me/about">About</a></li>
+    <li><a href="https://tkovs.me/blog">Blog</a></li>
 </ul>		
                     
                 </div>
