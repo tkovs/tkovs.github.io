@@ -35,6 +35,7 @@ exclude:
   - .gitignore
   - .sass-cache
   - Gemfile.lock
+  - vendor
 
 sass:
     sass_dir: assets/css/_sass
