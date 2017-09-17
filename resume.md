@@ -15,7 +15,9 @@ title: Resume
 
 #### Experiência
 
-Estagiário como desenvolvedor web no Núcleo de Tecnologia da Informação na Universidade Federal de Alagoas - Campus Arapiraca.
+```(05/2016 ~ 09/2016)``` Estagiário como desenvolvedor web no Núcleo de Tecnologia da Informação na Universidade Federal de Alagoas - Campus Arapiraca.
+
+```(09/2017 ~ ...)``` Estagiário como desenvolvedor Delphi na PlusSoft (Sistema de Automação Comercial e Consultoria).
 
 #### Qualificações
 
