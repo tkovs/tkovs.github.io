@@ -4,18 +4,18 @@ title: Sobre mim
 permalink: /about/
 ---
 
-Olá! Eu me chamo Vitor Rodrigues, sou estudante de informática, músico e desenvolvedor. Atualmente
-eu estudo no Instituto Federal de Alagoas - Campus Arapiraca, e pretendo me manter como
-desenvolvedor ativo na comunidade open source.
+<div align='center'>
+<img src="../assets/img/me.png" alt="me" style="width: 250px; heigth: auto;"/>
+</div>
 
-#### Artistas favoritos
+Olá! Eu me chamo João Vitor, atualmente estudante de ciência da computação na **UFAL** *Campus Arapiraca*, e programador delphi na **PlusSoft**. Músico, jogador de [Dota 2](http://www.dota2.com/play/), contribuidor na comunidade opensource, usuário do [Arch Linux](https://www.archlinux.org/) e seguidor de Shingeki no Kyojin!
 
-Robert Johnson, Muddy Waters, Stevie Ray Vaughan, João Gilberto, Justin Vernon, Hans Florian Zimmer, Bill Brown.
+Veja meu [currículo](http://tkovs.me/resume)
 
-#### Jogos favoritos
+### Sobre o blog
 
-Dota 2, Lineage 2 (Interlude), Mix Master Online.
+Planejo escrever sobre assuntos relacionados à computação, música e o que mais eu sentir vontade.
 
 ### Contate-me
 
-Encontre-me no [Github](http://github.com/tkovs) ou envie um Olá para [victor.rdg@hotmail.com](mailto:victor.rdg@hotmail.com)
+Encontre-me no [Github](http://github.com/tkovs) ou envie um olá para [tkovs@outlook.com](mailto:tkovs@outlook.com)
