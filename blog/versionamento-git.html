@@ -94,14 +94,14 @@
 
 <div id="id-introducao"></div>
 
-<p>##Introdução</p>
+<h2 id="introdução">Introdução</h2>
 
 <p>No decorrer do texto será abordado alguns temas importantes sobre versionamento, seguido de um
 tutorial usando o Git no terminal.</p>
 
 <div id="id-versionamento"></div>
 
-<p>##Versionamento</p>
+<h2 id="versionamento">Versionamento</h2>
 
 <p>Versionamento é como chamamos o ato de gerenciar diferentes versões de um mesmo arquivo, cada uma 
 com um id de identificação - geralmente um número.</p>
@@ -118,7 +118,7 @@ id-plataforma</p>
 
 <div id="id-plataforma"></div>
 
-<p>##Plataforma</p>
+<h2 id="plataforma">Plataforma</h2>
 
 <p>Independente da plataforma que você atue, há sistemas de controle de versão para Linux, Mac OS X,
 Windows, Solaris e o que mais houver. Sempre haverá implementações de softwares com esse objetivo em
@@ -129,7 +129,7 @@ diferentes linguagens, tanto privados quanto de código aberto.</p>
 
 <div id="id-git"></div>
 
-<p>##Git</p>
+<h2 id="git">Git</h2>
 
 <p>Git é uma ferramenta escrita em C, de código aberto, que foi desenvolvida pra ser o sistema de
 controle de versão do Linux. Hoje o Git é amplamente utilizado e é de fundamental importância
@@ -145,7 +145,7 @@ todo arquivo que for copiado ou criado nessa pasta está sob controle do Git, co
 
 <div id="id-escolher-arquivos"></div>
 
-<p>####Escolher quais arquivos estão sob versionamento</p>
+<h4 id="escolher-quais-arquivos-estão-sob-versionamento">Escolher quais arquivos estão sob versionamento</h4>
 
 <p>Embora o controle de versão do Git gerencie uma pasta específica, você decide quais arquivos dentro
 dessa pasta estão sob o controle desse sistema. Logo, não é porque um arquivo está dentro dessa
@@ -154,7 +154,7 @@ sobre algo.</p>
 
 <div id="id-nova-versao"></div>
 
-<p>####Definir uma nova versão</p>
+<h4 id="definir-uma-nova-versão">Definir uma nova versão</h4>
 
 <p>A cada vez que você altera arquivos, uma nova versão deles está sendo criada teoricamente falando,
 mas para que os arquivos que estão sobre o controle do Git sejam salvos numa nova versão é 
@@ -165,7 +165,7 @@ com as descrição sendo exibida, então você tem algo como uma linha do tempo 
 
 <div id="id-comparacao-versoes"></div>
 
-<p>####Comparação de versões</p>
+<h4 id="comparação-de-versões">Comparação de versões</h4>
 
 <p>Após ter mais de 1 versão do projeto gerenciado pelo Git, você pode comparar versões através do
 <strong>diff</strong>. O resultado é a mostra de todas as linhas que foram alteradas.</p>
@@ -190,7 +190,7 @@ Tchau.</code></pre></figure>
 
 <div id="id-navegacao-entre-versoes"></div>
 
-<p>####Navegação entre versões</p>
+<h4 id="navegação-entre-versões">Navegação entre versões</h4>
 
 <p>Embora você passe a esmagadora maioria do tempo navegando no seu projeto em seu estado atual, você
 pode visita-lo a qualquer momento em que um commit foi feito. No exemplo abaixo, o comando cat exibe
@@ -202,7 +202,7 @@ então todos os arquivos foram alterados pro estado que estavam no commit anteri
 
 <div id="id-ramificacoes"></div>
 
-<p>####Ramificações</p>
+<h4 id="ramificações">Ramificações</h4>
 
 <p>Quando você precisar fazer alterações no projeto, mas quiser manter uma cópia segura, não
 precisa copiá-lo para algum lugar como um backup. Quando quiser adicionar um novo recurso, ou alterar
@@ -222,7 +222,7 @@ branch <strong>master</strong>.</p>
 
 <div id="id-gestao-usuarios"></div>
 
-<p>####Gerenciando vários contribuidores num mesmo projeto</p>
+<h4 id="gerenciando-vários-contribuidores-num-mesmo-projeto">Gerenciando vários contribuidores num mesmo projeto</h4>
 
 <p>Usando o merge, diferentes pessoas podem trabalhar num mesmo projeto de modo organizado, cada um
 com sua ramificação própria atrás de um fim específico, desse modo ao não trabalharem num mesmo
@@ -233,7 +233,7 @@ final.</p>
 
 <div id="id-instalacao-git"></div>
 
-<p>##Instalação do Git</p>
+<h2 id="instalação-do-git">Instalação do Git</h2>
 
 <p>Faça o download do Git para o seu sistema operacional seguindo os passos no próprio
 <a href="https://git-scm.com/download/">site</a> da ferramenta. A instalação é muito simples e leva pouco
@@ -241,7 +241,7 @@ tempo, além de ter muitos tutoriais na internet ensinando a fazê-lo.</p>
 
 <div id="id-configurando-usuario"></div>
 
-<p>##Configurando seu usuário no git</p>
+<h2 id="configurando-seu-usuário-no-git">Configurando seu usuário no git</h2>
 
 <p>Após instalar, abra o terminal. Se você executar <code>git --version</code>, e não obtiver a versão do git, algo
 deu errado na instalação, mesmo que seja a adição do git no $PATH do seu sistema operacional.</p>
@@ -277,7 +277,7 @@ artigo.</p>
 
 <div id="id-comandos-basicos"></div>
 
-<p>##Comandos básicos</p>
+<h2 id="comandos-básicos">Comandos básicos</h2>
 
 <p>Se nunca usou o terminal ou ainda tem dificuldades, sugiro que leia <a href="https://tkovs.me/blog/introducao-terminal">minha postagem</a> sobre ele.</p>
 
@@ -286,14 +286,14 @@ artigo.</p>
 
 <div id="id-comandos-basicos-init"></div>
 
-<p>####Init</p>
+<h4 id="init">Init</h4>
 
 <p>Esse comando é responsável por criar um repositório Git vazio. Um diretório só pode ser gerenciado
 pelo Git se o <code>init</code> for executado nele.</p>
 
 <div id="id-comandos-basicos-status"></div>
 
-<p>####Status</p>
+<h4 id="status">Status</h4>
 
 <p>Retorna informações sobre o repositório atual: lista de arquivos alterados desde o último commit,
 branch atual, mudanças a serem <em>commitadas</em>, etc.</p>
@@ -302,14 +302,14 @@ branch atual, mudanças a serem <em>commitadas</em>, etc.</p>
 
 <div id="id-comandos-basicos-add"></div>
 
-<p>####Add</p>
+<h4 id="add">Add</h4>
 
 <p>Adiciona um arquivo que foi alterado para o gerenciamento do Git. Se um arquivo é alterado mas não
 passa pelo comando <code>add</code> antes do commit, suas alterações não são salvas.</p>
 
 <div id="id-comandos-basicos-commit"></div>
 
-<p>####Commit</p>
+<h4 id="commit">Commit</h4>
 
 <p>Salva as mudanças realizadas no repositório desde o último commit. Junto com as mudanças, salva
 informações como, por exemplo, quem fez as alterações, data do commit, breve explicação sobre o
@@ -322,14 +322,14 @@ mais que os 5 primeiros digitos de um código pra usa-lo.</p>
 
 <div id="id-comandos-basicos-diff"></div>
 
-<p>####Diff</p>
+<h4 id="diff">Diff</h4>
 
 <p>Compara dois commits e mostra a diferença entre eles. <strong>Eu</strong> uso muito pra comparar as alterações
 que fiz desde o último commit antes de fazer o próximo commit, sempre.</p>
 
 <div id="id-comandos-basicos-log"></div>
 
-<p>####Log</p>
+<h4 id="log">Log</h4>
 
 <p>Lista todos os commits, junto com a descrição e informações básicas como quem foi o autor do commit
 e a data. Detalhe: o commit mais novo pode ser referenciado por <strong>HEAD</strong>, dessa forma, para comparar
@@ -339,25 +339,25 @@ as mudanças feitas desde o último commit, basta executar <code>git diff HEAD</
 
 <div id="id-comandos-basicos-branch"></div>
 
-<p>####Branch</p>
+<h4 id="branch">Branch</h4>
 
 <p>O comando <code>branch</code> gerencia branches (ramificações) no seu repositório, excluindo-os, criando-os
 ou listando-os.</p>
 
 <div id="id-comandos-basicos-checkout"></div>
 
-<p>####Checkout</p>
+<h4 id="checkout">Checkout</h4>
 
 <p>Serve para navegar entre branches ou commits.</p>
 
 <div id="id-demonstracao-pratica"></div>
 
-<p>##Demonstração prática</p>
+<h2 id="demonstração-prática">Demonstração prática</h2>
 
 <p>Pra finalizar, vou criar um diretório, criar arquivos, gerencia-los com o Git, mostrando
 passo-a-passo o que eu faria.</p>
 
-<p>####Primeiro commit</p>
+<h4 id="primeiro-commit">Primeiro commit</h4>
 
 <figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="lineno"> 1</span> <span class="o">[</span>tkovs@toby ~<span class="o">]</span><span class="nv">$ </span>mkdir exemplo
 <span class="lineno"> 2</span> <span class="o">[</span>tkovs@toby ~<span class="o">]</span><span class="nv">$ </span><span class="nb">cd </span>exemplo/
