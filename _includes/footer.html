@@ -1,4 +1,19 @@
-{% if site.harmony.show_disclaimer %}
-	Made by <a href="http://gayan.me" target="_blank">Gayan Virajith</a> for everyone.      
-{% endif %}
-Powered by <a href="http://jekyllrb.com" target="_blank">Jekyll</a>
+<footer class="mb-3">
+  <div class="container">
+    <div class="row biography">
+      <div class="col-sm-6">
+        <h2>quem eu sou</h2>
+        <p>{{ site.biography }}</p>
+      </div>
+      <div class="col-sm-6">
+        <h2>o que é isto</h2>
+        <p>{{ site.description }}</p>
+      </div>
+    </div>
+    {% if site.colophon %}
+    <div class="row copyright text-center">
+      <div class="col-sm-12">{{ site.colophon }}</div>
+    </div>
+    {% endif %}
+  </div>
+</footer>

@@ -1,8 +1,4 @@
-#vim files
-*.swp
-
-#Jekyll
 _site/
-Gemfile.lock
 .sass-cache/
 .jekyll-metadata
+Gemfile.lock

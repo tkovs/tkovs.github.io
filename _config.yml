@@ -1,42 +1,28 @@
-url: https://tkovs.me
-#url: http://localhost:4000
+# Site settings
+title: "Informática, Matemática e afins"
+author: "João Vitor Rodrigues da Silva"
+description: "Esse é um blog sobre desenvolvimento de softwares, matemática, estatística, e outros assuntos relacionados ao curso de Ciência da Computação."
+keywords: "Ciência da Computação, Matemática, Software, Website, Estatística, Cálculo, Git, Github, Ruby, Python, Haskell, Linux"
+biography: "Eu sou graduando de Ciência da Computação pela <a href='http://www.ufal.edu.br/'>Universidade Federal de Alagoas</a>, técnico em Informática pelo <a href='https://www2.ifal.edu.br/'>Instituto Federal de Alagoas</a>, desenvolvedor web na <a href='https://plussoft.com.br'>PlusSoft</a>, entusiasta <a href='https://github.com/tkovs'>opensource</a>, e agora escritor em um blog."
+colophon: "© 2018 João Vitor Rodrigues da Silva.<br>Conteúdo sobre <a href='https://mit-license.org/'>MIT License</a>.<br>Este site está hospedado no <a href='https://pages.github.com/'>Github Pages</a> e foi baseado no site do <a href='http://hugosereno.eu/'>Hugo Sereno</a> usando <a href='https://jekyllrb.com/'>Jekyll</a> e <a href='http://getbootstrap.com'>Bootstrap</a>."
 
-harmony:
-  name: tkovs
-  description: #Um blog sobre mim e o que mais eu achar interessante
-  meta_description: > # 
-      Apenas um blog sobre mim, música, programação, as pessoas e o que mais
-      me der na telha, flw.
-  basetheme: theme-base-01
-  author:
-    name: Vitor Rodrigues
-    email: victor.rdg@hotmail.com
-    url: http://tkovs.me
+baseurl: ""
+url: "http://tkovs.me"
 
-  google_analytics_key: UA-76526417-1
-  disqus_shortname: tkovsblog
+# twitter_username:
+github_username: tkovs
+linkedin_username: tkovs
+facebook_username: joaovitorIFAL
+instagram_username: _tkovs
+# 500px_username:
 
-  social: 
-    github: tkovs
-    twitter: _tkovs
-    facebook: joaovitorIFAL
-  show_disclaimer: false
+google-analytics: UA-69060-5
+disqus_shortname: tkovsblog
 
-markdown:    kramdown
-highlighter: pygments 
+simple_search: http://google.com/search
+markdown: kramdown
+highlighter: rouge
+permalink: /blog/:year/:month/:day/:title/
 
-permalink:        pretty
-
-exclude: 
-  - CNAME
-  - Gemfile
-  - Rakefile
-  - README.md
-  - .gitignore
-  - .sass-cache
-  - Gemfile.lock
-  - vendor
-
-sass:
-    sass_dir: assets/css/_sass
-    style: :compressed
+plugins:
+- jekyll-sitemap

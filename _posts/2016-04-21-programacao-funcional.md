@@ -1,34 +1,11 @@
 ---
 layout: post
-title:  "Programação Funcional"
-date:   2016-04-21 
-description: Uma abordagem completa - mas não profunda - sobre a programação funcional, listando e explicando os conceitos fundamentais ligados a esse paradigma e mostrando seu uso na indústria e na comunidade.
-tags:
-- Programação Funcional
-permalink: /blog/programacao-funcional
+title: "Introdução à Programação Funcional"
+date: 2016-04-21 13:20
+comments: true
+external-url:
+categories: "Programação"
 ---
-
-## Tabela de conteúdo
-
-0. [Introdução](#id-introducao)
-1. [Haskell](#id-haskell)
-2. [Conceitos](#id-conceitos)
-    1. [Funções puras](#id-funcoes-puras)
-    2. [Imutabilidade](#id-imutabilidade)
-    3. [Recursão](#id-recursao)
-    4. [Transparência referencial](#id-transparencia-referencial)
-    5. [Funções](#id-funcoes)
-    6. [Funções anônimas](#id-funcoes-anonimas)
-    7. [Avaliação preguiçosa](#id-avaliacao-preguicosa)
-3. [Então, o que é programação funcional?](#id-o-que-e)
-4. [Uso](#id-uso)
-
-<hr />
-<div id='id-introducao'></div>
-
-## Introdução
-
-*Esse artigo é recomendado para quem já tem experiência com programação*
 
 Um paradigma de programação é um modo de se classificar linguagens de programação, definindo os
 recursos que elas disponibilizam e o seu funcionamento. Linguagens de programação podem estar
@@ -89,7 +66,7 @@ declarada e contenha o tamanho do `vetor`, e `soma` já tenha sido declarada ant
 conteúdo do `vetor` for alterado por alguma ação paralela no resto do programa antes da soma terminar,
 o resultado será incorreto.
 
-{% highlight c %}
+```c
 ...
 ...
 
@@ -101,7 +78,7 @@ printf ("%d", soma);
 
 ...
 ...
-{% endhighlight %}
+```
 
 Outro exemplo do uso de programação paralela é na renderização de imagens. Há milhões de pixels que
 devem ser renderizados. Todos eles podem ser renderizados individualmente, sem depender um do outro.
@@ -120,7 +97,7 @@ isso, como por exemplo usar recursão de cauda.
 
 Mas antes de entrar nesse assunto, será demonstrado aqui o uso da recursão para funções comuns.
 
-{% highlight haskell linenos %}
+```haskell
 -- Soma de uma lista
 sum :: [Num] -> Num
 sum [] = 0
@@ -149,7 +126,7 @@ fat x = x * fat (x-1)
 -- 5 * 4 * 3 * 2 * fat 1
 -- 5 * 4 * 3 * 2 * 1
 -- 120
-{% endhighlight %}
+```
 
 Recursão de cauda, ou **tail call** em inglês, é como uma subcategoria da recursão, e é usada pois
 na recursão comum o número de chamadas à função aumenta, consequentemente estourando a pilha.
@@ -160,7 +137,7 @@ compiladores de linguagens funcionais transformam chamadas a funções com recur
 
 > O código abaixo mostra a escrita e o funcionamento da função fibonacci sem usar tail call.
 
-{% highlight haskell linenos %}
+```haskell
 -- Fibonacci sem tail call
 fib :: Int -> Int
 fib 0 = 0
@@ -182,12 +159,12 @@ fib x = fib (x-1) + fib (x-2)
 -> 5 + 3
 -> 8
 -}
-{% endhighlight %}
+```
 
 > O código abaixo mostra a escrita e o funcionamento da função fibonacci usando tail call e uma função
 auxiliar.
 
-{% highlight haskell linenos %}
+```haskell
 -- Fibonacci com tail call
 fib :: Int -> Int
 fib x = fib_aux (x, 0, 1)
@@ -208,7 +185,7 @@ fib_aux (x, current, next) = fib_aux(x-1, next, current + next)
 -> fib_aux(0, 8, 13)
 -> 8
 -}
-{% endhighlight %}
+```
 
 <div id='id-transparencia-referencial'></div>
 
@@ -238,10 +215,10 @@ funções como parâmetros.
 Através desse recurso, qualquer função com múltiplos parâmetros pode ser escrita com apenas um. Para
 exemplo será usado o código abaixo:
 
-{% highlight haskell linenos %}
+```haskell
 add :: Int - (Int -> Int)
 add x y = x + y
-{% endhighlight %}
+```
 
 Observando a declaração da função, ela recebe 1 inteiro e retorna uma função que recebe um inteiro e
 retorna outro inteiro. No corpo da função diz-se que recebe 2 parâmetros e retorna a soma deles.
@@ -253,7 +230,7 @@ funcionais e que costumam receber um port para a biblioteca padrão de linguagen
 função map é uma função para manipulação de listas. Ela recebe uma função e uma lista genérica,
 aplica a função sobre cada elemento da lista retornando uma nova lista com as modificações.
 
-{% highlight haskell linenos %}
+```haskell
 -- Usando recursão
 map :: (a -> b) -> [a] -> [b]
 map f []     = []
@@ -262,7 +239,7 @@ map f (x:xs) = f x : map f xs
 -- Usando list comprehension
 map :: (a -> b) -> [a] -> [b]
 map f x = [f x | x <- xs]
-{% endhighlight %}
+```
 
 <div id='id-funcoes-anonimas'></div>
 
@@ -278,20 +255,20 @@ São usadas para conter uma funcionalidade que não precisa de um nome ou que te
 curto e rápido, sendo um objeto temporário. Esse recurso evita a escrita de funções de uma linha só
 que seriam usadas apenas uma vez, por exemplo:
 
-{% highlight haskell linenos %}
+```haskell
 something :: Num x => x -> x
 something x = (x *3 + 2) * x
 
 map something [1,2,3]
 -- Retorno: [5,16,33]
-{% endhighlight %}
+```
 
 ficaria assim:
 
-{% highlight haskell linenos %}
+```haskell
 map (\x -> (x * 3 + 2) * x) [1,2,3]
 -- Retorno: [5,16,33]
-{% endhighlight %}
+```
 
 <div id='id-avaliacao-preguicosa'></div>
 
