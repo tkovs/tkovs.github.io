@@ -1,19 +1,27 @@
 ---
 layout: post
-title: "Introdução à Programação Funcional"
+title: "Conceitos da programação funcional"
 date: 2016-04-21 13:20
 comments: true
-external-url:
+external-url: 123   
 categories: "Programação"
 ---
 
-Um paradigma de programação é um modo de se classificar linguagens de programação, definindo os
-recursos que elas disponibilizam e o seu funcionamento. Linguagens de programação podem estar
-embasadas em apenas um paradigma, e podem ser multiparadigmas. Os mais comuns são o **orientado a
-objetos**, o **imperativo**, e o **funcional**.
+Para o desenvolvimento de softwares, existem linguagens de programação. Essas
+linguagens podem ser classificadas e categorizadas de acordo com suas
+funcionalidades. Essas classificações são chamadas de **paradigmas de
+programação**.
 
-Há conceitos que devem ser compreendidos para se programar funcionalmente, e eles serão
-abordados no decorrer do texto.
+<img src="https://i.ytimg.com/vi/lqmMqtgWpms/maxresdefault.jpg" style="width: 100%" />
+
+Um paradigma de programação define os recursos que uma linguagem de programação
+disponibiliza, além do seu funcionamento, podendo essa linguagem estar embasada
+em apenas um paradigma ou ser multiparadigma. Os paradigmas mais comuns são o 
+**orientado a objetos**, o **imperativo**, e o **funcional** (abordado nessa
+publicação).
+
+Antes de começar a programar no paradigma funcional, é necessário compreender
+alguns conceitos que serão abordados no decorrer do texto.
 
 <div id='id-haskell'></div>
 
@@ -39,6 +47,11 @@ Para compreender esse paradigma, alguns conceitos são fundamentais.
 
 #### Funções puras
 
+<p class="text-center">
+<img src="https://cdn-images-1.medium.com/max/1200/1*OmLtMy0P6aBQzfzbZewlAA.png" class="w-25"/>
+</p>
+
+<p>
 São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
 resto do programa. Isso vai ao encontro da computação paralela, que é a divisão de uma tarefa entre
@@ -48,10 +61,13 @@ uma função sobre todos os dados: pode-se dividir essa lista em listas menores 
 processadores a disposição, atribuir uma lista a cada um e fazê-los trabalharem paralelamente,
 otimizando a tarefa. Isso é completamente viável porque uma execução não vai influenciar em outra
 paralela.
+</p>
 
 <div id='id-imutabilidade'></div>
 
 #### Imutabilidade
+
+> “A programação orientada a objetos torna o código mais compreensível por meio da contenção de partes móveis. A programação funcional torna o código mais compreensível por meio da **minimização** de partes móveis”. – [Michael Feathers](https://twitter.com/mfeathers/status/29581296216), autor de Working with Legacy Code, no Twitter.
 
 Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
 de se alterar o valor existe, cria-se uma cópia para se trabalhar, um dado novo, baseado no velho.
@@ -63,10 +79,10 @@ e estruturas que modificam as variáveis que definem um programa.
 
 No exemplo abaixo, imagine que nesse programa escrito em C a variável `tamanho` já tenha sido
 declarada e contenha o tamanho do `vetor`, e `soma` já tenha sido declarada anteriormente também. Se o
-conteúdo do `vetor` for alterado por alguma ação paralela no resto do programa antes da soma terminar,
+conteúdo do `vetor` for alterado por alguma ação *paralela* no resto do programa antes da soma terminar,
 o resultado será incorreto.
 
-```c
+{% highlight c linenos %}
 ...
 ...
 
@@ -78,11 +94,11 @@ printf ("%d", soma);
 
 ...
 ...
-```
+{% endhighlight %}
 
-Outro exemplo do uso de programação paralela é na renderização de imagens. Há milhões de pixels que
+<!-- Outro exemplo do uso de programação paralela é na renderização de imagens. Há milhões de pixels que
 devem ser renderizados. Todos eles podem ser renderizados individualmente, sem depender um do outro.
-A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.
+A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo, -->
 
 <div id='id-recursao'></div>
 
@@ -97,7 +113,7 @@ isso, como por exemplo usar recursão de cauda.
 
 Mas antes de entrar nesse assunto, será demonstrado aqui o uso da recursão para funções comuns.
 
-```haskell
+{% highlight haskell linenos %}
 -- Soma de uma lista
 sum :: [Num] -> Num
 sum [] = 0
@@ -126,7 +142,7 @@ fat x = x * fat (x-1)
 -- 5 * 4 * 3 * 2 * fat 1
 -- 5 * 4 * 3 * 2 * 1
 -- 120
-```
+{% endhighlight %}
 
 Recursão de cauda, ou **tail call** em inglês, é como uma subcategoria da recursão, e é usada pois
 na recursão comum o número de chamadas à função aumenta, consequentemente estourando a pilha.
@@ -137,7 +153,7 @@ compiladores de linguagens funcionais transformam chamadas a funções com recur
 
 > O código abaixo mostra a escrita e o funcionamento da função fibonacci sem usar tail call.
 
-```haskell
+{% highlight haskell linenos %}
 -- Fibonacci sem tail call
 fib :: Int -> Int
 fib 0 = 0
@@ -159,12 +175,12 @@ fib x = fib (x-1) + fib (x-2)
 -> 5 + 3
 -> 8
 -}
-```
+{% endhighlight %}
 
 > O código abaixo mostra a escrita e o funcionamento da função fibonacci usando tail call e uma função
 auxiliar.
 
-```haskell
+{% highlight haskell linenos %}
 -- Fibonacci com tail call
 fib :: Int -> Int
 fib x = fib_aux (x, 0, 1)
@@ -185,7 +201,7 @@ fib_aux (x, current, next) = fib_aux(x-1, next, current + next)
 -> fib_aux(0, 8, 13)
 -> 8
 -}
-```
+{% endhighlight %}
 
 <div id='id-transparencia-referencial'></div>
 
@@ -215,10 +231,10 @@ funções como parâmetros.
 Através desse recurso, qualquer função com múltiplos parâmetros pode ser escrita com apenas um. Para
 exemplo será usado o código abaixo:
 
-```haskell
+{% highlight haskell linenos %}
 add :: Int - (Int -> Int)
 add x y = x + y
-```
+{% endhighlight %}
 
 Observando a declaração da função, ela recebe 1 inteiro e retorna uma função que recebe um inteiro e
 retorna outro inteiro. No corpo da função diz-se que recebe 2 parâmetros e retorna a soma deles.
@@ -230,7 +246,7 @@ funcionais e que costumam receber um port para a biblioteca padrão de linguagen
 função map é uma função para manipulação de listas. Ela recebe uma função e uma lista genérica,
 aplica a função sobre cada elemento da lista retornando uma nova lista com as modificações.
 
-```haskell
+{% highlight haskell linenos %}
 -- Usando recursão
 map :: (a -> b) -> [a] -> [b]
 map f []     = []
@@ -239,7 +255,7 @@ map f (x:xs) = f x : map f xs
 -- Usando list comprehension
 map :: (a -> b) -> [a] -> [b]
 map f x = [f x | x <- xs]
-```
+{% endhighlight %}
 
 <div id='id-funcoes-anonimas'></div>
 
@@ -255,20 +271,20 @@ São usadas para conter uma funcionalidade que não precisa de um nome ou que te
 curto e rápido, sendo um objeto temporário. Esse recurso evita a escrita de funções de uma linha só
 que seriam usadas apenas uma vez, por exemplo:
 
-```haskell
+{% highlight haskell linenos %}
 something :: Num x => x -> x
 something x = (x *3 + 2) * x
 
 map something [1,2,3]
 -- Retorno: [5,16,33]
-```
+{% endhighlight %}
 
 ficaria assim:
 
-```haskell
+{% highlight haskell linenos %}
 map (\x -> (x * 3 + 2) * x) [1,2,3]
 -- Retorno: [5,16,33]
-```
+{% endhighlight %}
 
 <div id='id-avaliacao-preguicosa'></div>
 
