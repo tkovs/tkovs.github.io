@@ -5,12 +5,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="hsl(35, 36%, 95%)">
 
-  <title>Introdução à Programação Funcional</title>
+  <title>Conceitos da programação funcional</title>
 
   
   <meta name="description" content="
   
-    Introdução à Programação Funcional
+    Conceitos da programação funcional
     
     April 21, 2016 in Programação
     
@@ -25,7 +25,7 @@
   
     
       
-      Um pa..." />
+      Para ..." />
 
   
   <meta name="keywords" content="" />
@@ -97,7 +97,7 @@
 </div>
       <div class="row justify-content-center">
   <header class="col-md-12 text-center mt-3">
-    <h1 itemprop="name" class="pl-3 pr-3">Introdução à Programação Funcional</h1>
+    <h1 itemprop="name" class="pl-3 pr-3">Conceitos da programação funcional</h1>
     
     <p>April 21, 2016 in Programação</p>
     <div class="small-ornament pt-3 pb-3">
@@ -112,13 +112,21 @@
   <div class="col-md-8">
     <article lang="en">
       
-      <p>Um paradigma de programação é um modo de se classificar linguagens de programação, definindo os
-recursos que elas disponibilizam e o seu funcionamento. Linguagens de programação podem estar
-embasadas em apenas um paradigma, e podem ser multiparadigmas. Os mais comuns são o <strong>orientado a
-objetos</strong>, o <strong>imperativo</strong>, e o <strong>funcional</strong>.</p>
+      <p>Para o desenvolvimento de softwares, existem linguagens de programação. Essas
+linguagens podem ser classificadas e categorizadas de acordo com suas
+funcionalidades. Essas classificações são chamadas de <strong>paradigmas de
+programação</strong>.</p>
 
-<p>Há conceitos que devem ser compreendidos para se programar funcionalmente, e eles serão
-abordados no decorrer do texto.</p>
+<p><img src="https://i.ytimg.com/vi/lqmMqtgWpms/maxresdefault.jpg" style="width: 100%" /></p>
+
+<p>Um paradigma de programação define os recursos que uma linguagem de programação
+disponibiliza, além do seu funcionamento, podendo essa linguagem estar embasada
+em apenas um paradigma ou ser multiparadigma. Os paradigmas mais comuns são o 
+<strong>orientado a objetos</strong>, o <strong>imperativo</strong>, e o <strong>funcional</strong> (abordado nessa
+publicação).</p>
+
+<p>Antes de começar a programar no paradigma funcional, é necessário compreender
+alguns conceitos que serão abordados no decorrer do texto.</p>
 
 <div id="id-haskell"></div>
 
@@ -146,7 +154,12 @@ Caso queira estudar Haskell por conta própria, recomendo os seguintes materiais
 
 <h4 id="funções-puras">Funções puras</h4>
 
-<p>São funções sem side-effects - ou efeitos colaterais, em português. Elas não
+<p class="text-center">
+<img src="https://cdn-images-1.medium.com/max/1200/1*OmLtMy0P6aBQzfzbZewlAA.png" class="w-25" />
+</p>
+
+<p>
+São funções sem side-effects - ou efeitos colaterais, em português. Elas não
 dependem de nada além daquilo que é passado a elas como argumento e não influenciam diretamente o
 resto do programa. Isso vai ao encontro da computação paralela, que é a divisão de uma tarefa entre
 vários processadores, ou até mesmo máquinas. Um exemplo do porque programação funcional é bastante
@@ -154,11 +167,16 @@ relacionado à computação paralela é você ter uma lista de dados e precisar 
 uma função sobre todos os dados: pode-se dividir essa lista em listas menores e, tendo vários
 processadores a disposição, atribuir uma lista a cada um e fazê-los trabalharem paralelamente,
 otimizando a tarefa. Isso é completamente viável porque uma execução não vai influenciar em outra
-paralela.</p>
+paralela.
+</p>
 
 <div id="id-imutabilidade"></div>
 
 <h4 id="imutabilidade">Imutabilidade</h4>
+
+<blockquote>
+  <p>“A programação orientada a objetos torna o código mais compreensível por meio da contenção de partes móveis. A programação funcional torna o código mais compreensível por meio da <strong>minimização</strong> de partes móveis”. – <a href="https://twitter.com/mfeathers/status/29581296216">Michael Feathers</a>, autor de Working with Legacy Code, no Twitter.</p>
+</blockquote>
 
 <p>Ao se definir o valor de um dado, ele não pode ter seu valor alterado. Ao invés
 de se alterar o valor existe, cria-se uma cópia para se trabalhar, um dado novo, baseado no velho.
@@ -170,10 +188,21 @@ e estruturas que modificam as variáveis que definem um programa.</p>
 
 <p>No exemplo abaixo, imagine que nesse programa escrito em C a variável <code class="highlighter-rouge">tamanho</code> já tenha sido
 declarada e contenha o tamanho do <code class="highlighter-rouge">vetor</code>, e <code class="highlighter-rouge">soma</code> já tenha sido declarada anteriormente também. Se o
-conteúdo do <code class="highlighter-rouge">vetor</code> for alterado por alguma ação paralela no resto do programa antes da soma terminar,
+conteúdo do <code class="highlighter-rouge">vetor</code> for alterado por alguma ação <em>paralela</em> no resto do programa antes da soma terminar,
 o resultado será incorreto.</p>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+<figure class="highlight"><pre><code class="language-c" data-lang="c"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+</pre></td><td class="code"><pre><span class="p">...</span>
 <span class="p">...</span>
 
 <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">indice</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">indice</span> <span class="o">&lt;</span> <span class="n">tamanho</span><span class="p">;</span> <span class="n">indice</span><span class="o">++</span><span class="p">)</span>
@@ -183,12 +212,11 @@ o resultado será incorreto.</p>
 <span class="n">printf</span> <span class="p">(</span><span class="s">"%d"</span><span class="p">,</span> <span class="n">soma</span><span class="p">);</span>
 
 <span class="p">...</span>
-<span class="p">...</span>
-</code></pre></div></div>
+<span class="p">...</span></pre></td></tr></tbody></table></code></pre></figure>
 
-<p>Outro exemplo do uso de programação paralela é na renderização de imagens. Há milhões de pixels que
+<!-- Outro exemplo do uso de programação paralela é na renderização de imagens. Há milhões de pixels que
 devem ser renderizados. Todos eles podem ser renderizados individualmente, sem depender um do outro.
-A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo.</p>
+A ideia é mais ou menos essa. Logo, dividir a tarefa agiliza o processo, -->
 
 <div id="id-recursao"></div>
 
@@ -203,7 +231,35 @@ isso, como por exemplo usar recursão de cauda.</p>
 
 <p>Mas antes de entrar nesse assunto, será demonstrado aqui o uso da recursão para funções comuns.</p>
 
-<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Soma de uma lista</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+</pre></td><td class="code"><pre><span class="c1">-- Soma de uma lista</span>
 <span class="n">sum</span> <span class="o">::</span> <span class="p">[</span><span class="kt">Num</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="kt">Num</span>
 <span class="n">sum</span> <span class="kt">[]</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">sum</span> <span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="n">xs</span><span class="p">)</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">sum</span> <span class="n">xs</span>
@@ -230,8 +286,7 @@ isso, como por exemplo usar recursão de cauda.</p>
 <span class="c1">-- 5 * 4 * 3 * fat 2</span>
 <span class="c1">-- 5 * 4 * 3 * 2 * fat 1</span>
 <span class="c1">-- 5 * 4 * 3 * 2 * 1</span>
-<span class="c1">-- 120</span>
-</code></pre></div></div>
+<span class="c1">-- 120</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Recursão de cauda, ou <strong>tail call</strong> em inglês, é como uma subcategoria da recursão, e é usada pois
 na recursão comum o número de chamadas à função aumenta, consequentemente estourando a pilha.
@@ -244,7 +299,28 @@ compiladores de linguagens funcionais transformam chamadas a funções com recur
   <p>O código abaixo mostra a escrita e o funcionamento da função fibonacci sem usar tail call.</p>
 </blockquote>
 
-<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Fibonacci sem tail call</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="code"><pre><span class="c1">-- Fibonacci sem tail call</span>
 <span class="n">fib</span> <span class="o">::</span> <span class="kt">Int</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 <span class="n">fib</span> <span class="mi">0</span> <span class="o">=</span> <span class="mi">0</span>
 <span class="n">fib</span> <span class="mi">1</span> <span class="o">=</span> <span class="mi">1</span>
@@ -264,15 +340,34 @@ compiladores de linguagens funcionais transformam chamadas a funções com recur
 -&gt; (3 + 2) + 3
 -&gt; 5 + 3
 -&gt; 8
--}</span>
-</code></pre></div></div>
+-}</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <blockquote>
   <p>O código abaixo mostra a escrita e o funcionamento da função fibonacci usando tail call e uma função
 auxiliar.</p>
 </blockquote>
 
-<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Fibonacci com tail call</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+</pre></td><td class="code"><pre><span class="c1">-- Fibonacci com tail call</span>
 <span class="n">fib</span> <span class="o">::</span> <span class="kt">Int</span> <span class="o">-&gt;</span> <span class="kt">Int</span>
 <span class="n">fib</span> <span class="n">x</span> <span class="o">=</span> <span class="n">fib_aux</span> <span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 
@@ -291,8 +386,7 @@ auxiliar.</p>
 -&gt; fib_aux(1, 5, 8)
 -&gt; fib_aux(0, 8, 13)
 -&gt; 8
--}</span>
-</code></pre></div></div>
+-}</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <div id="id-transparencia-referencial"></div>
 
@@ -322,9 +416,10 @@ funções como parâmetros.
 Através desse recurso, qualquer função com múltiplos parâmetros pode ser escrita com apenas um. Para
 exemplo será usado o código abaixo:</p>
 
-<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">add</span> <span class="o">::</span> <span class="kt">Int</span> <span class="o">-</span> <span class="p">(</span><span class="kt">Int</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span>
-<span class="n">add</span> <span class="n">x</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span>
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="n">add</span> <span class="o">::</span> <span class="kt">Int</span> <span class="o">-</span> <span class="p">(</span><span class="kt">Int</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">)</span>
+<span class="n">add</span> <span class="n">x</span> <span class="n">y</span> <span class="o">=</span> <span class="n">x</span> <span class="o">+</span> <span class="n">y</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>Observando a declaração da função, ela recebe 1 inteiro e retorna uma função que recebe um inteiro e
 retorna outro inteiro. No corpo da função diz-se que recebe 2 parâmetros e retorna a soma deles.
@@ -336,15 +431,22 @@ funcionais e que costumam receber um port para a biblioteca padrão de linguagen
 função map é uma função para manipulação de listas. Ela recebe uma função e uma lista genérica,
 aplica a função sobre cada elemento da lista retornando uma nova lista com as modificações.</p>
 
-<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c1">-- Usando recursão</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+7
+8
+</pre></td><td class="code"><pre><span class="c1">-- Usando recursão</span>
 <span class="n">map</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">b</span><span class="p">]</span>
 <span class="n">map</span> <span class="n">f</span> <span class="kt">[]</span>     <span class="o">=</span> <span class="kt">[]</span>
 <span class="n">map</span> <span class="n">f</span> <span class="p">(</span><span class="n">x</span><span class="o">:</span><span class="n">xs</span><span class="p">)</span> <span class="o">=</span> <span class="n">f</span> <span class="n">x</span> <span class="o">:</span> <span class="n">map</span> <span class="n">f</span> <span class="n">xs</span>
 
 <span class="c1">-- Usando list comprehension</span>
 <span class="n">map</span> <span class="o">::</span> <span class="p">(</span><span class="n">a</span> <span class="o">-&gt;</span> <span class="n">b</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">a</span><span class="p">]</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="n">b</span><span class="p">]</span>
-<span class="n">map</span> <span class="n">f</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="n">x</span> <span class="o">|</span> <span class="n">x</span> <span class="o">&lt;-</span> <span class="n">xs</span><span class="p">]</span>
-</code></pre></div></div>
+<span class="n">map</span> <span class="n">f</span> <span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span> <span class="n">x</span> <span class="o">|</span> <span class="n">x</span> <span class="o">&lt;-</span> <span class="n">xs</span><span class="p">]</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <div id="id-funcoes-anonimas"></div>
 
@@ -360,18 +462,23 @@ conhecidas como <strong>lambda functions</strong>.</p>
 curto e rápido, sendo um objeto temporário. Esse recurso evita a escrita de funções de uma linha só
 que seriam usadas apenas uma vez, por exemplo:</p>
 
-<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">something</span> <span class="o">::</span> <span class="kt">Num</span> <span class="n">x</span> <span class="o">=&gt;</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+</pre></td><td class="code"><pre><span class="n">something</span> <span class="o">::</span> <span class="kt">Num</span> <span class="n">x</span> <span class="o">=&gt;</span> <span class="n">x</span> <span class="o">-&gt;</span> <span class="n">x</span>
 <span class="n">something</span> <span class="n">x</span> <span class="o">=</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span><span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span>
 
 <span class="n">map</span> <span class="n">something</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="c1">-- Retorno: [5,16,33]</span>
-</code></pre></div></div>
+<span class="c1">-- Retorno: [5,16,33]</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <p>ficaria assim:</p>
 
-<div class="language-haskell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">map</span> <span class="p">(</span><span class="nf">\</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
-<span class="c1">-- Retorno: [5,16,33]</span>
-</code></pre></div></div>
+<figure class="highlight"><pre><code class="language-haskell" data-lang="haskell"><table class="rouge-table"><tbody><tr><td class="gutter gl"><pre class="lineno">1
+2
+</pre></td><td class="code"><pre><span class="n">map</span> <span class="p">(</span><span class="nf">\</span><span class="n">x</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="n">x</span> <span class="o">*</span> <span class="mi">3</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span> <span class="o">*</span> <span class="n">x</span><span class="p">)</span> <span class="p">[</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">]</span>
+<span class="c1">-- Retorno: [5,16,33]</span></pre></td></tr></tbody></table></code></pre></figure>
 
 <div id="id-avaliacao-preguicosa"></div>
 

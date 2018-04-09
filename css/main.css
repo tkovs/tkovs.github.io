@@ -125,6 +125,7 @@ table th { font-variant: small-caps; text-transform: lowercase; font-weight: 700
 
 .highlight .c { color: #bfbfbf; font-style: italic; }
 .highlight .k { color: #c72323; }
+.highlight .o { color: #c72323; }
 .highlight .cm { font-style: italic; }
 .highlight .cp { font-weight: bold; }
 .highlight .c1 { font-style: italic; }
