@@ -8,7 +8,7 @@
     .c     {  color: lighten($text-color, 50%); font-style: italic } // Comment
     .err   {  } // Error
     .k     {  color: $alt-color } // Keyword
-    // .o     {  }  // Operator
+    .o     {  color: $alt-color }  // Operator
     .cm    {  font-style: italic } // Comment.Multiline
     .cp    {  font-weight: bold }  // Comment.Preproc
     .c1    {  font-style: italic } // Comment.Single
